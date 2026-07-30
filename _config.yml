@@ -1,0 +1,22 @@
+title: Axio Docs
+description: Documentation for Axio
+
+theme: just-the-docs
+
+url: ""
+
+search_enabled: true
+
+color_scheme: light
+
+nav_sort: case_sensitive
+
+aux_links:
+  GitHub Repository:
+    - https://github.com/anantacloud/Axio-Docs.git
+
+mermaid:
+  version: "11.4.1"
+
+
+footer_content: 'Copyright &copy; 2026 <a href="https://www.anantacloud.com" target="_blank">Ananta Cloud</a>. All rights reserved.'
