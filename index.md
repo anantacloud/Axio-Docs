@@ -15,7 +15,7 @@ Axio unifies cloud management, infrastructure automation, governance, security, 
 
 <div style="display:flex; gap:18px; flex-wrap:wrap; margin:20px 0;">
 
-<a href="/docs/overview.html"
+<a href="/docs/operations/"
 class="btn btn-green">
 Get Started
 </a>
