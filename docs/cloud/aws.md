@@ -63,7 +63,7 @@ Before connecting AWS, ensure that you have:
 
 ---
 
-# Step 1 — Create AWS Credentials
+### Step 1 — Create AWS Credentials
 
 Create an IAM User or IAM Role with permissions required for infrastructure provisioning.
 
@@ -84,7 +84,7 @@ Typical permissions include:
 
 ---
 
-# Step 2 — Navigate to Cloud Providers
+### Step 2 — Navigate to Cloud Providers
 
 Open **Cloud → Add Provider** inside Axio.
 
@@ -96,7 +96,7 @@ Open **Cloud → Add Provider** inside Axio.
 
 ---
 
-# Step 3 — Select Amazon Web Services
+### Step 3 — Select Amazon Web Services
 
 Choose **Amazon Web Services** from the provider list.
 
@@ -108,7 +108,7 @@ Choose **Amazon Web Services** from the provider list.
 
 ---
 
-# Step 4 — Enter Credentials
+### Step 4 — Enter Credentials
 
 Provide:
 
@@ -128,7 +128,7 @@ Provide:
 
 ---
 
-# Step 5 — Validate Connection
+### Step 5 — Validate Connection
 
 Axio verifies:
 
@@ -145,7 +145,7 @@ Axio verifies:
 
 ---
 
-# Step 6 — Save Provider
+### Step 6 — Save Provider
 
 Once validation succeeds, save the provider.
 
@@ -159,41 +159,5 @@ The AWS account becomes available for:
 <div class="doc-image">
 
 ![AWS Connected](/assets/images/cloud/aws/aws-connected.png)
-
-</div>
-
----
-
-## Best Practices
-
-- Use IAM Roles whenever possible
-- Rotate access keys regularly
-- Restrict permissions
-- Enable CloudTrail auditing
-- Separate Production and Development accounts
-
-{: .warning }
-
-> Never expose AWS credentials in repositories or Terraform code.
-
----
-
-## Next Steps
-
-<div class="cta-box">
-
-<div class="cta-content">
-
-### Configure Microsoft Azure
-
-Learn how to integrate Azure subscriptions with Axio.
-
-</div>
-
-<div class="cta-action">
-
-[Microsoft Azure →](./azure/){: .btn .btn-primary }
-
-</div>
 
 </div>
