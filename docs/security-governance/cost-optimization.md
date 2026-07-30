@@ -168,11 +168,3 @@ Congratulations!
 You have completed the **Security & Governance** documentation.
 
 Continue with the **Integrations** section to connect external systems such as GitHub, GitLab, Azure DevOps, Bitbucket, and OAuth providers with Axio.
-
-<div class="cta-box">
-
-<div class="cta-content">
-
-### Continue to Integrations
-
-Learn how to connect repositories, version control systems, and identity providers to Axio.
