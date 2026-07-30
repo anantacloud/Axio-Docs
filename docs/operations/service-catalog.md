@@ -2,7 +2,7 @@
 layout: default
 title: Service Catalog
 parent: Operations
-nav_order: 5
+nav_order: 3
 ---
 
 # Service Catalog
