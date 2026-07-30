@@ -236,17 +236,17 @@ best practices.
 
 <div class="community-links">
 
-<a href="#">
+<a href="https://github.com/anantacloud">
 <img src="{{ '/assets/icons/github.png' | relative_url }}">
 GitHub
 </a>
 
-<a href="#">
+<a href="https://www.linkedin.com/company/anantacloud/">
 <img src="{{ '/assets/icons/linkedin.png' | relative_url }}">
 LinkedIn
 </a>
 
-<a href="#">
+<a href="https://medium.com/anantacloud">
 <img src="{{ '/assets/icons/blog.png' | relative_url }}">
 Blog
 </a>
