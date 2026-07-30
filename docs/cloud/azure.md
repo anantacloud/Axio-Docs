@@ -179,33 +179,33 @@ The Azure subscription is now available for:
 
 <div class="feature-card">
 
-### Dedicated Service Principal
+<h3>Dedicated Service Principal</h3>
 
-Use a separate identity for infrastructure automation.
-
-</div>
-
-<div class="feature-card">
-
-### Role-Based Access
-
-Grant only the permissions required.
+<p>Use a separate identity for infrastructure automation</p>
 
 </div>
 
 <div class="feature-card">
 
-### Rotate Secrets
+<h3>Role-Based Access</h3>
 
-Update Client Secrets regularly.
+<p>Grant only the permissions required</p>
 
 </div>
 
 <div class="feature-card">
 
-### Separate Environments
+<h3>Rotate Secrets</h3>
 
-Use different subscriptions for Development, Staging, and Production.
+<p>Update Client Secrets regularly</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>Separate Environments</h3>
+
+<p>Use different subscriptions for Development, Staging, and Production</p>
 
 </div>
 
