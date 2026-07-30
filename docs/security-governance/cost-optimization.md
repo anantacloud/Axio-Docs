@@ -2,7 +2,7 @@
 layout: default
 title: Cost Optimization
 parent: Security & Governance
-nav_order: 5
+nav_order: 4
 ---
 
 # Cost Optimization
