@@ -31,25 +31,25 @@ Axio enables organizations to securely integrate cloud providers, manage credent
 
 <div class="feature-card">
 
-<h3>Amazon Web Services</h3>
+### Amazon Web Services
 
-<p>Provision AWS infrastructure securely using IAM-based authentication</p>
-
-</div>
-
-<div class="feature-card">
-
-<h3>Microsoft Azure</h3>
-
-<p>Connect Azure subscriptions using Service Principals</p>
+Provision AWS infrastructure securely using IAM-based authentication.
 
 </div>
 
 <div class="feature-card">
 
-<h3>Google Cloud Platform</h3>
+### Microsoft Azure
 
-<p>Manage GCP projects using Service Accounts</p>
+Connect Azure subscriptions using Service Principals.
+
+</div>
+
+<div class="feature-card">
+
+### Google Cloud Platform
+
+Manage GCP projects using Service Accounts.
 
 </div>
 
@@ -108,3 +108,23 @@ Continue with the following guides:
 - Amazon Web Services
 - Microsoft Azure
 - Google Cloud Platform
+
+---
+
+<div class="cta-box">
+
+<div class="cta-content">
+
+### Ready to Connect Your Cloud?
+
+Start by configuring your first cloud provider in Axio.
+
+</div>
+
+<div class="cta-action">
+
+[Configure Cloud →](./configure-cloud/){: .btn .btn-primary }
+
+</div>
+
+</div>
