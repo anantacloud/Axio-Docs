@@ -459,3 +459,40 @@ h1 {
 h2 {
     margin-top: 56px;
 }
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.feature-grid {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 24px;
+   margin: 32px 0;
+}
+
+.feature-card {
+   background: #fff;
+   border: 1px solid #e5e7eb;
+   border-radius: 14px;
+   padding: 24px;
+   box-shadow: 0 4px 12px rgba(0,0,0,.06);
+   transition: .25s;
+}
+
+.feature-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 12px 25px rgba(0,0,0,.12);
+}
+
+.feature-card h3 {
+   margin-top: 0;
+   margin-bottom: 12px;
+   color: #2563eb;
+}
+
+.feature-card p {
+   margin: 0;
+   line-height: 1.7;
+   color: #555;
+}
