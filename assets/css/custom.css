@@ -547,3 +547,165 @@ table td {
     border-top: 1px solid #ececec;
     color: #6b7280;
 }
+
+/* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media (max-width: 1200px) {
+
+    .provider-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-content-wrap {
+        width: 92% !important;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    /* Main Layout */
+
+    .main {
+        margin-left: 0 !important;
+    }
+
+    .main-content-wrap {
+        width: 100% !important;
+        padding: 0 20px;
+    }
+
+    /* Branding */
+
+    .site-brand {
+        gap: 10px;
+    }
+
+    .site-brand-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .site-brand-title {
+        font-size: 20px;
+    }
+
+    /* Header */
+
+    .header-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+        gap: 10px;
+    }
+
+    .version-badge,
+    .demo-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hero */
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Feature Cards */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Providers */
+
+    .provider-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .provider-card {
+        padding: 22px 16px;
+    }
+
+    /* Typography */
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        margin-top: 40px;
+        font-size: 1.6rem;
+    }
+
+    /* Tables */
+
+    .table-wrapper {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 700px;
+    }
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .provider-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .provider-logo {
+        width: 36px !important;
+        height: 36px !important;
+    }
+
+    .feature-card,
+    .provider-card {
+        padding: 18px;
+    }
+
+    .workflow-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .workflow-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    .community-links a {
+        width: 100%;
+    }
+}
