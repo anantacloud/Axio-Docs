@@ -426,3 +426,20 @@ Specificity: (0,3,1)
     align-items: center;
     outline-offset: -1px;
 }
+
+
+/* Adjust the main content */
+.main {
+    margin-left: 264px !important;
+    max-width: 100% !important;
+}
+
+.main-content-wrap {
+    max-width: 1500px !important;
+    width: 95% !important;
+    margin: 0 auto;
+}
+
+.main-content {
+    max-width: 100% !important;
+}
