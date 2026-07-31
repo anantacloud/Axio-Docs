@@ -100,11 +100,6 @@ justify-content:flex-start;
 }
 
 
-
-
-//site-footer//
-
-
 .site-footer {
    margin-top: 60px;
    border-top: 1px solid #ececec;
@@ -112,10 +107,6 @@ justify-content:flex-start;
    color: #6b7280;
 }
 
-
-/* =========================
-   PROVIDERS
-========================= */
 
 .provider-grid{
     display:grid;
@@ -153,10 +144,6 @@ justify-content:flex-start;
     margin-bottom:12px;
     color:#2563EB;
 }
-
-////////////////
-///workflow////
-//////////////
 
 .workflow-container{
     display:flex;
@@ -245,10 +232,6 @@ justify-content:flex-start;
     color:#64748B;
 }
 
-////////////////
-////sidebar/////
-///////////////
-
 @media (min-width: 50rem) {
     .side-bar {
         flex-flow:column nowrap;
@@ -269,10 +252,6 @@ justify-content:flex-start;
     display:flex;
     background-color:#f5f6fa;
 }
-
-//////////////////
-/////nav list/////
-/////////////////
 
 .nav-list .nav-list-item.active > .nav-list-link {
     background: #eef2ff !important;
@@ -315,16 +294,14 @@ Specificity: (0,3,1)
 }
 
 
-////////////////
-///site-title///
-////////////////
-
 @media (min-width: 50rem) {
     .site-title {
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
     }
 }
+
+
 @media (min-width: 31.25rem) {
     .site-title {
         font-size: 1.5rem !important;
@@ -337,6 +314,7 @@ Specificity: (0,3,1)
         padding-left: 2rem;
     }
 }
+
 .site-title {
     flex-grow: 1;
     display: flex;
@@ -346,12 +324,6 @@ Specificity: (0,3,1)
     outline-offset: -1px;
 }
 
-
-/////////////////////
-/////Search input////
-////////////////////
-
-
 @media (min-width: 50rem) {
     .search-input {
         padding: 0.5rem 1rem 0.5rem 3.5rem;
@@ -360,6 +332,8 @@ Specificity: (0,3,1)
         transition: padding-left linear 200ms;
     }
 }
+
+
 .search-input {
     position: absolute;
     width: 100%;
@@ -372,7 +346,6 @@ Specificity: (0,3,1)
     border-radius: 0;
 }
 
-///header-actions///
 
 .header-actions{
     display:flex;
@@ -381,8 +354,6 @@ Specificity: (0,3,1)
     margin-right:18px;
 }
 
-
-/* Version Badge */
 
 .version-badge{
     display:inline-flex;
@@ -397,9 +368,6 @@ Specificity: (0,3,1)
     font-weight:600;
 }
 
-
-
-/* Demo Button */
 
 .demo-btn{
     display:inline-flex;
@@ -416,9 +384,6 @@ Specificity: (0,3,1)
 }
 
 
-////////////////////
-//////Site button///
-///////////////////
 .site-button {
     display: flex;
     height: 100%;
@@ -428,7 +393,6 @@ Specificity: (0,3,1)
 }
 
 
-/* Adjust the main content */
 .main {
     margin-left: 264px !important;
     max-width: 100% !important;
@@ -444,9 +408,6 @@ Specificity: (0,3,1)
     max-width: 100% !important;
 }
 
-/* =========================
-   HERO BUTTONS
-========================= */
 
 .hero-buttons {
    display: flex;
