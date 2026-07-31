@@ -1,47 +1,4 @@
 /* ==========================================================
-   RESPONSIVE LAYOUT
-========================================================== */
-
-@media (max-width: 768px) {
-
-    .community-section {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .community-actions {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .community-actions .btn {
-        text-align: center;
-    }
-
-    .community-links {
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 900px) {
-
-    .workflow-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .workflow-arrow {
-        transform: rotate(90deg);
-        margin: 0;
-    }
-
-    .workflow-step {
-        max-width: 320px;
-    }
-}
-
-
-/* ==========================================================
    SIDEBAR
 ========================================================== */
 
@@ -569,12 +526,36 @@ table td {
 
 
 /* ==========================================================
+   TABLET RESPONSIVE
+========================================================== */
+
+@media (max-width: 900px) {
+
+    .workflow-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .workflow-step {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+}
+
+
+/* ==========================================================
    MOBILE RESPONSIVE
 ========================================================== */
 
 @media (max-width: 768px) {
 
-    /* Main Layout */
+    /* Layout */
 
     .main {
         margin-left: 0 !important;
@@ -605,8 +586,8 @@ table td {
     .header-actions {
         flex-wrap: wrap;
         justify-content: center;
-        margin-right: 0;
         gap: 10px;
+        margin-right: 0;
     }
 
     .version-badge,
@@ -632,7 +613,7 @@ table td {
         grid-template-columns: 1fr;
     }
 
-    /* Providers */
+    /* Provider Cards */
 
     .provider-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -641,6 +622,62 @@ table td {
 
     .provider-card {
         padding: 22px 16px;
+    }
+
+    /* Workflow */
+
+    .workflow-title {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .workflow-description {
+        text-align: center;
+    }
+
+    .workflow-step h3 {
+        font-size: 18px;
+    }
+
+    .workflow-step p {
+        font-size: 15px;
+    }
+
+    .workflow-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .workflow-icon img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Community */
+
+    .community-section {
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .community-title {
+        font-size: 1.8rem;
+    }
+
+    .community-description {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .community-links {
+        gap: 14px;
+        justify-content: center;
+    }
+
+    .community-links a {
+        width: 100%;
+        max-width: 320px;
     }
 
     /* Typography */
@@ -673,6 +710,8 @@ table td {
 
 @media (max-width: 480px) {
 
+    /* Providers */
+
     .provider-grid {
         grid-template-columns: 1fr;
     }
@@ -682,20 +721,57 @@ table td {
         height: 36px !important;
     }
 
-    .feature-card,
-    .provider-card {
+    .provider-card,
+    .feature-card {
         padding: 18px;
     }
 
+    /* Workflow */
+
+    .workflow-title {
+        font-size: 1.4rem;
+    }
+
+    .workflow-step {
+        max-width: 100%;
+    }
+
     .workflow-icon {
-        width: 60px;
-        height: 60px;
+        width: 56px;
+        height: 56px;
     }
 
     .workflow-icon img {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
     }
+
+    /* Community */
+
+    .community-title {
+        font-size: 1.5rem;
+    }
+
+    .community-description {
+        font-size: .95rem;
+    }
+
+    .community-links {
+        gap: 12px;
+    }
+
+    .community-links a {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 15px;
+    }
+
+    .community-links img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Typography */
 
     h1 {
         font-size: 1.75rem;
@@ -703,9 +779,5 @@ table td {
 
     h2 {
         font-size: 1.4rem;
-    }
-
-    .community-links a {
-        width: 100%;
     }
 }
