@@ -31,25 +31,25 @@ Axio enables organizations to securely integrate cloud providers, manage credent
 
 <div class="feature-card">
 
-### Amazon Web Services
+<h3>Amazon Web Services</h3>
 
-Provision AWS infrastructure securely using IAM-based authentication.
-
-</div>
-
-<div class="feature-card">
-
-### Microsoft Azure
-
-Connect Azure subscriptions using Service Principals.
+<p>Provision AWS infrastructure securely using IAM-based authentication</p>
 
 </div>
 
 <div class="feature-card">
 
-### Google Cloud Platform
+<h3>Microsoft Azure</h3>
 
-Manage GCP projects using Service Accounts.
+<p>Connect Azure subscriptions using Service Principals</p>
+
+</div>
+
+<div class="feature-card">
+
+<h3>Google Cloud Platform</h3>
+
+<p>Manage GCP projects using Service Accounts</p>
 
 </div>
 
