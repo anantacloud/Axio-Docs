@@ -496,3 +496,32 @@ h2 {
    line-height: 1.7;
    color: #555;
 }
+
+
+table{
+   border-collapse:collapse;
+   margin:25px 0;
+   width:100%;
+}
+
+table th{
+   background:#EEF4FF;
+   color:#1E40AF;
+   font-weight:700;
+}
+
+table th,
+table td{
+   padding:14px 18px;
+   border:1px solid #E5E7EB;
+}
+
+.table-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+    overflow-x: visible !important;
+}
