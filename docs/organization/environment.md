@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Service Catalog
-parent: Operations
+title: Environment
+parent: Organization
 nav_order: 3
 ---
 
