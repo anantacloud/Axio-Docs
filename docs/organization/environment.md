@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Environment
+title: Environments
 parent: Organization
 nav_order: 3
 ---
