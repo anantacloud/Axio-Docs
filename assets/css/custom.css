@@ -1230,3 +1230,10 @@ METHOD CARD
     text-decoration:none;
     font-weight:600;
 }
+
+
+@media (min-width: 31.25rem) {
+    h2, .text-beta, #toctitle {
+        line-height: 1.25;
+    }
+}
