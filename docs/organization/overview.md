@@ -11,7 +11,7 @@ description: Learn how Organization resources are structured in Axio.
 <div class="announcement-box">
 
 <div class="announcement-icon">
-   <img src="{{ '/assets/images/icons/building-2.svg' | relative_url }}"
+   <img src="{{ '/assets/icons/building-2.svg' | relative_url }}"
          alt="Organization"
          width="34"
          height="34">
