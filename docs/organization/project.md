@@ -2,5 +2,5 @@
 layout: default
 title: Projects
 parent: Organization
-nav_order: 1
+nav_order: 2
 ---
