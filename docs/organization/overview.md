@@ -6,14 +6,6 @@ nav_order: 1
 description: Learn how Organization resources are structured in Axio.
 ---
 
----
-layout: default
-title: Overview
-parent: Organization
-nav_order: 1
-description: Overview of Organization resources.
----
-
 # Organization
 
 <div class="announcement-box">
