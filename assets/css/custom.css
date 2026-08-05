@@ -785,3 +785,390 @@ table td {
         font-size: 1.4rem;
     }
 }
+
+/*==================================================
+ORGANIZATION OVERVIEW
+==================================================*/
+
+.announcement-box{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    padding:26px;
+    margin:30px 0;
+    border:1px solid #d6ccff;
+    border-radius:14px;
+    background:#faf8ff;
+}
+
+.announcement-icon{
+    width:70px;
+    height:70px;
+    min-width:70px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#eef2ff;
+    border-radius:16px;
+}
+
+.announcement-icon img{
+    width:38px;
+    height:38px;
+}
+
+.announcement-box h2{
+    margin:0 0 10px;
+    font-size:28px;
+}
+
+.announcement-box p{
+    margin:0;
+    color:#5f6470;
+    line-height:1.8;
+}
+
+
+/*==================================================
+RESOURCE GRID
+==================================================*/
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin:35px 0;
+}
+
+.resource-card{
+    background:#fff;
+    border-radius:16px;
+    border:1px solid #ececec;
+    overflow:hidden;
+    transition:.25s;
+    display:flex;
+    flex-direction:column;
+}
+
+.resource-card:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+}
+
+.resource-card h1{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.resource-card h3{
+    margin:20px 0 12px;
+}
+
+.resource-card{
+    padding:28px;
+}
+
+
+/*==================================================
+CARD COLORS
+==================================================*/
+
+.resource-card.project{
+    border-top:5px solid #7b61ff;
+}
+
+.resource-card.workspace{
+    border-top:5px solid #16a34a;
+}
+
+.resource-card.environment{
+    border-top:5px solid #fb923c;
+}
+
+
+/*==================================================
+FEATURE LIST
+==================================================*/
+
+.resource-card ul{
+    padding-left:18px;
+}
+
+.resource-card li{
+    margin:12px 0;
+    color:#555;
+}
+
+
+/*==================================================
+CARD FOOTER
+==================================================*/
+
+.card-footer{
+    margin-top:auto;
+    padding-top:20px;
+    font-weight:600;
+}
+
+.card-footer a{
+
+    text-decoration:none;
+
+}
+
+.card-footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/*==================================================
+METHOD GRID
+==================================================*/
+
+.method-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin:40px 0;
+
+}
+
+.method-card{
+
+    padding:30px;
+
+    border-radius:16px;
+
+    border:1px solid #e8e8e8;
+
+    background:#fff;
+
+    transition:.25s;
+
+}
+
+.method-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+.method-card h1{
+
+    font-size:30px;
+
+}
+
+.method-card ul{
+
+    padding-left:18px;
+
+}
+
+.method-card li{
+
+    margin:12px 0;
+
+}
+
+
+/*==================================================
+METHOD COLORS
+==================================================*/
+
+.method-card.ui{
+
+    border-top:5px solid #3b82f6;
+
+}
+
+.method-card.git{
+
+    border-top:5px solid #22c55e;
+
+}
+
+
+/*==================================================
+TIP BOX
+==================================================*/
+
+.tip-box{
+
+    margin:35px 0;
+
+    padding:25px;
+
+    border-radius:14px;
+
+    border-left:6px solid #22c55e;
+
+    background:#f0fff4;
+
+}
+
+.tip-box h3{
+
+    margin-top:0;
+
+}
+
+.tip-box ul{
+
+    margin-bottom:0;
+
+}
+
+
+/*==================================================
+TABLE
+==================================================*/
+
+table{
+
+    width:100%;
+
+    margin-top:20px;
+
+    border-collapse:collapse;
+
+}
+
+table th{
+
+    background:#f7f7f7;
+
+    font-weight:600;
+
+}
+
+table th,
+table td{
+
+    padding:14px;
+
+    border:1px solid #ececec;
+
+}
+
+
+/*==================================================
+CODE BLOCK
+==================================================*/
+
+pre{
+
+    border-radius:12px;
+
+    margin:25px 0;
+
+}
+
+code{
+
+    font-size:14px;
+
+}
+
+
+/*==================================================
+HEADINGS
+==================================================*/
+
+h1{
+
+    margin-top:45px;
+
+}
+
+h2{
+
+    margin-top:45px;
+
+}
+
+h3{
+
+    margin-top:30px;
+
+}
+
+
+/*==================================================
+TEXT
+==================================================*/
+
+p{
+
+    line-height:1.8;
+
+}
+
+li{
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media (max-width:1200px){
+
+.resource-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+.method-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+
+@media (max-width:768px){
+
+.announcement-box{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+.resource-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.method-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.announcement-icon{
+
+width:60px;
+height:60px;
+
+}
+
+}
