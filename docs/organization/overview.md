@@ -148,53 +148,5 @@ Define Projects, Workspaces, and Environments using YAML or JSON files stored in
 
 </div>
 
----
 
-# Resource Hierarchy
 
-```text
-Organization
-│
-├── Project
-│      │
-│      ├── Workspace
-│      │        │
-│      │        ├── Development
-│      │        ├── Staging
-│      │        └── Production
-│      │
-│      └── Workspace
-│
-└── Project
-```
-
----
-
-# Recommended Workflow
-
-<div class="tip-box">
-
-For Production workloads, it is recommended to manage resources using **Platform as Code**.
-
-Benefits include:
-
-- Version Control
-- GitOps
-- Pull Request Reviews
-- Audit Trail
-- Easy Rollback
-
-</div>
-
----
-
-## Next Steps
-
-Continue exploring Organization resources.
-
-| Resource | Description |
-|-----------|-------------|
-| **Projects** | Create and manage projects. |
-| **Workspaces** | Organize services and teams. |
-| **Environments** | Configure deployment targets. |
-| **Platform as Code** | Manage resources using Git. |
