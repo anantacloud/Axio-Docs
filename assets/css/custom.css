@@ -1023,7 +1023,7 @@ RESOURCE GRID
     padding:30px;
     display:flex;
     flex-direction:column;
-    min-height:430px;
+    min-height:320px;
     transition:all .25s ease;
     box-shadow:0 3px 10px rgba(15,23,42,.03);
 }
@@ -1039,14 +1039,17 @@ CARD COLORS
 ==================================================*/
 
 .resource-card.project{
+    background:#fcfbff;
     border-top-color:#7C4DFF;
 }
 
 .resource-card.workspace{
+    background:#fbfffc;
     border-top-color:#22C55E;
 }
 
 .resource-card.environment{
+    background:#fffdfa;
     border-top-color:#FB923C;
 }
 
@@ -1103,7 +1106,7 @@ ICON BOX
     color:#5b6472;
     font-size:16px;
     line-height:1.8;
-    margin:0 0 26px;
+    margin:0 0 18px;
 }
 
 .resource-card h4{
@@ -1129,7 +1132,7 @@ FEATURE LIST
     display:flex;
     align-items:center;
     gap:12px;
-    margin-bottom:16px;
+    margin-bottom:10px;
     color:#374151;
 }
 
@@ -1146,7 +1149,7 @@ CARD FOOTER
 
 .card-footer{
     margin-top:auto;
-    padding-top:24px;
+    padding-top:16px;
     border-top:1px solid #eef2f7;
 }
 
@@ -1177,15 +1180,15 @@ METHOD CARD
 
 .method-card{
     background:#fff;
-    border:1px solid #e8edf4;
+    border:1px solid #ececec;
     border-top-width:5px;
     border-radius:18px;
-    padding:30px;
+    padding:26px;
     display:flex;
     flex-direction:column;
     min-height:360px;
     transition:all .25s ease;
-    box-shadow:0 3px 10px rgba(15,23,42,.03);
+    box-shadow:0 2px 8px rgba(15,23,42,.03);
 }
 
 .method-card:hover{
