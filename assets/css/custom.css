@@ -786,6 +786,7 @@ table td {
     }
 }
 
+
 /*==================================================
 ORGANIZATION OVERVIEW
 ==================================================*/
@@ -826,176 +827,6 @@ ORGANIZATION OVERVIEW
     margin:0;
     color:#5f6470;
     line-height:1.8;
-}
-
-
-/*==================================================
-RESOURCE GRID
-==================================================*/
-
-.resource-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
-    margin:35px 0;
-}
-
-.resource-card{
-    background:#fff;
-    border-radius:16px;
-    border:1px solid #ececec;
-    overflow:hidden;
-    transition:.25s;
-    display:flex;
-    flex-direction:column;
-}
-
-.resource-card:hover{
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-}
-
-.resource-card h1{
-    font-size:28px;
-    margin-bottom:15px;
-}
-
-.resource-card h3{
-    margin:20px 0 12px;
-}
-
-.resource-card{
-    padding:28px;
-}
-
-
-/*==================================================
-CARD COLORS
-==================================================*/
-
-.resource-card.project{
-    border-top:5px solid #7b61ff;
-}
-
-.resource-card.workspace{
-    border-top:5px solid #16a34a;
-}
-
-.resource-card.environment{
-    border-top:5px solid #fb923c;
-}
-
-
-/*==================================================
-FEATURE LIST
-==================================================*/
-
-.resource-card ul{
-    padding-left:18px;
-}
-
-.resource-card li{
-    margin:12px 0;
-    color:#555;
-}
-
-
-/*==================================================
-CARD FOOTER
-==================================================*/
-
-.card-footer{
-    margin-top:auto;
-    padding-top:20px;
-    font-weight:600;
-}
-
-.card-footer a{
-
-    text-decoration:none;
-
-}
-
-.card-footer a:hover{
-
-    text-decoration:underline;
-
-}
-
-
-/*==================================================
-METHOD GRID
-==================================================*/
-
-.method-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:30px;
-
-    margin:40px 0;
-
-}
-
-.method-card{
-
-    padding:30px;
-
-    border-radius:16px;
-
-    border:1px solid #e8e8e8;
-
-    background:#fff;
-
-    transition:.25s;
-
-}
-
-.method-card:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 12px 25px rgba(0,0,0,.08);
-
-}
-
-.method-card h1{
-
-    font-size:30px;
-
-}
-
-.method-card ul{
-
-    padding-left:18px;
-
-}
-
-.method-card li{
-
-    margin:12px 0;
-
-}
-
-
-/*==================================================
-METHOD COLORS
-==================================================*/
-
-.method-card.ui{
-
-    border-top:5px solid #3b82f6;
-
-}
-
-.method-card.git{
-
-    border-top:5px solid #22c55e;
-
 }
 
 
@@ -1060,7 +891,6 @@ table td{
     border:1px solid #ececec;
 
 }
-
 
 /*==================================================
 CODE BLOCK
@@ -1171,4 +1001,229 @@ height:60px;
 
 }
 
+}
+
+
+/*==================================================
+RESOURCE GRID
+==================================================*/
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+    margin:35px 0 50px;
+}
+
+.resource-card{
+    background:#fff;
+    border:1px solid #e8edf4;
+    border-top-width:5px;
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    min-height:430px;
+    transition:all .25s ease;
+    box-shadow:0 3px 10px rgba(15,23,42,.03);
+}
+
+.resource-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 45px rgba(15,23,42,.08);
+}
+
+
+/*==================================================
+CARD COLORS
+==================================================*/
+
+.resource-card.project{
+    border-top-color:#7C4DFF;
+}
+
+.resource-card.workspace{
+    border-top-color:#22C55E;
+}
+
+.resource-card.environment{
+    border-top-color:#FB923C;
+}
+
+/*==================================================
+CARD TITLE
+==================================================*/
+
+.card-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:24px;
+}
+
+.card-title h3{
+    margin:0;
+    font-size:32px;
+    font-weight:700;
+    color:#1f2937;
+}
+
+/*==================================================
+ICON BOX
+==================================================*/
+
+.icon-box{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-shrink:0;
+}
+
+.project .icon-box{
+    background:#F3EDFF;
+}
+
+.workspace .icon-box{
+    background:#EAFBF1;
+}
+
+.environment .icon-box{
+    background:#FFF4E9;
+}
+
+.icon-box img{
+    width:30px;
+    height:30px;
+}
+
+.resource-card p{
+    color:#5b6472;
+    font-size:16px;
+    line-height:1.8;
+    margin:0 0 26px;
+}
+
+.resource-card h4{
+    margin:0 0 18px;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#8a94a6;
+    font-weight:700;
+}
+
+/*==================================================
+FEATURE LIST
+==================================================*/
+
+.resource-card ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.resource-card li{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:16px;
+    color:#374151;
+}
+
+.resource-card li::before{
+    content:"✓";
+    color:#22C55E;
+    font-weight:bold;
+}
+
+
+/*==================================================
+CARD FOOTER
+==================================================*/
+
+.card-footer{
+    margin-top:auto;
+    padding-top:24px;
+    border-top:1px solid #eef2f7;
+}
+
+.card-footer a{
+    color:#5B5CF0;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.card-footer a:hover{
+    color:#3F41DD;
+}
+
+/*==================================================
+METHOD GRID
+==================================================*/
+
+.method-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    margin:40px 0;
+}
+
+/*==================================================
+METHOD CARD
+==================================================*/
+
+.method-card{
+    background:#fff;
+    border:1px solid #e8edf4;
+    border-top-width:5px;
+    border-radius:18px;
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    min-height:360px;
+    transition:all .25s ease;
+    box-shadow:0 3px 10px rgba(15,23,42,.03);
+}
+
+.method-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 45px rgba(15,23,42,.08);
+}
+
+.method-card.ui{
+    border-top-color:#3B82F6;
+}
+
+.method-card.git{
+    border-top-color:#22C55E;
+}
+
+.method-card .icon-box{
+    background:#EEF4FF;
+}
+
+.method-card.git .icon-box{
+    background:#EAFBF1;
+}
+
+.section-description{
+    margin-top:-10px;
+    margin-bottom:30px;
+    color:#6b7280;
+    font-size:17px;
+}
+
+.footer-note{
+    text-align:center;
+    color:#6b7280;
+    margin-top:50px;
+    font-size:15px;
+}
+
+.footer-note a{
+    text-decoration:none;
+    font-weight:600;
 }
