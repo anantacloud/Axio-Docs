@@ -1233,7 +1233,10 @@ METHOD CARD
 
 
 @media (min-width: 31.25rem) {
-    h2, .text-beta, #toctitle {
+    h2,
+Specificity: (0,1,0)
+ {
+        font-size: 1.3rem !important;
         line-height: 1.25;
     }
 }
