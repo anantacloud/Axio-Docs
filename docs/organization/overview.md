@@ -6,24 +6,39 @@ nav_order: 1
 description: Learn how Organization resources are structured in Axio.
 ---
 
+---
+layout: default
+title: Overview
+parent: Organization
+nav_order: 1
+description: Overview of Organization resources.
+---
+
 # Organization
 
 <div class="announcement-box">
 
-<div class="announcement-icon">
-   <img src="{{ '/assets/icons/building-2.svg' | relative_url }}"
-         alt="Organization"
-         width="34"
-         height="34">
-</div>
+    <div class="announcement-icon">
+        <img src="{{ '/assets/icons/building-2.svg' | relative_url }}"
+             alt="Organization">
+    </div>
 
-<div>
+    <div class="announcement-content">
 
-## Manage all your organizational resources in one place.
+        <h2>Manage all your organizational resources in one place.</h2>
 
-Create and manage **Projects**, **Workspaces**, and **Environments** using either the **Axio UI** or **Platform as Code (Git-based)**.
+        <p>
+            Create and manage
+            <strong>Projects</strong>,
+            <strong>Workspaces</strong>, and
+            <strong>Environments</strong>
+            using either the
+            <strong>Axio UI</strong>
+            or
+            <strong>Platform as Code (Git-based)</strong>.
+        </p>
 
-</div>
+    </div>
 
 </div>
 
@@ -31,67 +46,140 @@ Create and manage **Projects**, **Workspaces**, and **Environments** using eithe
 
 ## Organization Resources
 
+<p class="section-description">
 An organization consists of the following core resources.
+</p>
 
 <div class="resource-grid">
 
+<!-- ===================== PROJECT ====================== -->
+
 <div class="resource-card project">
 
-# Projects
+    <div class="card-title">
 
-Logical grouping of Workspaces and Environments.
+        <img src="{{ '/assets/icons/folder.svg' | relative_url }}"
+             alt="Projects">
 
-### Features
+        <h3>Projects</h3>
 
-- Group related workloads
-- Manage project-level access
-- Configure project settings
+    </div>
 
-<div class="card-footer">
+    <p>
+        Logical grouping of Workspaces and Environments.
+    </p>
 
-[Explore Projects →](projects/)
+    <h4>Features</h4>
+
+    <ul>
+
+        <li>Group related workloads</li>
+
+        <li>Manage project-level access</li>
+
+        <li>Configure project settings</li>
+
+    </ul>
+
+    <div class="card-footer">
+
+        <a href="../projects/">
+
+            Explore Projects →
+
+        </a>
+
+    </div>
 
 </div>
 
-</div>
+<!-- ===================== WORKSPACE ====================== -->
 
 <div class="resource-card workspace">
 
-# Workspaces
+    <div class="card-title">
 
-Isolated areas for applications, services, and infrastructure.
+        <img src="{{ '/assets/icons/boxes.svg' | relative_url }}"
+             alt="Workspaces">
 
-### Features
+        <h3>Workspaces</h3>
 
-- Contains environments
-- Team isolation
-- Independent configuration
+    </div>
 
-<div class="card-footer">
+    <p>
 
-[Explore Workspaces →](workspaces/)
+        Isolated areas for applications,
+        services and infrastructure.
+
+    </p>
+
+    <h4>Features</h4>
+
+    <ul>
+
+        <li>Contains environments</li>
+
+        <li>Team isolation</li>
+
+        <li>Independent configuration</li>
+
+    </ul>
+
+    <div class="card-footer">
+
+        <a href="../workspaces/">
+
+            Explore Workspaces →
+
+        </a>
+
+    </div>
 
 </div>
 
-</div>
+<!-- ===================== ENVIRONMENT ====================== -->
 
 <div class="resource-card environment">
 
-# Environments
+    <div class="card-title">
 
-Deployment targets like Development, Staging, and Production.
+        <img src="{{ '/assets/icons/globe.svg' | relative_url }}"
+             alt="Environments">
 
-### Features
+        <h3>Environments</h3>
 
-- Multiple environment types
-- Deployment configuration
-- Environment-specific settings
+    </div>
 
-<div class="card-footer">
+    <p>
 
-[Explore Environments →](environments/)
+        Deployment targets like
+        Development,
+        Staging,
+        and Production.
 
-</div>
+    </p>
+
+    <h4>Features</h4>
+
+    <ul>
+
+        <li>Multiple environment types</li>
+
+        <li>Deployment configuration</li>
+
+        <li>Environment-specific settings</li>
+
+    </ul>
+
+    <div class="card-footer">
+
+        <a href="../environments/">
+
+            Explore Environments →
+
+        </a>
+
+    </div>
 
 </div>
 
@@ -99,54 +187,105 @@ Deployment targets like Development, Staging, and Production.
 
 ---
 
-# Ways to Create Resources
+## Ways to Create Resources
+
+<p class="section-description">
 
 Choose the workflow that best matches your team's development process.
 
+</p>
+
 <div class="method-grid">
+
+<!-- ================= UI ================= -->
 
 <div class="method-card ui">
 
-# From the UI
+    <div class="card-title">
 
-Create resources directly from the Axio web interface.
+        <img src="{{ '/assets/icons/monitor.svg' | relative_url }}"
+             alt="UI">
 
-### Best for
+        <h3>From the UI</h3>
 
-- Quick setup
-- Manual administration
-- Learning the platform
+    </div>
 
-<div class="card-footer">
+    <p>
 
-[Create Resources from UI →](projects/create-from-ui/)
+        Create resources directly
+        from the Axio web interface.
+
+    </p>
+
+    <h4>Best for</h4>
+
+    <ul>
+
+        <li>Quick setup</li>
+
+        <li>Manual administration</li>
+
+        <li>Learning the platform</li>
+
+    </ul>
+
+    <div class="card-footer">
+
+        <a href="../projects/create-from-ui/">
+
+            Create Resources from UI →
+
+        </a>
+
+    </div>
 
 </div>
 
-</div>
+<!-- ================= PLATFORM AS CODE ================= -->
 
 <div class="method-card git">
 
-# Platform as Code (Git-Based)
+    <div class="card-title">
 
-Define Projects, Workspaces, and Environments using YAML or JSON files stored in Git.
+        <img src="{{ '/assets/icons/git-branch.svg' | relative_url }}"
+             alt="Git">
 
-### Best for
+        <h3>Platform as Code (Git-Based)</h3>
 
-- GitOps
-- Version Control
-- Automation
-- Audit & Compliance
+    </div>
 
-<div class="card-footer">
+    <p>
 
-[Platform as Code Guide →](../platform-as-code/repository-setup/)
+        Define Projects, Workspaces,
+        and Environments using YAML
+        or JSON files stored in Git.
+
+    </p>
+
+    <h4>Best for</h4>
+
+    <ul>
+
+        <li>GitOps workflows</li>
+
+        <li>Version control</li>
+
+        <li>Automation</li>
+
+        <li>Audit & Compliance</li>
+
+    </ul>
+
+    <div class="card-footer">
+
+        <a href="../platform-as-code/repository-setup/">
+
+            Platform as Code Guide →
+
+        </a>
+
+    </div>
 
 </div>
 
 </div>
-
-</div>
-
-
-
