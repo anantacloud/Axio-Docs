@@ -1170,8 +1170,8 @@ METHOD GRID
 .method-grid{
     display:grid;
     grid-template-columns:repeat(2,1fr);
-    gap:28px;
-    margin:40px 0;
+    gap:24px;
+    margin:32px 0;
 }
 
 /*==================================================
@@ -1186,22 +1186,24 @@ METHOD CARD
     padding:26px;
     display:flex;
     flex-direction:column;
-    min-height:360px;
-    transition:all .25s ease;
+    min-height:230px;
+    transition:.25s ease;
     box-shadow:0 2px 8px rgba(15,23,42,.03);
 }
 
 .method-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 18px 45px rgba(15,23,42,.08);
+    transform:translateY(-4px);
+    box-shadow:0 16px 35px rgba(15,23,42,.08);
 }
 
 .method-card.ui{
-    border-top-color:#3B82F6;
+    background:#fbfdff;
+    border-top-color:#3b82f6;
 }
 
 .method-card.git{
-    border-top-color:#22C55E;
+    background:#fbfffc;
+    border-top-color:#22c55e;
 }
 
 .method-card .icon-box{
@@ -1229,6 +1231,81 @@ METHOD CARD
 .footer-note a{
     text-decoration:none;
     font-weight:600;
+}
+
+
+.method-card .card-title{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-bottom:18px;
+}
+
+.method-card .card-title h3{
+    margin:0;
+    font-size:1.55rem;
+    font-weight:700;
+}
+
+.method-card p{
+    margin:0 0 18px;
+    color:#5b6472;
+    line-height:1.7;
+}
+
+.method-card h4{
+    margin:0 0 12px;
+    font-size:.78rem;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:#8b93a3;
+}
+
+.method-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.method-card li{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.method-card li::before{
+    content:"✓";
+    color:#22c55e;
+    font-weight:700;
+}
+
+.method-card .card-footer{
+    margin-top:auto;
+    padding-top:16px;
+    border-top:1px solid #eef2f7;
+}
+
+.method-card .icon-box{
+    width:54px;
+    height:54px;
+    border-radius:16px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.method-card.ui .icon-box{
+    background:#eaf2ff;
+}
+
+.method-card.git .icon-box{
+    background:#eafbf1;
+}
+
+.method-card .icon-box img{
+    width:28px;
+    height:28px;
 }
 
 
