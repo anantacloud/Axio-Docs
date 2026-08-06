@@ -1633,9 +1633,8 @@ METHOD CARD
 }
 
 .previous{
-    border:1px solid #c7d2fe;
-    color:#4f46e5;
-    background:#fff;
+    background:#4f46e5;
+    color:#fff;
 }
 
 .previous:hover{
