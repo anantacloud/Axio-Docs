@@ -1353,3 +1353,377 @@ METHOD CARD
 .git-icon {
     background: #EAFBF0;
 }
+
+
+/* ============================================
+   Create Project from UI
+============================================ */
+
+.page-icon{
+    width:46px;
+    height:46px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+/* ============================================
+   Prerequisite
+============================================ */
+
+.prerequisite-box{
+    margin:30px 0;
+    padding:18px 22px;
+    border:1px solid #bfdcff;
+    background:#f4f9ff;
+    border-radius:12px;
+}
+
+.prerequisite-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+.prerequisite-header img{
+    width:20px;
+    height:20px;
+}
+
+.prerequisite-header h3,
+.prerequisite-header h4,
+.prerequisite-header h5,
+.prerequisite-header h6{
+    margin:0;
+    color:#2563eb;
+    font-size:16px;
+}
+
+/* ============================================
+   Layout
+============================================ */
+
+.step-layout{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    margin-top:24px;
+    align-items:flex-start;
+}
+
+/* ============================================
+   Timeline
+============================================ */
+
+.step-left{
+    position:relative;
+}
+
+.step-item{
+    display:flex;
+    gap:18px;
+    position:relative;
+    padding-bottom:28px;
+}
+
+.step-item:last-child{
+    padding-bottom:0;
+}
+
+.step-item::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:34px;
+    width:2px;
+    height:calc(100% - 8px);
+    background:#dbeafe;
+}
+
+.step-item:last-child::before{
+    display:none;
+}
+
+.step-circle{
+    width:30px;
+    height:30px;
+    min-width:30px;
+    border-radius:50%;
+    background:#2563eb;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:14px;
+}
+
+.step-content h3{
+    margin:0 0 6px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.step-content p{
+    margin:0;
+    color:#4b5563;
+}
+
+.step-content ul{
+    margin:10px 0 0 20px;
+}
+
+.step-content li{
+    margin:6px 0;
+}
+
+/* ============================================
+   Form Card
+============================================ */
+
+.project-form{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:24px;
+    box-shadow:0 6px 24px rgba(15,23,42,.05);
+}
+
+.form-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.form-header h2{
+    margin:0;
+    font-size:20px;
+}
+
+.close-btn{
+    color:#9ca3af;
+    font-size:20px;
+}
+
+.project-form label{
+    display:block;
+    margin-bottom:16px;
+    font-weight:500;
+    color:#374151;
+}
+
+.project-form input,
+.project-form textarea,
+.project-form select{
+    width:100%;
+    margin-top:8px;
+    padding:12px 14px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    font-size:14px;
+    box-sizing:border-box;
+    background:#fff;
+}
+
+.project-form input:focus,
+.project-form textarea:focus,
+.project-form select:focus{
+    border-color:#4f46e5;
+    outline:none;
+    box-shadow:0 0 0 3px rgba(79,70,229,.12);
+}
+
+.project-form textarea{
+    resize:vertical;
+}
+
+/* ============================================
+   Buttons
+============================================ */
+
+.form-actions{
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+    margin-top:24px;
+}
+
+.cancel-btn{
+    border:1px solid #d1d5db;
+    background:#fff;
+    color:#374151;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.cancel-btn:hover{
+    background:#f8fafc;
+}
+
+.create-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.create-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ============================================
+   What Happens Next
+============================================ */
+
+.what-next{
+    margin-top:40px;
+}
+
+.what-next ul{
+    margin-top:16px;
+}
+
+.what-next li{
+    margin-bottom:10px;
+}
+
+/* ============================================
+   Tip
+============================================ */
+
+.tip-box{
+    margin-top:32px;
+    padding:18px 22px;
+    background:#f8f5ff;
+    border:1px solid #d8c7ff;
+    border-radius:12px;
+}
+
+.tip-box h3{
+    margin-top:0;
+    color:#6d28d9;
+}
+
+/* ============================================
+   Navigation
+============================================ */
+
+.page-navigation{
+    margin-top:40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nav-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.previous{
+    border:1px solid #c7d2fe;
+    color:#4f46e5;
+    background:#fff;
+}
+
+.previous:hover{
+    background:#eef2ff;
+}
+
+.next{
+    background:#4f46e5;
+    color:#fff;
+}
+
+.next:hover{
+    background:#4338ca;
+}
+
+/* ============================================
+   Divider
+============================================ */
+
+hr{
+    margin:40px 0;
+}
+
+/* ============================================
+   Responsive
+============================================ */
+
+@media (max-width:1024px){
+
+.step-layout{
+    grid-template-columns:1fr;
+}
+
+.step-right{
+    order:-1;
+}
+
+.page-navigation{
+    flex-direction:column;
+    gap:16px;
+}
+
+.nav-button{
+    width:100%;
+}
+
+}
+
+@media (max-width:768px){
+
+.project-form{
+    padding:18px;
+}
+
+.step-content h3{
+    font-size:17px;
+}
+
+.step-circle{
+    width:28px;
+    height:28px;
+    min-width:28px;
+}
+
+.prerequisite-box{
+    padding:16px;
+}
+
+}
+
+@media (max-width:480px){
+
+.project-form{
+    padding:16px;
+}
+
+.form-actions{
+    flex-direction:column;
+}
+
+.cancel-btn,
+.create-btn{
+    width:100%;
+}
+
+.page-icon{
+    width:36px;
+    height:36px;
+}
+
+}
