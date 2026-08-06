@@ -6,127 +6,138 @@ grand_parent: Organization
 nav_order: 2
 ---
 
-# <img src="{{ '/assets/icons/code.svg' | relative_url }}" class="page-icon" alt="Platform as Code"> Create a Project using Platform as Code
+<h1>
+    <img src="{{ '/assets/icons/code.svg' | relative_url }}"
+         class="page-icon"
+         alt="Platform as Code">
+    Create a Project using Platform as Code
+</h1>
 
-Define a Project in a YAML or JSON file and synchronize it from your Git repository.
-
-<div class="prerequisite-box">
-
-<div class="prerequisite-header">
-
-<img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
-
-<h3>Important</h3>
-
-</div>
-
-<p>
-
-Ensure that your Git repository is connected and synchronized with Axio before proceeding.
-
+<p class="page-description">
+    Define a Project in a YAML or JSON file and synchronize it from your Git repository.
 </p>
 
+<div class="important-box">
+
+    <div class="important-header">
+
+        <img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}"
+             alt="Warning">
+
+        <h3>Important</h3>
+
+    </div>
+
+    <p>
+        Ensure that your Git repository is connected and synchronized with Axio before proceeding.
+    </p>
+
 </div>
 
----
+<hr>
 
-## Step-by-Step Guide
+<h2>Step-by-Step Guide</h2>
 
 <div class="step-layout">
 
-<div class="step-left">
+    <!-- LEFT -->
 
-<div class="step-item">
+    <div class="step-left">
 
-<div class="step-circle">1</div>
+        <div class="step-item">
 
-<div class="step-content">
+            <div class="step-circle">1</div>
 
-<h3>Define Project</h3>
+            <div class="step-content">
 
-<p>
+                <h3>Define Project</h3>
 
-Create a YAML or JSON file containing the Project definition.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="step-item">
-
-<div class="step-circle">2</div>
-
-<div class="step-content">
-
-<h3>Commit and Push</h3>
-
-<p>
-
-Commit the Project definition file and push it to your Git repository.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="step-item">
-
-<div class="step-circle">3</div>
-
-<div class="step-content">
-
-<h3>Platform Sync</h3>
-
-<p>
-
-The Axio platform automatically synchronizes with your repository and reads the Project definition.
-
-</p>
-
-</div>
-
-</div>
-
-<div class="step-item">
-
-<div class="step-circle">4</div>
-
-<div class="step-content">
-
-<h3>Project Created</h3>
-
-<p>
-
-The Project will appear in the <strong>Projects</strong> page and is ready for creating Workspaces.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="step-right">
-
-    <!-- YAML Card -->
-
-    <div class="code-card">
-
-        <div class="code-tabs">
-
-            <div class="tab-buttons">
-
-                <button class="tab-btn active">YAML</button>
-
-                <button class="tab-btn">JSON</button>
+                <p>
+                    Create a YAML or JSON file containing the Project definition.
+                </p>
 
             </div>
 
         </div>
+
+        <div class="step-item">
+
+            <div class="step-circle">2</div>
+
+            <div class="step-content">
+
+                <h3>Commit and Push</h3>
+
+                <p>
+                    Commit the Project definition file and push it to your Git repository.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="step-item">
+
+            <div class="step-circle">3</div>
+
+            <div class="step-content">
+
+                <h3>Platform Sync</h3>
+
+                <p>
+                    Axio automatically synchronizes with your Git repository and reads the Project definition.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="step-item">
+
+            <div class="step-circle">4</div>
+
+            <div class="step-content">
+
+                <h3>Project Created</h3>
+
+                <p>
+                    The Project appears under
+                    <strong>Organization → Projects</strong>.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="step-right">
+
+        <!-- YAML CARD -->
+
+        <div class="code-card">
+
+            <div class="code-tabs">
+
+                <div class="tab-buttons">
+
+                    <button class="tab-btn active">
+                        YAML
+                    </button>
+
+                    <button class="tab-btn">
+                        JSON
+                    </button>
+
+                </div>
+
+                <button class="copy-btn">
+                    📋 Copy
+                </button>
+
+            </div>
 
 <pre><code>apiVersion: platform.axio.io/v1
 kind: Project
@@ -139,13 +150,13 @@ spec:
   description: Project for ecommerce services
 </code></pre>
 
-    </div>
+        </div>
 
-    <!-- Repository Card -->
+        <!-- REPOSITORY CARD -->
 
-    <div class="repo-card">
+        <div class="repo-card">
 
-        <h3>Repository Structure</h3>
+            <h3>Repository Structure</h3>
 
 <pre><code>platform-resources/
 └── projects/
@@ -154,58 +165,74 @@ spec:
     └── README.md
 </code></pre>
 
+        </div>
+
     </div>
 
 </div>
 
----
+<hr>
 
-## What Happens Next?
+<h2>What Happens Next?</h2>
 
-After synchronizing the Project:
+<p>After synchronizing the Project:</p>
 
-- The Project is automatically created in Axio.
-- The Project appears under **Organization → Projects**.
-- Changes committed to Git automatically update the Project.
-- You can begin creating Workspaces inside the Project.
-- Your Git repository remains the single source of truth.
+<ul>
 
+    <li>
+        The Project is automatically created in Axio.
+    </li>
+
+    <li>
+        The Project appears under
+        <strong>Organization → Projects</strong>.
+    </li>
+
+    <li>
+        Changes committed to Git automatically update the Project.
+    </li>
+
+    <li>
+        You can begin creating Workspaces inside the Project.
+    </li>
+
+    <li>
+        Your Git repository remains the single source of truth.
+    </li>
+
+</ul>
 
 <div class="tip-box">
 
-<div class="tip-header">
+    <div class="tip-header">
 
-<img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}" alt="Tip">
+        <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
+             alt="Tip">
 
-<h3>Tip</h3>
+        <h3>Tip</h3>
+
+    </div>
+
+    <p>
+        Store Project definitions in a dedicated Git repository to enable version control, code reviews, and GitOps workflows.
+    </p>
 
 </div>
-
-<p>
-
-Store Project definitions in a dedicated Git repository to enable version control, code reviews, and GitOps workflows.
-
-</p>
-
-</div>
-
 
 <div class="page-navigation">
 
-<a
-class="nav-button previous"
-href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
+    <a class="nav-button previous"
+       href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
 
-← Create Project from UI
+        ← Create Project from UI
 
-</a>
+    </a>
 
-<a
-class="nav-button next"
-href="{{ '/docs/organization/workspaces/' | relative_url }}">
+    <a class="nav-button next"
+       href="{{ '/docs/organization/workspaces/' | relative_url }}">
 
-Workspaces →
+        Workspaces →
 
-</a>
+    </a>
 
 </div>
