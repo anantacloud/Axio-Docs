@@ -1207,13 +1207,13 @@ METHOD CARD
 }
 
 .method-card.ui{
-    background: linear-gradient(135deg, #fbfdff 0%, #f6faff 35%, #eef6ff 100%);
-    border: 1px solid #CFE3FF;
+    background:#fbfffc;
+    border: 1px solid #CFEFD8;
 }
 
 .method-card.git{
-    background: linear-gradient(135deg, #fbfffc 0%, #f6fdf8 35%, #eefaf2 100%);
-    border: 1px solid #CFEFD8;
+    background:#fcfbff;
+    border: 1px solid #D8C7FF;
 }
 
 .method-card .icon-box{
