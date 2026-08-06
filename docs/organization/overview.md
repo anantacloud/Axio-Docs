@@ -216,16 +216,6 @@ Choose the workflow that best matches your team's development process.
 
     </ul>
 
-    <div class="card-footer">
-
-        <a href="../projects/create-from-ui/">
-
-            Create Resources from UI →
-
-        </a>
-
-    </div>
-
 </div>
 
 <!-- ================= PLATFORM AS CODE ================= -->
@@ -260,16 +250,6 @@ Choose the workflow that best matches your team's development process.
         <li>Audit & Compliance</li>
 
     </ul>
-
-    <div class="card-footer">
-
-        <a href="../platform-as-code/repository-setup/">
-
-            Platform as Code Guide →
-
-        </a>
-
-    </div>
 
 </div>
 
