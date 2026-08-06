@@ -224,7 +224,7 @@ Create a Project first before creating Workspaces and Environments.
 class="nav-button previous"
 href="{{ '/docs/organization/overview/' | relative_url }}">
 
-← Projects
+← Overview
 
 </a>
 
