@@ -206,8 +206,6 @@ Choose the workflow that best matches your team's development process.
 
     </p>
 
-    <h4>Best for</h4>
-
     <ul>
 
         <li>Quick setup</li>
@@ -250,8 +248,6 @@ Choose the workflow that best matches your team's development process.
         or JSON files stored in Git.
 
     </p>
-
-    <h4>Best for</h4>
 
     <ul>
 
