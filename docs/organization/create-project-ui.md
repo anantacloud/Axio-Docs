@@ -221,6 +221,14 @@ Create a Project first before creating Workspaces and Environments.
 <div class="page-navigation">
 
 <a
+class="nav-button previous"
+href="{{ '/docs/organization/overview/' | relative_url }}">
+
+← Projects
+
+</a>
+
+<a
 class="nav-button next"
 href="{{ '/docs/organization/projects/create-project-platform-as-code/' | relative_url }}">
 
