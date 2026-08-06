@@ -46,7 +46,7 @@ nav_order: 2
 
         <div class="step-item">
 
-            <div class="step-circle">1</div>
+            <div class="step-circle-pac">1</div>
 
             <div class="step-content">
 
@@ -62,7 +62,7 @@ nav_order: 2
 
         <div class="step-item">
 
-            <div class="step-circle">2</div>
+            <div class="step-circle-pac">2</div>
 
             <div class="step-content">
 
@@ -78,7 +78,7 @@ nav_order: 2
 
         <div class="step-item">
 
-            <div class="step-circle">3</div>
+            <div class="step-circle-pac">3</div>
 
             <div class="step-content">
 
@@ -94,7 +94,7 @@ nav_order: 2
 
         <div class="step-item">
 
-            <div class="step-circle">4</div>
+            <div class="step-circle-pac">4</div>
 
             <div class="step-content">
 
