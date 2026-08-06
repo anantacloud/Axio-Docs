@@ -162,7 +162,6 @@ After synchronizing the Project:
 - You can begin creating Workspaces inside the Project.
 - Your Git repository remains the single source of truth.
 
----
 
 <div class="tip-box">
 
@@ -182,7 +181,6 @@ Store Project definitions in a dedicated Git repository to enable version contro
 
 </div>
 
----
 
 <div class="page-navigation">
 
