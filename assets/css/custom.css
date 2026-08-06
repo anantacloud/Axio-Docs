@@ -2041,5 +2041,75 @@ hr{
 
 }
 
+.step-right{
 
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* YAML CARD */
+
+.code-card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(15,23,42,.05);
+
+}
+
+/* REPOSITORY CARD */
+
+.repo-card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 3px 12px rgba(15,23,42,.05);
+
+}
+
+.repo-card h3{
+
+    margin-top:0;
+
+    margin-bottom:16px;
+
+    font-size:20px;
+
+}
+
+.repo-card pre{
+
+    margin:0;
+
+    padding:0;
+
+    background:none;
+
+}
+
+.repo-card code{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    font-family:Consolas, monospace;
+
+}
 
