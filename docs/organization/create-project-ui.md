@@ -206,11 +206,17 @@ After creating the Project:
 - Create Environments within Workspaces.
 - Manage all project resources from a single location.
 
----
 
 <div class="tip-box">
 
-<h3>💡 Tip</h3>
+    <div class="tip-header">
+
+        <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
+             alt="Tip">
+
+        <h3>Tip</h3>
+
+    </div>
 
 <p>
 A Project is the top-level resource container in Axio.
@@ -222,17 +228,8 @@ Create a Project first before creating Workspaces and Environments.
 
 </div>
 
----
 
 <div class="page-navigation">
-
-<a
-class="nav-button previous"
-href="{{ '/docs/organization/projects/' | relative_url }}">
-
-← Projects
-
-</a>
 
 <a
 class="nav-button next"
