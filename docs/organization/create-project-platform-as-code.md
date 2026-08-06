@@ -118,8 +118,6 @@ The Project will appear in the <strong>Projects</strong> page and is ready for c
 
 <h2>YAML</h2>
 
-<button class="cancel-btn">Copy</button>
-
 </div>
 
 <pre><code>apiVersion: platform.axio.io/v1
@@ -141,7 +139,7 @@ spec:
 └── projects/
     ├── ecommerce.yaml
     ├── payments.yaml
-    └── README.md
+
 </code></pre>
 
 </div>
