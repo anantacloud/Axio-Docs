@@ -49,7 +49,7 @@ An organization consists of the following core resources.
 
     <div class="card-title">
 
-        <img src="{{ '/assets/icons/folder.svg' | relative_url }}"
+        <img class="project-icon" src="{{ '/assets/icons/folder.svg' | relative_url }}"
              alt="Projects">
 
         <h3>Projects</h3>
@@ -90,7 +90,7 @@ An organization consists of the following core resources.
 
     <div class="card-title">
 
-        <img src="{{ '/assets/icons/boxes.svg' | relative_url }}"
+        <img class="workspace-icon" src="{{ '/assets/icons/boxes.svg' | relative_url }}"
              alt="Workspaces">
 
         <h3>Workspaces</h3>
@@ -134,7 +134,7 @@ An organization consists of the following core resources.
 
     <div class="card-title">
 
-        <img src="{{ '/assets/icons/globe.svg' | relative_url }}"
+        <img class="environment-icon" src="{{ '/assets/icons/globe.svg' | relative_url }}"
              alt="Environments">
 
         <h3>Environments</h3>
@@ -192,7 +192,7 @@ Choose the workflow that best matches your team's development process.
 
     <div class="card-title">
 
-        <img src="{{ '/assets/icons/monitor.svg' | relative_url }}"
+        <img  class="ui-icon" src="{{ '/assets/icons/monitor.svg' | relative_url }}"
              alt="UI">
 
         <h3 class="ui-title">From the UI</h3>
@@ -236,7 +236,7 @@ Choose the workflow that best matches your team's development process.
 
     <div class="card-title">
 
-        <img src="{{ '/assets/icons/git-branch.svg' | relative_url }}"
+        <img class="git-icon" src="{{ '/assets/icons/git-branch.svg' | relative_url }}"
              alt="Git">
 
         <h3 class="git-title">Platform as Code (Git-Based)</h3>
