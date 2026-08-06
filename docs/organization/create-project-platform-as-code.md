@@ -168,7 +168,7 @@ After synchronizing the Project:
 
 <div class="tip-header">
 
-<img src="{{ '/assets/icons/bulb.svg' | relative_url }}" alt="Tip">
+<img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}" alt="Tip">
 
 <h3>Tip</h3>
 
