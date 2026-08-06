@@ -36,7 +36,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">1</div>
+<div class="step-circle-ui">1</div>
 
 <div class="step-content">
 
@@ -50,7 +50,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">2</div>
+<div class="step-circle-ui">2</div>
 
 <div class="step-content">
 
@@ -66,7 +66,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">3</div>
+<div class="step-circle-ui">3</div>
 
 <div class="step-content">
 
@@ -80,7 +80,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">4</div>
+<div class="step-circle-ui">4</div>
 
 <div class="step-content">
 
@@ -99,7 +99,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">5</div>
+<div class="step-circle-ui">5</div>
 
 <div class="step-content">
 
@@ -113,7 +113,7 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-item">
 
-<div class="step-circle">6</div>
+<div class="step-circle-ui">6</div>
 
 <div class="step-content">
 
