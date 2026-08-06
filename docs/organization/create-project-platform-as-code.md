@@ -112,13 +112,21 @@ The Project will appear in the <strong>Projects</strong> page and is ready for c
 
 <div class="step-right">
 
-<div class="project-form">
+    <!-- YAML Card -->
 
-<div class="form-header">
+    <div class="code-card">
 
-<h2>YAML</h2>
+        <div class="code-tabs">
 
-</div>
+            <div class="tab-buttons">
+
+                <button class="tab-btn active">YAML</button>
+
+                <button class="tab-btn">JSON</button>
+
+            </div>
+
+        </div>
 
 <pre><code>apiVersion: platform.axio.io/v1
 kind: Project
@@ -131,20 +139,22 @@ spec:
   description: Project for ecommerce services
 </code></pre>
 
-<hr>
+    </div>
 
-<h3>Repository Structure</h3>
+    <!-- Repository Card -->
+
+    <div class="repo-card">
+
+        <h3>Repository Structure</h3>
 
 <pre><code>platform-resources/
 └── projects/
     ├── ecommerce.yaml
     ├── payments.yaml
-
+    └── README.md
 </code></pre>
 
-</div>
-
-</div>
+    </div>
 
 </div>
 
