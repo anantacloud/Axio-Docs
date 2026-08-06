@@ -195,7 +195,7 @@ Choose the workflow that best matches your team's development process.
         <img src="{{ '/assets/icons/monitor.svg' | relative_url }}"
              alt="UI">
 
-        <h3>From the UI</h3>
+        <h3 class="ui-title">From the UI</h3>
 
     </div>
 
@@ -239,7 +239,7 @@ Choose the workflow that best matches your team's development process.
         <img src="{{ '/assets/icons/git-branch.svg' | relative_url }}"
              alt="Git">
 
-        <h3>Platform as Code (Git-Based)</h3>
+        <h3 class="git-title">Platform as Code (Git-Based)</h3>
 
     </div>
 
