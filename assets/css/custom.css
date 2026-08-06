@@ -1622,7 +1622,7 @@ METHOD CARD
 }
 
 .nav-button{
-    width:240px;              /* Fixed width */
+    width:280px;              /* Fixed width */
     height:48px;
     display:inline-flex;
     align-items:center;
@@ -1635,21 +1635,13 @@ METHOD CARD
 }
 
 .previous{
-    background:#4f46e5;
+    background:#7253ed;
     color:#fff;
-}
-
-.previous:hover{
-    background:#eef2ff;
 }
 
 .next{
-    background:#4f46e5;
+    background:#7253ed;
     color:#fff;
-}
-
-.next:hover{
-    background:#4338ca;
 }
 
 /* ============================================
