@@ -1146,7 +1146,7 @@ FEATURE LIST
 
 .resource-card li::before{
     content:"✓" !important;
-    color:#22C55E !important;
+    color:#22c55e !important;
     font-weight:bold !important;
     position: absolute;
     margin-left: -0.9em;
@@ -1207,22 +1207,12 @@ METHOD CARD
 }
 
 .method-card.ui{
-    background: linear-gradient(
-        135deg,
-        #f8fbff 0%,
-        #f2f8ff 50%,
-        #eef6ff 100%
-    );
+    background: linear-gradient(135deg, #fbfdff 0%, #f6faff 35%, #eef6ff 100%);
     border: 1px solid #CFE3FF;
 }
 
 .method-card.git{
-    background: linear-gradient(
-        135deg,
-        #f8fffb 0%,
-        #f2fcf6 50%,
-        #edf9f2 100%
-    );
+    background: linear-gradient(135deg, #fbfffc 0%, #f6fdf8 35%, #eefaf2 100%);
     border: 1px solid #CFEFD8;
 }
 
@@ -1290,15 +1280,17 @@ METHOD CARD
 .method-card li{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
     margin-bottom:10px;
-    padding-left: 8px;
+    padding-left: 20px;
 }
 
 .method-card li::before{
-    content:"✓";
-    color:#22c55e;
-    font-weight:700;
+    content:"✓" !important;
+    color:#22c55e !important;
+    font-weight:bold !important;
+    position: absolute;
+    margin-left: -0.9em;
 }
 
 .method-card .card-footer{
