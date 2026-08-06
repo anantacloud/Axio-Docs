@@ -90,7 +90,6 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <ul>
 <li><strong>Name</strong> (Unique identifier)</li>
-<li><strong>Display Name</strong></li>
 <li><strong>Description</strong> (Optional)</li>
 </ul>
 
@@ -149,16 +148,6 @@ Name *
 <input
 type="text"
 placeholder="e.g. ecommerce">
-
-</label>
-
-<label>
-
-Display Name *
-
-<input
-type="text"
-placeholder="e.g. Ecommerce Platform">
 
 </label>
 
