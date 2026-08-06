@@ -1208,12 +1208,12 @@ METHOD CARD
 
 .method-card.ui{
     background:#fbfffc;
-    border: 1px solid #CFEFD8;
+    border: 1px solid #D8C7FF;
 }
 
 .method-card.git{
     background:#fcfbff;
-    border: 1px solid #D8C7FF;
+    border: 1px solid #CFEFD8;
 }
 
 .method-card .icon-box{
