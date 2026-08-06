@@ -14,7 +14,7 @@ Define a Project in a YAML or JSON file and synchronize it from your Git reposit
 
 <div class="prerequisite-header">
 
-<img src="{{ '/assets/icons/warning.svg' | relative_url }}" alt="Important">
+<img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
 
 <h3>Important</h3>
 
