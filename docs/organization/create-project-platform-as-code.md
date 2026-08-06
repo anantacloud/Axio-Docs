@@ -115,25 +115,38 @@ nav_order: 2
 
     <div class="step-right">
 
-        <!-- YAML CARD -->
+        <!-- YAML / JSON CARD -->
 
-        <div class="code-card">
+<div class="code-card">
 
-            <div class="code-tabs">
+    <div class="tabs">
 
-                <div class="tab-buttons">
+        <!-- YAML TAB -->
 
-                    <button class="tab-btn active">
-                        YAML
-                    </button>
+        <input
+            type="radio"
+            id="yaml-tab"
+            name="project-code"
+            checked>
 
-                    <button class="tab-btn">
-                        JSON
-                    </button>
+        <label for="yaml-tab" class="tab-label">
+            YAML
+        </label>
 
-                </div>
+        <!-- JSON TAB -->
 
-            </div>
+        <input
+            type="radio"
+            id="json-tab"
+            name="project-code">
+
+        <label for="json-tab" class="tab-label">
+            JSON
+        </label>
+
+        <!-- YAML CONTENT -->
+
+        <div class="tab-content yaml-content">
 
 <pre><code>apiVersion: platform.axio.io/v1
 kind: Project
@@ -147,6 +160,32 @@ spec:
 </code></pre>
 
         </div>
+
+        <!-- JSON CONTENT -->
+
+        <div class="tab-content json-content">
+
+<pre><code>{
+  "apiVersion": "platform.axio.io/v1",
+  "kind": "Project",
+
+  "metadata": {
+    "name": "ecommerce"
+  },
+
+  "spec": {
+    "displayName": "Ecommerce Project",
+    "description": "Project for ecommerce services"
+  }
+}
+</code></pre>
+
+        </div>
+
+    </div>
+
+</div>
+
 
         <!-- REPOSITORY CARD -->
 
