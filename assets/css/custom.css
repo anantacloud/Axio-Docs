@@ -2113,3 +2113,89 @@ hr{
 
 }
 
+/* ==========================================
+   YAML / JSON Tabs (CSS Only)
+========================================== */
+
+.code-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(15,23,42,.05);
+}
+
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* Hide radio buttons */
+
+.tabs input[type="radio"]{
+    display:none;
+}
+
+/* Labels */
+
+.tab-label{
+    padding:12px 22px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    color:#6b7280;
+    border-bottom:1px solid #eef2f7;
+    transition:.2s;
+}
+
+/* Active Tab */
+
+#yaml-tab:checked + .tab-label,
+#json-tab:checked + .tab-label{
+    color:#2563eb;
+    background:#eff6ff;
+    border-bottom:2px solid #2563eb;
+}
+
+/* Content Wrapper */
+
+.content-wrapper{
+    width:100%;
+}
+
+/* Hide Both */
+
+.yaml-content,
+.json-content{
+    display:none;
+}
+
+/* Show YAML */
+
+#yaml-tab:checked ~ .content-wrapper .yaml-content{
+    display:block;
+}
+
+/* Show JSON */
+
+#json-tab:checked ~ .content-wrapper .json-content{
+    display:block;
+}
+
+/* Code Block */
+
+.code-card pre{
+    margin:0;
+    padding:20px;
+    background:#fcfcfd;
+    border-top:1px solid #eef2f7;
+    overflow:auto;
+}
+
+.code-card code{
+    font-family:Consolas, monospace;
+    font-size:14px;
+    line-height:1.8;
+    color:#1e293b;
+}
+
