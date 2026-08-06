@@ -34,7 +34,6 @@ description: Learn how Organization resources are structured in Axio.
 
 </div>
 
----
 
 ## Organization Resources
 
@@ -176,8 +175,6 @@ An organization consists of the following core resources.
 </div>
 
 </div>
-
----
 
 ## Ways to Create Resources
 
