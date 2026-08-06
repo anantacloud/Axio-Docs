@@ -6,8 +6,6 @@ grand_parent: Organization
 nav_order: 1
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/project-ui.css' | relative_url }}">
-
 # <img src="{{ '/assets/icons/folder.svg' | relative_url }}" class="page-icon" alt="Project"> Create a Project from UI
 
 Follow these simple steps to create a Project using the Axio web interface.
@@ -18,11 +16,13 @@ Follow these simple steps to create a Project using the Axio web interface.
 
 <img src="{{ '/assets/icons/info.svg' | relative_url }}" alt="Info">
 
-### Prerequisite
+<h3>Prerequisite</h3>
 
 </div>
 
+<p>
 Ensure that you have permission to create Projects in your Organization before creating a Project.
+</p>
 
 </div>
 
@@ -40,9 +40,9 @@ Ensure that you have permission to create Projects in your Organization before c
 
 <div class="step-content">
 
-### Login to Axio
+<h3>Login to Axio</h3>
 
-Sign in to the Axio platform using your credentials.
+<p>Sign in to the Axio platform using your credentials.</p>
 
 </div>
 
@@ -54,11 +54,11 @@ Sign in to the Axio platform using your credentials.
 
 <div class="step-content">
 
-### Go to Projects
+<h3>Go to Projects</h3>
 
-Navigate to:
+<p>Navigate to:</p>
 
-**Organization → Projects**
+<p><strong>Organization → Projects</strong></p>
 
 </div>
 
@@ -70,9 +70,9 @@ Navigate to:
 
 <div class="step-content">
 
-### Click Create Project
+<h3>Click Create Project</h3>
 
-Click the **Create Project** button from the Projects page.
+<p>Click the <strong>Create Project</strong> button from the Projects page.</p>
 
 </div>
 
@@ -84,13 +84,15 @@ Click the **Create Project** button from the Projects page.
 
 <div class="step-content">
 
-### Fill in Project Details
+<h3>Fill in Project Details</h3>
 
-Provide the required information:
+<p>Provide the required information:</p>
 
-- **Name** *(Unique identifier)*
-- **Display Name**
-- **Description** *(Optional)*
+<ul>
+<li><strong>Name</strong> (Unique identifier)</li>
+<li><strong>Display Name</strong></li>
+<li><strong>Description</strong> (Optional)</li>
+</ul>
 
 </div>
 
@@ -102,9 +104,9 @@ Provide the required information:
 
 <div class="step-content">
 
-### Review and Confirm
+<h3>Review and Confirm</h3>
 
-Review all the entered information and click **Create**.
+<p>Review all the entered information and click <strong>Create</strong>.</p>
 
 </div>
 
@@ -116,9 +118,11 @@ Review all the entered information and click **Create**.
 
 <div class="step-content">
 
-### Project Created
+<h3>Project Created</h3>
 
-The new Project will appear in the **Projects** page and is now ready to contain Workspaces and Environments.
+<p>
+The new Project will appear in the <strong>Projects</strong> page and is now ready to contain Workspaces and Environments.
+</p>
 
 </div>
 
@@ -132,7 +136,7 @@ The new Project will appear in the **Projects** page and is now ready to contain
 
 <div class="form-header">
 
-## Create Project
+<h2>Create Project</h2>
 
 <span class="close-btn">✕</span>
 
@@ -206,11 +210,15 @@ After creating the Project:
 
 <div class="tip-box">
 
-### 💡 Tip
+<h3>💡 Tip</h3>
 
+<p>
 A Project is the top-level resource container in Axio.
+</p>
 
+<p>
 Create a Project first before creating Workspaces and Environments.
+</p>
 
 </div>
 
