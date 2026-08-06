@@ -74,7 +74,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="../projects/">
+        <a href="/docs/organization/create-project-ui/">
 
             Explore Projects →
 
