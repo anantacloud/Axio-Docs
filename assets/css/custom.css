@@ -1998,47 +1998,6 @@ hr{
 }
 
 /* ==========================================
-   Navigation
-========================================== */
-
-.page-navigation{
-    display:flex;
-    justify-content:space-between;
-    margin-top:40px;
-}
-
-.nav-button{
-    width:270px;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-    transition:.2s;
-}
-
-.previous{
-    border:1px solid #c7d2fe;
-    color:#4f46e5;
-    background:#fff;
-}
-
-.previous:hover{
-    background:#eef2ff;
-}
-
-.next{
-    background:#4f46e5;
-    color:#fff;
-}
-
-.next:hover{
-    background:#4338ca;
-}
-
-/* ==========================================
    Responsive
 ========================================== */
 
