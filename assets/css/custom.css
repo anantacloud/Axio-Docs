@@ -1326,3 +1326,36 @@ METHOD CARD
     width:28px;
     height:28px;
 }
+
+.card-title img {
+    width: 48px;
+    height: 48px;
+    padding: 10px;
+    border-radius: 14px;
+    object-fit: contain;
+}
+
+/* Purple */
+.project-icon {
+    background: #F3EEFF;
+}
+
+/* Green */
+.workspace-icon {
+    background: #EAFBF0;
+}
+
+/* Orange */
+.environment-icon {
+    background: #FFF2E8;
+}
+
+/* Blue */
+.ui-icon {
+    background: #EDF5FF;
+}
+
+/* Green */
+.git-icon {
+    background: #EAFBF0;
+}
