@@ -302,7 +302,7 @@ After creating the Environment:
 
     <a
         class="nav-button next"
-        href="{{ '/docs/organization/workspaces/create-environment-platform-as-code/' | relative_url }}">
+        href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_url }}">
 
         Create Environment using Platform as Code →
 
