@@ -172,8 +172,8 @@ href="{{ '/docs/organization/workspaces/create-workspace-ui/' | relative_url }}"
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/organization/environments/' | relative_url }}">
-Environments →
+href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
+Create environments from UI→
 </a>
 
 </div>
