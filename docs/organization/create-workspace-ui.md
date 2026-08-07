@@ -7,7 +7,7 @@ nav_order: 1
 ---
 
 <h1>
-    <img src="{{ '/assets/icons/workspace.svg' | relative_url }}"
+    <img src="{{ '/assets/icons/blocks.svg' | relative_url }}"
          class="page-icon"
          alt="Workspace">
     Create a Workspace from UI
@@ -21,7 +21,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
     <div class="prerequisite-header">
 
-        <img src="{{ '/assets/icons/info-circle.svg' | relative_url }}"
+        <img src="{{ '/assets/icons/info.svg' | relative_url }}"
              alt="Info">
 
         <h3>Prerequisite</h3>
