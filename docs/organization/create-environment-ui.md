@@ -35,7 +35,7 @@ Before creating an environment, ensure that:
 
 <div class="step">
 
-### **1. Login to Axio**
+### 1. Login to Axio
 
 Sign in to the Axio platform using your credentials.
 
@@ -43,7 +43,7 @@ Sign in to the Axio platform using your credentials.
 
 <div class="step">
 
-### **2. Navigate to Environments**
+### 2. Navigate to Environments
 
 Go to:
 
@@ -53,7 +53,7 @@ Go to:
 
 <div class="step">
 
-### **3. Click Create Environment**
+### 3. Click Create Environment
 
 Click the **Create Environment** button.
 
@@ -61,7 +61,7 @@ Click the **Create Environment** button.
 
 <div class="step">
 
-### **4. Enter Environment Details**
+### 4. Enter Environment Details
 
 Provide the required information:
 
@@ -74,7 +74,7 @@ Provide the required information:
 
 <div class="step">
 
-### **5. Review Configuration**
+### 5. Review Configuration
 
 Verify all the entered information before creating the environment.
 
@@ -82,9 +82,11 @@ Verify all the entered information before creating the environment.
 
 <div class="step">
 
-### **6. Create the Environment**
+### 6. Create the Environment
 
 Click **Create** to provision the environment.
+
+The environment will be created under the selected workspace and will be available for application deployments and resource management.
 
 </div>
 
@@ -95,19 +97,19 @@ Click **Create** to provision the environment.
 ## Example
 
 | Field | Example |
-|--------|---------|
-| Name | production |
-| Display Name | Production Environment |
-| Workspace | platform-team |
-| Description | Production deployment environment |
+|------|---------|
+| **Name** | production |
+| **Display Name** | Production Environment |
+| **Workspace** | platform-team |
+| **Description** | Production deployment environment |
 
 ---
 
 <div class="tip-box">
 
-### 💡 Tip
+### Tip
 
-Use meaningful names such as **development**, **staging**, or **production** so that environments are easy to identify across projects.
+Use meaningful names such as **development**, **staging**, and **production** so that environments are easy to identify and manage across multiple workspaces.
 
 </div>
 
@@ -116,20 +118,22 @@ Use meaningful names such as **development**, **staging**, or **production** so 
 ## Best Practices
 
 - Follow a consistent naming convention.
-- Create separate environments for each deployment stage.
-- Add clear descriptions for easier maintenance.
+- Create separate environments for Development, Staging, and Production.
+- Add descriptive information to improve maintainability.
 - Organize environments under the appropriate workspace.
-- Grant access only to authorized users.
+- Grant access only to users who require it.
+- Regularly review environment configurations.
 
 ---
 
 ## Expected Result
 
-After successful creation:
+After the environment is successfully created:
 
-- The environment appears under the selected workspace.
-- It becomes available for deployments and resource management.
+- It appears under the selected workspace.
+- It is available for deployments and infrastructure management.
 - Team members with the required permissions can access and manage it.
+- Applications and services can be deployed into the environment.
 
 ---
 
@@ -139,8 +143,8 @@ After creating an environment, you can:
 
 - Configure infrastructure resources.
 - Deploy applications into the environment.
-- Assign credentials and secrets.
-- Configure policies and access permissions.
+- Configure credentials and secrets.
+- Apply governance and security policies.
 - Monitor deployments and environment health.
 
 ---
@@ -149,7 +153,7 @@ After creating an environment, you can:
 
 ## What's Next?
 
-Continue with **Create Environment using Platform as Code** to automate environment creation through declarative configuration.
+Continue with **Create Environment using Platform as Code** to automate environment provisioning through declarative configuration.
 
 <a href="create-environment-platform-as-code.html" class="btn btn-primary">
 Create Environment using Platform as Code →
