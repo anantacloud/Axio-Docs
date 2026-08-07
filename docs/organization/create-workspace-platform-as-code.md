@@ -7,7 +7,7 @@ nav_order: 2
 ---
 
 <h1>
-  <img src="{{ '/assets/icons/workspace.svg' | relative_url }}"
+  <img src="{{ '/assets/icons/layout-dashboard.svg' | relative_url }}"
        class="page-icon"
        alt="Workspace">
   Create a Workspace using Platform as Code
