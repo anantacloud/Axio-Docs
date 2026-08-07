@@ -302,7 +302,7 @@ After creating the Workspace:
 
     <a
         class="nav-button next"
-        href="{{ '/docs/organization/workspaces/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/docs/organization/create-workspace-platform-as-code/' | relative_url }}">
 
         Create using Platform as Code →
 
