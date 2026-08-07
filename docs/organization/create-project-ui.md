@@ -137,8 +137,6 @@ The new Project will appear in the <strong>Projects</strong> page and is now rea
 
 <h2>Create Project</h2>
 
-<span class="close-btn">✕</span>
-
 </div>
 
 <label>
