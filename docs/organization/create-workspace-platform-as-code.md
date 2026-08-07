@@ -167,7 +167,7 @@ Keep all Workspace definitions in Git to enable version control, reviews, and Gi
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/docs/organization/workspaces/create-workspace-ui/' | relative_url }}">
+href="{{ '/docs/organization/create-workspace-ui/' | relative_url }}">
 ← Create Workspace from UI
 </a>
 
