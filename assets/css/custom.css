@@ -1622,7 +1622,7 @@ METHOD CARD
 }
 
 .nav-button{
-    width:280px;              /* Fixed width */
+    width:350px;              /* Fixed width */
     height:48px;
     display:inline-flex;
     align-items:center;
