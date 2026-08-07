@@ -14,7 +14,7 @@ nav_order: 1
 </h1>
 
 <p class="page-description">
-Create a Workspace using the Axio web interface. A Workspace belongs to a Project and provides an isolated area for managing Environments and resources.
+Create an Environment from the Axio user interface to organize infrastructure deployments within a Workspace. Environments help separate resources for development, testing, staging, and production while maintaining consistent configurations.
 </p>
 
 <div class="prerequisite-box">
@@ -29,7 +29,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
     </div>
 
     <p>
-        Ensure that you have permission to create Workspaces and that a Project already exists.
+       Ensure that you have permission to create Environments and that a Workspace already exists.
     </p>
 
 </div>
@@ -66,14 +66,14 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
             <div class="step-content">
 
-                <h3>Go to Workspaces</h3>
+                <h3>Go to Environments</h3>
 
                 <p>
                     Navigate to:
                 </p>
 
                 <p>
-                    <strong>Organization → Workspaces</strong>
+                    <strong>Organization → Environments</strong>
                 </p>
 
             </div>
@@ -86,10 +86,10 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
             <div class="step-content">
 
-                <h3>Click Create Workspace</h3>
+                <h3>Click Create Environment</h3>
 
                 <p>
-                    Click the <strong>Create Workspace</strong> button.
+                    Click the <strong>Create Environment</strong> button.
                 </p>
 
             </div>
@@ -102,7 +102,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
             <div class="step-content">
 
-                <h3>Fill in Workspace Details</h3>
+                <h3>Fill in Environment Details</h3>
 
                 <p>
                     Provide the required information:
@@ -114,7 +114,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
                     <li><strong>Display Name</strong></li>
 
-                    <li><strong>Project</strong></li>
+                    <li><strong>Workspace</strong></li>
 
                     <li><strong>Description</strong> (Optional)</li>
 
@@ -147,10 +147,10 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
             <div class="step-content">
 
-                <h3>Workspace Created</h3>
+                <h3>Environment Created</h3>
 
                 <p>
-                    The Workspace will appear under the selected Project and is now ready for creating Environments.
+                    The Environment will appear under the selected Workspace and is ready for deploying infrastructure stacks.
                 </p>
 
             </div>
@@ -167,7 +167,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
             <div class="form-header">
 
-                <h2>Create Workspace</h2>
+                <h2>Create Environment</h2>
 
             </div>
 
@@ -177,7 +177,7 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
                 <input
                     type="text"
-                    placeholder="e.g. development">
+                    placeholder="e.g. production">
 
             </label>
 
@@ -187,21 +187,21 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 
                 <input
                     type="text"
-                    placeholder="Development Workspace">
+                    placeholder="Production Environment">
 
             </label>
 
             <label>
 
-                Project *
+                Workspace *
 
                 <select>
 
-                    <option>Select Project</option>
+                    <option>Select Workspace</option>
 
-                    <option>Ecommerce</option>
+                    <option>Development</option>
 
-                    <option>Payments</option>
+                    <option>Production</option>
 
                 </select>
 
@@ -244,29 +244,29 @@ Create a Workspace using the Axio web interface. A Workspace belongs to a Projec
 <h2>What Happens Next?</h2>
 
 <p>
-After creating the Workspace:
+After creating the Environment:
 </p>
 
 <ul>
 
     <li>
-        The Workspace becomes available under the selected Project.
+        The Environment becomes available under the selected Workspace.
     </li>
 
     <li>
-        You can create one or more Environments.
+        You can deploy one or more Infrastructure Stacks.
     </li>
 
     <li>
-        Configure credentials and policies.
+        Manage environment-specific configurations and credentials.
     </li>
 
     <li>
-        Deploy and manage application resources.
+        Isolate deployments for development, staging, or production.
     </li>
 
     <li>
-        Collaborate securely with your team.
+        Enable secure collaboration across deployment environments.
     </li>
 
 </ul>
@@ -284,7 +284,7 @@ After creating the Workspace:
 
     <p>
 
-        Organize Workspaces based on teams, applications, or environments to simplify access management and resource isolation.
+        Create separate Environments for development, staging, and production to isolate deployments and maintain consistent infrastructure management.
 
     </p>
 
@@ -296,7 +296,7 @@ After creating the Workspace:
         class="nav-button previous"
         href="{{ '/docs/organization/workspaces/' | relative_url }}">
 
-        ← Workspaces
+        ← Create Workspaces using Platform as Code
 
     </a>
 
@@ -309,4 +309,3 @@ After creating the Workspace:
     </a>
 
 </div>
-
