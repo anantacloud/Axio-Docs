@@ -16,7 +16,7 @@ nav_order: 1
 
 # Create Environment from UI
 
-Create an environment through the Axio web interface to organize and manage application deployments. Environments help isolate configurations, credentials, and infrastructure for different stages such as development, staging, and production.
+Create an Environment through the Axio web interface. Environments help isolate deployments, configurations, credentials, and infrastructure for different stages such as Development, Staging, and Production.
 
 </div>
 
@@ -42,8 +42,6 @@ Create an environment through the Axio web interface to organize and manage appl
 ---
 
 ## Step-by-Step Guide
-
-<div class="step-wrapper">
 
 <!-- LEFT -->
 
@@ -116,11 +114,8 @@ Create an environment through the Axio web interface to organize and manage appl
             <ul>
 
                 <li><strong>Name</strong> (Unique identifier)</li>
-
                 <li><strong>Display Name</strong></li>
-
                 <li><strong>Workspace</strong></li>
-
                 <li><strong>Description</strong> (Optional)</li>
 
             </ul>
@@ -180,9 +175,7 @@ Create an environment through the Axio web interface to organize and manage appl
 
             Name *
 
-            <input
-                type="text"
-                placeholder="e.g. production">
+            <input type="text" placeholder="e.g. production">
 
         </label>
 
@@ -190,9 +183,7 @@ Create an environment through the Axio web interface to organize and manage appl
 
             Display Name *
 
-            <input
-                type="text"
-                placeholder="Production Environment">
+            <input type="text" placeholder="Production Environment">
 
         </label>
 
@@ -203,10 +194,8 @@ Create an environment through the Axio web interface to organize and manage appl
             <select>
 
                 <option>Select Workspace</option>
-
-                <option>Platform Team</option>
-
-                <option>Application Team</option>
+                <option>Development Workspace</option>
+                <option>Production Workspace</option>
 
             </select>
 
@@ -216,8 +205,7 @@ Create an environment through the Axio web interface to organize and manage appl
 
             Description
 
-            <textarea
-                rows="4"
+            <textarea rows="4"
                 placeholder="Enter description (optional)"></textarea>
 
         </label>
@@ -225,15 +213,11 @@ Create an environment through the Axio web interface to organize and manage appl
         <div class="form-actions">
 
             <button class="cancel-btn">
-
                 Cancel
-
             </button>
 
             <button class="create-btn">
-
                 Create
-
             </button>
 
         </div>
@@ -242,20 +226,16 @@ Create an environment through the Axio web interface to organize and manage appl
 
 </div>
 
-</div>
-
 ---
 
 ## Expected Result
-
-<ul>
 
 <li>
     The Environment becomes available under the selected Workspace.
 </li>
 
 <li>
-    Applications and services can be deployed into the Environment.
+    Deploy applications and services into the Environment.
 </li>
 
 <li>
@@ -267,10 +247,8 @@ Create an environment through the Axio web interface to organize and manage appl
 </li>
 
 <li>
-    Monitor deployments and manage infrastructure resources.
+    Monitor and manage environment resources.
 </li>
-
-</ul>
 
 ---
 
@@ -287,13 +265,11 @@ Create an environment through the Axio web interface to organize and manage appl
 
 <p>
 
-    Use clear names such as <strong>development</strong>, <strong>staging</strong>, and <strong>production</strong> to make environments easy to identify and manage across workspaces.
+Use clear names such as <strong>Development</strong>, <strong>Staging</strong>, and <strong>Production</strong> to make environments easy to identify and manage across Workspaces.
 
 </p>
 
 ---
-
-<div class="page-navigation">
 
 <a
     class="nav-button previous"
@@ -310,5 +286,3 @@ Create an environment through the Axio web interface to organize and manage appl
     Create using Platform as Code →
 
 </a>
-
-</div>
