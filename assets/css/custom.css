@@ -1207,12 +1207,12 @@ METHOD CARD
 }
 
 .method-card.ui{
-    background:#fbfffc;
+    background:#fcfbff;
     border: 1px solid #D8C7FF;
 }
 
 .method-card.git{
-    background:#fcfbff;
+    background:#fbfffc;
     border: 1px solid #CFEFD8;
 }
 
