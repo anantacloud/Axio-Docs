@@ -294,7 +294,7 @@ After creating the Workspace:
 
     <a
         class="nav-button previous"
-        href="{{ '/docs/organization/workspaces/' | relative_url }}">
+        href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
 
         ← Create Project from UI
 
