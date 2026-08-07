@@ -230,7 +230,7 @@ href="{{ '/docs/organization/overview/' | relative_url }}">
 class="nav-button next"
 href="{{ '/docs/organization/projects/create-project-platform-as-code/' | relative_url }}">
 
-Create using Platform as Code →
+Create Projects using Platform as Code →
 
 </a>
 
