@@ -2,7 +2,7 @@
 layout: default
 title: Catalog
 has_toc: false
-Parent: Platform as Code
+parent: Platform as Code
 nav_order: 1
 ---
 
