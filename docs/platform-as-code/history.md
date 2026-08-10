@@ -1,153 +1,287 @@
 ---
 layout: default
 title: History
-parent: Platform as Code
+Parent: Platform as Code
 nav_order: 4
+has_toc: false
 ---
 
-<div class="announcement-box">
-    <div class="announcement-content">
+<div class="history-page">
 
-        <div>
+    <!-- HEADER -->
+
+    <div class="history-header-row">
+
+        <div class="history-title">
+
             <h2>History</h2>
 
             <p>
-                Review the activity and outcomes of Platform as Code
-                synchronization and resource changes.
+                History provides a complete audit trail of all synchronization
+                runs triggered by Git or scheduled in Axio.
             </p>
 
         </div>
 
-    </div>
-</div>
+        <div class="history-prerequisite">
 
-<div class="prerequisite-header">
+            <div class="history-prerequisite-icon">
+                <img src="{{ '/assets/icons/info.svg' | relative_url }}"
+                     alt="Info">
+            </div>
 
-    <img src="{{ '/assets/icons/info.svg' | relative_url }}"
-         alt="Info">
+            <div>
 
-    <h3>What is History?</h3>
+                <h3>Prerequisite</h3>
 
-</div>
+                <p>
+                    Platform as Code must be enabled and a synchronization
+                    must have been executed.
+                </p>
 
-<p>
-    History provides an audit-style view of Platform as Code activity. Use it
-    to understand what changed, which Git commit introduced the change, and
-    whether the synchronization completed successfully.
-</p>
-
-<div class="step-left">
-
-    <div class="step-item">
-
-        <div class="step-circle-ui">1</div>
-
-        <div class="step-content">
-
-            <h3>Open History</h3>
-
-            <p>
-                Navigate to <strong>Platform as Code → History</strong> to
-                review previous synchronization and resource activity.
-            </p>
+            </div>
 
         </div>
 
     </div>
 
-    <div class="step-item">
 
-        <div class="step-circle-ui">2</div>
+    <!-- MAIN CONTENT -->
 
-        <div class="step-content">
+    <div class="history-main-grid">
 
-            <h3>Identify the Change</h3>
 
-            <p>
-                Use the available activity details to identify the affected
-                resource, repository, manifest, or Git commit.
-            </p>
+        <!-- LEFT COLUMN -->
+
+        <div class="history-left">
+
+
+            <!-- WHAT IS HISTORY -->
+
+            <div class="history-info-card">
+
+                <div class="history-info-icon">
+
+                    <img src="{{ '/assets/icons/history.svg' | relative_url }}"
+                         alt="History">
+
+                </div>
+
+                <div>
+
+                    <h3>What is History?</h3>
+
+                    <p>
+                        History is an audit log of all synchronization
+                        executions. It helps you track what changed, when it
+                        changed, who triggered it, and the result of each run.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- HOW HISTORY HELPS -->
+
+            <div class="history-help-card">
+
+                <h3>How History Helps</h3>
+
+
+                <div class="history-help-item">
+
+                    <div class="history-help-icon">✓</div>
+
+                    <div>
+
+                        <h4>Audit Trail</h4>
+
+                        <p>
+                            Maintain a record of all changes for compliance
+                            and auditing.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-help-item">
+
+                    <div class="history-help-icon">⚒</div>
+
+                    <div>
+
+                        <h4>Troubleshooting</h4>
+
+                        <p>
+                            Quickly identify failures and understand what
+                            went wrong.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-help-item">
+
+                    <div class="history-help-icon">⌁</div>
+
+                    <div>
+
+                        <h4>Insights</h4>
+
+                        <p>
+                            Track trends, durations, and success rates
+                            over time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="history-help-item">
+
+                    <div class="history-help-icon">⌑</div>
+
+                    <div>
+
+                        <h4>Traceability</h4>
+
+                        <p>
+                            Trace every change back to the trigger, commit,
+                            and user.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT COLUMN -->
+
+        <div class="history-right">
+
+
+            <!-- HISTORY AT A GLANCE -->
+
+            <div class="history-glance-card">
+
+                <h3>History at a Glance</h3>
+
+                <div class="history-glance-flow">
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">▷</div>
+
+                        <h4>Triggered</h4>
+
+                        <p>
+                            Run is triggered by Git push or schedule.
+                        </p>
+
+                    </div>
+
+
+                    <div class="history-glance-line"></div>
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">☷</div>
+
+                        <h4>Captured</h4>
+
+                        <p>
+                            Run details, changes, and metadata are captured.
+                        </p>
+
+                    </div>
+
+
+                    <div class="history-glance-line"></div>
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">✓</div>
+
+                        <h4>Executed</h4>
+
+                        <p>
+                            Synchronization executes and produces results.
+                        </p>
+
+                    </div>
+
+
+                    <div class="history-glance-line"></div>
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">▣</div>
+
+                        <h4>Recorded</h4>
+
+                        <p>
+                            Results, status, duration, and logs are recorded.
+                        </p>
+
+                    </div>
+
+
+                    <div class="history-glance-line"></div>
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">◔</div>
+
+                        <h4>Available</h4>
+
+                        <p>
+                            History is available for review, analysis,
+                            and export.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIP -->
+
+            <div class="history-tip-card">
+
+                <div class="history-tip-header">
+
+                    <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
+                         alt="Tip">
+
+                    <h3>Tip</h3>
+
+                </div>
+
+                <p>
+                    Regularly review history to ensure successful
+                    synchronizations, detect recurring issues, and maintain
+                    the health of your Platform as Code resources.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
-
-    <div class="step-item">
-
-        <div class="step-circle-ui">3</div>
-
-        <div class="step-content">
-
-            <h3>Review the Outcome</h3>
-
-            <p>
-                Check whether the operation succeeded, failed, requires
-                approval, or resulted in another synchronization state.
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="step-item">
-
-        <div class="step-circle-ui">4</div>
-
-        <div class="step-content">
-
-            <h3>Troubleshoot Failed Changes</h3>
-
-            <p>
-                When a synchronization fails, use the history details together
-                with the corresponding Git commit and manifest to identify the
-                cause.
-            </p>
-
-        </div>
-
-    </div>
-
-    <div class="step-item">
-
-        <div class="step-circle-ui">5</div>
-
-        <div class="step-content">
-
-            <h3>Trace GitOps Activity</h3>
-
-            <p>
-                Use History together with Resources and Synchronizations to
-                trace how a Git change moved through the Platform as Code
-                workflow.
-            </p>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="tip-header">
-
-    <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
-         alt="Tip">
-
-    <h3>Tip</h3>
-
-</div>
-
-<p>
-    When troubleshooting a resource, start with the resource status, then check
-    the associated synchronization and use History to trace the Git commit
-    responsible for the change.
-</p>
-
-<a class="nav-button previous"
-   href="{{ '/docs/platform-as-code/synchronizations/' | relative_url }}">
-    ← Synchronizations
-</a>
-
-<a class="nav-button next"
-   href="{{ '/docs/platform-as-code/' | relative_url }}">
-    Platform as Code →
-</a>
