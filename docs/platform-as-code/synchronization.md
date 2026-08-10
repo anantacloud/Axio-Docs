@@ -158,7 +158,7 @@ has_toc: false
 
                 <div class="sync-info-icon">
 
-                    <img src="{{ '/assets/icons/synchronization.svg' | relative_url }}"
+                    <img src="{{ '/assets/icons/refresh-cw.svg' | relative_url }}"
                          alt="Synchronizations">
 
                 </div>
