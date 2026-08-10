@@ -2449,12 +2449,12 @@ hr{
 }
 
 .benefits-card li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #168451;
-    font-weight: 700;
+    content: "✓" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    color: #168451 !important;
+    font-weight: 700 !important;
 }
 
 
