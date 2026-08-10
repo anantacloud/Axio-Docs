@@ -2,6 +2,7 @@
 layout: default
 title: Platform as Code
 nav_order: 3
+has_toc: false
 ---
 
 # Platform as Code
