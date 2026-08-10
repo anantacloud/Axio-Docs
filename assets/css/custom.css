@@ -2575,3 +2575,155 @@ hr{
 
 
 
+/* =========================================================
+   WORKFLOW DIAGRAM - PERFECT HORIZONTAL ALIGNMENT
+   ========================================================= */
+
+.workflow-diagram {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+
+    padding: 22px 18px;
+
+    border: 1px solid #cfe7da;
+    border-radius: 10px;
+
+    background: #fbfefc;
+
+    box-sizing: border-box;
+}
+
+
+/* ---------------------------------------------------------
+   Each workflow item
+   --------------------------------------------------------- */
+
+.workflow-node {
+    flex: 1 1 0;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   Number box
+   --------------------------------------------------------- */
+
+.workflow-icon {
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    background: #e5f6ee;
+
+    border: 1px solid #a9ddc4;
+
+    color: #148453;
+
+    font-size: 21px;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   Heading
+   --------------------------------------------------------- */
+
+.workflow-node strong {
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+
+    min-height: 22px;
+
+    margin: 0 0 6px;
+
+    color: #111827;
+
+    font-size: 14px;
+
+    line-height: 22px;
+
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   Description
+   --------------------------------------------------------- */
+
+.workflow-node span {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 72px;
+
+    margin: 0;
+
+    color: #596273;
+
+    font-size: 12px;
+
+    line-height: 1.45;
+
+    text-align: center;
+}
+
+
+/* ---------------------------------------------------------
+   Arrows
+   --------------------------------------------------------- */
+
+.workflow-arrow {
+
+    flex: 0 0 24px;
+
+    width: 24px;
+
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0;
+
+    color: #1f2937;
+
+    font-size: 24px;
+
+    line-height: 56px;
+}
+
+
+
+
+
