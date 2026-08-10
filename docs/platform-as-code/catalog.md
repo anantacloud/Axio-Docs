@@ -6,18 +6,10 @@ Parent: Platform as Code
 nav_order: 1
 ---
 
-<div class="catalog-header-box">
 
-    <div>
-        <h2>Catalog</h2>
+# Catalog
 
-        <p>
-            Browse the resource kinds available for Platform as Code and
-            learn how to define them in YAML.
-        </p>
-    </div>
-
-</div>
+Browse the resource kinds available for Platform as Code and learn how to define them in YAML.
 
 <div class="catalog-prerequisite">
 
