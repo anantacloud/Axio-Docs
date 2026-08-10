@@ -11,26 +11,6 @@ nav_order: 1
 
 Browse the resource kinds available for Platform as Code and learn how to define them in YAML.
 
-<div class="catalog-prerequisite">
-
-    <div class="prerequisite-header">
-
-        <img src="{{ '/assets/icons/info.svg' | relative_url }}"
-             alt="Info">
-
-        <h3>What is the Catalog?</h3>
-
-    </div>
-
-    <p>
-        The Catalog is the read-only reference for every Platform as Code
-        resource kind. It provides schemas, required fields, dependencies,
-        field types, and YAML examples that you can use when authoring
-        manifests in Git.
-    </p>
-
-</div>
-
 <div class="catalog-layout">
 
     <!-- LEFT -->
