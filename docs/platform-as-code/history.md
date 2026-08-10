@@ -62,7 +62,7 @@ has_toc: false
 
                 <div class="history-info-icon">
 
-                    <img src="{{ '/assets/icons/history.svg' | relative_url }}"
+                    <img src="{{ '/assets/icons/rotate-ccw-clock.svg' | relative_url }}"
                          alt="History">
 
                 </div>
