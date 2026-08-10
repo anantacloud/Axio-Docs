@@ -4,23 +4,10 @@ title: Platform as Code
 nav_order: 3
 ---
 
-<div class="announcement-box">
+# Platform as Code
 
-    <div class="announcement-content">
-
-        <div>
-            <h2>Platform as Code</h2>
-
-            <p>
-                Manage Axio resources declaratively through Git-managed manifests,
-                resource schemas, synchronization, and change history.
-            </p>
-        </div>
-
-    </div>
-
-</div>
-
+Manage Axio resources declaratively through Git-managed manifests, resource schemas, synchronization, and change history.
+           
 <div class="prerequisite-header">
 
     <img src="{{ '/assets/icons/info.svg' | relative_url }}"
