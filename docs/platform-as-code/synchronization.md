@@ -347,39 +347,3 @@ has_toc: false
         </div>
 
     </div>
-
-
-    <!-- NAVIGATION -->
-
-    <div class="sync-navigation">
-
-        <a
-            class="sync-nav-button previous"
-            href="{{ '/docs/platform-as-code/resources/' | relative_url }}">
-
-            <span class="sync-nav-arrow">←</span>
-
-            <div>
-                <small>Previous</small>
-                Resources
-            </div>
-
-        </a>
-
-
-        <a
-            class="sync-nav-button next"
-            href="{{ '/docs/platform-as-code/history/' | relative_url }}">
-
-            <div>
-                <small>Next</small>
-                History
-            </div>
-
-            <span class="sync-nav-arrow">→</span>
-
-        </a>
-
-    </div>
-
-</div>
