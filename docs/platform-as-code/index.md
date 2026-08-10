@@ -239,24 +239,3 @@ nav_order: 3
     </div>
 
 </div>
-
-<div class="platform-navigation">
-
-    <a
-        class="nav-button previous"
-        href="{{ '/docs/organization/' | relative_url }}">
-
-        ← Organization Overview
-
-    </a>
-
-    <a
-        class="nav-button next"
-        href="{{ '/docs/platform-as-code/catalog/' | relative_url }}">
-
-        Catalog →
-
-    </a>
-
-</div>
-
