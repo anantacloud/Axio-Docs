@@ -2,24 +2,8 @@
 layout: default
 title: Create Environment using Platform as Code
 parent: Environments
-grand_parent: Organization
-nav_order: 2
+
 ---
-
-<div class="announcement-box">
-    <div class="announcement-content">
-        <img src="{{ '/assets/icons/environment.svg' | relative_url }}"
-             alt="Environment">
-
-        <div>
-            <h2>Create Environment using Platform as Code</h2>
-
-            <p>
-                Define and create environments declaratively using Axio Platform as Code.
-            </p>
-        </div>
-    </div>
-</div>
 
 <div class="prerequisite-header">
 
@@ -31,121 +15,121 @@ nav_order: 2
 </div>
 
 <p>
-    Ensure that you have permission to create Environments and that a Workspace
-    already exists.
+   Ensure that you have permission to create Environments and that a Workspace already exists.
 </p>
 
-<div class="steps-container">
+<!-- LEFT -->
 
-    <!-- LEFT -->
+<div class="step-left">
 
-    <div class="step-left">
+    <div class="step-item">
 
-        <div class="step-item">
+        <div class="step-circle-ui">1</div>
 
-            <div class="step-circle-ui">1</div>
+        <div class="step-content">
 
-            <div class="step-content">
+            <h3>Create an Environment Manifest</h3>
 
-                <h3>Create an Environment YAML file</h3>
-
-                <p>
-                    Create a YAML file that defines the Environment you want to
-                    provision in Axio.
-                </p>
-
-                <pre><code>apiVersion: platform.axio.io/v1
-kind: Environment
-metadata:
-  name: my-environment
-spec:
-  displayName: Environment-testing
-  workspace: production</code></pre>
-
-            </div>
-
-        </div>
-
-        <div class="step-item">
-
-            <div class="step-circle-ui">2</div>
-
-            <div class="step-content">
-
-                <h3>Define the Environment configuration</h3>
-
-                <p>
-                    Update the manifest with the required Environment name,
-                    display name, and Workspace.
-                </p>
-
-                <pre><code>metadata:
-  name: my-environment
-
-spec:
-  displayName: Environment-testing
-  workspace: production</code></pre>
-
-                <p>
-                    The Workspace referenced in the manifest must already exist
-                    and you must have permission to use it.
-                </p>
-
-            </div>
+            <p>
+                Create a YAML manifest that defines the Environment you want to provision using Platform as Code.
+            </p>
 
         </div>
 
     </div>
 
-    <!-- RIGHT -->
+    <div class="step-item">
 
-    <div class="step-right">
+        <div class="step-circle-ui">2</div>
 
-        <div class="step-item">
+        <div class="step-content">
 
-            <div class="step-circle-ui">3</div>
+            <h3>Define the Environment</h3>
 
-            <div class="step-content">
+            <p>
+                Specify the Environment resource using the Axio Platform as Code API version and resource kind.
+            </p>
 
-                <h3>Apply the manifest</h3>
-
-                <p>
-                    Apply the YAML manifest using the Axio Platform as Code
-                    workflow.
-                </p>
-
-                <pre><code>axio apply -f environment.yaml</code></pre>
-
-                <p>
-                    Axio reads the manifest and creates the Environment in the
-                    specified Workspace.
-                </p>
-
-            </div>
+            <p>
+                <strong>apiVersion: platform.axio.io/v1</strong>
+            </p>
 
         </div>
 
-        <div class="step-item">
+    </div>
 
-            <div class="step-circle-ui">4</div>
+    <div class="step-item">
 
-            <div class="step-content">
+        <div class="step-circle-ui">3</div>
 
-                <h3>Verify the Environment</h3>
+        <div class="step-content">
 
-                <p>
-                    After applying the manifest, verify that the Environment
-                    was created successfully.
-                </p>
+            <h3>Configure Environment Details</h3>
 
-                <pre><code>axio get environments</code></pre>
+            <p>
+                Provide the required information:
+            </p>
 
-                <p>
-                    The newly created Environment should appear in the list of
-                    available Environments.
-                </p>
+            <ul>
 
-            </div>
+                <li><strong>Name</strong> (Unique identifier)</li>
+
+                <li><strong>Display Name</strong></li>
+
+                <li><strong>Workspace</strong></li>
+
+                <li><strong>Sensitive</strong> (Optional)</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="step-item">
+
+        <div class="step-circle-ui">4</div>
+
+        <div class="step-content">
+
+            <h3>Save the YAML Manifest</h3>
+
+            <p>
+                Save the configuration as an Environment YAML file, for example
+                <strong>environment.yaml</strong>.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="step-item">
+
+        <div class="step-circle-ui">5</div>
+
+        <div class="step-content">
+
+            <h3>Apply the Manifest</h3>
+
+            <p>
+                Apply the Environment manifest using the Axio Platform as Code workflow.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="step-item">
+
+        <div class="step-circle-ui">6</div>
+
+        <div class="step-content">
+
+            <h3>Environment Created</h3>
+
+            <p>
+                The Environment will be created under the specified Workspace and can be used to deploy infrastructure stacks.
+            </p>
 
         </div>
 
@@ -153,21 +137,137 @@ spec:
 
 </div>
 
-<div class="tip-box">
+<!-- RIGHT -->
+
+<div class="step-right">
+
+    <div class="project-form">
+
+        <div class="form-header">
+
+            <h2>Environment Manifest</h2>
+
+        </div>
+
+        <label>
+
+            Name *
+
+            <input
+                type="text"
+                placeholder="e.g. production">
+
+        </label>
+
+        <label>
+
+            Display Name *
+
+            <input
+                type="text"
+                placeholder="Production Environment">
+
+        </label>
+
+        <label>
+
+            Workspace *
+
+            <select>
+
+                <option>Select Workspace</option>
+
+                <option>Development</option>
+
+                <option>Production</option>
+
+            </select>
+
+        </label>
+
+        <label>
+
+            Sensitive
+
+            <select>
+
+                <option>false</option>
+
+                <option>true</option>
+
+            </select>
+
+        </label>
+
+        <div class="form-actions">
+
+            <button class="cancel-btn">
+
+                Cancel
+
+            </button>
+
+            <button class="create-btn">
+
+                Apply
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<li>
+    The Environment becomes available under the selected Workspace.
+</li>
+
+<li>
+    The Environment configuration can be managed through a YAML manifest.
+</li>
+
+<li>
+    You can deploy one or more Infrastructure Stacks.
+</li>
+
+<li>
+    Manage environment-specific configurations and credentials.
+</li>
+
+<li>
+    Isolate deployments for development, staging, or production.
+</li>
+
+<div class="tip-header">
+
+    <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
+         alt="Tip">
 
     <h3>Tip</h3>
 
-    <p>
-        Store your Environment YAML manifests in Git so that configuration
-        changes can be version controlled, reviewed, and reused across
-        environments.
-    </p>
-
 </div>
 
----
+<p>
 
-← [Create Workspace from UI](create-workspace-ui)
+    Store Environment manifests in Git so that configuration changes can be version controlled, reviewed, and consistently applied across development, staging, and production environments.
 
-[Create Environment from UI →](create-environment-ui)
+</p>
+
+<a
+    class="nav-button previous"
+    href="{{ '/docs/organization/create-workspace-platform-as-code/' | relative_url }}">
+
+    ← Create Workspace using Platform as Code
+
+</a>
+
+<a
+    class="nav-button next"
+    href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
+
+    Create Environment from UI →
+
+</a>
+
 
