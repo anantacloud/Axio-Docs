@@ -2207,54 +2207,7 @@ hr{
 
 
 
-
-
-
-
-
-
-/* =========================================================
-   PLATFORM AS CODE PAGE
-   ========================================================= */
-
-/* ---------------------------------------------------------
-   Announcement / Page Header
-   --------------------------------------------------------- */
-
-.announcement-box {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0 0 34px;
-    padding: 28px 34px;
-    border: 1px solid #d9dde5;
-    border-radius: 12px;
-    background: #ffffff;
-}
-
-.announcement-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.announcement-box h2 {
-    margin: 0 0 10px;
-    font-size: 32px;
-    line-height: 1.2;
-    color: #111827;
-}
-
-.announcement-box p {
-    margin: 0;
-    color: #596273;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-
-/* ---------------------------------------------------------
-   Overview
-   --------------------------------------------------------- */
+/* Overview */
 
 .prerequisite-header {
     display: flex;
@@ -2278,14 +2231,12 @@ hr{
     margin: 0 0 28px;
     max-width: 1100px;
     color: #596273;
-    line-height: 1.8;
     font-size: 16px;
+    line-height: 1.8;
 }
 
 
-/* ---------------------------------------------------------
-   Workflow Heading
-   --------------------------------------------------------- */
+/* Workflow heading */
 
 .workflow-title {
     margin: 0 0 20px;
@@ -2295,52 +2246,33 @@ hr{
 }
 
 
-/* ---------------------------------------------------------
-   Main Two Column Layout
-   --------------------------------------------------------- */
+/* Main two-column layout */
 
 .platform-code-layout {
     display: grid;
-    grid-template-columns:
-        minmax(280px, 0.9fr)
-        minmax(520px, 1.55fr);
-
+    grid-template-columns: minmax(280px, 0.9fr) minmax(520px, 1.55fr);
     gap: 24px;
     align-items: stretch;
 }
 
 
-/* ---------------------------------------------------------
-   Left Workflow Card
-   --------------------------------------------------------- */
+/* Left workflow */
 
 .platform-workflow {
     position: relative;
-
-    padding: 26px 28px;
-
+    padding: 28px;
+    box-sizing: border-box;
     border: 1px solid #d9dde5;
     border-radius: 12px;
-
     background: #ffffff;
-
-    box-sizing: border-box;
 }
-
-
-/* Individual steps */
 
 .platform-workflow .step-item {
     position: relative;
-
     display: grid;
-
     grid-template-columns: 42px 1fr;
-
     column-gap: 18px;
-
     padding: 0 0 38px;
-
     margin: 0;
 }
 
@@ -2348,577 +2280,299 @@ hr{
     padding-bottom: 0;
 }
 
-
-/* Vertical line */
-
-.platform-workflow
-.step-item:not(:last-child)::before {
-
+.platform-workflow .step-item:not(:last-child)::before {
     content: "";
-
     position: absolute;
-
     left: 17px;
-
     top: 34px;
-
     bottom: 0;
-
     width: 2px;
-
     background: #b7ead1;
 }
 
-
-/* Number circle */
-
 .platform-workflow .step-circle-ui {
-
     position: relative;
-
     z-index: 2;
-
     width: 34px;
     height: 34px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 50%;
-
     background: #18a96b;
-
     color: #ffffff;
-
     font-size: 16px;
-
     font-weight: 700;
-
     line-height: 1;
 }
-
-
-/* Step content */
 
 .platform-workflow .step-content {
     padding-top: 1px;
 }
 
-.platform-workflow
-.step-content h3 {
-
+.platform-workflow .step-content h3 {
     margin: 0 0 7px;
-
-    font-size: 18px;
-
-    line-height: 1.35;
-
     color: #111827;
+    font-size: 18px;
+    line-height: 1.35;
 }
 
-.platform-workflow
-.step-content p {
-
+.platform-workflow .step-content p {
     margin: 0;
-
     color: #596273;
-
     font-size: 15px;
-
     line-height: 1.65;
 }
 
 
-/* ---------------------------------------------------------
-   Right Column
-   --------------------------------------------------------- */
+/* Right column */
 
 .platform-right {
-
     min-width: 0;
-
-    padding: 26px;
-
+    padding: 28px;
+    box-sizing: border-box;
     border: 1px solid #d9dde5;
     border-radius: 12px;
-
     background: #ffffff;
-
-    box-sizing: border-box;
 }
 
-
-/* Description */
-
 .platform-description {
-
-    margin-bottom: 20px;
-
+    margin: 0 0 20px;
     color: #1f2937;
-
     font-size: 16px;
-
     line-height: 1.7;
 }
 
-
-/* Workflow heading */
-
 .platform-workflow-heading {
-
     margin: 0 0 18px;
-
     text-align: center;
-
     color: #168451;
-
     font-size: 20px;
 }
 
 
-/* ---------------------------------------------------------
-   Workflow Diagram
-   --------------------------------------------------------- */
+/* Workflow diagram */
 
 .workflow-diagram {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 8px;
-
     padding: 22px 18px;
-
-    border: 1px solid #cfe7da;
-
-    border-radius: 10px;
-
-    background: #fbfefc;
-
     box-sizing: border-box;
+    border: 1px solid #cfe7da;
+    border-radius: 10px;
+    background: #fbfefc;
 }
 
-
-/* Workflow node */
-
 .workflow-node {
-
     flex: 1 1 0;
-
     min-width: 0;
-
     text-align: center;
 }
 
-
-/* Workflow icon */
-
 .workflow-icon {
-
     width: 56px;
     height: 56px;
-
     margin: 0 auto 12px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     border-radius: 10px;
-
     background: #e5f6ee;
-
     border: 1px solid #a9ddc4;
-
     color: #148453;
-
     font-size: 21px;
-
     font-weight: 700;
 }
 
-
-/* Workflow title */
-
 .workflow-node strong {
-
     display: block;
-
-    margin-bottom: 6px;
-
+    margin: 0 0 6px;
     color: #111827;
-
     font-size: 14px;
 }
 
-
-/* Workflow description */
-
 .workflow-node span {
-
     display: block;
-
     color: #596273;
-
     font-size: 12px;
-
     line-height: 1.45;
 }
 
-
-/* Arrow */
-
 .workflow-arrow {
-
     flex: 0 0 auto;
-
     color: #1f2937;
-
     font-size: 25px;
-
     line-height: 1;
 }
 
 
-/* ---------------------------------------------------------
-   Benefits + Tip
-   --------------------------------------------------------- */
+/* Benefits + Tip */
 
 .platform-bottom-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1fr
-        1.12fr;
-
+    grid-template-columns: 1fr 1.12fr;
     gap: 18px;
-
     margin-top: 18px;
 }
 
-
-/* Common card */
-
 .platform-card {
-
-    border: 1px solid #d9dde5;
-
-    border-radius: 10px;
-
     padding: 20px;
-
     box-sizing: border-box;
-}
-
-
-/* Benefits */
-
-.benefits-card {
-
-    background: #fbfefc;
+    border: 1px solid #d9dde5;
+    border-radius: 10px;
 }
 
 .platform-card h3 {
-
     margin: 0 0 15px;
-
     color: #168451;
-
     font-size: 19px;
 }
 
-
-/* Benefits list */
+.benefits-card {
+    background: #fbfefc;
+}
 
 .benefits-card ul {
-
     margin: 0;
-
     padding: 0;
-
     list-style: none;
 }
 
 .benefits-card li {
-
     position: relative;
-
     margin: 0 0 11px;
-
     padding-left: 24px;
-
     color: #1f2937;
-
     font-size: 14px;
-
     line-height: 1.5;
 }
 
-
-/* Check icon */
-
 .benefits-card li::before {
-
     content: "✓";
-
     position: absolute;
-
     left: 0;
-
     top: 0;
-
     color: #168451;
-
     font-weight: 700;
 }
 
 
-/* ---------------------------------------------------------
-   Tip Card
-   --------------------------------------------------------- */
+/* Tip */
 
 .platform-tip {
-
     background: #fffdf6;
-
     border-color: #eadfbd;
 }
 
-
-/* Tip header */
-
 .platform-tip .tip-header {
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
-
     margin: 0 0 12px;
 }
 
 .platform-tip .tip-header img {
-
     width: 22px;
     height: 22px;
 }
 
 .platform-tip .tip-header h3 {
-
     margin: 0;
-
     color: #d88b00;
 }
 
-
-/* Tip paragraph */
-
 .platform-tip p {
-
     margin: 0 0 14px;
-
     color: #394150;
-
     font-size: 14px;
-
     line-height: 1.6;
 }
 
-
-/* Divider */
-
 .platform-tip hr {
-
     margin: 14px 0;
-
     border: 0;
-
     border-top: 1px solid #eadfbd;
 }
 
-
-/* Example structure label */
-
 .platform-tip > strong {
-
     color: #d88b00;
-
     font-size: 13px;
 }
 
-
-/* Example code */
-
 .platform-tip pre {
-
     margin: 10px 0 0;
-
     padding: 12px;
-
     overflow-x: auto;
-
     border-radius: 7px;
-
     background: #fffaf0;
 }
 
 .platform-tip code {
-
     font-size: 12px;
-
     line-height: 1.5;
 }
 
 
-/* ---------------------------------------------------------
-   Previous / Next Navigation
-   --------------------------------------------------------- */
+/* Navigation */
 
 .platform-navigation {
-
     display: flex;
-
     justify-content: flex-end;
-
     gap: 18px;
-
     margin: 24px 0 10px;
 }
 
-
-/* Buttons */
-
 .platform-navigation .nav-button {
-
     min-width: 250px;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
     padding: 15px 22px;
-
+    box-sizing: border-box;
+    text-align: center;
     border-radius: 8px;
-
     text-decoration: none;
-
     font-weight: 600;
 }
 
-
-/* Previous */
-
-.platform-navigation
-.nav-button.previous {
-
+.platform-navigation .nav-button.previous {
     border: 1px solid #168451;
-
     background: #ffffff;
-
     color: #168451;
 }
 
-
-/* Next */
-
-.platform-navigation
-.nav-button.next {
-
+.platform-navigation .nav-button.next {
     border: 1px solid #168451;
-
     background: #168451;
-
     color: #ffffff;
 }
 
 
-/* ---------------------------------------------------------
-   Responsive
-   --------------------------------------------------------- */
+/* Responsive */
 
 @media (max-width: 1100px) {
 
     .platform-code-layout {
-
         grid-template-columns: 1fr;
-
     }
 
     .workflow-diagram {
-
         flex-wrap: wrap;
-
     }
 
     .workflow-node {
-
         flex: 1 1 28%;
-
     }
 
     .workflow-arrow {
-
         display: none;
-
     }
-
 }
 
 
-@media (max-width: 700px) {
 
-    .announcement-box {
 
-        padding: 22px;
 
-    }
 
-    .announcement-box h2 {
 
-        font-size: 27px;
 
-    }
-
-    .platform-workflow,
-    .platform-right {
-
-        padding: 20px;
-
-    }
-
-    .platform-bottom-grid {
-
-        grid-template-columns: 1fr;
-
-    }
-
-    .workflow-node {
-
-        flex: 1 1 45%;
-
-    }
-
-    .platform-navigation {
-
-        flex-direction: column;
-
-    }
-
-    .platform-navigation .nav-button {
-
-        width: 100%;
-
-        min-width: 0;
-
-    }
-
-}
 
