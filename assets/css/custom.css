@@ -5577,3 +5577,582 @@ hr{
 
 
 
+/* AXIO — Create Stack from axio.yaml */
+
+.axio-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  color: #111827;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.axio-page * {
+  box-sizing: border-box;
+}
+
+.axio-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 26px;
+  margin: 18px 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.axio-eyebrow {
+  margin-bottom: 7px;
+  color: #6d3bd1;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.axio-hero h2 {
+  margin: 0 0 8px;
+  font-size: 27px;
+  line-height: 1.2;
+}
+
+.axio-hero h2 span {
+  color: #6034c5;
+}
+
+.axio-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: #5f6675;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.axio-badge {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #eee8ff;
+  color: #5c31c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.axio-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px 17px;
+  margin-bottom: 20px;
+  border: 1px solid #ded3ff;
+  border-radius: 10px;
+  background: #f8f5ff;
+}
+
+.axio-info-icon {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  border: 1.5px solid #6939cf;
+  border-radius: 50%;
+  color: #6939cf;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.axio-info strong {
+  color: #412087;
+  font-size: 13px;
+}
+
+.axio-info p {
+  margin: 3px 0 0;
+  color: #6b647b;
+  font-size: 12px;
+}
+
+.axio-layout {
+  display: grid;
+  grid-template-columns: 38% 62%;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.axio-steps,
+.axio-card {
+  border: 1px solid #e3e6ec;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.045);
+}
+
+.axio-steps {
+  padding: 22px 20px;
+}
+
+.axio-section-title {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.axio-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 8px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #182033;
+  text-align: left;
+  cursor: pointer;
+}
+
+.axio-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 40px;
+  width: 1px;
+  height: calc(100% - 10px);
+  background: #d8d4e5;
+}
+
+.axio-step-number {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border: 1.5px solid #7041d1;
+  border-radius: 50%;
+  background: #fff;
+  color: #7041d1;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.axio-step.active {
+  background: #f8f5ff;
+}
+
+.axio-step.active .axio-step-number,
+.axio-step.done .axio-step-number {
+  background: #6939cf;
+  color: #fff;
+}
+
+.axio-step strong {
+  display: block;
+  margin: 1px 0 4px;
+  font-size: 13px;
+}
+
+.axio-step small {
+  display: block;
+  max-width: 250px;
+  color: #6b7280;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+
+.axio-card {
+  padding: 24px;
+}
+
+.axio-card-header {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.axio-card-kicker {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.axio-card h3 {
+  margin: 3px 0 0;
+  font-size: 20px;
+}
+
+.axio-progress {
+  height: 3px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eeeaf7;
+}
+
+.axio-progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: #6939cf;
+  transition: width .25s ease;
+}
+
+.axio-form-step {
+  display: none;
+  min-height: 275px;
+  padding-top: 22px;
+}
+
+.axio-form-step.active {
+  display: block;
+  animation: axioFade .2s ease;
+}
+
+@keyframes axioFade {
+  from { opacity: .25; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.axio-form-step label {
+  display: block;
+  margin: 0 0 7px;
+  color: #202738;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.axio-form-step label em {
+  color: #dc2626;
+  font-style: normal;
+}
+
+.axio-form-step input,
+.axio-form-step select {
+  width: 100%;
+  min-height: 42px;
+  padding: 9px 12px;
+  border: 1px solid #dfe3ea;
+  border-radius: 8px;
+  outline: none;
+  background: #fff;
+  color: #202738;
+  font-size: 13px;
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.axio-form-step input:focus,
+.axio-form-step select:focus {
+  border-color: #7041d1;
+  box-shadow: 0 0 0 3px rgba(112, 65, 209, .10);
+}
+
+.axio-step-help {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: #f8f9fb;
+  color: #687082;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.axio-input-with-icon {
+  position: relative;
+}
+
+.axio-input-with-icon input {
+  padding-right: 40px;
+}
+
+.axio-input-with-icon span {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  color: #343b4b;
+}
+
+.axio-two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.axio-two-columns label {
+  margin-top: 0;
+}
+
+.axio-found,
+.axio-auto {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  margin-top: 18px;
+  padding: 13px;
+  border: 1px solid #bde8d1;
+  border-radius: 9px;
+  background: #f2fcf6;
+}
+
+.axio-found > span,
+.axio-auto > span {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #2ca66f;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.axio-found strong,
+.axio-auto strong {
+  display: block;
+  color: #176c47;
+  font-size: 12px;
+}
+
+.axio-found small,
+.axio-auto small {
+  display: block;
+  margin-top: 3px;
+  color: #4c6c5c;
+  font-size: 11px;
+}
+
+.axio-review {
+  display: grid;
+  gap: 0;
+  border: 1px solid #e4e7ec;
+  border-radius: 9px;
+  overflow: hidden;
+}
+
+.axio-review div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 11px 13px;
+  border-bottom: 1px solid #edf0f3;
+  font-size: 12px;
+}
+
+.axio-review div:last-child {
+  border-bottom: 0;
+}
+
+.axio-review span {
+  color: #707887;
+}
+
+.axio-review strong {
+  color: #202738;
+  font-weight: 700;
+  text-align: right;
+}
+
+.axio-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  padding-top: 15px;
+  border-top: 1px solid #edf0f4;
+}
+
+.axio-btn {
+  min-width: 96px;
+  padding: 10px 17px;
+  border: 1px solid #dfe3e9;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.axio-btn.secondary {
+  background: #fff;
+  color: #454b59;
+}
+
+.axio-btn.primary {
+  border-color: #6939cf;
+  background: #6939cf;
+  color: #fff;
+}
+
+.axio-btn.primary:hover {
+  background: #592cb7;
+}
+
+.axio-complete {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 15px 18px;
+  border: 1px solid #bfe8d2;
+  border-radius: 11px;
+  background: #f2fcf6;
+}
+
+.axio-complete.show {
+  display: flex;
+  animation: axioFade .25s ease;
+}
+
+.axio-check {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #2ca66f;
+  color: #fff;
+  font-weight: 800;
+}
+
+.axio-complete strong,
+.axio-complete span:last-child {
+  display: block;
+}
+
+.axio-complete strong {
+  color: #176c47;
+  font-size: 13px;
+}
+
+.axio-complete span:last-child {
+  margin-top: 2px;
+  color: #5d6e65;
+  font-size: 11px;
+}
+
+.axio-reference,
+.axio-best-practices {
+  margin-top: 18px;
+  padding: 20px;
+  border: 1px solid #e3e6ec;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.axio-reference {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 13px;
+  align-items: center;
+}
+
+.axio-reference-icon {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f2efff;
+  color: #6939cf;
+  font-weight: 800;
+}
+
+.axio-reference strong,
+.axio-best-practices h3 {
+  font-size: 14px;
+}
+
+.axio-reference p {
+  margin: 4px 0 0;
+  color: #687082;
+  font-size: 12px;
+}
+
+.axio-reference a {
+  color: #5f32c4;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.axio-best-practices h3 {
+  margin: 0 0 12px;
+}
+
+.axio-best-practices ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.axio-best-practices li {
+  position: relative;
+  padding-left: 22px;
+  color: #5f6675;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.axio-best-practices li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2ca66f;
+  font-weight: 900;
+}
+
+.axio-page code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #f2f1f5;
+  color: #5830b8;
+  font-size: .92em;
+}
+
+@media (max-width: 900px) {
+  .axio-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .axio-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+
+  .axio-section-title {
+    grid-column: 1 / -1;
+  }
+
+  .axio-step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .axio-hero,
+  .axio-reference {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .axio-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .axio-two-columns,
+  .axio-best-practices ul {
+    grid-template-columns: 1fr;
+  }
+
+  .axio-card {
+    padding: 17px;
+  }
+}
+
+
