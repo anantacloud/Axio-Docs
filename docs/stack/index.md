@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stack
+title: Stacks
 nav_order: 3
 has_children: true
 ---
