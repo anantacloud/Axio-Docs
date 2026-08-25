@@ -12972,3 +12972,628 @@ table tr:hover td {
     }
 
 }
+
+
+/* =========================================================
+   Axio — Built-in Workflow Templates
+   Scoped to .builtin-workflow-page
+   ========================================================= */
+
+.builtin-workflow-page {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 28px 26px 60px;
+  color: #14213d;
+  line-height: 1.55;
+}
+
+.builtin-workflow-page * {
+  box-sizing: border-box;
+}
+
+.builtin-workflow-page h1,
+.builtin-workflow-page h2,
+.builtin-workflow-page h3,
+.builtin-workflow-page p {
+  margin-top: 0;
+}
+
+.builtin-workflow-page h1 {
+  margin-bottom: 12px;
+  color: #10203f;
+  font-size: 34px;
+  line-height: 1.15;
+  font-weight: 750;
+}
+
+.builtin-workflow-page h2 {
+  margin-bottom: 18px;
+  color: #0758d8;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.builtin-workflow-page h3 {
+  margin-bottom: 9px;
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 750;
+}
+
+.builtin-workflow-page p,
+.builtin-workflow-page li {
+  color: #253451;
+  font-size: 14px;
+}
+
+.builtin-workflow-page strong {
+  color: #12203d;
+}
+
+/* =========================================================
+   Hero
+   ========================================================= */
+
+.builtin-hero {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) minmax(620px, 1.5fr);
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+
+.builtin-hero-copy {
+  padding-top: 6px;
+}
+
+.section-eyebrow {
+  margin-bottom: 8px;
+  color: #1769e0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.builtin-hero-copy > p {
+  max-width: 530px;
+  margin-bottom: 0;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   Common Cards
+   ========================================================= */
+
+.pipeline-card,
+.template-kinds-card,
+.builtin-table-card,
+.selection-card {
+  border: 1px solid #dce5f2;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(30, 64, 110, 0.04);
+}
+
+/* =========================================================
+   Pipeline
+   ========================================================= */
+
+.pipeline-card {
+  min-height: 225px;
+  padding: 18px 22px 16px;
+}
+
+.pipeline-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.pipeline-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 4px 0 2px;
+}
+
+.pipeline-arrow {
+  flex: 0 0 auto;
+  color: #173b70;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.pipeline-step {
+  width: 76px;
+  min-width: 76px;
+  min-height: 96px;
+  padding: 9px 5px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.pipeline-step strong {
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.pipeline-icon {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.pipeline-step.purple {
+  border-color: #a88cff;
+}
+
+.pipeline-step.purple .pipeline-icon {
+  background: #f0eaff;
+  color: #7041df;
+}
+
+.pipeline-step.blue {
+  border-color: #84b4ff;
+}
+
+.pipeline-step.blue .pipeline-icon {
+  background: #e8f2ff;
+  color: #1769e0;
+}
+
+.pipeline-step.cyan {
+  border-color: #79b9ff;
+}
+
+.pipeline-step.cyan .pipeline-icon {
+  background: #e9f7ff;
+  color: #087fc0;
+}
+
+.pipeline-step.teal {
+  border-color: #7bd6cf;
+}
+
+.pipeline-step.teal .pipeline-icon {
+  background: #e8faf8;
+  color: #008f88;
+}
+
+.pipeline-step.orange {
+  border-color: #ffb35c;
+}
+
+.pipeline-step.orange .pipeline-icon {
+  background: #fff1df;
+  color: #ef8500;
+}
+
+.pipeline-step.green {
+  border-color: #72d89a;
+}
+
+.pipeline-step.green .pipeline-icon {
+  background: #e9faef;
+  color: #079347;
+}
+
+.pipeline-step.light-blue {
+  border-color: #91b8ff;
+}
+
+.pipeline-step.light-blue .pipeline-icon {
+  background: #edf4ff;
+  color: #3778e8;
+}
+
+.parallel-label {
+  width: 185px;
+  margin: 2px auto 0;
+  color: #1769e0;
+  font-size: 11px;
+  text-align: center;
+}
+
+.parallel-label span {
+  display: block;
+  height: 12px;
+  margin: -2px 0 1px;
+  border-left: 1px dashed #86aef2;
+  border-right: 1px dashed #86aef2;
+  border-bottom: 1px dashed #86aef2;
+}
+
+/* =========================================================
+   Main Content Grid
+   ========================================================= */
+
+.builtin-main-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.78fr) minmax(620px, 1.75fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.template-kinds-card,
+.builtin-table-card {
+  padding: 18px;
+}
+
+.card-heading-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 31px;
+  height: 31px;
+  margin-right: 8px;
+  border-radius: 8px;
+  background: #eaf2ff;
+  color: #1769e0;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+/* =========================================================
+   Template Types
+   ========================================================= */
+
+.template-kind {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 12px 5px;
+}
+
+.kind-icon {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #e9f2ff;
+  color: #2675e8;
+  font-size: 28px;
+}
+
+.org-kind .kind-icon {
+  background: #eaf8ee;
+  color: #159447;
+}
+
+.platform-kind h3 {
+  color: #1769e0;
+}
+
+.org-kind h3 {
+  color: #159447;
+}
+
+.template-kind ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.template-kind li {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.kind-divider {
+  height: 1px;
+  margin: 10px 0;
+  background: #e4eaf3;
+}
+
+.published-note {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 15px -1px -1px;
+  padding: 13px;
+  border: 1px solid #cfe0fa;
+  border-radius: 9px;
+  background: #f2f7ff;
+}
+
+.published-note > span {
+  color: #1769e0;
+  font-size: 19px;
+}
+
+.published-note p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* =========================================================
+   Built-in Templates Table
+   ========================================================= */
+
+.template-table-wrap {
+  overflow: hidden;
+  border: 1px solid #d9e2ee;
+  border-radius: 9px;
+}
+
+.builtin-template-table {
+  width: 100%;
+  margin: 0 !important;
+  border: 0 !important;
+  border-collapse: collapse !important;
+  box-shadow: none !important;
+}
+
+.builtin-template-table th {
+  padding: 11px 14px;
+  border-right: 1px solid #dce4ef;
+  border-bottom: 1px solid #d6e0ed;
+  background: #f7faff;
+  color: #1769e0;
+  font-size: 13px;
+  font-weight: 750;
+  text-align: left;
+}
+
+.builtin-template-table td {
+  padding: 11px 14px;
+  border-right: 1px solid #e1e7ef;
+  border-bottom: 1px solid #e1e7ef;
+  color: #253451;
+  font-size: 12.5px;
+  vertical-align: middle;
+}
+
+.builtin-template-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.builtin-template-table th:last-child,
+.builtin-template-table td:last-child {
+  border-right: 0;
+}
+
+.builtin-template-table tbody tr:hover {
+  background: #fbfdff;
+}
+
+.template-id {
+  font-size: 12.5px;
+  white-space: nowrap;
+}
+
+.template-id.terraform,
+.template-id.opentofu {
+  color: #6540d8;
+}
+
+.template-id.pulumi {
+  color: #1769e0;
+}
+
+.template-id.cloudformation {
+  color: #16a05d;
+}
+
+.template-id.crossplane {
+  color: #0a9d91;
+}
+
+.template-id.bicep {
+  color: #1769e0;
+}
+
+.template-id.destroy {
+  color: #e53935;
+}
+
+.template-id.drift {
+  color: #08a39a;
+}
+
+.operation-heading {
+  padding: 10px 14px;
+  border-top: 1px solid #dfe6f0;
+  border-bottom: 1px solid #dfe6f0;
+  background: #f8f3ff;
+  color: #6340d6;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.operation-table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* =========================================================
+   Template Selection
+   ========================================================= */
+
+.selection-card {
+  margin-top: 22px;
+  padding: 17px 20px 18px;
+  border-color: #d3e5d9;
+  background: #fbfefc;
+}
+
+.selection-card h2 {
+  margin-bottom: 14px;
+  color: #139149;
+}
+
+.selection-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #e7f7ec;
+  color: #139149;
+}
+
+.selection-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.selection-item {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.check-icon {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  display: grid;
+  place-items: center;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: #e5f7eb;
+  color: #159447;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.selection-item p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.selection-item code {
+  padding: 1px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: #eef7f0;
+  color: #16874a;
+  font-size: 0.9em;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .builtin-hero,
+  .builtin-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selection-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .builtin-workflow-page {
+    padding: 22px 18px 45px;
+  }
+
+  .builtin-workflow-page h1 {
+    font-size: 30px;
+  }
+
+  .pipeline-flow {
+    justify-content: flex-start;
+  }
+
+  .selection-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .template-table-wrap {
+    overflow-x: auto;
+  }
+
+  .builtin-template-table {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 600px) {
+  .builtin-workflow-page {
+    padding: 18px 12px 38px;
+  }
+
+  .builtin-workflow-page h1 {
+    font-size: 26px;
+  }
+
+  .builtin-hero-copy > p {
+    font-size: 15px;
+  }
+
+  .pipeline-card {
+    padding: 15px 12px;
+  }
+
+  .pipeline-card h2 {
+    font-size: 18px;
+  }
+
+  .pipeline-step {
+    width: 68px;
+    min-width: 68px;
+  }
+
+  .builtin-main-grid {
+    gap: 15px;
+  }
+
+  .template-kinds-card,
+  .builtin-table-card {
+    padding: 14px;
+  }
+
+  .selection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selection-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .builtin-workflow-page h1 {
+    font-size: 24px;
+  }
+
+  .pipeline-flow {
+    justify-content: flex-start;
+  }
+
+  .pipeline-step {
+    width: 62px;
+    min-width: 62px;
+    min-height: 88px;
+  }
+
+  .pipeline-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .pipeline-arrow {
+    font-size: 20px;
+  }
+}
+
