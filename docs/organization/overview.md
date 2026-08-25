@@ -57,18 +57,18 @@ An organization consists of the following core resources.
     </div>
 
     <p>
-        Logical grouping of Workspaces and Environments.
+        Group related workspaces and manage project-level configuration and access.
     </p>
 
     <h4>Features</h4>
 
     <ul>
 
-        <li>Group related workloads</li>
+        <li>Group related workspaces</li>
 
-        <li>Manage project-level access</li>
+        <li>Mark projects as sensitive</li>
 
-        <li>Configure project settings</li>
+        <li>Archive projects when eligible</li>
 
     </ul>
 
@@ -98,21 +98,18 @@ An organization consists of the following core resources.
     </div>
 
     <p>
-
-        Isolated areas for applications,
-        services and infrastructure.
-
+        Workspaces belong to projects and contain environments for applications, services, and infrastructure.
     </p>
 
     <h4>Features</h4>
 
     <ul>
 
-        <li>Contains environments</li>
+        <li>Contain environments</li>
 
-        <li>Team isolation</li>
+        <li>Assign or unassign from projects</li>
 
-        <li>Independent configuration</li>
+        <li>Mark workspaces as sensitive</li>
 
     </ul>
 
@@ -142,23 +139,18 @@ An organization consists of the following core resources.
     </div>
 
     <p>
-
-        Deployment targets like
-        Development,
-        Staging,
-        and Production.
-
+        Environments are deployment targets where workflows run and deployments are approved.
     </p>
 
     <h4>Features</h4>
 
     <ul>
 
-        <li>Multiple environment types</li>
+        <li>Assign users or groups as owners</li>
 
-        <li>Deployment configuration</li>
+        <li>Run workflows and approve deployments</li>
 
-        <li>Environment-specific settings</li>
+        <li>Configure self-approval behavior</li>
 
     </ul>
 
@@ -200,19 +192,16 @@ Choose the workflow that best matches your team's development process.
     </div>
 
     <p>
-
-        Create resources directly
-        from the Axio web interface.
-
+        Create and manage Projects, Workspaces, and Environments directly from the Axio web interface.
     </p>
 
     <ul>
 
-        <li>Quick setup</li>
+        <li>Create Projects, Workspaces, and Environments</li>
 
-        <li>Manual administration</li>
+        <li>Manage resource hierarchy and assignments</li>
 
-        <li>Learning the platform</li>
+        <li>Configure owners, sensitivity, and archiving</li>
 
     </ul>
 
@@ -232,25 +221,23 @@ Choose the workflow that best matches your team's development process.
     </div>
 
     <p>
-
-        Define Projects, Workspaces,
-        and Environments using YAML
-        or JSON files stored in Git.
-
+       Define Projects, Workspaces, and Environments using YAML or JSON files stored in Git.
     </p>
 
     <ul>
 
-        <li>GitOps workflows</li>
+        <li>Define organization resources as code</li>
 
-        <li>Version control</li>
+        <li>Track changes with Git</li>
 
-        <li>Automation</li>
+        <li>Automate resource configuration</li>
 
-        <li>Audit & Compliance</li>
+        <li>Manage resources consistently</li>
 
     </ul>
 
 </div>
 
 </div>
+
+

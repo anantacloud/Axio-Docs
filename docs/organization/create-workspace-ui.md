@@ -14,7 +14,7 @@ nav_order: 1
 </h1>
 
 <p class="page-description">
-Create a Workspace using the Axio web interface. A Workspace belongs to a Project and provides an isolated area for managing Environments and resources.
+   Create a Workspace using the Axio web interface. A Workspace belongs to a Project and contains Environments.
 </p>
 
 <div class="prerequisite-box">
@@ -254,19 +254,23 @@ After creating the Workspace:
     </li>
 
     <li>
-        You can create one or more Environments.
+        You can create one or more Environments within the Workspace.
     </li>
 
     <li>
-        Configure credentials and policies.
+        You can mark the Workspace as <strong>Sensitive</strong>.
     </li>
 
     <li>
-        Deploy and manage application resources.
+        You can archive the Workspace when it is no longer required.
     </li>
 
     <li>
-        Collaborate securely with your team.
+        You can unassign the Workspace from its Project when needed.
+    </li>
+
+     <li>
+        Sensitive Workspaces cannot be deleted or archived and block destroy deployments for linked stacks.
     </li>
 
 </ul>
@@ -283,9 +287,7 @@ After creating the Workspace:
     </div>
 
     <p>
-
-        Organize Workspaces based on teams, applications, or environments to simplify access management and resource isolation.
-
+        Use Workspaces to organize Environments within Projects. Mark a Workspace as Sensitive when its linked resources require protection from                         deletion or destroy deployments.
     </p>
 
 </div>

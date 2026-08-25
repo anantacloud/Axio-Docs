@@ -120,7 +120,7 @@ Ensure that you have permission to create Projects in your Organization before c
 <h3>Project Created</h3>
 
 <p>
-The new Project will appear in the <strong>Projects</strong> page and is now ready to contain Workspaces and Environments.
+  The new Project is now ready to contain Workspaces. Environments are created within Workspaces.
 </p>
 
 </div>
@@ -189,9 +189,73 @@ After creating the Project:
 
 - The Project becomes available under **Organization → Projects**.
 - You can add one or more **Workspaces** to the Project.
-- Configure access permissions and policies.
-- Create Environments within Workspaces.
-- Manage all project resources from a single location.
+- Workspaces can contain **Environments**.
+- You can mark the Project as **Sensitive** when additional protection is required.
+- You can **archive the Project** when it is no longer required.
+
+
+<div class="resource-grid-info">
+
+<div class="resource-card project">
+
+    <div class="card-title">
+
+        <img class="project-icon" src="{{ '/assets/icons/folder.svg' | relative_url }}"
+             alt="Projects">
+
+        <h3>Make a Project Sensitive</h3>
+
+    </div>
+
+    <p>
+        A Project can be marked as sensitive to provide additional protection.
+    </p>
+
+    <ul>
+
+        <li>Sensitive Projects cannot be deleted</li>
+
+        <li>Sensitive Projects cannot be archived</li>
+
+        <li>Destroy deployments for linked stack are blocked</li>
+
+        <li>Resources created by linked stacks cannot be destroyed through destroy deployments</li>
+
+    </ul>
+
+</div>
+
+
+<div class="resource-card workspace">
+
+    <div class="card-title">
+
+        <img class="workspace-icon" src="{{ '/assets/icons/boxes.svg' | relative_url }}"
+             alt="Workspaces">
+
+        <h3>Archive a Project</h3>
+
+    </div>
+
+    <p>
+       Archive a Project when it is no longer actively required.
+    </p>
+
+    <h4>Features</h4>
+
+    <ul>
+
+        <li>Archived Projects are retained for reference</li>
+
+        <li>Archive Projects are not available for ongoing operations</li>
+
+        <li>Sensitive Projects cannot be archived</li>
+
+    </ul>
+
+ </div>
+
+</div>
 
 
 <div class="tip-box">
@@ -201,17 +265,13 @@ After creating the Project:
         <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
              alt="Tip">
 
-        <h3>Tip</h3>
+        <h3>Unassigning a Workspace from a Project</h3>
 
     </div>
 
-<p>
-A Project is the top-level resource container in Axio.
-</p>
-
-<p>
-Create a Project first before creating Workspaces and Environments.
-</p>
+    <p>
+        A Workspace can be unassigned from its current Project. When a Workspace is unassigned, the Workspace and any Environment associated with it are         moved to the default project.
+    </p>
 
 </div>
 

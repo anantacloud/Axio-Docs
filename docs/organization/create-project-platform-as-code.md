@@ -14,7 +14,7 @@ nav_order: 2
 </h1>
 
 <p class="page-description">
-Define a Project in a YAML or JSON file and synchronize it from your Git repository.
+   Define a Project in a YAML or JSON file and synchronize the Project with Axio from your Git repository.
 </p>
 
 <div class="important-box">
@@ -24,7 +24,7 @@ Define a Project in a YAML or JSON file and synchronize it from your Git reposit
   </div>
 
   <p>
-    Ensure that your Git repository is connected and synchronized with Axio before proceeding.
+       Ensure that your Git repository is connected to Axio before proceeding. Synchronization can be triggered manually or configured on a schedule from             <strong>Platform as Code → Synchronizations</strong>
   </p>
 </div>
 
@@ -55,8 +55,12 @@ Define a Project in a YAML or JSON file and synchronize it from your Git reposit
 <div class="step-item">
 <div class="step-circle-pac">3</div>
 <div class="step-content">
-<h3>Platform Sync</h3>
-<p>Axio automatically synchronizes with your Git repository and reads the Project definition.</p>
+<h3>Synchronize with Axio</h3>
+<p>Go to <strong>Platform as Code → Synchronizations</strong> and synchronize the connected repository with Axio.</p>
+<h4>Manual Synchronization</h4>
+<p>Click <strong>Sync now</strong> to immediately synchronize the repository and apply the Project definition.</p>
+<h4>Scheduled Synchronization</h4>
+<p>Enable <strong>Auto</strong> and configure a synchronization schedule to periodically synchronize the repository.</p>
 </div>
 </div>
 
@@ -64,7 +68,7 @@ Define a Project in a YAML or JSON file and synchronize it from your Git reposit
 <div class="step-circle-pac">4</div>
 <div class="step-content">
 <h3>Project Created</h3>
-<p>The Project appears under <strong>Organization → Projects</strong>.</p>
+<p>After a successful synchronization, the Project appears under **Organization → Projects**.</p>
 </div>
 </div>
 
@@ -139,11 +143,11 @@ spec:
 <h2>What Happens Next?</h2>
 
 <ul>
-<li>The Project is automatically created in Axio.</li>
+<li>The Project is created in Axio after a successful synchronization.</li>
 <li>The Project appears under <strong>Organization → Projects</strong>.</li>
-<li>Changes committed to Git automatically update the Project.</li>
+<li>You can synchronize changes manually using <strong>Sync now</strong>.</li>
+<li>You can enable <strong>scheduled synchronization</strong> to periodically apply Git changes.</li>
 <li>You can begin creating Workspaces inside the Project.</li>
-<li>Your Git repository remains the single source of truth.</li>
 </ul>
 
 <div class="tip-box">
@@ -154,7 +158,7 @@ spec:
 </div>
 
 <p>
-Store Project definitions in a dedicated Git repository to enable version control, code reviews, and GitOps workflows.
+   Store Project definitions in Git to maintain version history and manage changes through your repository workflow.
 </p>
 
 </div>

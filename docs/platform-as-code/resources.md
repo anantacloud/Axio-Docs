@@ -20,7 +20,7 @@ has_toc: false
 
             <p>
                 Resources represent the current state of Platform as Code objects
-                as managed by Axio.
+                as managed by Axio. The Resources page provides a read-only view of resources discovered and reconciled from Git manifests.
             </p>
 
         </div>
@@ -37,8 +37,7 @@ has_toc: false
                 <h3>Prerequisite</h3>
 
                 <p>
-                    Platform as Code must be enabled and a Git repository connected
-                    to view resources.
+                    Platform as Code must be configured and a Git repository must be connected and synchronized to discover Git-managed resources.
                 </p>
 
             </div>
@@ -63,11 +62,10 @@ has_toc: false
 
                 <div class="resources-step-content">
 
-                    <h3>View Resource Inventory</h3>
+                    <h3>View Git-Managed Resources</h3>
 
                     <p>
-                        View all resources discovered from Git and their current
-                        status in Axio.
+                       View the platform resources discovered and reconciled from Git manifests. The Resources page provides a read-only inventory of resources                               managed by Axio.
                     </p>
 
                 </div>
@@ -84,8 +82,7 @@ has_toc: false
                     <h3>Filter and Search</h3>
 
                     <p>
-                        Filter by category, resource kind, status, or search by
-                        name to find the resources you need.
+                        Use the available filters and search to find resources by name, type, or synchronization state.
                     </p>
 
                 </div>
@@ -99,11 +96,10 @@ has_toc: false
 
                 <div class="resources-step-content">
 
-                    <h3>Inspect Resource Details</h3>
+                    <h3>Review Git Source</h3>
 
                     <p>
-                        View detailed information about a resource including
-                        spec, status, metadata, and dependencies.
+                        Review the Git repository, branch, manifest path, and commit associated with a Git-managed resource.
                     </p>
 
                 </div>
@@ -117,11 +113,10 @@ has_toc: false
 
                 <div class="resources-step-content">
 
-                    <h3>Track Sync Status</h3>
+                    <h3>Check Sync Status</h3>
 
                     <p>
-                        Check the sync status, last synchronization time, and
-                        health of each resource.
+                        Review the synchronization status of each resource to determine whether it is ready, drifted, or has failed synchronization.
                     </p>
 
                 </div>
@@ -135,11 +130,10 @@ has_toc: false
 
                 <div class="resources-step-content">
 
-                    <h3>Drill Down to Related Resources</h3>
+                    <h3>Monitor Drift and Last Sync</h3>
 
                     <p>
-                        Navigate to related resources and dependencies from the
-                        resource details view.
+                        Check whether a resource is in sync with its Git definition and review when it was last synchronized.
                     </p>
 
                 </div>
@@ -170,270 +164,9 @@ has_toc: false
                     <h3>What are Resources?</h3>
 
                     <p>
-                        Resources are the Platform as Code objects discovered from
-                        Git and managed in Axio. They reflect the desired state
-                        defined in your YAML manifests along with their current
-                        status in the platform.
+                       Resources are Platform as Code objects discovered from Git manifests and managed by Axio.
+                       They represent the resource definitions stored in Git and their current synchronization state in Axio.
                     </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- RESOURCE TABLE -->
-
-            <div class="resources-table-card">
-
-                <div class="resources-card-title-row">
-
-                    <h3>Resources</h3>
-
-                </div>
-
-
-                <div class="resources-filters">
-
-                    <div class="resources-search">
-
-                        <span class="resources-search-icon">⌕</span>
-
-                        <input
-                            type="text"
-                            placeholder="Search resources...">
-
-                    </div>
-
-
-                    <select>
-
-                        <option>All Categories</option>
-
-                        <option>Organization</option>
-                        <option>Project</option>
-                        <option>Workspace</option>
-                        <option>Environment</option>
-                        <option>Stack</option>
-
-                    </select>
-
-
-                    <select>
-
-                        <option>All Statuses</option>
-
-                        <option>Healthy</option>
-                        <option>Degraded</option>
-                        <option>Unhealthy</option>
-                        <option>Unknown</option>
-
-                    </select>
-
-
-                    <div class="resources-updated">
-
-                        <span>⟳</span>
-
-                        Last updated: 1m ago
-
-                    </div>
-
-                </div>
-
-
-                <div class="resources-table-wrapper">
-
-                    <table class="resources-table">
-
-                        <thead>
-
-                            <tr>
-
-                                <th>Name</th>
-                                <th>Kind</th>
-                                <th>Category</th>
-                                <th>Status</th>
-                                <th>Sync Status</th>
-                                <th>Last Sync</th>
-                                <th>Actions</th>
-
-                            </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    <a href="#">production</a>
-                                </td>
-
-                                <td>Environment</td>
-
-                                <td>Environment</td>
-
-                                <td>
-                                    <span class="resource-status healthy">
-                                        ● Healthy
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <span class="sync-status">
-                                        Synced
-                                    </span>
-                                </td>
-
-                                <td>1m ago</td>
-
-                                <td class="resource-action">⋮</td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    <a href="#">production-ws</a>
-                                </td>
-
-                                <td>Workspace</td>
-
-                                <td>Workspace</td>
-
-                                <td>
-                                    <span class="resource-status healthy">
-                                        ● Healthy
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <span class="sync-status">
-                                        Synced
-                                    </span>
-                                </td>
-
-                                <td>2m ago</td>
-
-                                <td class="resource-action">⋮</td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    <a href="#">platform-team</a>
-                                </td>
-
-                                <td>Project</td>
-
-                                <td>Project</td>
-
-                                <td>
-                                    <span class="resource-status healthy">
-                                        ● Healthy
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <span class="sync-status">
-                                        Synced
-                                    </span>
-                                </td>
-
-                                <td>3m ago</td>
-
-                                <td class="resource-action">⋮</td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    <a href="#">axio-platform</a>
-                                </td>
-
-                                <td>Organization</td>
-
-                                <td>Organization</td>
-
-                                <td>
-                                    <span class="resource-status healthy">
-                                        ● Healthy
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <span class="sync-status">
-                                        Synced
-                                    </span>
-                                </td>
-
-                                <td>5m ago</td>
-
-                                <td class="resource-action">⋮</td>
-
-                            </tr>
-
-
-                            <tr>
-
-                                <td>
-                                    <a href="#">prod-stack</a>
-                                </td>
-
-                                <td>Stack</td>
-
-                                <td>Stack</td>
-
-                                <td>
-                                    <span class="resource-status degraded">
-                                        ● Degraded
-                                    </span>
-                                </td>
-
-                                <td>
-                                    <span class="sync-status">
-                                        Synced
-                                    </span>
-                                </td>
-
-                                <td>7m ago</td>
-
-                                <td class="resource-action">⋮</td>
-
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-
-                </div>
-
-
-                <div class="resources-pagination-row">
-
-                    <span>
-                        Showing 1 to 5 of 24 resources
-                    </span>
-
-                    <div class="resources-pagination">
-
-                        <button>‹</button>
-
-                        <button class="active">1</button>
-
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-
-                        <button>›</button>
-
-                    </div>
 
                 </div>
 
@@ -560,17 +293,17 @@ spec:
 
                         <li>
                             <strong class="status-green">Healthy</strong>
-                            – Resource is up to date
+                            – Resource is up to date with Git
                         </li>
 
                         <li>
-                            <strong class="status-orange">Degraded</strong>
-                            – Issues detected that need attention
+                            <strong class="status-orange">Drifted</strong>
+                            – Resource differs from Git
                         </li>
 
                         <li>
-                            <strong class="status-red">Unhealthy</strong>
-                            – Resource is in a failed state
+                            <strong class="status-red">Failed</strong>
+                            – Resource failed to synchronize
                         </li>
 
                         <li>

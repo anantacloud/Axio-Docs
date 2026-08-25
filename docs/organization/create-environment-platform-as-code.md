@@ -23,7 +23,7 @@ Define a Environment in a YAML or JSON file and synchronize it from your Git rep
     <h3>Important</h3>
   </div>
   <p>
-    Ensure that your Git repository is connected and synchronized with Axio before creating Workspaces using Platform as Code.
+    Ensure that your Git repository is connected to Axio before creating Environments using Platform as Code. After committing the Environment definition,     synchronize the repository from <strong>Platform as Code → Synchronizations</strong> manually or using a configured schedule.
   </p>
 </div>
 
@@ -54,8 +54,8 @@ Define a Environment in a YAML or JSON file and synchronize it from your Git rep
 <div class="step-item">
 <div class="step-circle-pac">3</div>
 <div class="step-content">
-<h3>Platform Synchronization</h3>
-<p>Axio automatically detects repository changes and synchronizes the Environment.</p>
+<h3>Synchronize with Axio</h3>
+<p>Go to <strong>Platform as Code → Synchronizations</strong> and synchronize the connected repository manually using <strong>Sync now</strong>, or configure a schedule for automatic synchronization.</p>
 </div>
 </div>
 
@@ -63,7 +63,7 @@ Define a Environment in a YAML or JSON file and synchronize it from your Git rep
 <div class="step-circle-pac">4</div>
 <div class="step-content">
 <h3>Environment Created</h3>
-<p>The Environment appears under the selected Workspace and is ready for creating Environments.</p>
+<p>After a successful synchronization, the Environment appears under the Workspace specified in its definition.</p>
 </div>
 </div>
 
@@ -144,25 +144,13 @@ spec:
 <h2>What Happens Next?</h2>
 
 <ul>
-<li>The Environment is automatically created in Axio.</li>
-<li>The Environment appears under the selected Project.</li>
-<li>Future Git commits automatically synchronize the Environment.</li>
-<li>You can create and manage Environments within the Workspace.</li>
-<li>Your Git repository remains the single source of truth.</li>
+<li>The Environment is created in Axio.</li>
+<li>The Environment appears under the Workspace specified in its definition.</li>
+<li>You can manually synchronize the repository again using <strong>Sync now</strong>.</li>
+<li>You can configure a synchronization schedule to periodically reconcile repository changes.</li>
+<li>You can manage the Environment and its associated infrastructure from the Axio platform.</li>
 </ul>
 
-<div class="tip-box">
-
-<div class="tip-header">
-<img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}" alt="Tip">
-<h3>Tip</h3>
-</div>
-
-<p>
-Keep all Environment definitions in Git to enable version control, reviews, and GitOps workflows.
-</p>
-
-</div>
 
 <div class="page-navigation">
 
@@ -172,8 +160,8 @@ href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
-Create Environment from UI→
+href="{{ '/docs/platform-as-code/' | relative_url }}">
+Platform As Code→
 </a>
 
 </div>

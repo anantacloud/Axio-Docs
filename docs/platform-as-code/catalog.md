@@ -280,19 +280,3 @@ spec:
     </div>
 
 </div>
-
-<div class="catalog-tip">
-
-    <div class="tip-header">
-        <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
-             alt="Tip">
-        <h3>Tip</h3>
-    </div>
-
-    <p>
-        Use the Catalog as the source of truth for resource schemas.
-        Always check the selected resource's required fields and dependencies
-        before committing a manifest to Git.
-    </p>
-
-</div>

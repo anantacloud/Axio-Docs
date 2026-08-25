@@ -14,7 +14,7 @@ nav_order: 2
 </h1>
 
 <p class="page-description">
-Define a Workspace in a YAML or JSON file and synchronize it from your Git repository.
+Define a Workspace in a YAML or JSON file and synchronize the Workspace with Axio from your Git repository.
 </p>
 
 <div class="important-box">
@@ -23,7 +23,7 @@ Define a Workspace in a YAML or JSON file and synchronize it from your Git repos
     <h3>Important</h3>
   </div>
   <p>
-    Ensure that your Git repository is connected and synchronized with Axio before creating Workspaces using Platform as Code.
+    Ensure that your Git repository is connected to Axio before creating Workspaces using Platform as Code. You can synchronize the repository manually or configure scheduled synchronization from Platform as Code → Synchronizations.
   </p>
 </div>
 
@@ -55,7 +55,7 @@ Define a Workspace in a YAML or JSON file and synchronize it from your Git repos
 <div class="step-circle-pac">3</div>
 <div class="step-content">
 <h3>Platform Synchronization</h3>
-<p>Axio automatically detects repository changes and synchronizes the Workspace.</p>
+<p>Synchronize the connected Git repository from Platform as Code → Synchronizations. You can click Sync now for an immediate synchronization or enable Auto to configure scheduled synchronization.</p>
 </div>
 </div>
 
@@ -63,7 +63,7 @@ Define a Workspace in a YAML or JSON file and synchronize it from your Git repos
 <div class="step-circle-pac">4</div>
 <div class="step-content">
 <h3>Workspace Created</h3>
-<p>The Workspace appears under the selected Project and is ready for creating Environments.</p>
+<p>After a successful synchronization, the Workspace appears under the selected Project and is ready for creating Environments.</p>
 </div>
 </div>
 
@@ -144,11 +144,11 @@ spec:
 <h2>What Happens Next?</h2>
 
 <ul>
-<li>The Workspace is automatically created in Axio.</li>
+<li>The Workspace is created in Axio after a successful synchronization.</li>
 <li>The Workspace appears under the selected Project.</li>
-<li>Future Git commits automatically synchronize the Workspace.</li>
+<li>You can synchronize Git changes manually using <strong>Sync now</strong>.</li>
+<li>You can enable <strong>scheduled synchronization</strong> to periodically apply Git changes.</li>
 <li>You can create and manage Environments within the Workspace.</li>
-<li>Your Git repository remains the single source of truth.</li>
 </ul>
 
 <div class="tip-box">
@@ -159,7 +159,7 @@ spec:
 </div>
 
 <p>
-Keep all Workspace definitions in Git to enable version control, reviews, and GitOps workflows.
+  Keep Workspace definitions in Git to maintain version history and manage Workspace changes through your repository workflow.
 </p>
 
 </div>

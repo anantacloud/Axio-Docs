@@ -14,7 +14,7 @@ nav_order: 1
 </h1>
 
 <p class="page-description">
-Create an Environment from the Axio user interface to organize infrastructure deployments within a Workspace. Environments help separate resources for development, testing, staging, and production while maintaining consistent configurations.
+Create an Environment using the Axio web interface. An Environment belongs to a Workspace and serves as a deployment target for infrastructure stacks.
 </p>
 
 <div class="prerequisite-box">
@@ -241,35 +241,119 @@ Create an Environment from the Axio user interface to organize infrastructure de
 
 <hr>
 
-<h2>What Happens Next?</h2>
+<div class="environment-cards">
 
-<p>
-After creating the Environment:
-</p>
+  <!-- Environment Owners -->
+  <div class="environment-card environment-card-blue">
 
-<ul>
+    <div class="environment-card-header">
+      <div class="environment-card-icon">👥</div>
+      <h3>Environment Owners</h3>
+    </div>
 
-    <li>
-        The Environment becomes available under the selected Workspace.
-    </li>
+    <div class="environment-card-divider"></div>
 
-    <li>
-        You can deploy one or more Infrastructure Stacks.
-    </li>
+    <p class="environment-card-description">
+      Assign users or groups as owners of an Environment.
+      Owners can run workflows in the Environment and
+      approve deployments when required.
+    </p>
 
-    <li>
-        Manage environment-specific configurations and credentials.
-    </li>
+    <div class="environment-card-label">
+      KEY POINTS
+    </div>
 
-    <li>
-        Isolate deployments for development, staging, or production.
-    </li>
+    <div class="environment-point">
+      <div class="environment-point-icon">▶</div>
+      <p>
+        Environment Owners can run workflows within the
+        Environment.
+      </p>
+    </div>
 
-    <li>
-        Enable secure collaboration across deployment environments.
-    </li>
+    <div class="environment-point">
+      <div class="environment-point-icon">✓</div>
+      <p>
+        Environment Owners can approve deployments when
+        approval is required.
+      </p>
+    </div>
 
-</ul>
+    <div class="environment-point">
+      <div class="environment-point-icon">👥</div>
+      <p>
+        Assign one or more users or groups as Environment
+        Owners.
+      </p>
+    </div>
+
+    <div class="environment-info environment-info-blue">
+      <div class="environment-info-icon">ⓘ</div>
+      <p>
+        At least one user or group must be assigned as an
+        Environment Owner.
+      </p>
+    </div>
+
+  </div>
+
+
+  <!-- Skip Self Approval -->
+  <div class="environment-card environment-card-green">
+
+    <div class="environment-card-header">
+      <div class="environment-card-icon">🛡</div>
+      <h3>Skip self-approval for workflows</h3>
+    </div>
+
+    <div class="environment-card-divider"></div>
+
+    <p class="environment-card-description">
+      Controls whether the user who triggered a workflow
+      can approve its deployment.
+    </p>
+
+    <div class="self-approval-option">
+
+      <div class="self-approval-icon">🔒</div>
+
+      <div>
+        <h4>If enabled</h4>
+        <p>
+          The workflow initiator cannot approve their own
+          deployment. Another Environment Owner must
+          review and approve.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="self-approval-option">
+
+      <div class="self-approval-icon">♙</div>
+
+      <div>
+        <h4>If disabled</h4>
+        <p>
+          Self-approval is allowed. However, at least one
+          user or group must be assigned as an Environment
+          Owner.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="environment-info environment-info-green">
+      <div class="environment-info-icon">ⓘ</div>
+      <p>
+        This setting helps maintain secure and compliant
+        deployment practices.
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
 <div class="tip-box">
 
@@ -278,17 +362,30 @@ After creating the Environment:
         <img src="{{ '/assets/icons/lightbulb.svg' | relative_url }}"
              alt="Tip">
 
-        <h3>Tip</h3>
+        <h3>Discover Runs</h3>
 
     </div>
 
     <p>
-
-        Create separate Environments for development, staging, and production to isolate deployments and maintain consistent infrastructure management.
-
+       Environments provide access to Discover Runs, which shows the history of PR-driven stack discovery activity. It helps you track provisioned stacks,        plans, PR-close destroy actions, discovery status, and related details.
     </p>
 
 </div>
+
+<h2>What Happens Next?</h2>
+
+<p>
+After creating the Environment:
+</p>
+
+<ul>
+    <li>The Environment becomes available under the selected <strong>Workspace</strong>.</li>
+    <li>Deploy one or more <strong>Infrastructure Stacks</strong> in the Environment.</li>
+    <li>Sensitive Environments block destroy deployments for linked stacks.</li>
+    <li>Sensitive Environments cannot be deleted or archived. </li>
+    <li>An Environment can be <strong>unassigned from its Workspace</strong> and moved to the <strong>default workspace</strong>.</li>
+    <li>Environments can be <strong>archived</strong> when eligible. </li>
+</ul>
 
 <div class="page-navigation">
 
