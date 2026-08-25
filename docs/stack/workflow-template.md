@@ -208,9 +208,9 @@ This section provides a high-level overview of Workflow Templates and how they a
 
 </div>
 
-  <a href="{{ '/docs/stack/deployment-template-format.html' | relative_url }}"
+  <a href="{{ '/docs/stack/built-in.html' | relative_url }}"
      class="workflow-start-button">
-    Next: Deployment Template Format
+    Next: Built-In Template
     <span>→</span>
   </a>
 
