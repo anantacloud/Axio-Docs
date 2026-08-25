@@ -505,9 +505,7 @@ table td {
     color: #6b7280;
 }
 
-.site-button {
-    display: none !important;
-}  
+ 
 
 /* ==========================================================
    TABLET RESPONSIVE
@@ -12818,4 +12816,159 @@ table tr:hover td {
   .compliance-risk-reports .crr-table td {
     min-width: 150px;
   }
+}
+
+
+/* =========================================================
+   ADDITIONAL RESPONSIVE FIXES
+   Only for layouts without responsive overrides
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   Platform as Code
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .platform-bottom-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .platform-workflow .step-item {
+        grid-template-columns: 34px minmax(0, 1fr);
+        column-gap: 14px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Catalog Workflow
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .catalog-workflow .step-item {
+        grid-template-columns: 34px minmax(0, 1fr);
+        column-gap: 14px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Resources Workflow
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .resources-step-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+        column-gap: 14px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Synchronizations Workflow
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .sync-step-item {
+        grid-template-columns: 32px minmax(0, 1fr);
+        column-gap: 14px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   History Help Items
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .history-help-item {
+        grid-template-columns: 48px minmax(0, 1fr);
+        column-gap: 14px;
+    }
+
+    .history-help-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Axio Variable Rows
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+    .axio-variable-row {
+        grid-template-columns:
+            minmax(0, 1fr)
+            16px
+            minmax(0, 1fr)
+            28px;
+        gap: 5px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Resource Information Cards
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .resource-grid-info {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   Small Mobile
+   --------------------------------------------------------- */
+
+@media (max-width: 480px) {
+
+    .platform-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .platform-workflow .step-item,
+    .catalog-workflow .step-item {
+        grid-template-columns: 30px minmax(0, 1fr);
+        column-gap: 12px;
+    }
+
+    .resources-step-item,
+    .sync-step-item {
+        grid-template-columns: 30px minmax(0, 1fr);
+        column-gap: 12px;
+    }
+
+    .history-help-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+        column-gap: 12px;
+    }
+
+    .history-help-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
 }
