@@ -5,6 +5,8 @@ theme: just-the-docs
 
 url: ""
 
+permalink: pretty
+
 search_enabled: true
 
 color_scheme: light
