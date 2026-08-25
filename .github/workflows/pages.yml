@@ -34,6 +34,15 @@ jobs:
       - name: Build site
         run: bundle exec jekyll build
 
+
+      - name: Check generated pages
+        run: |
+          echo "Checking organization pages..."
+          find _site/docs/organization -maxdepth 3 -type f | sort
+
+          echo "Checking overview..."
+          ls -la _site/docs/organization/overview/ || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
