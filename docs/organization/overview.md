@@ -115,7 +115,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="../workspaces/">
+        <a href="/docs/organization/create-workspace-ui/">
 
             Explore Workspaces →
 
@@ -156,7 +156,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="../environments/">
+        <a href="/docs/organization/create-environment-ui/">
 
             Explore Environments →
 
