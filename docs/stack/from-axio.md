@@ -313,3 +313,24 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_url }}">
+
+← Create Environment using Platform as Code
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/docs/stack/manual-step/' | relative_url }}">
+
+Create Stack manually →
+
+</a>
+
+</div>
+

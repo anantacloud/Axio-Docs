@@ -217,4 +217,24 @@ This section provides a high-level overview of Workflow Templates and how they a
 </div>
 
 
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/docs/stack/manual-step/' | relative_url }}">
+
+← Create Stack Manually
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/docs/stack/built-in/' | relative_url }}">
+
+Built In Template →
+
+</a>
+
+</div>
+
 

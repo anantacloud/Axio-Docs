@@ -109,3 +109,23 @@ nav_order: 2
 
 </div>
 
+
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/docs/stack/manual-step/' | relative_url }}">
+
+← Create Stack Manually 
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/docs/platform-as-code/' | relative_url }}">
+
+Platform as Code → 
+
+</a>
+
+</div>

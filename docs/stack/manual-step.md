@@ -392,3 +392,24 @@ document.addEventListener("DOMContentLoaded", function () {
   render(1);
 });
 </script>
+
+
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/docs/stack/from-axio/' | relative_url }}">
+
+← Create Stack from axio.yaml
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/docs/stack/workflow-template/' | relative_url }}">
+
+Workflow Template →
+
+</a>
+
+</div>

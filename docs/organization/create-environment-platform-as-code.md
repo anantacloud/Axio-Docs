@@ -160,8 +160,8 @@ href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/platform-as-code/' | relative_url }}">
-Platform As Code→
+href="{{ '/docs/stack/from-axio/' | relative_url }}">
+Create Stack from axio.yaml →
 </a>
 
 </div>
