@@ -241,3 +241,22 @@ Choose the workflow that best matches your team's development process.
 </div>
 
 
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ 'index' | relative_url }}">
+
+← Welcome to Axio
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
+
+Create Project using UI →
+
+</a>
+
+</div>
