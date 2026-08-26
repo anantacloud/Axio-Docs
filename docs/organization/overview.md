@@ -239,5 +239,3 @@ Choose the workflow that best matches your team's development process.
 </div>
 
 </div>
-
-
