@@ -20010,3 +20010,1010 @@ table tr:hover td {
   .audit-info{flex-wrap:wrap}
 }
 
+
+
+/* =========================================================
+   AXIO — Roles & Access
+   Page 1 — Roles & Access Overview
+   ========================================================= */
+
+.rao-page {
+  --rao-navy: #102d5c;
+  --rao-blue: #155bc4;
+  --rao-light-blue: #edf5ff;
+  --rao-border: #cbd9e8;
+  --rao-text: #18263a;
+  --rao-muted: #536176;
+  --rao-green: #15955a;
+  --rao-green-bg: #f1fbf5;
+  --rao-yellow: #d88c10;
+  --rao-yellow-bg: #fffaf0;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 14px 34px;
+  color: var(--rao-text);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.rao-page *,
+.rao-page *::before,
+.rao-page *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.rao-page-header {
+  height: 49px;
+  border-bottom: 1px solid #b8c8da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rao-brand {
+  color: var(--rao-navy);
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.rao-page-meta {
+  color: #303944;
+  font-size: 14px;
+}
+
+.rao-page-meta span {
+  margin: 0 10px;
+  color: #718094;
+}
+
+/* Title */
+
+.rao-title-block {
+  padding: 29px 0 17px;
+}
+
+.rao-title-block h1 {
+  margin: 0;
+  color: var(--rao-navy);
+  font-size: 45px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -1.1px;
+}
+
+.rao-title-block p {
+  max-width: 780px;
+  margin: 11px 0 0;
+  color: var(--rao-muted);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+/* Info boxes */
+
+.rao-info-box,
+.rao-tip-box {
+  border: 1px solid #b9d6f7;
+  border-radius: 7px;
+  background: #f4f9ff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 16px;
+}
+
+.rao-info-box p,
+.rao-tip-box p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.rao-info-icon {
+  flex: 0 0 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--rao-blue);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Sections */
+
+.rao-section {
+  margin-top: 21px;
+}
+
+.rao-section h2 {
+  margin: 0 0 6px;
+  color: var(--rao-navy);
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.rao-number {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
+  border-radius: 5px;
+  background: var(--rao-blue);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  vertical-align: -2px;
+}
+
+.rao-intro {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Built-in roles */
+
+.rao-role-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  margin-top: 9px;
+}
+
+.rao-role-card {
+  min-height: 286px;
+  border: 1px solid #cfe0f2;
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px 12px 13px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rao-role-icon {
+  width: 67px;
+  height: 67px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: var(--rao-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 33px;
+  font-weight: 700;
+}
+
+.rao-role-card h3 {
+  margin: 0 0 10px;
+  color: var(--rao-blue);
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.rao-role-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.rao-role-label {
+  margin-top: auto;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: #edf5ff;
+  color: var(--rao-blue);
+  font-size: 12px;
+}
+
+.rao-unassigned .rao-role-icon {
+  background: #f0f1f2;
+  color: #52606e;
+}
+
+.rao-unassigned .rao-role-label {
+  background: #f0f1f2;
+  color: #52606e;
+}
+
+/* Key concepts */
+
+.rao-concept-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 9px;
+}
+
+.rao-concept-card {
+  min-height: 147px;
+  border: 1px solid #d5e1ea;
+  border-radius: 7px;
+  background: #fff;
+  padding: 13px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.rao-concept-icon {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #eaf8f0;
+  color: var(--rao-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.rao-concept-card h3 {
+  margin: 1px 0 6px;
+  color: var(--rao-green);
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.rao-concept-card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* How access works */
+
+.rao-access-section {
+  margin-top: 22px;
+}
+
+.rao-flow {
+  display: grid;
+  grid-template-columns: 1fr 31px 1fr 31px 1fr 31px 1fr;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.rao-flow-item {
+  text-align: center;
+  padding: 0 9px;
+}
+
+.rao-flow-icon {
+  width: 61px;
+  height: 61px;
+  margin: 0 auto 11px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: var(--rao-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  font-weight: 800;
+}
+
+.rao-flow-item h3 {
+  margin: 0 0 8px;
+  color: var(--rao-blue);
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.rao-flow-item p {
+  max-width: 190px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.rao-flow-arrow {
+  padding-top: 20px;
+  color: var(--rao-blue);
+  font-size: 29px;
+  text-align: center;
+}
+
+/* Core principle */
+
+.rao-core-box {
+  margin-top: 18px;
+  border: 1px solid #f0cf82;
+  border-radius: 7px;
+  background: #fffaf0;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rao-core-icon {
+  flex: 0 0 35px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.rao-core-box h3 {
+  margin: 0 0 5px;
+  color: #d2860b;
+  font-size: 16px;
+}
+
+.rao-core-box p {
+  margin: 0;
+  color: var(--rao-navy);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.rao-core-box strong {
+  font-weight: 800;
+}
+
+/* Bottom tip */
+
+.rao-tip-box {
+  margin-top: 18px;
+  min-height: 49px;
+}
+
+.rao-tip-box p {
+  color: var(--rao-navy);
+}
+
+/* Just-the-Docs compatibility */
+
+.rao-page h1::before,
+.rao-page h2::before,
+.rao-page h3::before {
+  content: none !important;
+}
+
+.rao-page h1,
+.rao-page h2,
+.rao-page h3,
+.rao-page p {
+  letter-spacing: normal;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .rao-role-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rao-concept-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .rao-flow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .rao-flow-arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .rao-page {
+    padding: 0 10px 28px;
+  }
+
+  .rao-page-header {
+    height: auto;
+    padding: 9px 0;
+    gap: 10px;
+  }
+
+  .rao-brand {
+    font-size: 24px;
+  }
+
+  .rao-page-meta {
+    font-size: 11px;
+  }
+
+  .rao-title-block h1 {
+    font-size: 34px;
+  }
+
+  .rao-title-block p {
+    font-size: 16px;
+  }
+
+  .rao-role-grid,
+  .rao-concept-grid,
+  .rao-flow {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* =========================================================
+   AXIO — Roles & Access
+   Page 2 — Users & Role Assignment
+   ========================================================= */
+
+.ura-page {
+  --ura-navy: #102d5c;
+  --ura-blue: #155bc4;
+  --ura-light-blue: #edf5ff;
+  --ura-border: #cbd9e8;
+  --ura-text: #17243a;
+  --ura-muted: #536176;
+  --ura-green: #15955a;
+  --ura-green-bg: #f1fbf5;
+  --ura-orange: #e88b09;
+  --ura-orange-bg: #fff9ee;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 14px 34px;
+  color: var(--ura-text);
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.ura-page *,
+.ura-page *::before,
+.ura-page *::after {
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.ura-page-header {
+  height: 49px;
+  border-bottom: 1px solid #b8c8da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ura-brand {
+  color: var(--ura-navy);
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.ura-page-meta {
+  color: #303944;
+  font-size: 14px;
+}
+
+.ura-page-meta span {
+  margin: 0 10px;
+  color: #718094;
+}
+
+/* Title */
+
+.ura-title-block {
+  padding: 27px 0 16px;
+}
+
+.ura-title-block h1 {
+  margin: 0;
+  color: var(--ura-navy);
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.ura-title-block p {
+  max-width: 850px;
+  margin: 9px 0 0;
+  color: var(--ura-muted);
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+/* Callout */
+
+.ura-info-box,
+.ura-reminder {
+  border: 1px solid #b9d6f7;
+  border-radius: 7px;
+  background: #f4f9ff;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 16px;
+}
+
+.ura-info-box p,
+.ura-reminder p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.ura-info-box strong {
+  color: var(--ura-blue);
+}
+
+.ura-info-icon {
+  flex: 0 0 29px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background: var(--ura-blue);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Sections */
+
+.ura-section {
+  margin-top: 20px;
+}
+
+.ura-section h2 {
+  margin: 0 0 5px;
+  color: var(--ura-navy);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.ura-number {
+  display: inline-flex;
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
+  border-radius: 5px;
+  background: var(--ura-blue);
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  vertical-align: -2px;
+}
+
+.ura-intro {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Generic cards */
+
+.ura-card-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.ura-card-grid.four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.ura-card {
+  min-height: 185px;
+  border: 1px solid #cfe0f2;
+  border-radius: 8px;
+  background: #fff;
+  padding: 13px 13px 15px;
+  text-align: center;
+}
+
+.ura-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: var(--ura-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.ura-card h3 {
+  margin: 0 0 7px;
+  color: var(--ura-blue);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.ura-card p {
+  max-width: 190px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Assignment flow */
+
+.ura-assignment-flow {
+  display: grid;
+  grid-template-columns: 1fr 29px 1fr 29px 1fr 29px 1fr;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.ura-flow-card {
+  min-height: 153px;
+  border: 1px solid #cfe0f2;
+  border-radius: 7px;
+  background: #f9fcff;
+  padding: 12px 13px;
+  text-align: left;
+}
+
+.ura-flow-icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 6px;
+  border-radius: 50%;
+  background: #eaf8f0;
+  color: var(--ura-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.ura-flow-card h3 {
+  margin: 0 0 5px;
+  color: var(--ura-green);
+  font-size: 14px;
+}
+
+.ura-flow-card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.ura-flow-arrow {
+  color: var(--ura-blue);
+  font-size: 27px;
+  text-align: center;
+}
+
+/* Role table */
+
+.ura-table {
+  width: 100%;
+  margin-top: 9px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #cbd9e8;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 12.5px;
+}
+
+.ura-table th {
+  padding: 7px 11px;
+  background: var(--ura-navy);
+  color: #fff;
+  font-size: 13px;
+  text-align: left;
+  font-weight: 700;
+}
+
+.ura-table td {
+  padding: 7px 11px;
+  border-top: 1px solid #d7e1ec;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.ura-table tbody tr:nth-child(even) {
+  background: #f5f9fd;
+}
+
+.ura-role-table th:nth-child(1) {
+  width: 19%;
+}
+
+.ura-role-table th:nth-child(2) {
+  width: 46%;
+}
+
+.ura-role-table th:nth-child(3) {
+  width: 35%;
+}
+
+.ura-table-icon {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #eaf3ff;
+  color: var(--ura-blue);
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+.ura-muted-icon {
+  color: #687789;
+  background: #edf0f3;
+}
+
+/* Groups */
+
+.ura-groups-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.7fr;
+  gap: 14px;
+  margin-top: 9px;
+}
+
+.ura-group-card {
+  min-height: 125px;
+  border: 1px solid #cfe0f2;
+  border-radius: 7px;
+  background: #fff;
+  padding: 13px;
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.ura-group-icon {
+  flex: 0 0 47px;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  background: #eaf8f0;
+  color: var(--ura-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.ura-group-card h3 {
+  margin: 1px 0 6px;
+  color: var(--ura-green);
+  font-size: 15px;
+}
+
+.ura-group-card p {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.ura-benefits {
+  border: 1px solid #bfe1ce;
+  border-radius: 7px;
+  background: var(--ura-green-bg);
+  padding: 12px 14px;
+}
+
+.ura-benefits-title {
+  color: var(--ura-green);
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.ura-check-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--ura-green);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.ura-benefits ul {
+  margin: 8px 0 0 5px;
+  padding-left: 17px;
+}
+
+.ura-benefits li {
+  margin: 5px 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+
+/* Important notes */
+
+.ura-notes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 9px;
+  border: 1px solid #f0cf82;
+  border-radius: 7px;
+  background: var(--ura-orange-bg);
+  padding: 15px 10px;
+}
+
+.ura-note {
+  min-height: 66px;
+  padding: 0 17px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  border-right: 1px solid #edc66e;
+}
+
+.ura-note:last-child {
+  border-right: 0;
+}
+
+.ura-note > span {
+  flex: 0 0 34px;
+  color: var(--ura-orange);
+  font-size: 27px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.ura-note p {
+  margin: 0;
+  color: var(--ura-navy);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+/* Reminder */
+
+.ura-reminder {
+  margin-top: 18px;
+  min-height: 48px;
+}
+
+.ura-reminder strong {
+  color: var(--ura-blue);
+  margin-right: 5px;
+}
+
+/* Just The Docs compatibility */
+
+.ura-page h1::before,
+.ura-page h2::before,
+.ura-page h3::before {
+  content: none !important;
+}
+
+.ura-page h1,
+.ura-page h2,
+.ura-page h3,
+.ura-page p {
+  letter-spacing: normal;
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .ura-card-grid.four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ura-groups-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ura-benefits {
+    grid-column: 1 / -1;
+  }
+
+  .ura-notes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ura-note:nth-child(2) {
+    border-right: 0;
+  }
+
+  .ura-note:nth-child(-n+2) {
+    border-bottom: 1px solid #edc66e;
+    padding-bottom: 10px;
+  }
+
+  .ura-note:nth-child(n+3) {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .ura-assignment-flow {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .ura-flow-arrow {
+    display: none;
+  }
+
+  .ura-groups-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .ura-benefits {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 650px) {
+  .ura-page {
+    padding: 0 10px 28px;
+  }
+
+  .ura-page-header {
+    height: auto;
+    padding: 9px 0;
+    gap: 10px;
+  }
+
+  .ura-brand {
+    font-size: 24px;
+  }
+
+  .ura-page-meta {
+    font-size: 11px;
+  }
+
+  .ura-title-block h1 {
+    font-size: 34px;
+  }
+
+  .ura-card-grid.four,
+  .ura-assignment-flow,
+  .ura-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .ura-note {
+    border-right: 0;
+    border-bottom: 1px solid #edc66e;
+    padding: 10px 15px !important;
+  }
+
+  .ura-note:last-child {
+    border-bottom: 0;
+  }
+
+  .ura-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
