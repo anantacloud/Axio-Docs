@@ -2,6 +2,7 @@
 layout: default
 title: "Axio: Unified Platform Engineering Platform"
 description: "Axio is an open-source platform engineering platform by Ananta Cloud that unifies infrastructure, Kubernetes, DevOps, security, and governance into a single developer experience."
+permalink: /docs/
 nav_order: 1
 ---
 

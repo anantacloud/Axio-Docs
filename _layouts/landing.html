@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+</head>
+
+<body>
+
+  <main class="landing-page">
+
+    <header class="landing-header">
+      <div class="landing-logo">
+        <img src="{{ '/assets/images/axio-logo.png' | relative_url }}" alt="Axio">
+      </div>
+
+      <div class="landing-actions">
+        <a href="{{ '/docs/' | relative_url }}" class="landing-button primary">
+          Axio Documentation
+        </a>
+
+        <a href="{{ '/docs/organization/overview/' | relative_url }}" class="landing-button secondary">
+          Get Started
+        </a>
+      </div>
+    </header>
+
+    <section class="landing-content">
+
+      <h1>Welcome to Axio</h1>
+
+      <p class="landing-subtitle">
+        Unified Platform Engineering Platform
+      </p>
+
+      <p class="landing-description">
+        Axio brings cloud management, infrastructure automation,
+        governance, security, and AI-powered operations together
+        in one unified platform.
+      </p>
+
+      <div class="landing-buttons">
+
+        <a href="{{ '/docs/' | relative_url }}" class="landing-button primary">
+          Explore Axio
+        </a>
+
+        <a href="{{ '/docs/organization/overview/' | relative_url }}" class="landing-button secondary">
+          Get Started
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
