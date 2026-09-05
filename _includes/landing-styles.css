@@ -384,10 +384,19 @@ a.ac-dropdown-item:hover {
 }
 
 .ac-hero {
-  display: block;
-  padding: clamp(40px, 7vw, 80px) 0 clamp(28px, 4vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(100svh - 88px);
+  padding: clamp(40px, 7vw, 80px) 0 clamp(48px, 6vw, 72px);
   max-width: 900px;
   animation: ac-rise 700ms ease both;
+}
+
+@supports not (height: 100svh) {
+  .ac-hero {
+    min-height: calc(100vh - 88px);
+  }
 }
 
 .ac-hero-copy {
@@ -443,7 +452,10 @@ a.ac-dropdown-item:hover {
 .ac-tool-pill {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
+  box-sizing: border-box;
+  width: 148px;
   padding: 10px 16px 10px 12px;
   border-radius: 10px;
   background: #ffffff;
