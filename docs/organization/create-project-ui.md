@@ -4,7 +4,7 @@ title: Create Project from UI
 parent: Projects
 grand_parent: Organization
 nav_order: 1
-permalink: /axio/organization/create-project-ui/
+permalink: /axio/organization/project/create-project-ui/
 ---
 
 # <img src="{{ '/assets/icons/folder.svg' | relative_url }}" class="page-icon" alt="Project"> Create a Project from UI
@@ -281,7 +281,7 @@ After creating the Project:
 
 <a
 class="nav-button previous"
-href="{{ '/axio/organization/overview/' | relative_url }}">
+href="{{ '/axio/organization/project/overview/' | relative_url }}">
 
 ← Overview
 
@@ -289,7 +289,7 @@ href="{{ '/axio/organization/overview/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/organization/create-project-platform-as-code/' | relative_url }}">
+href="{{ '/axio/organization/project/create-project-platform-as-code/' | relative_url }}">
 
 Create Project using Platform as Code →
 
