@@ -3,6 +3,7 @@ layout: default
 title: Policies
 parent: Security & Governance
 nav_order: 2
+permalink: /axio/security-governance/policies/
 ---
 
 <div class="policy-page">
