@@ -3,9 +3,8 @@ layout: default
 title: Tenant
 parent: Administration
 nav_order: 2
+permalink: /axio/administration/tenant/
 ---
-
-<link rel="stylesheet" href="{{ '/assets/css/administration-tenant.css' | relative_url }}">
 
 <div class="tenant-page">
 
