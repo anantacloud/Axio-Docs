@@ -4,7 +4,7 @@ title: Create Project from UI
 parent: Projects
 grand_parent: Organization
 nav_order: 1
-permalink: /axio/organization/create-project-ui/
+permalink: /axio/project/create-project-ui/
 ---
 
 # <img src="{{ '/assets/icons/folder.svg' | relative_url }}" class="page-icon" alt="Project"> Create a Project from UI
