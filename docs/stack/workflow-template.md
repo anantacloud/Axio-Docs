@@ -5,6 +5,7 @@ parent: Stacks
 nav_order: 3
 has_children: true
 has_toc: false
+permalink: /axio/stack/workflow-template/
 ---
 
 # Workflow Templates
@@ -221,7 +222,7 @@ This section provides a high-level overview of Workflow Templates and how they a
 
 <a
 class="nav-button previous"
-href="{{ '/docs/stack/manual-step/' | relative_url }}">
+href="{{ '/axio/stack/manual-step/' | relative_url }}">
 
 ← Create Stack Manually
 
@@ -229,7 +230,7 @@ href="{{ '/docs/stack/manual-step/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/docs/stack/built-in/' | relative_url }}">
+href="{{ '/axio/stack/built-in/' | relative_url }}">
 
 Built In Template →
 
