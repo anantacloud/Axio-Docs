@@ -4,6 +4,7 @@ title: Security & Governance
 nav_order: 6
 has_children: true
 has_toc: false
+permalink: /axio/security-governance/
 ---
 
 <div class="governance-dashboard">
