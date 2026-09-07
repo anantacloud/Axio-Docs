@@ -3,6 +3,7 @@ layout: default
 title: Security Insights
 parent: Security & Governance
 nav_order: 1
+permalink: /axio/security-governance/security-insights/
 ---
 
 <div class="security-insights-page">
