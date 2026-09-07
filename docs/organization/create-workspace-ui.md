@@ -296,7 +296,7 @@ After creating the Workspace:
 
     <a
         class="nav-button previous"
-        href="{{ '/organization/create-project-ui/' | relative_url }}">
+        href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
 
         ← Create Project from UI
 
@@ -304,7 +304,7 @@ After creating the Workspace:
 
     <a
         class="nav-button next"
-        href="{{ '/organization/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/docs/organization/create-workspace-platform-as-code/' | relative_url }}">
 
         Create Workspace using Platform as Code →
 
