@@ -3,6 +3,7 @@ layout: default
 title: AI Prompt Library
 parent: AI
 nav_order: 2
+permalink: /axio/ai/prompt-library/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/ai-prompt-library.css' | relative_url }}">
