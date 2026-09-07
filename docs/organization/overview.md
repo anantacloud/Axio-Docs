@@ -253,7 +253,7 @@ href="{{ '/axio/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/axio/organization/create-project-ui/' | relative_url }}">
+href="{{ '/axio/organization/project/create-project-ui/' | relative_url }}">
 
 Create Project using UI →
 
