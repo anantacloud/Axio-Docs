@@ -3,6 +3,7 @@ layout: default
 title: Audit Logs
 parent: Administration
 nav_order: 9
+permalink: /axio/administration/role-and-access/audit-logs/
 ---
 
 <div class="audit-page">
