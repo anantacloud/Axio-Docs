@@ -3,6 +3,7 @@ layout: default
 title: Create Stack from axio.yaml
 parent: Stacks
 nav_order: 1
+permalink: /axio/stack/from-axio/
 ---
 
 # Create a Stack from `axio.yaml`
@@ -318,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <a
 class="nav-button previous"
-href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_url }}">
+href="{{ '/axio/organization/create-environment-platform-as-code/' | relative_url }}">
 
 ← Create Environment using Platform as Code
 
@@ -326,7 +327,7 @@ href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_ur
 
 <a
 class="nav-button next"
-href="{{ '/docs/stack/manual-step/' | relative_url }}">
+href="{{ '/axio/stack/manual-step/' | relative_url }}">
 
 Create Stack manually →
 
