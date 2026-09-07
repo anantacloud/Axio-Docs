@@ -297,15 +297,15 @@ After creating the Workspace:
 
     <a
         class="nav-button previous"
-        href="{{ '/axio/organization/create-project-ui/' | relative_url }}">
+        href="{{ '/axio/organization/project/create-project-platform-as-code/' | relative_url }}">
 
-        ← Create Project from UI
+        ← Create Project using Platform as Code
 
     </a>
 
     <a
         class="nav-button next"
-        href="{{ '/axio/organization/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/axio/organization/workspace/create-workspace-platform-as-code/' | relative_url }}">
 
         Create Workspace using Platform as Code →
 
