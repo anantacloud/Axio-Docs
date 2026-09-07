@@ -156,7 +156,7 @@ spec:
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/axio/organization/create-environment-ui/' | relative_url }}">
+href="{{ '/axio/organization/environment/create-environment-ui/' | relative_url }}">
 ← Create Environment from UI
 </a>
 
