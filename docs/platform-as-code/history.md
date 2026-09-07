@@ -4,6 +4,7 @@ title: History
 parent: Platform as Code
 nav_order: 4
 has_toc: false
+permalink: /axio/platform-as-code/history/
 ---
 
 <div class="history-page">
