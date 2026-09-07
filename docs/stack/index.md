@@ -3,7 +3,7 @@ layout: default
 title: Stacks
 nav_order: 3
 has_children: true
-permalink: /axio/stack/from-axio/
+permalink: /axio/stack/
 ---
 
 <script>
