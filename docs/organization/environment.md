@@ -8,9 +8,9 @@ permalink: /axio/organization/environment/
 ---
 
 <script>
-window.location.replace("{{ '/axio/organization/create-environment-ui/' | relative_url }}");
+window.location.replace("{{ '/axio/organization/environment/create-environment-ui/' | relative_url }}");
 </script>
 
 <noscript>
-  <meta http-equiv="refresh" content="0; url={{ '/axio/organization/create-environment-ui/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/axio/organization/environment/create-environment-ui/' | relative_url }}">
 </noscript>
