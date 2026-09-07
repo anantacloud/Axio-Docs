@@ -392,7 +392,7 @@ After creating the Environment:
 
     <a
         class="nav-button previous"
-        href="{{ '/axio/organization/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/axio/organization/workspace/create-workspace-platform-as-code/' | relative_url }}">
 
         ← Create Workspace using Platform as Code
 
