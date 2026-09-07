@@ -4,6 +4,7 @@ title: Resources
 parent: Platform as Code
 nav_order: 2
 has_toc: false
+permalink: /axio/platform-as-code/resources/
 ---
 
 <div class="resources-page">
