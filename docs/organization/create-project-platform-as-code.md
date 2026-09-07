@@ -166,12 +166,12 @@ spec:
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
+href="{{ '/organization/create-project-ui/' | relative_url }}">
 ← Create Project from UI
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/organization/create-workspace-ui/' | relative_url }}">
+href="{{ '/organization/create-workspace-ui/' | relative_url }}">
 Create Workspace from UI →
 </a>
 
