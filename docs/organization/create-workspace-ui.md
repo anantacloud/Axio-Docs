@@ -4,7 +4,7 @@ title: Create Workspace from UI
 parent: Workspaces
 grand_parent: Organization
 nav_order: 1
-permalink: /axio/organization/create-workspace-ui/
+permalink: /axio/organization/workspace/create-workspace-ui/
 ---
 
 <h1>
