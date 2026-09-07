@@ -4,7 +4,7 @@ title: Workspaces
 parent: Organization
 nav_order: 3
 has_children: true
-permalink: /axio/organization/create-project-ui/
+permalink: /axio/workspace/
 ---
 
 <script>
