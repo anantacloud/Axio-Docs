@@ -6,10 +6,10 @@ has_children: true
 ---
 
 <script>
-window.location.replace("{{ '/axio/ai/assistant/' | relative_url }}");
+window.location.replace("{{ '/docs/ai/assistant/' | relative_url }}");
 </script>
 
 <noscript>
-  <meta http-equiv="refresh" content="0; url={{ '/axio/ai/assistant/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/docs/ai/assistant/' | relative_url }}">
 </noscript>
 
