@@ -280,7 +280,7 @@ After creating the Project:
 
 <a
 class="nav-button previous"
-href="{{ '/organization/overview/' | relative_url }}">
+href="{{ '/docs/organization/overview/' | relative_url }}">
 
 ← Overview
 
@@ -288,7 +288,7 @@ href="{{ '/organization/overview/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/organization/create-project-platform-as-code/' | relative_url }}">
+href="{{ '/docs/organization/create-project-platform-as-code/' | relative_url }}">
 
 Create Project using Platform as Code →
 
