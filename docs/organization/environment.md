@@ -7,9 +7,9 @@ has_children: true
 ---
 
 <script>
-window.location.replace("{{ '/organization/create-environment-ui/' | relative_url }}");
+window.location.replace("{{ '/docs/organization/create-environment-ui/' | relative_url }}");
 </script>
 
 <noscript>
-  <meta http-equiv="refresh" content="0; url={{ '/organization/create-environment-ui/' | relative_url }}">
+  <meta http-equiv="refresh" content="0; url={{ '/docs/organization/create-environment-ui/' | relative_url }}">
 </noscript>
