@@ -155,12 +155,12 @@ spec:
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/organization/create-environment-ui/' | relative_url }}">
+href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
 ← Create Environment from UI
 </a>
 
 <a class="nav-button next"
-href="{{ '/stack/from-axio/' | relative_url }}">
+href="{{ '/docs/stack/from-axio/' | relative_url }}">
 Create Stack from axio.yaml →
 </a>
 
