@@ -3,6 +3,7 @@ layout: default
 title: Built-In Template
 parent: Workflow Template
 nav_order: 2
+permalink: /axio/stack/built-in/
 ---
 
 <div class="builtin-workflow-page">
@@ -114,7 +115,7 @@ nav_order: 2
 
 <a
 class="nav-button previous"
-href="{{ '/docs/stack/manual-step/' | relative_url }}">
+href="{{ '/axio/stack/manual-step/' | relative_url }}">
 
 ← Create Stack Manually 
 
@@ -122,7 +123,7 @@ href="{{ '/docs/stack/manual-step/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/docs/platform-as-code/' | relative_url }}">
+href="{{ '/axio/platform-as-code/' | relative_url }}">
 
 Platform as Code → 
 
