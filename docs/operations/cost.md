@@ -8,12 +8,6 @@ permalink: /axio/operations/cost/
 
 <div class="cost-page">
 
-<div class="cost-breadcrumb">
-  <span>Operations</span>
-  <span>/</span>
-  <strong>Cost Explorer</strong>
-</div>
-
 <h1>Cost Explorer</h1>
 
 <p class="cost-intro">
