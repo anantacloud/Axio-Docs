@@ -281,7 +281,7 @@ After creating the Project:
 
 <a
 class="nav-button previous"
-href="{{ '/axio/organization/project/overview/' | relative_url }}">
+href="{{ '/axio/organization/overview/' | relative_url }}">
 
 ← Overview
 
