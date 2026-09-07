@@ -3,7 +3,8 @@ description: Documentation for Axio
 
 theme: just-the-docs
 
-url: ""
+url: "https://developer.anantacloud.com"
+baseurl: ""
 
 permalink: pretty
 
