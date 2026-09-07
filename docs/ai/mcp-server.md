@@ -3,6 +3,7 @@ layout: default
 title: AI MCP Servers
 parent: AI
 nav_order: 4
+permalink: /axio/ai/mcp-server/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/ai-mcp-servers.css' | relative_url }}">
