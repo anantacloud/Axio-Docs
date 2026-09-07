@@ -4,7 +4,7 @@ title: Create Environment from UI
 parent: Environments
 grand_parent: Organization
 nav_order: 1
-permalink: /axio/organization/create-environment-ui/
+permalink: /axio/organization/environment/create-environment-ui/
 ---
 
 <h1>
