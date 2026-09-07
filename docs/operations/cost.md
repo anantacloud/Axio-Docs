@@ -3,7 +3,7 @@ layout: default
 nav_order: 3
 parent: Operations
 title: Cost Explorer
-permalink	/axio/operations/cost/
+permalink: /axio/operations/cost/
 ---
 
 <div class="cost-page">
