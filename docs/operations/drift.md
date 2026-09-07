@@ -3,7 +3,7 @@ layout: default
 nav_order: 2
 parent: Operations
 title: Drift Detection
-permalink	/axio/operations/drift/
+permalink: /axio/operations/drift/
 ---
 
 # Drift Detection
