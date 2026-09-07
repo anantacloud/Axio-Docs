@@ -6,8 +6,6 @@ nav_order: 1
 permalink: /axio/ai/assistant/
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/ai-assistant.css' | relative_url }}">
-
 <div class="ai-assistant-page">
 
   <div class="ai-hero">
