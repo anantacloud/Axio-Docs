@@ -3,6 +3,7 @@ layout: default
 title: Integrations
 parent: Administration
 nav_order: 9
+permalink: /axio/administration/role-and-access/integration/
 ---
 
 <div class="integrations-page">
