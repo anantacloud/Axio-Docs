@@ -245,7 +245,7 @@ Choose the workflow that best matches your team's development process.
 
 <a
 class="nav-button previous"
-href="{{ 'index' | relative_url }}">
+href="{{ '/axio/' | relative_url }}">
 
 ← Welcome to Axio
 
