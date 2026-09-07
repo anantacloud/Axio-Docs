@@ -3,6 +3,7 @@ layout: default
 nav_order: 1
 parent: Operations
 title: Approvals
+permalink: /axio/operations/approval/
 ---
 
 # Approvals
