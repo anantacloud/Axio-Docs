@@ -4,6 +4,7 @@ title: Overview
 parent: Organization
 nav_order: 1
 description: Learn how Organization resources are structured in Axio.
+permalink: /axio/organization/overview/
 ---
 
 # Organization
