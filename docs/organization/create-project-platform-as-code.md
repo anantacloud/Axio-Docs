@@ -4,7 +4,7 @@ title: Create Project using Platform as Code
 parent: Projects
 grand_parent: Organization
 nav_order: 2
-permalink: /axio/organization/environment/create-project-platform-as-code/
+permalink: /axio/organization/project/create-project-platform-as-code/
 ---
 
 <h1>
