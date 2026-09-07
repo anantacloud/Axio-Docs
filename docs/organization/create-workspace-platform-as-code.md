@@ -4,7 +4,7 @@ title: Create Workspace using Platform as Code
 parent: Workspaces
 grand_parent: Organization
 nav_order: 2
-permalink: /axio/workspace/create-workspace-platform-as-code/
+permalink: /axio/organization/workspace/create-workspace-platform-as-code/
 ---
 
 <h1>
