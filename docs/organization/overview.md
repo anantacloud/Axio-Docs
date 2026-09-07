@@ -252,7 +252,7 @@ href="{{ 'index' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
+href="{{ '/organization/create-project-ui/' | relative_url }}">
 
 Create Project using UI →
 
