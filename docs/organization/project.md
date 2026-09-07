@@ -4,7 +4,7 @@ title: Projects
 parent: Organization
 nav_order: 2
 has_children: true
-permalink: /axio/organization/create-project-ui/
+permalink: /axio/project/
 ---
 
 <script>
