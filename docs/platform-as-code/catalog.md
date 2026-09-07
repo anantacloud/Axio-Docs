@@ -4,6 +4,7 @@ title: Catalog
 has_toc: false
 parent: Platform as Code
 nav_order: 1
+permalink: /axio/platform-as-code/catalog/
 ---
 
 
