@@ -3,6 +3,7 @@ layout: default
 title: AI Model Platform
 parent: AI
 nav_order: 3
+permalink: /axio/ai/model-platform/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/ai-model-platform.css' | relative_url }}">
