@@ -4,6 +4,7 @@ title: Create Environment from UI
 parent: Environments
 grand_parent: Organization
 nav_order: 1
+permalink: /axio/organization/create-environment-ui/
 ---
 
 <h1>
@@ -391,7 +392,7 @@ After creating the Environment:
 
     <a
         class="nav-button previous"
-        href="{{ '/docs/organization/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/axio/organization/create-workspace-platform-as-code/' | relative_url }}">
 
         ← Create Workspace using Platform as Code
 
@@ -399,7 +400,7 @@ After creating the Environment:
 
     <a
         class="nav-button next"
-        href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_url }}">
+        href="{{ '/axio/organization/create-environment-platform-as-code/' | relative_url }}">
 
         Create Environment using Platform as Code →
 
