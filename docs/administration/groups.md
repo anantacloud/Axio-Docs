@@ -3,6 +3,7 @@ layout: default
 title: Groups
 parent: Administration
 nav_order: 4
+permalink: /axio/administration/groups/
 ---
 
 <div class="admin-groups-page">
