@@ -4,6 +4,7 @@ title: Synchronizations
 parent: Platform as Code
 nav_order: 3
 has_toc: false
+permalink: /axio/platform-as-code/synchronization/
 ---
 
 <div class="sync-page">
