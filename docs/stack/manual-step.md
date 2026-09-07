@@ -3,6 +3,7 @@ layout: default
 title: Create Stack Manually
 parent: Stacks
 nav_order: 2
+permalink: /axio/stack/manual-step/
 ---
 
 # Create a Stack Manually
@@ -398,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <a
 class="nav-button previous"
-href="{{ '/docs/stack/from-axio/' | relative_url }}">
+href="{{ '/axio/stack/from-axio/' | relative_url }}">
 
 ← Create Stack from axio.yaml
 
@@ -406,7 +407,7 @@ href="{{ '/docs/stack/from-axio/' | relative_url }}">
 
 <a
 class="nav-button next"
-href="{{ '/docs/stack/workflow-template/' | relative_url }}">
+href="{{ '/axio/stack/workflow-template/' | relative_url }}">
 
 Workflow Template →
 
