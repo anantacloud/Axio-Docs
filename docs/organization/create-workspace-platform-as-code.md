@@ -4,6 +4,7 @@ title: Create Workspace using Platform as Code
 parent: Workspaces
 grand_parent: Organization
 nav_order: 2
+permalink: /axio/organization/create-workspace-platform-as-code/
 ---
 
 <h1>
@@ -167,12 +168,12 @@ spec:
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/docs/organization/create-workspace-ui/' | relative_url }}">
+href="{{ '/axio/organization/create-workspace-ui/' | relative_url }}">
 ← Create Workspace from UI
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/organization/create-environment-ui/' | relative_url }}">
+href="{{ '/axio/organization/create-environment-ui/' | relative_url }}">
 Create Environment from UI→
 </a>
 
