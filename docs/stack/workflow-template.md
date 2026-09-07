@@ -209,7 +209,7 @@ This section provides a high-level overview of Workflow Templates and how they a
 
 </div>
 
-  <a href="{{ '/docs/stack/built-in/' | relative_url }}"
+  <a href="{{ '/axio/stack/built-in/' | relative_url }}"
      class="workflow-start-button">
     Next: Built-In Template
     <span>→</span>
