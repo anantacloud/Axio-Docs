@@ -3,6 +3,7 @@ layout: default
 title: My Profile
 parent: Administration
 nav_order: 1
+permalink: /axio/administration/profile/
 ---
 
 <div class="profile-page">
