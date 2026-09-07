@@ -4,6 +4,7 @@ title: Create Project using Platform as Code
 parent: Projects
 grand_parent: Organization
 nav_order: 2
+permalink: /axio/organization/create-project-ui/
 ---
 
 <h1>
@@ -166,12 +167,12 @@ spec:
 <div class="page-navigation">
 
 <a class="nav-button previous"
-href="{{ '/docs/organization/create-project-ui/' | relative_url }}">
+href="{{ '/axio/organization/create-project-ui/' | relative_url }}">
 ← Create Project from UI
 </a>
 
 <a class="nav-button next"
-href="{{ '/docs/organization/create-workspace-ui/' | relative_url }}">
+href="{{ '/axio/organization/create-workspace-ui/' | relative_url }}">
 Create Workspace from UI →
 </a>
 
