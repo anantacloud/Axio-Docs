@@ -391,7 +391,7 @@ After creating the Environment:
 
     <a
         class="nav-button previous"
-        href="{{ '/organization/create-workspace-platform-as-code/' | relative_url }}">
+        href="{{ '/docs/organization/create-workspace-platform-as-code/' | relative_url }}">
 
         ← Create Workspace using Platform as Code
 
@@ -399,7 +399,7 @@ After creating the Environment:
 
     <a
         class="nav-button next"
-        href="{{ '/organization/create-environment-platform-as-code/' | relative_url }}">
+        href="{{ '/docs/organization/create-environment-platform-as-code/' | relative_url }}">
 
         Create Environment using Platform as Code →
 
