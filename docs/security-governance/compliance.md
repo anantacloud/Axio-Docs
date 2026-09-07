@@ -3,6 +3,7 @@ layout: default
 title: Compliance
 parent: Security & Governance
 nav_order: 3
+permalink: /axio/security-governance/compliance/
 ---
 
 <div class="compliance-risk-reports">
