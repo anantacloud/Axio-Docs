@@ -11,10 +11,6 @@ permalink: /axio/security-governance/security-insights/
   <div class="security-page-header">
     <h1>Security Insights and findings</h1>
 
-    <div class="security-meta">
-      <span><strong>Routes:</strong> <b>/security/insights</b> &nbsp; <b>/security/findings</b></span>
-      <span><strong>Who:</strong> All signed-in org members with <b>security:read</b>.</span>
-    </div>
 
     <div class="security-admin-note">
       <span class="security-note-icon">i</span>
