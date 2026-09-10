@@ -225,22 +225,3 @@ The **All Sources** tab shows the available infrastructure sources that can be s
 
 </div>
 
----
-
-<div class="drift-analytics">
-
-<div>
-
-<h2>Trends &amp; Analytics</h2>
-
-<p>Use <strong>Show trends &amp; analytics</strong> to review drift-related trends and analytics for monitored infrastructure.</p>
-
-<p>This can help identify recurring check failures and understand drift detection activity over time.</p>
-
-</div>
-
-<div class="drift-analytics-button">
-Show trends &amp; analytics →
-</div>
-
-</div>
