@@ -12,12 +12,6 @@ permalink: /axio/ai/mcp-server/
 
   <h1 class="mcp-title">AI MCP Servers</h1>
 
-  <p class="mcp-intro">
-    Browse and run Platform MCP tools, or ask the Assistant to run them.
-    Executions and HIGH-risk approvals also appear on Activity
-    <code>/ai/history?tab=tools</code>.
-  </p>
-
   <div class="mcp-info-banner">
     <span class="mcp-banner-icon">ⓘ</span>
     <span>Overview: <code>AI.md</code>.</span>
@@ -101,14 +95,6 @@ permalink: /axio/ai/mcp-server/
   </div>
 
   <h2>Platform MCP servers</h2>
-
-  <p class="mcp-section-description">
-    Registered in
-    <code>apps/api/src/platform-mcp/platform-mcp-servers.ts</code>.
-    URI pattern <code>axio://&lt;domain&gt;</code>.
-    Qualified tool names: <code>&lt;domain&gt;.&lt;tool&gt;</code>
-    (short names stay unique when possible).
-  </p>
 
   <div class="mcp-server-table-wrapper">
     <table class="mcp-server-table">
@@ -233,12 +219,7 @@ permalink: /axio/ai/mcp-server/
       <code>drift</code>,
       <code>logs</code>.
     </p>
-
-    <p>
-      <strong>Templates:</strong>
-      <code>axio://stacks/{stackId}</code>,
-      <code>axio://runs/{runId}</code>.
-    </p>
+    
   </div>
 
 </div>
