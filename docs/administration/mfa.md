@@ -140,7 +140,6 @@ permalink: /axio/administration/role-and-access/mfa/
           Use SSO with MFA enforced at your identity provider.
           Configure under <code>Authentication Providers</code>.
         </p>
-        <a href="#">Go to Authentication Providers <span>→</span></a>
       </div>
     </section>
 
@@ -152,7 +151,6 @@ permalink: /axio/administration/role-and-access/mfa/
           Configure communication channels used for SMS and email OTP under
           <code>Integrations → Communication</code>.
         </p>
-        <a href="#">Go to Communication Settings <span>→</span></a>
       </div>
     </section>
 
