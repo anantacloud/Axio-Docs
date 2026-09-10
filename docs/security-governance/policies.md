@@ -57,10 +57,6 @@ permalink: /axio/security-governance/policies/
         <h2>Policy Library</h2>
       </div>
 
-      <div class="policy-meta">
-        <span><strong>Route:</strong> /policies</span>
-        <span><strong>Who:</strong> OWNER and ADMIN</span>
-      </div>
 
       <p>The library is the full policy catalog and the org’s installed policies.</p>
 
@@ -202,12 +198,6 @@ permalink: /axio/security-governance/policies/
         <span class="policy-icon policy-icon-green">♧</span>
         <h2>Role presets (policy vs approval)</h2>
       </div>
-
-      <p>
-        Apply governance role presets from the API
-        (<code>POST /organizations/:orgId/roles/governance-presets</code>)
-        or as documented in enterprise governance.
-      </p>
 
       <table class="policy-table role-table">
         <thead>
