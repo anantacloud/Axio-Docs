@@ -28,10 +28,6 @@ permalink: /axio/security-governance/compliance/
         <h2>Compliance</h2>
       </div>
 
-      <div class="crr-meta">
-        <span><strong>Route:</strong> <b>/compliance</b></span>
-        <span><strong>Who:</strong> OWNER and ADMIN</span>
-      </div>
 
       <p>
         Compliance maps technical policy results onto <strong>frameworks</strong>
@@ -77,11 +73,6 @@ permalink: /axio/security-governance/compliance/
       <div class="crr-section-title">
         <span class="crr-icon risk-icon">▥</span>
         <h2>Risk</h2>
-      </div>
-
-      <div class="crr-meta">
-        <span><strong>Route:</strong> <b>/security/risk</b></span>
-        <span><strong>Who:</strong> OWNER and ADMIN</span>
       </div>
 
       <p>
@@ -138,11 +129,6 @@ permalink: /axio/security-governance/compliance/
       <div class="crr-section-title">
         <span class="crr-icon reports-icon">▤</span>
         <h2>Reports</h2>
-      </div>
-
-      <div class="crr-meta">
-        <span><strong>Route:</strong> <b>/governance/reports</b></span>
-        <span><strong>Who:</strong> OWNER and ADMIN</span>
       </div>
 
       <div class="crr-callout amber-callout">
