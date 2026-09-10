@@ -12,16 +12,8 @@ permalink: /axio/security-governance/
   <div class="governance-top">
 
     <div class="governance-intro">
-      <div class="governance-breadcrumb">
-        Security &amp; Governance <span>/</span> <strong>Governance Dashboard</strong>
-      </div>
 
       <h1>Governance Dashboard</h1>
-
-      <div class="governance-meta">
-        <span><strong>Route:</strong> <b>/governance</b></span>
-        <span><strong>Who:</strong> OWNER and ADMIN (<b>tenant_admin / org_owner</b>)</span>
-      </div>
 
       <p>
         The Governance Dashboard is the control center for <strong>policy posture</strong>
