@@ -244,7 +244,6 @@ Create a Stack from an existing repository that contains a valid `axio.yaml` fil
         Your repository must contain a valid <code>axio.yaml</code> file in the root directory.
       </p>
     </div>
-    <a href="#">View axio.yaml reference ↗</a>
   </div>
 
   <div class="axio-best-practices">
