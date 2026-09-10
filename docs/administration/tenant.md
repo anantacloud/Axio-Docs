@@ -37,7 +37,7 @@ permalink: /axio/administration/tenant/
               <span class="tenant-status">Platform Provider</span>
             </div>
             <p>The central organization managing cloud infrastructure and governance.</p>
-            <small>Created on Apr 12, 2023 &nbsp;•&nbsp; Owner: Sarah Kapoor</small>
+            <small>Created on Apr 12, 2023 &nbsp;•&nbsp; Owner: abc</small>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ permalink: /axio/administration/tenant/
         <div class="tenant-field">
           <label>Organization ID (8-character code)</label>
           <div class="tenant-copy-field">
-            <code>ACME7X9Q</code>
+            <code>ABCDEFGH</code>
             <button>▣ &nbsp; Copy</button>
           </div>
           <small>Use this ID at sign-in to access this organization.</small>
@@ -168,47 +168,47 @@ permalink: /axio/administration/tenant/
     <h2>Quick links</h2>
 
     <div class="tenant-links-grid">
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">⚙</span>
         <span><b>Organization Settings</b><small>Manage org details, settings and preferences</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">♙</span>
         <span><b>Users</b><small>Invite and manage members</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">♧</span>
         <span><b>Teams</b><small>Manage teams and team memberships</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">♢</span>
         <span><b>Roles &amp; Permissions</b><small>Configure roles and access permissions</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">⌑</span>
         <span><b>SSO Configuration</b><small>Manage SAML / OIDC single sign-on</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">♢</span>
         <span><b>MFA Policy</b><small>Configure multi-factor authentication policy</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">▤</span>
         <span><b>Audit Logs</b><small>View organization audit and activity logs</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">✣</span>
         <span><b>Integrations</b><small>Manage connected services and integrations</small></span>
         <strong>→</strong>
       </a>
-      <a href="#" class="tenant-link-card">
+      <a class="tenant-link-card">
         <span class="link-icon">▣</span>
         <span><b>Billing &amp; Plans</b><small>View billing, usage and subscription plans</small></span>
         <strong>→</strong>
