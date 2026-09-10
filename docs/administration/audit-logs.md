@@ -149,7 +149,7 @@ permalink: /axio/administration/role-and-access/audit-logs/
             <td>Login</td>
             <td><span class="badge success">✓ Success</span></td>
             <td><span class="severity info">INFO</span></td>
-            <td>sarah.kapoor@acme.com</td>
+            <td>sania.kapoor@abcd.com</td>
             <td>User</td><td>Web UI</td>
           </tr>
           <tr>
@@ -158,7 +158,7 @@ permalink: /axio/administration/role-and-access/audit-logs/
             <td>Update</td>
             <td><span class="badge success">✓ Success</span></td>
             <td><span class="severity info">INFO</span></td>
-            <td>amit.rawat@acme.com</td>
+            <td>amit.rawat@abcd.com</td>
             <td>aws-prod-vpc</td><td>Web UI</td>
           </tr>
           <tr>
@@ -167,7 +167,7 @@ permalink: /axio/administration/role-and-access/audit-logs/
             <td>Create</td>
             <td><span class="badge success">✓ Success</span></td>
             <td><span class="severity info">INFO</span></td>
-            <td>neha.tiwari@acme.com</td>
+            <td>neha.tiwari@abcd.com</td>
             <td>deploy-9f7ab2</td><td>Runner</td>
           </tr>
           <tr>
@@ -176,7 +176,7 @@ permalink: /axio/administration/role-and-access/audit-logs/
             <td>Delete</td>
             <td><span class="badge failure">× Failure</span></td>
             <td><span class="severity high">HIGH</span></td>
-            <td>raj.sharma@acme.com</td>
+            <td>raj.sharma@abcd.com</td>
             <td>policy-allow-ssh</td><td>Web UI</td>
           </tr>
           <tr>
@@ -185,7 +185,7 @@ permalink: /axio/administration/role-and-access/audit-logs/
             <td>Access Denied</td>
             <td><span class="badge failure">× Failure</span></td>
             <td><span class="severity critical">CRITICAL</span></td>
-            <td>john.doe@acme.com</td>
+            <td>john.doe@abcd.com</td>
             <td>project-alpha</td><td>API</td>
           </tr>
         </tbody>
