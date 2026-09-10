@@ -57,7 +57,7 @@ permalink: /axio/administration/tenant/
         <div class="tenant-field">
           <label>Organization slug</label>
           <div class="tenant-copy-field">
-            <code>acme-corp</code>
+            <code>abcd-corp</code>
             <button>▣ &nbsp; Copy</button>
           </div>
           <small>Used in URLs and invitations.</small>
