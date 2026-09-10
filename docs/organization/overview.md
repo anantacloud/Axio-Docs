@@ -75,7 +75,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="/docs/organization/create-project-ui/">
+        <a href="/axio/organization/project/create-project-ui/">
 
             Explore Projects →
 
@@ -116,7 +116,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="/docs/organization/create-workspace-ui/">
+        <a href="/axio/organization/workspace/create-workspace-ui/">
 
             Explore Workspaces →
 
@@ -157,7 +157,7 @@ An organization consists of the following core resources.
 
     <div class="card-footer">
 
-        <a href="/docs/organization/create-environment-ui/">
+        <a href="/axio/organization/environment/create-environment-ui/">
 
             Explore Environments →
 
