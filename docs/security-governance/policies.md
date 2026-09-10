@@ -22,11 +22,6 @@ permalink: /axio/security-governance/policies/
         <h2>Policy Packs</h2>
       </div>
 
-      <div class="policy-meta">
-        <span><strong>Route:</strong> /policy-packs</span>
-        <span><strong>Who:</strong> Platform engineers and admins<br><small>(platform_engineer and above)</small></span>
-      </div>
-
       <p>
         A <strong>policy pack</strong> is a versioned bundle of policies with a status
         (for example <strong>draft</strong> vs <strong>published</strong>) and assignments.
