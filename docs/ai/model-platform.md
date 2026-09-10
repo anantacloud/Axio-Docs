@@ -18,15 +18,6 @@ permalink: /axio/ai/model-platform/
     </p>
   </div>
 
-  <div class="model-info-banner">
-    <span class="model-info-icon">ⓘ</span>
-    <span>
-      Legacy <code>/ai-gateway</code> redirects here.
-      Use <code>?tab=</code> to open a tab directly
-      (overview, providers, models, routing, features, prompts, rag,
-      policies, usage).
-    </span>
-  </div>
 
   <h2>Architecture</h2>
 
@@ -79,22 +70,6 @@ permalink: /axio/ai/model-platform/
 
     </div>
 
-  </div>
-
-  <div class="model-warning-banner">
-    <span>♢</span>
-    <span>
-      Credentials at rest: AES-256-GCM via AiCredentialCryptoService.
-      Prefer platform secret refs (<code>apiKeySecretRef</code>) over inline keys.
-    </span>
-  </div>
-
-  <div class="model-success-banner">
-    <span>♧</span>
-    <span>
-      First visit can <code>POST .../bootstrap</code> to seed the provider/model
-      catalog for this organization.
-    </span>
   </div>
 
   <h2>Platform tabs</h2>
@@ -157,13 +132,6 @@ permalink: /axio/ai/model-platform/
 
   </div>
 
-  <div class="playground-banner">
-    <span>♙</span>
-    <span>
-      Playground calls <code>POST .../complete</code> with a feature key,
-      task, and privacy hint.
-    </span>
-  </div>
 
   <h2>Provider catalog (gateway)</h2>
 
