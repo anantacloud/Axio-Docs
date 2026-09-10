@@ -15,7 +15,7 @@ permalink: /axio/ai/assistant/
 
   <div class="ai-info-banner">
     <span class="ai-banner-icon">ⓘ</span>
-    <span>Powered by the Axio Model Platform. See <a href="{{ '/docs/ai/model-platform/' | relative_url }}">Model Platform</a> for supported providers and routing.</span>
+    <span>Powered by the Axio Model Platform. See <a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a> for supported providers and routing.</span>
   </div>
 
   <h2>What it does</h2>
@@ -58,7 +58,6 @@ permalink: /axio/ai/assistant/
     </div>
     <div class="ai-check-column">
       <div>✓ <span>Prompt Library hand-off (system guardrails + user starter)</span></div>
-      <div>✓ <span>Deep links: <code>?prompt=</code> and <code>?librarySlug=</code></span></div>
     </div>
   </div>
 
@@ -77,7 +76,7 @@ permalink: /axio/ai/assistant/
   <div class="ai-warning"><span>♢</span><span>Deliberately omitted fields are listed in <code>redactionFlags</code>.</span></div>
 
   <h2>Tool calling</h2>
-  <p class="ai-section-description">Tools are listed via <code>GET /ai/tools</code> and executed via <code>POST /ai/tools/execute</code>.</p>
+  
 
   <div class="ai-flow">
     <div class="ai-flow-step"><div class="flow-number purple-bg">1</div><h3>Request</h3><p>User asks a question or requests an action.</p></div>
