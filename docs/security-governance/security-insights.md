@@ -102,7 +102,6 @@ permalink: /axio/security-governance/security-insights/
 
       <ul>
         <li>Enable <strong>live scan</strong> on connected repos so new IaC is evaluated without a manual click every time.</li>
-        <li>Open <code>/security/insights?tab=scans</code> (also used after Governance live-scan bookmarks).</li>
         <li>Org default for new repos is set under <strong>Governance Dashboard → Settings</strong>.</li>
       </ul>
     </div>
@@ -156,10 +155,6 @@ permalink: /axio/security-governance/security-insights/
 
   <section class="security-section security-findings-section">
     <h2>My findings</h2>
-
-    <div class="security-route-badge">
-      <strong>Route:</strong> /security/findings
-    </div>
 
     <p>
       This is the engineer work queue: <strong>open misconfigurations and policy failures
