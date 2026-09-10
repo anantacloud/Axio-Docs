@@ -33,7 +33,7 @@ permalink: /axio/administration/tenant/
           <div class="tenant-avatar">AC</div>
           <div>
             <div class="tenant-org-name">
-              Acme Corporation
+              Abcd Corporation
               <span class="tenant-status">Platform Provider</span>
             </div>
             <p>The central organization managing cloud infrastructure and governance.</p>
