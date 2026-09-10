@@ -28,8 +28,6 @@ Overview: <code>ADMINISTRATION.md</code>　•　Org-wide MFA policy: <code>ADMI
 <div><b>⚿</b><h3>API keys</h3><p>API-key posture link under Integrations</p></div>
 </div>
 
-<div class="profile-route">✓　<code>/settings</code> and <code>/admin/platform/profile</code> also land on this page.</div>
-
 <h2>Sections</h2>
 <div class="profile-table">
 <div class="profile-head"><b>Section</b><b>Content</b></div>
