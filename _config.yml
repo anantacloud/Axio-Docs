@@ -14,10 +14,6 @@ color_scheme: light
 
 nav_sort: case_sensitive
 
-aux_links:
-  GitHub Repository:
-    - https://github.com/anantacloud/Axio-Docs.git
-
 mermaid:
   version: "11.4.1"
 
