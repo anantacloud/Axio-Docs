@@ -3,7 +3,7 @@ layout: default
 title: IaC Engines
 parent: Administration
 nav_order: 10
-permalink: /axio/administration/role-and-access/iac-engines/
+permalink: /axio/administration/iac-engines/
 ---
 
 <div class="iac-engines-page">

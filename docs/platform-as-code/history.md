@@ -7,6 +7,8 @@ has_toc: false
 permalink: /axio/platform-as-code/history/
 ---
 
+# History
+
 <div class="history-page">
 
     <!-- HEADER -->
@@ -15,11 +17,13 @@ permalink: /axio/platform-as-code/history/
 
         <div class="history-title">
 
-            <h2>History</h2>
+            <h2>GitOps History</h2>
 
             <p>
-                History provides a complete audit trail of all synchronization
-                runs triggered by Git or scheduled in Axio.
+                Open <strong>Platform as Code → History</strong> for a read-only audit of every synchronization run —
+                validation, approval, reconciliation, and final outcome. Use
+                <a href="{{ '/axio/platform-as-code/synchronization/' | relative_url }}">Synchronizations</a>
+                for operational tasks such as approving plans, reviewing run details, or cleaning recent run records.
             </p>
 
         </div>
@@ -33,17 +37,30 @@ permalink: /axio/platform-as-code/history/
 
             <div>
 
-                <h3>Prerequisite</h3>
+                <h3>Prerequisites</h3>
 
                 <p>
-                    Platform as Code must be enabled and a synchronization
-                    must have been executed.
+                    At least one synchronization must have run (manual, scheduled, or webhook-triggered).
+                    Viewers with <code>pac:read</code> can browse history; Administrators and scoped Members
+                    use the same read-only view on this tab.
                 </p>
 
             </div>
 
         </div>
 
+    </div>
+
+    <div class="important-box" style="margin-bottom: 1.5rem;">
+      <div class="important-header">
+        <img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
+        <h3>History vs Recent runs</h3>
+      </div>
+      <p>
+        <strong>History</strong> is a compact audit table across synchronization runs. For plan previews,
+        Approve/Reject actions, duration, change counts, and run cleanup, use
+        <strong>Synchronizations → Recent runs</strong>. Both views draw from the same sync-run records.
+      </p>
     </div>
 
 
@@ -73,11 +90,39 @@ permalink: /axio/platform-as-code/history/
                     <h3>What is History?</h3>
 
                     <p>
-                        History is an audit log of all synchronization
-                        executions. It helps you track what changed, when it
-                        changed, who triggered it, and the result of each run.
+                        GitOps History is an organization-wide audit log of Platform as Code synchronization
+                        executions. Each row captures when a run started, which repository and commit were
+                        reconciled, how it was triggered, whether validation and approval gates passed, and
+                        whether the plan was applied, failed, or rejected.
                     </p>
 
+                </div>
+
+            </div>
+
+
+            <!-- HISTORY TABLE -->
+
+            <div class="history-info-card" style="margin-top: 1rem;">
+
+                <div class="history-info-icon">
+                    <img src="{{ '/assets/icons/clipboard-list.svg' | relative_url }}" alt="Columns">
+                </div>
+
+                <div>
+                    <h3>History columns</h3>
+                    <ul>
+                        <li><strong>Started</strong> — Local date and time the run began</li>
+                        <li><strong>Repository</strong> — Connected Git repository name</li>
+                        <li><strong>Commit</strong> — Short SHA of the reconciled commit</li>
+                        <li><strong>Trigger</strong> — Manual (<strong>Sync now</strong>), scheduled (<strong>Auto</strong>), or webhook</li>
+                        <li><strong>Validation</strong> — Schema and dependency check outcome (<code>valid</code>, <code>invalid</code>, <code>partial</code>)</li>
+                        <li><strong>Approval</strong> — Whether a plan required or received approval (<code>pending</code>, <code>approved</code>, <code>not_required</code>, etc.)</li>
+                        <li><strong>Applied</strong> — <code>Yes</code> when reconciliation completed successfully</li>
+                        <li><strong>Failed</strong> — <code>Yes</code> when validation or apply errors occurred</li>
+                        <li><strong>Rejected</strong> — <code>Yes</code> when an approver rejected the plan</li>
+                        <li><strong>Status</strong> — Overall run state (<code>completed</code>, <code>failed</code>, <code>awaiting approval</code>, <code>running</code>, <code>rejected</code>)</li>
+                    </ul>
                 </div>
 
             </div>
@@ -96,11 +141,11 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Audit Trail</h4>
+                        <h4>Audit trail</h4>
 
                         <p>
-                            Maintain a record of all changes for compliance
-                            and auditing.
+                            Maintain a record of Git-driven platform changes for compliance
+                            and post-incident review.
                         </p>
 
                     </div>
@@ -117,8 +162,8 @@ permalink: /axio/platform-as-code/history/
                         <h4>Troubleshooting</h4>
 
                         <p>
-                            Quickly identify failures and understand what
-                            went wrong.
+                            Filter failed or rejected runs, then open the same run under
+                            <strong>Synchronizations → Recent runs</strong> for plan details and error messages.
                         </p>
 
                     </div>
@@ -132,11 +177,11 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Insights</h4>
+                        <h4>Trends</h4>
 
                         <p>
-                            Track trends, durations, and success rates
-                            over time.
+                            Scan validation and approval columns over time to spot recurring
+                            schema issues or sensitive-resource approval bottlenecks.
                         </p>
 
                     </div>
@@ -153,8 +198,9 @@ permalink: /axio/platform-as-code/history/
                         <h4>Traceability</h4>
 
                         <p>
-                            Trace every change back to the trigger, commit,
-                            and user.
+                            Trace each run back to repository, commit SHA, and trigger type.
+                            Commit author and message are included in search even though they are
+                            not shown as separate columns.
                         </p>
 
                     </div>
@@ -187,7 +233,8 @@ permalink: /axio/platform-as-code/history/
                         <h4>Triggered</h4>
 
                         <p>
-                            Run is triggered by Git push or schedule.
+                            A run starts from <strong>Sync now</strong>,
+                            an <strong>Auto</strong> schedule, or a Git webhook.
                         </p>
 
                     </div>
@@ -200,10 +247,28 @@ permalink: /axio/platform-as-code/history/
 
                         <div class="history-glance-icon">☷</div>
 
-                        <h4>Captured</h4>
+                        <h4>Discovered &amp; validated</h4>
 
                         <p>
-                            Run details, changes, and metadata are captured.
+                            Manifests are fetched from the working directory,
+                            parsed, and checked against schemas and policies.
+                        </p>
+
+                    </div>
+
+
+                    <div class="history-glance-line"></div>
+
+
+                    <div class="history-glance-item">
+
+                        <div class="history-glance-icon">≡</div>
+
+                        <h4>Planned &amp; approved</h4>
+
+                        <p>
+                            A sync plan is built; sensitive changes may require
+                            approval before apply.
                         </p>
 
                     </div>
@@ -216,10 +281,11 @@ permalink: /axio/platform-as-code/history/
 
                         <div class="history-glance-icon">✓</div>
 
-                        <h4>Executed</h4>
+                        <h4>Reconciled</h4>
 
                         <p>
-                            Synchronization executes and produces results.
+                            Creates, updates, and staged deletions are applied
+                            to platform resources (or the plan is rejected).
                         </p>
 
                     </div>
@@ -235,7 +301,8 @@ permalink: /axio/platform-as-code/history/
                         <h4>Recorded</h4>
 
                         <p>
-                            Results, status, duration, and logs are recorded.
+                            Outcome, validation, approval, and status appear
+                            in GitOps History and Recent runs.
                         </p>
 
                     </div>
@@ -248,11 +315,11 @@ permalink: /axio/platform-as-code/history/
 
                         <div class="history-glance-icon">◔</div>
 
-                        <h4>Available</h4>
+                        <h4>Reviewed</h4>
 
                         <p>
-                            History is available for review, analysis,
-                            and export.
+                            Search and refresh on the History tab, or drill into
+                            run details from Synchronizations when action is needed.
                         </p>
 
                     </div>
@@ -276,9 +343,13 @@ permalink: /axio/platform-as-code/history/
                 </div>
 
                 <p>
-                    Regularly review history to ensure successful
-                    synchronizations, detect recurring issues, and maintain
-                    the health of your Platform as Code resources.
+                    Use the search box to filter by repository, commit SHA, trigger, status, validation,
+                    or approval. Click <strong>Refresh</strong> to reload the latest runs. When a run
+                    shows <strong>awaiting approval</strong>, switch to
+                    <a href="{{ '/axio/platform-as-code/synchronization/' | relative_url }}">Synchronizations</a>
+                    to Approve or Reject, or open <strong>Operations → Approvals</strong> for the full request.
+                    Administrators can prune old entries with <strong>Clean history</strong> on the
+                    Synchronizations tab — that action is not available on History itself.
                 </p>
 
             </div>
@@ -286,3 +357,26 @@ permalink: /axio/platform-as-code/history/
         </div>
 
     </div>
+
+</div>
+
+
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/axio/platform-as-code/synchronization/' | relative_url }}">
+
+← Synchronizations
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/axio/platform-as-code/' | relative_url }}">
+
+Platform as Code →
+
+</a>
+
+</div>

@@ -8,18 +8,53 @@ permalink: /axio/stack/manual-step/
 
 # Create a Stack Manually
 
-Create a Stack by providing the Stack configuration directly in Axio instead of using an `axio.yaml` file from a repository.
+Configure a stack step by step in Axio — repository, cloud runtime, state backend, workflow template, variables, secrets, and policy packs — without uploading an `axio.yaml` manifest.
+
+<div class="important-box">
+  <div class="important-header">
+    <img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
+    <h3>Important</h3>
+  </div>
+
+  <p>
+    <strong>Manual setup does not read <code>axio.yaml</code>.</strong> The repository step connects Git for your IaC source code only; Axio does not discover or import a stack manifest during manual creation. If your repository already has <code>axio.yaml</code>, use
+    <a href="{{ '/axio/stack/from-axio/' | relative_url }}">Create Stack from axio.yaml</a> instead.
+  </p>
+
+  <p>
+    Your progress is <strong>saved automatically</strong> in the browser on each step. When you return to <strong>Stacks → New Stack → Manual setup</strong>, you can resume the draft or start fresh.
+  </p>
+</div>
+
+<div class="prerequisite-box">
+
+<div class="prerequisite-header">
+
+<img src="{{ '/assets/icons/info.svg' | relative_url }}" alt="Info">
+
+<h3>Prerequisites</h3>
+
+</div>
+
+<ul>
+<li>Permission to create stacks (<strong>Member</strong> or higher with <code>iac:manage</code> in the target project, workspace, or environment scope).</li>
+<li>A <strong>Project</strong>, <strong>Team workspace</strong>, and <strong>Environment</strong> where the stack will live (create them inline from the General step if needed).</li>
+<li>A Git connection under <strong>Administration → Integrations → Source Control</strong> for the repository that contains your IaC code.</li>
+<li>Cloud credentials under <strong>Administration → Integrations → Cloud providers</strong> when deploying to AWS, Azure, GCP, OCI, or DigitalOcean.</li>
+<li>At least one <strong>published</strong> workflow template compatible with your chosen IaC engine (and cloud provider, if applicable).</li>
+</ul>
+
+</div>
 
 <div class="axio-manual-page">
 
   <div class="axio-manual-hero">
     <div>
       <div class="axio-manual-eyebrow">STACK CREATION</div>
-      <h2>Create Stack from <span>Manual Steps</span></h2>
+      <h2>Create Stack with <span>Manual Setup</span></h2>
       <p>
-        Create a Stack by manually providing the project, workspace, environment,
-        repository, AWS credentials, IaC configuration, backend, workflow template,
-        variables, secrets, and policy packs.
+        Go to <strong>Stacks → New Stack</strong> and choose <strong>Manual setup</strong>.
+        Walk through eight wizard steps to define scope, repository, runtime, backend, workflow, and policies.
       </p>
     </div>
     <div class="axio-manual-badge">Manual Setup</div>
@@ -28,9 +63,9 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
   <div class="axio-manual-info">
     <span class="axio-manual-info-icon">i</span>
     <div>
-      <strong>Manual configuration gives you full control over the Stack.</strong>
+      <strong>Manual configuration gives you full control over the stack.</strong>
       <p>
-        Configure the required infrastructure and workflow settings directly in Axio.
+        Best when the repository has no <code>axio.yaml</code> yet, or you prefer to configure engine, backend, and workflow in the Axio UI.
       </p>
     </div>
   </div>
@@ -43,56 +78,56 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
       <button class="axio-manual-step active" data-step="1">
         <span class="axio-manual-number">1</span>
         <span>
-          <strong>Choose Project</strong>
-          <small>Select the project under which you want to create the Stack.</small>
+          <strong>General</strong>
+          <small>Project, team workspace, environment, stack name, and description.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="2">
         <span class="axio-manual-number">2</span>
         <span>
-          <strong>Select Workspace</strong>
-          <small>Choose the workspace for your Stack.</small>
+          <strong>Repository Connect</strong>
+          <small>Git connection, repository, ref, and working directory.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="3">
         <span class="axio-manual-number">3</span>
         <span>
-          <strong>Select Environment</strong>
-          <small>Choose the environment, such as Dev, Staging, or Prod.</small>
+          <strong>IaC Configuration</strong>
+          <small>Cloud provider, credential, region, IaC engine, and version.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="4">
         <span class="axio-manual-number">4</span>
         <span>
-          <strong>Enter Stack Name</strong>
-          <small>Provide a unique name for your Stack.</small>
+          <strong>Backend</strong>
+          <small>State storage for Terraform and OpenTofu stacks.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="5">
         <span class="axio-manual-number">5</span>
         <span>
-          <strong>Select Repository</strong>
-          <small>Select the repository and choose a branch, tag, or commit.</small>
+          <strong>Workflow Template</strong>
+          <small>Select a published provisioning workflow.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="6">
         <span class="axio-manual-number">6</span>
         <span>
-          <strong>Provide AWS Credentials</strong>
-          <small>Select or add AWS credentials used to deploy the Stack.</small>
+          <strong>Variables &amp; Secrets</strong>
+          <small>Stack input variables and secret references.</small>
         </span>
       </button>
 
       <button class="axio-manual-step" data-step="7">
         <span class="axio-manual-number">7</span>
         <span>
-          <strong>Configure Stack</strong>
-          <small>Configure IaC, backend, workflow, variables, secrets, and policy packs.</small>
+          <strong>Policy Packs</strong>
+          <small>Attach optional compliance policy packs.</small>
         </span>
       </button>
 
@@ -100,7 +135,7 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
         <span class="axio-manual-number">8</span>
         <span>
           <strong>Review &amp; Create</strong>
-          <small>Review the configuration and create the Stack.</small>
+          <small>Review the configuration and create the stack.</small>
         </span>
       </button>
     </aside>
@@ -110,7 +145,7 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
       <div class="axio-manual-card-header">
         <div>
           <div class="axio-manual-kicker">Create Stack</div>
-          <h3>Manual Steps</h3>
+          <h3>Manual Setup</h3>
         </div>
         <div class="axio-manual-progress">
           <span id="manualProgressBar"></span>
@@ -118,55 +153,64 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
       </div>
 
       <div class="axio-manual-form-step active" data-panel="1">
-        <label>Project <em>*</em></label>
-        <select>
-          <option>Acme Corp</option>
-          <option>Demo Project</option>
-          <option>Platform Project</option>
-        </select>
-        <div class="axio-manual-help">Select the project where the Stack should be created.</div>
-      </div>
+        <label>Organization</label>
+        <input type="text" value="Acme Corp" readonly aria-label="Organization">
 
-      <div class="axio-manual-form-step" data-panel="2">
-        <label>Workspace <em>*</em></label>
-        <select>
-          <option>platform-team</option>
-          <option>engineering</option>
-          <option>devops</option>
-        </select>
-        <div class="axio-manual-help">Choose the workspace that will manage this Stack.</div>
-      </div>
+        <div class="axio-manual-two" style="margin-top: 1rem;">
+          <div>
+            <label>Project <em>*</em></label>
+            <select>
+              <option>Acme Corp</option>
+              <option>Demo Project</option>
+              <option>Platform Project</option>
+            </select>
+          </div>
+          <div>
+            <label>Team workspace <em>*</em></label>
+            <select>
+              <option>platform-team</option>
+              <option>engineering</option>
+              <option>devops</option>
+            </select>
+          </div>
+        </div>
 
-      <div class="axio-manual-form-step" data-panel="3">
         <label>Environment <em>*</em></label>
         <select>
           <option>Development</option>
           <option>Staging</option>
           <option>Production</option>
         </select>
-        <div class="axio-manual-help">Choose the environment for this Stack.</div>
-      </div>
 
-      <div class="axio-manual-form-step" data-panel="4">
-        <label>Stack Name <em>*</em></label>
-        <input type="text" value="my-app-stack" placeholder="Enter Stack name">
+        <label>Stack name <em>*</em></label>
+        <input type="text" value="my-app-stack" placeholder="Enter stack name">
 
         <label class="axio-extra-label">Description</label>
-        <textarea rows="3" placeholder="Describe your Stack">Stack created manually</textarea>
+        <textarea rows="3" placeholder="Describe your stack">Stack created manually</textarea>
 
-        <div class="axio-manual-help">Use a meaningful Stack name and description.</div>
+        <div class="axio-manual-help">
+          Stack name must start with a letter and contain only letters, numbers, hyphens, and underscores.
+          Use <strong>Create project</strong>, <strong>Create workspace</strong>, or <strong>Create environment</strong> links if hierarchy resources are missing.
+        </div>
       </div>
 
-      <div class="axio-manual-form-step" data-panel="5">
+      <div class="axio-manual-form-step" data-panel="2">
+        <label>Source control provider <em>*</em></label>
+        <select>
+          <option>my-github (GitHub)</option>
+          <option>acme-gitlab (GitLab)</option>
+          <option>acme-bitbucket (Bitbucket)</option>
+        </select>
+
         <label>Repository <em>*</em></label>
         <div class="axio-manual-repo">
-          <input type="text" value="github.com/acme/my-infra">
+          <input type="text" value="acme/my-infra" aria-label="Repository">
           <span>↗</span>
         </div>
 
         <div class="axio-manual-two">
           <div>
-            <label>Source</label>
+            <label>Ref type</label>
             <select>
               <option>Branch</option>
               <option>Tag</option>
@@ -180,54 +224,99 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
             </select>
           </div>
         </div>
-      </div>
 
-      <div class="axio-manual-form-step" data-panel="6">
-        <label>AWS Credentials <em>*</em></label>
-        <select>
-          <option>acme-aws-prod</option>
-          <option>acme-aws-dev</option>
-          <option>Add new credentials...</option>
-        </select>
+        <label>Repository path <em>*</em></label>
+        <input type="text" value="." aria-label="Repository path">
 
         <div class="axio-manual-help">
-          Select or add the AWS credentials that will be used to deploy the Stack.
+          Enter <code>owner/repository</code> (not a full URL). <strong>Repository path</strong> is the working directory for IaC files (use <code>.</code> for the repo root).
+          Manual setup does <strong>not</strong> discover <code>axio.yaml</code> from the repository.
         </div>
       </div>
 
-      <div class="axio-manual-form-step" data-panel="7">
-
+      <div class="axio-manual-form-step" data-panel="3">
         <div class="axio-config-grid">
 
           <div class="axio-config-box">
-            <h4>IaC Configuration</h4>
-            <label>Tool <em>*</em></label>
+            <h4>Cloud</h4>
+            <label>Cloud provider <em>*</em></label>
+            <select>
+              <option>AWS</option>
+              <option>Azure</option>
+              <option>GCP</option>
+              <option>OCI</option>
+              <option>DigitalOcean</option>
+            </select>
+
+            <label>Cloud credential <em>*</em></label>
+            <select>
+              <option>acme-aws-prod</option>
+              <option>acme-aws-dev</option>
+            </select>
+
+            <label>Region <em>*</em></label>
+            <input type="text" value="ap-south-1" aria-label="Region">
+          </div>
+
+          <div class="axio-config-box">
+            <h4>IaC engine</h4>
+            <label>Engine <em>*</em></label>
             <select>
               <option>Terraform</option>
-              <option>Pulumi</option>
               <option>OpenTofu</option>
+              <option>Pulumi</option>
+              <option>Crossplane</option>
+              <option>CloudFormation</option>
+              <option>Azure ARM / Bicep</option>
+            </select>
+
+            <label>Engine version <em>*</em></label>
+            <select>
+              <option>1.15.9</option>
+              <option>1.9.5</option>
             </select>
           </div>
 
-          <div class="axio-config-box">
-            <h4>Backend</h4>
-            <label>Backend</label>
-            <select>
-              <option>S3</option>
-              <option>Azure Storage</option>
-              <option>GCS</option>
-            </select>
-          </div>
+        </div>
 
-          <div class="axio-config-box">
-            <h4>Workflow Template</h4>
-            <label>Template</label>
-            <select>
-              <option>Terraform Default</option>
-              <option>Terraform Plan & Apply</option>
-              <option>Custom Workflow</option>
-            </select>
-          </div>
+        <div class="axio-manual-help">
+          Available cloud providers depend on the selected IaC engine. Provider plugin versions (for example AWS provider for Terraform) may also be required.
+        </div>
+      </div>
+
+      <div class="axio-manual-form-step" data-panel="4">
+        <label>State backend provider</label>
+        <select>
+          <option>Axio database (default)</option>
+          <option>Amazon S3</option>
+          <option>Azure Blob Storage</option>
+          <option>Google Cloud Storage</option>
+          <option>MinIO</option>
+        </select>
+
+        <div class="axio-manual-help">
+          <strong>Axio database</strong> is the default managed option for Terraform and OpenTofu — state is stored in the platform with an HTTP remote backend URL after creation.
+          Pulumi, Crossplane, CloudFormation, and ARM/Bicep use engine-native state management; backend configuration applies to Terraform and OpenTofu only.
+        </div>
+      </div>
+
+      <div class="axio-manual-form-step" data-panel="5">
+        <label>Workflow template <em>*</em></label>
+        <select>
+          <option>Terraform Standard Deploy</option>
+          <option>Terraform Plan &amp; Apply</option>
+          <option>OpenTofu Standard Deploy</option>
+        </select>
+
+        <div class="axio-manual-help">
+          Only <strong>published</strong> templates compatible with your IaC engine (and cloud provider) are shown.
+          Axio may recommend a template based on your selections. Browse all templates or open a template link from Administration to pre-fill this step.
+        </div>
+      </div>
+
+      <div class="axio-manual-form-step" data-panel="6">
+
+        <div class="axio-config-grid">
 
           <div class="axio-config-box">
             <h4>Variables</h4>
@@ -242,19 +331,30 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
 
           <div class="axio-config-box">
             <h4>Secrets</h4>
-            <button type="button" class="axio-add-box">🔒 Add Secrets</button>
+            <button type="button" class="axio-add-box">🔒 Add secret reference</button>
+            <div class="axio-manual-help" style="margin-top: 0.75rem;">
+              Assign saved secrets from Axio — do not store sensitive values in plain variables.
+            </div>
           </div>
 
-          <div class="axio-config-box axio-policy">
-            <h4>Policy Packs</h4>
-            <select>
-              <option>Select Policy Packs</option>
-              <option>AWS Security Policies</option>
-              <option>Cost Policies</option>
-              <option>Organization Policies</option>
-            </select>
-          </div>
+        </div>
 
+      </div>
+
+      <div class="axio-manual-form-step" data-panel="7">
+
+        <div class="axio-config-box axio-policy">
+          <h4>Policy packs</h4>
+          <select>
+            <option>None (optional)</option>
+            <option>AWS Security Policies</option>
+            <option>Cost Policies</option>
+            <option>Organization Policies</option>
+          </select>
+        </div>
+
+        <div class="axio-manual-help">
+          Policy packs are optional. Attach published packs to run compliance checks during Plan and Apply workflows.
         </div>
 
       </div>
@@ -263,17 +363,21 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
 
         <div class="axio-manual-review">
           <div><span>Project</span><strong>Acme Corp</strong></div>
-          <div><span>Workspace</span><strong>platform-team</strong></div>
+          <div><span>Team workspace</span><strong>platform-team</strong></div>
           <div><span>Environment</span><strong>Development</strong></div>
-          <div><span>Stack Name</span><strong>my-app-stack</strong></div>
-          <div><span>Repository</span><strong>github.com/acme/my-infra</strong></div>
-          <div><span>AWS Credentials</span><strong>acme-aws-prod</strong></div>
-          <div><span>IaC Configuration</span><strong>Terraform</strong></div>
-          <div><span>Backend</span><strong>S3</strong></div>
-          <div><span>Workflow Template</span><strong>Terraform Default</strong></div>
+          <div><span>Stack name</span><strong>my-app-stack</strong></div>
+          <div><span>Repository</span><strong>acme/my-infra @ main</strong></div>
+          <div><span>Repository path</span><strong>.</strong></div>
+          <div><span>Cloud</span><strong>AWS · acme-aws-prod · ap-south-1</strong></div>
+          <div><span>IaC engine</span><strong>Terraform 1.15.9</strong></div>
+          <div><span>Backend</span><strong>Axio database</strong></div>
+          <div><span>Workflow template</span><strong>Terraform Standard Deploy</strong></div>
           <div><span>Variables</span><strong>region = ap-south-1</strong></div>
-          <div><span>Secrets</span><strong>Configured</strong></div>
-          <div><span>Policy Packs</span><strong>Selected</strong></div>
+          <div><span>Policy packs</span><strong>None</strong></div>
+        </div>
+
+        <div class="axio-manual-help">
+          Click any section on the review screen in Axio to jump back and edit that step. Axio validates the full configuration before creation.
         </div>
 
       </div>
@@ -290,17 +394,18 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
     <span class="axio-manual-check">✓</span>
     <div>
       <strong>You're all set!</strong>
-      <span>Your Stack will be created with the provided manual configuration.</span>
+      <span>Your stack is created and appears in the Stacks inventory.</span>
     </div>
   </div>
 
   <div class="axio-manual-note">
     <div class="axio-manual-note-icon">!</div>
     <div>
-      <strong>Review your configuration</strong>
+      <strong>Review before you create</strong>
       <p>
-        Verify the repository, credentials, IaC configuration, backend,
-        workflow template, variables, secrets, and policy packs before creating the Stack.
+        Verify repository access, cloud credentials, backend settings, workflow template compatibility,
+        variables, secrets, and policy packs on the <strong>Review &amp; Create</strong> step.
+        Deployment runs (Plan / Apply / Destroy) require a valid cloud connection when a provider is configured.
       </p>
     </div>
   </div>
@@ -308,10 +413,24 @@ Create a Stack by providing the Stack configuration directly in Axio instead of 
   <div class="axio-manual-best">
     <h3>Best Practices</h3>
     <ul>
-      <li>Use meaningful Stack names and descriptions.</li>
-      <li>Keep sensitive values in secrets instead of plain variables.</li>
-      <li>Select the appropriate backend for your infrastructure state.</li>
-      <li>Review policy packs before creating the Stack.</li>
+      <li>Use meaningful stack names and descriptions scoped to the correct project, workspace, and environment.</li>
+      <li>Keep sensitive values in <strong>secrets</strong>, not plain variables.</li>
+      <li>Start with the <strong>Axio database</strong> backend unless your organization requires a dedicated S3, Azure, or GCS bucket.</li>
+      <li>Pick a workflow template that matches your IaC engine and cloud provider.</li>
+      <li>Set the repository path to the subdirectory that contains your Terraform, OpenTofu, or Pulumi code.</li>
+      <li>If you later add <code>axio.yaml</code> to the repo, use <strong>Sync from repository</strong> on the stack detail page — or recreate via <a href="{{ '/axio/stack/from-axio/' | relative_url }}">From axio.yaml</a> for manifest-driven stacks.</li>
+    </ul>
+  </div>
+
+  <div class="axio-manual-best">
+    <h3>Troubleshooting</h3>
+    <ul>
+      <li><strong>No projects in scope</strong> — ask an organization admin to grant Member access on a project, workspace, or environment with <code>iac:manage</code>.</li>
+      <li><strong>No Git connections</strong> — add one under Administration → Integrations → Source Control.</li>
+      <li><strong>Cloud credential is required</strong> — add a connection for the selected provider; some providers also require an account or subscription scope field.</li>
+      <li><strong>No workflow templates shown</strong> — publish a compatible template or change the IaC engine / cloud provider selection.</li>
+      <li><strong>Repository validation failed</strong> — confirm the connection can access the repository and branch, tag, or commit you selected.</li>
+      <li><strong>Stack validation failed on review</strong> — use the inline links to jump to the first invalid step and fix required fields.</li>
     </ul>
   </div>
 
@@ -326,6 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const progress = document.getElementById("manualProgressBar");
   const complete = document.getElementById("manualComplete");
 
+  const TOTAL_STEPS = 8;
   let current = 1;
 
   function render(step) {
@@ -341,11 +461,11 @@ document.addEventListener("DOMContentLoaded", function () {
       panel.classList.toggle("active", Number(panel.dataset.panel) === current);
     });
 
-    progress.style.width = ((current - 1) / 7) * 100 + "%";
+    progress.style.width = ((current - 1) / (TOTAL_STEPS - 1)) * 100 + "%";
     prev.style.visibility = current === 1 ? "hidden" : "visible";
-    next.textContent = current === 8 ? "Create Stack" : "Continue";
+    next.textContent = current === TOTAL_STEPS ? "Create stack" : "Continue";
 
-    if (current < 8) {
+    if (current < TOTAL_STEPS) {
       complete.classList.remove("show");
     }
   }
@@ -357,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   next.addEventListener("click", function () {
-    if (current < 8) {
+    if (current < TOTAL_STEPS) {
       render(current + 1);
     } else {
       complete.classList.add("show");
@@ -393,7 +513,6 @@ document.addEventListener("DOMContentLoaded", function () {
   render(1);
 });
 </script>
-
 
 <div class="page-navigation">
 

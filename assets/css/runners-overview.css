@@ -1,0 +1,360 @@
+/* Runners – Overview documentation page */
+
+.runners-doc {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 32px 40px 56px;
+  color: #17243d;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  box-sizing: border-box;
+}
+
+.runners-doc *,
+.runners-doc *::before,
+.runners-doc *::after {
+  box-sizing: border-box;
+}
+
+.runners-doc h1 {
+  margin: 0 0 14px;
+  color: #12213d;
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 750;
+  letter-spacing: -1.5px;
+}
+
+.runners-doc .intro {
+  max-width: 1280px;
+  margin: 0 0 30px;
+  color: #526786;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* Fleet metrics */
+
+.runner-metrics {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.metric-card {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 16px;
+  border: 1px solid #dce5f0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.metric-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.metric-blue {
+  color: #0877ef;
+  background: #edf6ff;
+}
+
+.metric-green {
+  background: #e7f8ef;
+  position: relative;
+}
+
+.metric-green::after,
+.metric-red::after {
+  content: "";
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  display: block;
+}
+
+.metric-green::after {
+  background: #08b56c;
+}
+
+.metric-red {
+  background: #fff0f1;
+  position: relative;
+}
+
+.metric-red::after {
+  background: #ff3b43;
+}
+
+.metric-purple {
+  color: #7337e8;
+  background: #f3eaff;
+}
+
+.metric-orange {
+  color: #f08b08;
+  background: #fff3df;
+}
+
+.metric-label {
+  margin-bottom: 5px;
+  color: #526786;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.metric-value {
+  color: #14233f;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 750;
+}
+
+/* Alert */
+
+.runner-alert {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 92px;
+  margin-bottom: 18px;
+  padding: 18px 24px;
+  border: 1px solid #f6d99c;
+  border-radius: 6px;
+  background: #fff8e9;
+}
+
+.alert-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: #ff9f12;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+}
+
+.alert-title {
+  margin-bottom: 4px;
+  color: #8b3510;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.alert-text {
+  color: #455671;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+/* Offline cleanup */
+
+.cleanup-panel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 88px;
+  margin-bottom: 30px;
+  padding: 18px 24px;
+  border: 1px solid #dce5f0;
+  border-radius: 6px;
+  background: #fbfcfe;
+}
+
+.cleanup-icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #fff0f1;
+  color: #ef3037;
+  font-size: 25px;
+}
+
+.cleanup-title {
+  margin-bottom: 4px;
+  color: #17243d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.cleanup-text {
+  color: #526786;
+  font-size: 15px;
+}
+
+/* Inventory */
+
+.inventory h2 {
+  margin: 0 0 4px;
+  color: #14233f;
+  font-size: 31px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.inventory-description {
+  margin: 0 0 14px;
+  color: #526786;
+  font-size: 16px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border: 1px solid #dce5f0;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.inventory table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+}
+
+.inventory th {
+  padding: 11px 20px;
+  border-bottom: 1px solid #dce5f0;
+  background: #f7f9fc;
+  color: #17243d;
+  text-align: left;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.inventory td {
+  padding: 11px 20px;
+  border-bottom: 1px solid #e5ebf3;
+  color: #50637f;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.inventory tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.inventory tbody tr:hover {
+  background: #fbfcff;
+}
+
+.inventory th:nth-child(1),
+.inventory td:nth-child(1) {
+  width: 12%;
+}
+
+.inventory th:nth-child(2),
+.inventory td:nth-child(2) {
+  width: 13%;
+}
+
+.inventory th:nth-child(3),
+.inventory td:nth-child(3) {
+  width: 13%;
+}
+
+.inventory th:nth-child(4),
+.inventory td:nth-child(4) {
+  width: 15%;
+}
+
+.inventory th:nth-child(5),
+.inventory td:nth-child(5) {
+  width: 13%;
+}
+
+.inventory th:nth-child(6),
+.inventory td:nth-child(6) {
+  width: 14%;
+}
+
+.inventory th:nth-child(7),
+.inventory td:nth-child(7) {
+  width: 15%;
+}
+
+.inventory th:nth-child(8),
+.inventory td:nth-child(8) {
+  width: 12%;
+}
+
+/* Version badges */
+
+.badge {
+  display: inline-block;
+  margin-left: 7px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.badge.latest {
+  color: #06945b;
+  background: #e5f8ef;
+}
+
+.badge.update {
+  color: #d97600;
+  background: #fff0d8;
+}
+
+.badge.deprecated {
+  color: #e53935;
+  background: #ffe6e7;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .runner-metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .inventory table {
+    min-width: 1050px;
+  }
+}
+
+@media (max-width: 760px) {
+  .runners-doc {
+    padding: 24px 18px 40px;
+  }
+
+  .runners-doc h1 {
+    font-size: 34px;
+  }
+
+  .runners-doc .intro {
+    font-size: 16px;
+  }
+
+  .runner-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .runner-alert,
+  .cleanup-panel {
+    align-items: flex-start;
+  }
+}
+

@@ -7,6 +7,8 @@ has_toc: false
 permalink: /axio/platform-as-code/resources/
 ---
 
+# Resources
+
 <div class="resources-page">
 
     <!-- HEADER -->
@@ -17,11 +19,12 @@ permalink: /axio/platform-as-code/resources/
 
             <div class="resources-breadcrumb-spacer"></div>
 
-            <h2>Resources</h2>
+            <h2>Git-Managed Resources</h2>
 
             <p>
-                Resources represent the current state of Platform as Code objects
-                as managed by Axio. The Resources page provides a read-only view of resources discovered and reconciled from Git manifests.
+                Open <strong>Platform as Code → Resources</strong> for a read-only inventory of platform objects
+                discovered from Git manifests and reconciled by Axio. To change a resource, edit its YAML in the
+                source repository, commit, push, and synchronize — not from this screen.
             </p>
 
         </div>
@@ -35,16 +38,31 @@ permalink: /axio/platform-as-code/resources/
 
             <div>
 
-                <h3>Prerequisite</h3>
+                <h3>Prerequisites</h3>
 
                 <p>
-                    Platform as Code must be configured and a Git repository must be connected and synchronized to discover Git-managed resources.
+                    A Git repository connected under <strong>Administration → Integrations → Source Control</strong>,
+                    registered for Platform as Code, with at least one successful synchronization from
+                    <strong>Platform as Code → Synchronizations</strong>.
+                    Viewing requires <code>pac:read</code> or higher.
                 </p>
 
             </div>
 
         </div>
 
+    </div>
+
+    <div class="important-box" style="margin-bottom: 1.5rem;">
+      <div class="important-header">
+        <img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
+        <h3>Important</h3>
+      </div>
+      <p>
+        This page is an <strong>observability and inventory</strong> view — not an editor. Git-managed resources show a
+        <strong>Git-managed</strong> indicator in Organization views; manual UI edits to those resources are restricted.
+        When drift is detected, you can reconcile from Git via <strong>Sync now</strong> or open a pull request to align Git with the platform (Administrators).
+      </p>
     </div>
 
 
@@ -63,10 +81,11 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resources-step-content">
 
-                    <h3>View Git-Managed Resources</h3>
+                    <h3>Browse the inventory</h3>
 
                     <p>
-                       View the platform resources discovered and reconciled from Git manifests. The Resources page provides a read-only inventory of resources                               managed by Axio.
+                        Review the table of Platform as Code resources — name, kind (type), repository, branch,
+                        manifest path, commit, sync status, drift, and last sync time. Use pagination to move through large lists.
                     </p>
 
                 </div>
@@ -80,10 +99,11 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resources-step-content">
 
-                    <h3>Filter and Search</h3>
+                    <h3>Open resource details</h3>
 
                     <p>
-                        Use the available filters and search to find resources by name, type, or synchronization state.
+                        Click a row to open the detail dialog. Review sync status chips, repository, manifest path,
+                        applied commit, and the read-only manifest YAML (<code>sourceYaml</code>).
                     </p>
 
                 </div>
@@ -97,10 +117,12 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resources-step-content">
 
-                    <h3>Review Git Source</h3>
+                    <h3>Review Git source</h3>
 
                     <p>
-                        Review the Git repository, branch, manifest path, and commit associated with a Git-managed resource.
+                        Confirm which repository, branch, manifest file path, and commit SHA last applied the resource.
+                        The manifest path is relative to the repository working directory (for example
+                        <code>platform-config/environments/production.yaml</code>).
                     </p>
 
                 </div>
@@ -114,10 +136,12 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resources-step-content">
 
-                    <h3>Check Sync Status</h3>
+                    <h3>Check sync status</h3>
 
                     <p>
-                        Review the synchronization status of each resource to determine whether it is ready, drifted, or has failed synchronization.
+                        Inspect <strong>Sync Status</strong> — for example <code>READY</code>, <code>PENDING</code>,
+                        <code>FAILED</code>, <code>DRIFTED</code>, or <code>AWAITING APPROVAL</code> when a sync plan
+                        includes the resource and requires approval.
                     </p>
 
                 </div>
@@ -131,10 +155,30 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resources-step-content">
 
-                    <h3>Monitor Drift and Last Sync</h3>
+                    <h3>Monitor drift and dependencies</h3>
 
                     <p>
-                        Check whether a resource is in sync with its Git definition and review when it was last synchronized.
+                        The <strong>Drift</strong> column shows <em>In sync</em> or <em>Drifted</em> when live platform
+                        state differs from Git. Pending resources may list blocked dependencies (for example a Workspace
+                        that must reconcile before an Environment).
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="resources-step-item">
+
+                <div class="resources-step-circle">6</div>
+
+                <div class="resources-step-content">
+
+                    <h3>Act on drift or approval</h3>
+
+                    <p>
+                        For drift, go to <strong>Synchronizations</strong> and <strong>Sync now</strong> to reconcile from Git,
+                        or use <strong>Open PR to fix drift</strong> (Administrators) to update the manifest to match the platform.
+                        Approve or reject pending sync plans from the detail dialog or <strong>Operations → Approvals</strong>.
                     </p>
 
                 </div>
@@ -165,10 +209,39 @@ permalink: /axio/platform-as-code/resources/
                     <h3>What are Resources?</h3>
 
                     <p>
-                       Resources are Platform as Code objects discovered from Git manifests and managed by Axio.
-                       They represent the resource definitions stored in Git and their current synchronization state in Axio.
+                        Resources are Platform as Code objects tracked by Axio after manifest discovery and reconciliation.
+                        Each row represents a kind and name (for example <code>Environment/production</code>), its
+                        synchronization state, drift relative to Git, and the repository commit that last applied it.
+                        Resources with a linked repository are <strong>Git-managed</strong>; others may appear with
+                        <strong>Git Managed: No</strong> until synchronized from a repo.
                     </p>
 
+                </div>
+
+            </div>
+
+
+            <!-- TABLE COLUMNS -->
+
+            <div class="resources-info-card" style="margin-top: 1rem;">
+
+                <div class="resources-info-icon">
+                    <img src="{{ '/assets/icons/clipboard-list.svg' | relative_url }}" alt="Columns">
+                </div>
+
+                <div>
+                    <h3>Inventory columns</h3>
+                    <ul>
+                        <li><strong>Name</strong> — Resource name (<code>metadata.name</code>)</li>
+                        <li><strong>Type</strong> — Resource kind (Project, Workspace, Environment, …)</li>
+                        <li><strong>Git Managed</strong> — Whether the resource is tied to a synchronized repository</li>
+                        <li><strong>Repository / Branch</strong> — Source repo and branch</li>
+                        <li><strong>Manifest Path</strong> — File path within the working directory</li>
+                        <li><strong>Commit</strong> — Short SHA of the last applied commit</li>
+                        <li><strong>Sync Status</strong> — Reconciliation phase (see statuses below)</li>
+                        <li><strong>Drift</strong> — <em>In sync</em> or <em>Drifted</em> vs Git definition</li>
+                        <li><strong>Last Sync</strong> — Timestamp of last reconciliation</li>
+                    </ul>
                 </div>
 
             </div>
@@ -183,17 +256,14 @@ permalink: /axio/platform-as-code/resources/
 
                 <div class="resource-details-card">
 
-                    <h3>Resource Details (production)</h3>
+                    <h3>Resource detail (Environment/production)</h3>
 
 
                     <div class="resource-detail-tabs">
 
-                        <span class="active">Overview</span>
-                        <span>Spec</span>
-                        <span>Status</span>
-                        <span>Metadata</span>
-                        <span>Dependencies</span>
-                        <span>Events</span>
+                        <span class="active">Summary</span>
+                        <span>Manifest (read-only)</span>
+                        <span>Alerts</span>
 
                     </div>
 
@@ -208,11 +278,6 @@ permalink: /axio/platform-as-code/resources/
                             </div>
 
                             <div>
-                                <strong>Category:</strong>
-                                <span>Environment</span>
-                            </div>
-
-                            <div>
                                 <strong>API Version:</strong>
                                 <span class="api-badge">
                                     platform.axio.io/v1
@@ -220,26 +285,41 @@ permalink: /axio/platform-as-code/resources/
                             </div>
 
                             <div>
-                                <strong>Created At:</strong>
-                                <span>Mar 20, 2026, 10:32 AM</span>
+                                <strong>Repository:</strong>
+                                <span>acme-platform-config</span>
+                            </div>
+
+                            <div>
+                                <strong>Branch:</strong>
+                                <span>main</span>
+                            </div>
+
+                            <div>
+                                <strong>Manifest path:</strong>
+                                <span>platform-config/environments/production.yaml</span>
+                            </div>
+
+                            <div>
+                                <strong>Commit:</strong>
+                                <span>a1b2c3d</span>
                             </div>
 
                             <div>
                                 <strong>Last Sync:</strong>
-                                <span>1 minute ago</span>
+                                <span>Mar 20, 2026, 10:32 AM</span>
                             </div>
 
                             <div>
                                 <strong>Sync Status:</strong>
                                 <span class="mini-status synced">
-                                    ● Synced
+                                    ● READY
                                 </span>
                             </div>
 
                             <div>
-                                <strong>Health:</strong>
+                                <strong>Drift:</strong>
                                 <span class="mini-status healthy">
-                                    ● Healthy
+                                    ● In sync
                                 </span>
                             </div>
 
@@ -258,7 +338,9 @@ metadata:
     team: platform
 spec:
   displayName: Production Environment
-  workspace: production-ws</code></pre>
+  project: ecommerce
+  workspace: development
+  type: PRODUCTION</code></pre>
 
                         </div>
 
@@ -281,38 +363,53 @@ spec:
                     </div>
 
                     <p>
-                        Resources show the current state as reported by Axio.
-                        Use Synchronizations to reconcile any drift between
-                        Git and the platform.
+                        Resources reflect state as reported by Axio after the last sync run.
+                        Use <strong>Synchronizations → Sync now</strong> to reconcile Git with the platform, or
+                        <strong>History</strong> for a read-only audit of past runs.
                     </p>
 
                     <hr>
 
-                    <h4>Common statuses:</h4>
+                    <h4>Common sync statuses:</h4>
 
                     <ul>
 
                         <li>
-                            <strong class="status-green">Healthy</strong>
-                            – Resource is up to date with Git
+                            <strong class="status-green">READY</strong>
+                            – Reconciled and available in the platform
+                        </li>
+
+                        <li>
+                            <strong class="status-orange">PENDING</strong>
+                            – Waiting to apply (often blocked on a parent dependency)
+                        </li>
+
+                        <li>
+                            <strong class="status-orange">AWAITING APPROVAL</strong>
+                            – Included in a sync plan that requires approval
                         </li>
 
                         <li>
                             <strong class="status-orange">Drifted</strong>
-                            – Resource differs from Git
+                            – Live platform state differs from the Git manifest (see Drift column)
                         </li>
 
                         <li>
-                            <strong class="status-red">Failed</strong>
-                            – Resource failed to synchronize
+                            <strong class="status-red">FAILED</strong>
+                            – Reconciliation or validation failed (check Synchronizations / History)
                         </li>
 
                         <li>
-                            <strong class="status-gray">Unknown</strong>
-                            – Status is not yet available
+                            <strong class="status-gray">UNKNOWN</strong>
+                            – Status not yet determined
                         </li>
 
                     </ul>
+
+                    <p style="margin-top: 1rem;">
+                        Browse kind schemas in <a href="{{ '/axio/platform-as-code/catalog/' | relative_url }}">Catalog</a>
+                        before authoring new manifests.
+                    </p>
 
                 </div>
 
@@ -321,3 +418,26 @@ spec:
         </div>
 
     </div>
+
+</div>
+
+
+<div class="page-navigation">
+
+<a
+class="nav-button previous"
+href="{{ '/axio/platform-as-code/catalog/' | relative_url }}">
+
+← Catalog
+
+</a>
+
+<a
+class="nav-button next"
+href="{{ '/axio/platform-as-code/' | relative_url }}">
+
+Platform as Code →
+
+</a>
+
+</div>

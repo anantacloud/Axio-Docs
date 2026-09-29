@@ -10,9 +10,49 @@ permalink: /axio/stack/workflow-template/
 
 # Workflow Templates
 
-Workflow Templates define reusable deployment workflows for Axio stacks. They specify the IaC engines, operations, pipeline stages, approvals, policy checks, security checks, and notifications that should be executed during a deployment.
+Workflow templates define reusable **deployment pipelines** for Axio stacks — the ordered stages executed when you **Run stack** (Plan, Apply, Destroy, Drift detection, and related operations). A template specifies supported IaC engines and cloud providers, pipeline steps (checkout, validate, plan, approval, apply, notifications, policy checks, and security scans), and optional governance metadata.
 
-Axio supports two YAML formats for Workflow Templates.
+Manage templates under **Stacks → Workflow Templates** (`/stacks/workflow-templates`). Attach a template when creating a stack manually, reference one in `axio.yaml`, or select one each time you start a run.
+
+<div class="important-box">
+  <div class="important-header">
+    <img src="{{ '/assets/icons/triangle-alert.svg' | relative_url }}" alt="Warning">
+    <h3>Important</h3>
+  </div>
+
+  <p>
+    <strong>Workflow templates are not the same as PaC <code>kind: Workflow</code>.</strong>
+    Templates describe the <em>deployment pipeline</em> for stack runs (Plan / Apply / Destroy).
+    PaC <code>Workflow</code> resources are a separate automation catalog kind. Stack blueprints use
+    <code>axio.yaml</code> (<code>kind: Stack</code>), not Platform as Code project manifests.
+  </p>
+
+  <p>
+    Only <strong>published</strong> organization templates appear in stack run pickers.
+    <strong>Built-in</strong> platform templates (standard deploy, destroy, and drift per IaC engine) are available immediately without publishing.
+  </p>
+</div>
+
+<div class="prerequisite-box">
+
+<div class="prerequisite-header">
+
+<img src="{{ '/assets/icons/info.svg' | relative_url }}" alt="Info">
+
+<h3>Prerequisites</h3>
+
+</div>
+
+<ul>
+<li><strong>View templates</strong> — <code>workflow:template:read</code> (all organization roles).</li>
+<li><strong>Create, edit, import, or publish</strong> — <code>workflow:template:create</code>, <code>workflow:template:edit</code>, <code>workflow:template:publish</code> (Administrators and Members).</li>
+<li><strong>Run stack with a template</strong> — <code>workflow:template:execute</code> and <code>iac:manage</code> in the target scope.</li>
+<li>For Git-backed org templates via Platform as Code — a connected repository registered under <strong>Platform as Code → Synchronizations</strong>.</li>
+</ul>
+
+</div>
+
+Axio supports two YAML shapes when authoring or importing workflow templates.
 
 <div class="workflow-format-grid">
 
@@ -36,14 +76,15 @@ Axio supports two YAML formats for Workflow Templates.
     </div>
 
     <p>
-      Steps-based YAML format used for Git-backed platform templates,
-      Admin catalog import, and catalog import.
+      Steps-based YAML used for built-in platform templates, the admin <strong>Import YAML</strong> wizard,
+      the template editor YAML tab, and raw files in Git repositories.
     </p>
 
     <ul>
-      <li>Human-readable and easy to version</li>
-      <li>Ordered pipeline with sequential/parallel steps</li>
-      <li>Recommended for most use cases</li>
+      <li>Human-readable and easy to version in Git</li>
+      <li>Ordered pipeline with sequential and <code>parallel:</code> step blocks</li>
+      <li>Required fields: <code>id</code>, <code>name</code>, <code>supportedIacEngines</code>, <code>supportedOperations</code>, <code>steps</code></li>
+      <li>Recommended for most custom templates</li>
     </ul>
 
   </div>
@@ -70,14 +111,14 @@ Axio supports two YAML formats for Workflow Templates.
     </div>
 
     <p>
-      Visual graph (nodes &amp; edges) converted to
-      steps automatically.
+      Visual graph (<code>nodes</code> and <code>edges</code>) used by the workflow template editor.
+      Imported YAML with a top-level <code>nodes</code> array is converted to executable steps automatically.
     </p>
 
     <ul>
-      <li>Graph-based workflow design</li>
-      <li>Automatic conversion to executable steps</li>
-      <li>Ideal for complex workflow visualisation</li>
+      <li>Graph-based workflow design in the UI</li>
+      <li>Automatic conversion to the steps pipeline at save or publish time</li>
+      <li>Use <code>config.catalogStage</code> on nodes to reference catalog stage IDs explicitly</li>
     </ul>
 
   </div>
@@ -85,9 +126,28 @@ Axio supports two YAML formats for Workflow Templates.
 </div>
 
 
+## Where templates come from
+
+| Source | How it is loaded | In the UI |
+|--------|------------------|-----------|
+| **Built-in platform templates** | Registered in the API at startup (code registry plus optional YAML under <code>apps/api/workflow-templates/</code>) | Shown as <strong>Built-in</strong>; read-only; available immediately |
+| **Organization catalog** | Created or imported in **Stacks → Workflow Templates**, versioned in PostgreSQL, published per version | <strong>User Managed</strong>; editable; must be <strong>Published</strong> to select on stack runs |
+| **Platform as Code Git sync** | <code>kind: WorkflowTemplate</code> manifests (or raw deployment-template YAML) in PaC repositories, synchronized from **Platform as Code → Synchronizations** | Appears in the org catalog after sync; use <code>spec.publish: true</code> or <code>status: ACTIVE</code> for auto-publish |
+
+Built-in templates include one standard **deploy**, **destroy**, and **drift** workflow per IaC engine (Terraform, OpenTofu, Pulumi, CloudFormation, Crossplane, and Azure ARM/Bicep), for example <code>terraform-standard-deploy</code> and <code>opentofu-standard-deploy</code>.
+
+
+## How templates are used
+
+1. **Manual stack creation** — select a compatible published template on the <strong>Workflow Template</strong> wizard step (see <a href="{{ '/axio/stack/manual-step/' | relative_url }}">Create Stack Manually</a>).
+2. **From axio.yaml** — set <code>workflowTemplate</code> or <code>workflowHint</code> in the manifest; Axio resolves a matching template after upload (see <a href="{{ '/axio/stack/from-axio/' | relative_url }}">Create Stack from axio.yaml</a>).
+3. **Run stack** — choose a template when starting Plan, Apply, Destroy, or other operations; the stack may remember a default template from provisioning.
+4. **Stack detail** — view or change the linked template; deprecated versions show a banner with upgrade guidance.
+
+
 ## What's on this page?
 
-This section provides a high-level overview of Workflow Templates and how they are used in Axio.
+This section is the overview for workflow templates. Use the topics below and child pages for format details, built-in templates, and authoring guidance.
 
 <div class="workflow-capability-grid">
 
@@ -105,7 +165,8 @@ This section provides a high-level overview of Workflow Templates and how they a
     <h4>YAML Formats</h4>
 
     <p>
-      Understand the two supported YAML formats.
+      Deployment-template <code>steps</code> syntax and designer <code>nodes</code>/<code>edges</code> graphs.
+      See <a href="{{ '/docs/WORKFLOW_TEMPLATE_YAML.html' | relative_url }}">Workflow template YAML reference</a>.
     </p>
 
   </div>
@@ -121,10 +182,10 @@ This section provides a high-level overview of Workflow Templates and how they a
       </svg>
     </div>
 
-    <h4>Git Auto-Loading</h4>
+    <h4>Loading &amp; Git</h4>
 
     <p>
-      Learn how templates are loaded from Git and repositories.
+      Built-in YAML at API startup, org import/publish, and PaC <code>WorkflowTemplate</code> sync from connected repositories.
     </p>
 
   </div>
@@ -143,7 +204,7 @@ This section provides a high-level overview of Workflow Templates and how they a
     <h4>axio.yaml Integration</h4>
 
     <p>
-      See how to reference templates in your axio.yaml file.
+      Reference <code>workflowTemplate: terraform-standard-deploy</code> or <code>workflowHint</code> in your stack manifest so Create Stack and Run stack resolve the right pipeline.
     </p>
 
   </div>
@@ -158,10 +219,10 @@ This section provides a high-level overview of Workflow Templates and how they a
       </svg>
     </div>
 
-    <h4>Validation</h4>
+    <h4>Validation &amp; Governance</h4>
 
     <p>
-      Learn the validation rules and governance checks.
+      Parse-time checks (valid YAML, non-empty steps, well-formed parallel blocks), publish-time graph integrity, and org governance rules (production approval, plan-before-apply, valid stage IDs).
     </p>
 
   </div>
@@ -180,7 +241,7 @@ This section provides a high-level overview of Workflow Templates and how they a
     <h4>Export</h4>
 
     <p>
-      Export published templates as YAML for reuse.
+      Export published org template versions as YAML from the template detail page or via the admin API for reuse in Git or other environments.
     </p>
 
   </div>
@@ -203,15 +264,15 @@ This section provides a high-level overview of Workflow Templates and how they a
     <h4>Where to start?</h4>
 
     <p>
-      If you are new to Workflow Templates, we recommend starting
-      with the Deployment Template Format.
+      If you are new to workflow templates, start with the built-in standard deploy templates —
+      then read the deployment-template YAML format before authoring custom pipelines.
     </p>
 
 </div>
 
   <a href="{{ '/axio/stack/built-in/' | relative_url }}"
      class="workflow-start-button">
-    Next: Built-In Template
+    Next: Built-In Templates
     <span>→</span>
   </a>
 
@@ -232,10 +293,8 @@ href="{{ '/axio/stack/manual-step/' | relative_url }}">
 class="nav-button next"
 href="{{ '/axio/stack/built-in/' | relative_url }}">
 
-Built In Template →
+Built-In Templates →
 
 </a>
 
 </div>
-
-

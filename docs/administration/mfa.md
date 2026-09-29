@@ -3,7 +3,7 @@ layout: default
 title: MFA
 parent: Administration
 nav_order: 6
-permalink: /axio/administration/role-and-access/mfa/
+permalink: /axio/administration/mfa/
 ---
 
 <div class="admin-mfa-page">

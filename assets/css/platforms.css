@@ -1,0 +1,362 @@
+/* Platforms documentation page */
+
+.platforms-doc {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px 30px 60px;
+  color: #405578;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.platforms-doc *,
+.platforms-doc *::before,
+.platforms-doc *::after {
+  box-sizing: border-box;
+}
+
+.platforms-doc h1,
+.platforms-doc h2,
+.platforms-doc h3 {
+  color: #101f43;
+  letter-spacing: -0.45px;
+}
+
+.platforms-doc h1 {
+  margin: 0 0 5px;
+  font-size: 38px;
+  line-height: 1.12;
+  font-weight: 760;
+}
+
+.platforms-doc h2 {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 740;
+}
+
+.platforms-doc h3 {
+  margin: 10px 0 6px;
+  font-size: 13px;
+}
+
+.platforms-doc p {
+  margin: 4px 0 10px;
+}
+
+.platforms-doc .lead {
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.platforms-doc strong {
+  color: #243c65;
+}
+
+.platforms-doc a {
+  color: #1769d2;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.platforms-doc code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #edf2f8;
+  color: #19335d;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    monospace;
+  font-size: 0.88em;
+}
+
+/* Tables */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d7e1ed;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.platforms-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.platforms-doc th {
+  padding: 8px 12px;
+  border-bottom: 1px solid #d7e1ed;
+  background: #f3f7fb;
+  color: #14254a;
+  text-align: left;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.platforms-doc td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #e1e8f1;
+  color: #526887;
+  vertical-align: top;
+}
+
+.platforms-doc tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.platform-summary {
+  margin-bottom: 20px;
+}
+
+.platform-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #15294d;
+  font-weight: 700;
+}
+
+.os-icon {
+  width: 24px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 5px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.os-icon.linux,
+.large-icon.linux {
+  color: #111;
+}
+
+.os-icon.windows,
+.large-icon.windows {
+  color: #087be9;
+}
+
+.os-icon.docker,
+.large-icon.docker {
+  color: #0787e9;
+}
+
+.os-icon.k8s,
+.large-icon.k8s {
+  color: #3e71df;
+}
+
+/* Platform cards */
+
+.platform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.platform-card {
+  padding: 13px;
+  border: 1px solid #dce5ef;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.platform-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.large-icon {
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.platform-heading p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.platform-card h2 {
+  margin-top: 1px;
+}
+
+/* Code */
+
+.code-block {
+  overflow: hidden;
+  margin-top: 7px;
+  border-radius: 6px;
+  background: #17263b;
+  color: #edf4fd;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 10px;
+  border-bottom: 1px solid #2b3a52;
+  color: #c3cfdf;
+  font-size: 11px;
+}
+
+.copy-mark {
+  color: #e3eaf3;
+  font-size: 14px;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 9px 11px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  padding: 0;
+  background: transparent;
+  color: #edf4fd;
+  font-size: 11px;
+  line-height: 1.55;
+  white-space: pre;
+}
+
+/* Callouts */
+
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.callout p {
+  margin: 1px 0;
+}
+
+.callout-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #167bee;
+  font-weight: 800;
+}
+
+.callout.info {
+  border-color: #bddfff;
+  background: #f1f8ff;
+}
+
+.callout.warning {
+  border-color: #f4d28d;
+  background: #fff8e8;
+}
+
+.callout.warning .callout-icon {
+  background: #f19a0b;
+}
+
+.docker-card .callout {
+  margin-top: 9px;
+}
+
+/* Lower panels */
+
+.lower-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.panel {
+  padding: 12px;
+  border: 1px solid #dce5ef;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.panel-heading h2 {
+  margin-top: 1px;
+  font-size: 19px;
+}
+
+.panel-heading p {
+  margin: 2px 0 0;
+  font-size: 11px;
+}
+
+.panel-icon {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.panel-icon.purple {
+  color: #7543e5;
+  background: #f1eaff;
+}
+
+.panel-icon.green {
+  color: #0aa565;
+  background: #e4f8ee;
+}
+
+.link-line {
+  margin-top: 8px !important;
+  font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .platforms-doc {
+    padding: 20px 18px 45px;
+  }
+
+  .platforms-doc h1 {
+    font-size: 32px;
+  }
+
+  .platform-grid,
+  .lower-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .platform-summary table {
+    min-width: 760px;
+  }
+}
