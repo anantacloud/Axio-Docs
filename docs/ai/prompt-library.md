@@ -175,9 +175,6 @@ permalink: /axio/ai/prompt-library/
 
   </div>
 
-  <h2>Example prompts</h2>
-  <p class="prompt-section-description">Representative built-ins — the full catalog is searchable on the page.</p>
-
   <h2>Tips for better results</h2>
   <div class="prompt-tips">
     <div>• Start with <strong>Plan Your First Stack</strong> or <strong>Axio Platform Orientation</strong> if you are new.</div>
