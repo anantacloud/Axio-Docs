@@ -12405,7 +12405,7 @@ table tr:hover td {
 .compliance-risk-reports {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 26px 28px 64px;
+  padding: 26px 28px;
   color: #111827;
   font-family: inherit;
   font-size: 15px;
