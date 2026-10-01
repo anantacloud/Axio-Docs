@@ -2,7 +2,7 @@
 layout: default
 title: Security Insights
 parent: Security & Governance
-nav_order: 1
+nav_order: 2
 permalink: /axio/security-governance/security-insights/
 ---
 
