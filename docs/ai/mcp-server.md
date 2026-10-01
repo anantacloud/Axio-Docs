@@ -107,7 +107,7 @@ permalink: /axio/ai/mcp-servers/
       </div>
       <p>
         Review results in the run dialog. Approve or reject HIGH-risk runs on
-        <strong>AI → Activity → Tool runs</strong> (<code>/ai/history?tab=tools</code>) or via
+        <strong>AI → Activity → Tool runs</strong> or via
         quick-action badges when pending approvals exist.
       </p>
     </div>
@@ -166,8 +166,7 @@ permalink: /axio/ai/mcp-servers/
   <h2>Classic MCP tools</h2>
 
   <p class="mcp-section-description">
-    Built-in JSON-RPC tools (short names, in addition to qualified Platform MCP tools on
-    <code>tools/list</code>):
+    Built-in JSON-RPC tools :
   </p>
 
   <div class="mcp-classic-grid">
@@ -232,36 +231,6 @@ permalink: /axio/ai/mcp-servers/
       <span>Architecture / cost / security analysis for a workspace</span>
     </div>
 
-  </div>
-
-  <div class="mcp-resources">
-    <p>
-      <strong>Resources</strong> (<code>resources/list</code>; values masked where sensitive):
-      <code>axio://projects</code>,
-      <code>axio://stacks</code>,
-      <code>axio://runs</code>,
-      <code>axio://variables</code>,
-      <code>axio://secrets</code>,
-      <code>axio://policies</code>,
-      <code>axio://runners</code>,
-      <code>axio://jobs</code>,
-      <code>axio://resources</code>,
-      <code>axio://costs</code>,
-      <code>axio://drift</code>,
-      <code>axio://logs</code>.
-    </p>
-    <p>
-      <strong>Resource templates:</strong>
-      <code>axio://stacks/{stackId}</code>,
-      <code>axio://runs/{runId}</code>.
-    </p>
-  </div>
-
-  <h2>Related pages</h2>
-  <div class="mcp-related-grid">
-    <div>→ <span><a href="{{ '/axio/ai/assistant/' | relative_url }}">AI Assistant</a> — run tools via natural language</span></div>
-    <div>→ <span><a href="{{ '/axio/ai/activity/' | relative_url }}">Activity</a> — tool run history and approvals</span></div>
-    <div>→ <span><a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a> — LLM gateway that powers Assistant chat</span></div>
   </div>
 
 </div>
