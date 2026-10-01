@@ -7,6 +7,9 @@ nav_order: 2
 permalink: /axio/organization/workspace/create-workspace-platform-as-code/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/workspace-pac.css' | relative_url }}">
+
+
 <h1>
   <img src="{{ '/assets/icons/layout-dashboard.svg' | relative_url }}"
        class="page-icon"
@@ -244,7 +247,7 @@ spec:
 
 <div class="resource-grid-info">
 
-<div class="resource-card workspace">
+<div class="resource-card-workspace-pac workspace">
 
     <div class="card-title">
 

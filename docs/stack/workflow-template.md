@@ -168,7 +168,6 @@ This section is the overview for workflow templates. Use the topics below and ch
 
     <p>
       Deployment-template <code>steps</code> syntax and designer <code>nodes</code>/<code>edges</code> graphs.
-      See <a href="{{ '/docs/WORKFLOW_TEMPLATE_YAML.html' | relative_url }}">Workflow template YAML reference</a>.
     </p>
 
   </div>

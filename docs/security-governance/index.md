@@ -96,11 +96,6 @@ permalink: /axio/security-governance/
       <span>Analytics</span>
       <span>Settings</span>
 
-      <div class="governance-filters">
-        <span>▣ &nbsp; 7 / 30 / 90 days</span>
-        <span>Cloud: All providers⌄</span>
-        <span>Framework: All⌄</span>
-      </div>
     </div>
 
     <p style="margin-top: 1rem;">
@@ -121,7 +116,7 @@ permalink: /axio/security-governance/
         date range (7, 30, or 90 days).
       </p>
 
-      <a class="chart-link" href="{{ '/axio/security-governance/' | relative_url }}#analytics">Open Analytics tab <span>→</span></a>
+    
     </div>
 
     <div class="governance-chart-card">
@@ -132,7 +127,6 @@ permalink: /axio/security-governance/
         <strong>Framework coverage</strong> maps controls to CIS, NIST, ISO 27001, SOC 2, PCI DSS, HIPAA, and related frameworks.
       </p>
 
-      <a class="chart-link" href="{{ '/axio/security-governance/' | relative_url }}#analytics">View coverage charts <span>→</span></a>
     </div>
 
     <div class="governance-chart-card">
@@ -143,7 +137,6 @@ permalink: /axio/security-governance/
         <strong>Policy pack usage</strong> shows the most assigned packs. A <strong>findings trend</strong> chart breaks violations down by severity over time.
       </p>
 
-      <a class="chart-link" href="{{ '/axio/security-governance/policy-packs/' | relative_url }}">Browse policy packs <span>→</span></a>
     </div>
 
   </section>

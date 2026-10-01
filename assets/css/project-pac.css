@@ -1,0 +1,652 @@
+/* ==========================================
+   Create Project using Platform as Code
+========================================== */
+
+.page-icon{
+    width:46px;
+    height:46px;
+    vertical-align:middle;
+    margin-right:10px;
+}
+
+/* ==========================================
+   Important Callout
+========================================== */
+
+.important-box{
+    margin:28px 0;
+    padding:18px 22px;
+    border:1px solid #f9d28b;
+    background:#fff8eb;
+    border-radius:12px;
+}
+
+.important-header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:8px;
+}
+
+.important-header img{
+    width:20px;
+    height:20px;
+}
+
+.important-header h3{
+    margin:0;
+    color:#c2410c;
+    font-size:16px;
+    font-weight:600;
+}
+
+/* ==========================================
+   Main Layout
+========================================== */
+
+.step-layout{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:36px;
+    margin-top:24px;
+}
+
+/* ==========================================
+   Timeline
+========================================== */
+
+.step-left{
+    position:relative;
+}
+
+.step-item{
+    display:flex;
+    gap:18px;
+    position:relative;
+    padding-bottom:28px;
+}
+
+.step-item:last-child{
+    padding-bottom:0;
+}
+
+.step-item::before{
+    content:"";
+    position:absolute;
+    left:14px;
+    top:34px;
+    width:2px;
+    height:calc(100% - 8px);
+    background:#bbf7d0;
+}
+
+.step-item:last-child::before{
+    display:none;
+}
+
+.step-circle-pac{
+    width:30px;
+    height:30px;
+    min-width:30px;
+    border-radius:50%;
+    background:#16a34a;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+}
+
+.step-content h3{
+    margin:0 0 6px;
+    font-size:18px;
+    color:#111827;
+}
+
+.step-content p{
+    margin:0;
+    color:#4b5563;
+    line-height:1.7;
+}
+
+/* ==========================================
+   Right Panel
+========================================== */
+
+.code-panel{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* ==========================================
+   Code Card
+========================================== */
+
+.code-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(15,23,42,.05);
+}
+
+.code-tabs{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 18px;
+    border-bottom:1px solid #eef2f7;
+}
+
+.tabs{
+    display:flex;
+    gap:10px;
+}
+
+.tab{
+    padding:7px 18px;
+    border:1px solid #dbeafe;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    color:#6b7280;
+    background:#fff;
+}
+
+.tab.active{
+    color:#2563eb;
+    border-color:#bfdbfe;
+    background:#eff6ff;
+}
+
+.copy-btn{
+    padding:7px 14px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    background:#fff;
+    font-size:14px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.copy-btn:hover{
+    background:#f8fafc;
+}
+
+.code-card pre{
+    margin:0;
+    padding:20px;
+    overflow:auto;
+    background:#fcfcfd;
+}
+
+.code-card code{
+    font-family:Consolas, monospace;
+    font-size:14px;
+    line-height:1.8;
+    color:#1e40af;
+}
+
+/* ==========================================
+   Repository Card
+========================================== */
+
+.repo-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    padding:18px;
+    box-shadow:0 6px 18px rgba(15,23,42,.05);
+}
+
+.repo-card h3{
+    margin-top:0;
+    margin-bottom:14px;
+    font-size:17px;
+}
+
+.repo-card pre{
+    margin:0;
+    background:#fafafa;
+    padding:18px;
+    border-radius:8px;
+    overflow:auto;
+}
+
+.repo-card code{
+    font-family:Consolas, monospace;
+    line-height:1.8;
+}
+
+/* ==========================================
+   Tip Box
+========================================== */
+
+.tip-box{
+    margin-top:34px;
+    border:1px solid #d8c7ff;
+    background:#faf6ff;
+    border-radius:12px;
+    padding:18px 22px;
+}
+
+.tip-header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.tip-header img{
+    width:24px;
+    height:24px;
+}
+
+.tip-header h3{
+    margin:0;
+    color:#6d28d9;
+}
+
+.tip-box p{
+    margin:0;
+    line-height:1.8;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width:1000px){
+
+.step-layout{
+    grid-template-columns:1fr;
+}
+
+.page-navigation{
+    flex-direction:column;
+    gap:16px;
+}
+
+.nav-button{
+    width:100%;
+}
+
+}
+
+@media (max-width:640px){
+
+.code-tabs{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+}
+
+.tabs{
+    width:100%;
+}
+
+.tab{
+    flex:1;
+    text-align:center;
+}
+
+.copy-btn{
+    width:100%;
+}
+
+}
+
+.step-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/* YAML CARD */
+
+.code-card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 3px 12px rgba(15,23,42,.05);
+
+}
+
+/* REPOSITORY CARD */
+
+.repo-card{
+
+    background:#fff;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 3px 12px rgba(15,23,42,.05);
+
+}
+
+.repo-card h3{
+
+    margin-top:0;
+
+    margin-bottom:16px;
+
+    font-size:20px;
+
+}
+
+.repo-card pre{
+
+    margin:0;
+
+    padding:0;
+
+    background:none;
+
+}
+
+.repo-card code{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    font-family:Consolas, monospace;
+
+}
+
+/* ==========================================
+   YAML / JSON Tabs (CSS Only)
+========================================== */
+
+.code-card{
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(15,23,42,.05);
+}
+
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+/* Hide radio buttons */
+
+.tabs input[type="radio"]{
+    display:none;
+}
+
+/* Labels */
+
+.tab-label{
+    padding:12px 22px;
+    cursor:pointer;
+    font-size:14px;
+    font-weight:600;
+    color:#6b7280;
+    border-bottom:1px solid #eef2f7;
+    transition:.2s;
+}
+
+/* Active Tab */
+
+#yaml-tab:checked + .tab-label,
+#json-tab:checked + .tab-label{
+    color:#2563eb;
+    background:#eff6ff;
+    border-bottom:2px solid #2563eb;
+}
+
+/* Content Wrapper */
+
+.content-wrapper{
+    width:100%;
+}
+
+/* Hide Both */
+
+.yaml-content,
+.json-content{
+    display:none;
+}
+
+/* Show YAML */
+
+#yaml-tab:checked ~ .content-wrapper .yaml-content{
+    display:block;
+}
+
+/* Show JSON */
+
+#json-tab:checked ~ .content-wrapper .json-content{
+    display:block;
+}
+
+/* Code Block */
+
+.code-card pre{
+    margin:0;
+    padding:20px;
+    background:#fcfcfd;
+    border-top:1px solid #eef2f7;
+    overflow:auto;
+}
+
+.code-card code{
+    font-family:Consolas, monospace;
+    font-size:14px;
+    line-height:1.8;
+    color:#1e293b;
+}
+
+
+
+
+
+
+
+
+
+/* Overview */
+
+.prerequisite-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 12px;
+}
+
+.prerequisite-header img {
+    width: 22px;
+    height: 22px;
+}
+
+.prerequisite-header h3 {
+    margin: 0;
+    color: #176b45;
+    font-size: 21px;
+}
+
+.platform-overview {
+    margin: 0 0 28px;
+    max-width: 1100px;
+    color: #596273;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* Workflow heading */
+
+.workflow-title {
+    margin: 0 0 20px;
+    font-size: 27px;
+    line-height: 1.25;
+    color: #111827;
+}
+
+
+/* Main two-column layout */
+
+.platform-code-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(520px, 1.55fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+
+/* Left workflow */
+
+.platform-workflow {
+    position: relative;
+    padding: 28px;
+    box-sizing: border-box;
+    border: 1px solid #d9dde5;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.platform-workflow .step-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    column-gap: 18px;
+    padding: 0 0 38px;
+    margin: 0;
+}
+
+.platform-workflow .step-item:last-child {
+    padding-bottom: 0;
+}
+
+.platform-workflow .step-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 34px;
+    bottom: 0;
+    width: 2px;
+    background: #b7ead1;
+}
+
+.platform-workflow .step-circle-ui {
+    position: relative;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #18a96b;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.platform-workflow .step-content {
+    padding-top: 1px;
+}
+
+.platform-workflow .step-content h3 {
+    margin: 0 0 7px;
+    color: #111827;
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.platform-workflow .step-content p {
+    margin: 0;
+    color: #596273;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* Right column */
+
+.platform-right {
+    min-width: 0;
+    padding: 28px;
+    box-sizing: border-box;
+    border: 1px solid #d9dde5;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.platform-description {
+    margin: 0 0 20px;
+    color: #1f2937;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.platform-workflow-heading {
+    margin: 0 0 18px;
+    text-align: center;
+    color: #168451;
+    font-size: 20px;
+}
+
+.resource-card-pac.project {
+    background: #f9f8fd;
+    border: 1px solid #886ec4;
+}
+
+.resource-card-pac {
+    border-radius: 18px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    transition: all .25s ease;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, .03);
+}
+
+.resource-card-pac ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resource-card-pac li {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 14px;
+    line-height: 1.6;
+}
+
+.resource-card-pac li::before {
+    content: "✓" !important;
+    color: #22c55e !important;
+    font-weight: 700 !important;
+    position: absolute;
+    top: 0;
+    margin: 0;
+}
+
+.resource-card-pac p {
+    color: #5b6472;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}

@@ -79,39 +79,6 @@ Axio discovers Terraform resources in the selected stack, prices them, and rolls
 
 </div>
 
-<h2>Consolidated spend summary</h2>
-
-<p>
-After at least one stack scan, the hero banner shows live totals (not sample data):
-</p>
-
-<div class="cost-summary-grid">
-
-  <div class="cost-metric-card">
-    <div class="cost-metric-label">MONTHLY SPEND <span>$</span></div>
-    <div class="cost-metric-value green">—</div>
-    <div class="cost-metric-description">All scanned stacks</div>
-  </div>
-
-  <div class="cost-metric-card">
-    <div class="cost-metric-label">ANNUAL FORECAST <span>▣</span></div>
-    <div class="cost-metric-value">—</div>
-    <div class="cost-metric-description">12-month projection</div>
-  </div>
-
-  <div class="cost-metric-card">
-    <div class="cost-metric-label">POTENTIAL SAVINGS <span>◇</span></div>
-    <div class="cost-metric-value green">—</div>
-    <div class="cost-metric-description">Estimated monthly opportunity</div>
-  </div>
-
-  <div class="cost-metric-card">
-    <div class="cost-metric-label">OPEN ANOMALIES <span>△</span></div>
-    <div class="cost-metric-value red">—</div>
-    <div class="cost-metric-description">Unacknowledged cost spikes</div>
-  </div>
-
-</div>
 
 <h2>Page tabs</h2>
 

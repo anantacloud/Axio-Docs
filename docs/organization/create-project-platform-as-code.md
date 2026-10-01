@@ -7,6 +7,9 @@ nav_order: 2
 permalink: /axio/organization/project/create-project-platform-as-code/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/project-pac.css' | relative_url }}">
+
+
 <h1>
     <img src="{{ '/assets/icons/code.svg' | relative_url }}"
          class="page-icon"
@@ -227,7 +230,7 @@ spec:
 
 <div class="resource-grid-info">
 
-<div class="resource-card project">
+<div class="resource-card-pac project">
 
     <div class="card-title">
 
@@ -285,8 +288,6 @@ spec:
 </p>
 
 </div>
-
-<hr>
 
 
 <div class="page-navigation">

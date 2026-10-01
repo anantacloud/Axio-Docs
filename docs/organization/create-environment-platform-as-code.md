@@ -7,6 +7,9 @@ nav_order: 2
 permalink: /axio/organization/create-environment-platform-as-code/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/environment-pac.css' | relative_url }}">
+
+
 <h1>
   <img src="{{ '/assets/icons/layout-dashboard.svg' | relative_url }}"
        class="page-icon"
@@ -254,7 +257,7 @@ spec:
 
 <div class="resource-grid-info">
 
-<div class="resource-card environment">
+<div class="resource-card-environment-pac environment">
 
     <div class="card-title">
 

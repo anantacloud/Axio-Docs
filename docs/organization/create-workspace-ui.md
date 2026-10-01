@@ -7,6 +7,9 @@ nav_order: 1
 permalink: /axio/organization/workspace/create-workspace-ui/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/workspace-ui.css' | relative_url }}">
+
+
 <h1>
     <img src="{{ '/assets/icons/blocks.svg' | relative_url }}"
          class="page-icon"
@@ -286,7 +289,7 @@ permalink: /axio/organization/workspace/create-workspace-ui/
 
 </div>
 
-<div class="resource-card project">
+<div class="resource-card-workspace project">
 
     <div class="card-title">
 

@@ -352,6 +352,11 @@ RESOURCE CARD CONTENT
     margin:0;
 }
 
+.main-content ul > li::before {
+    position: absolute !important;
+    margin-left: 0em !important;
+}
+
 
 /*==================================================
 CARD FOOTER
@@ -467,6 +472,13 @@ WAYS TO CREATE RESOURCES
     position:relative;
     margin-bottom:9px;
     padding-left:20px;
+}
+
+.method-card li::before {
+    content: "✓" !important;
+    color: #22c55e !important;
+    font-weight: bold !important;    
+    margin-left: 0.10em !important;
 }
 
 .method-card ul li::before{
@@ -1035,7 +1047,6 @@ RESPONSIVE
 }
 
 .hierarchy-tree {
-    font-size: 14px;
     color: #34445d;
     line-height: 1.75;
 }
@@ -1334,12 +1345,9 @@ RESPONSIVE
     padding: 8px 10px !important;
     background: #f5f3ff !important;
     border: 1px solid #dfe3eb !important;
-
     color: #172033 !important;
-    font-size: 13px !important;
     font-weight: 700 !important;
     line-height: 1.35;
-
     text-align: left;
     vertical-align: middle;
 }
@@ -1347,11 +1355,8 @@ RESPONSIVE
 .access-roles-table td {
     padding: 7px 10px !important;
     border: 1px solid #dfe3eb !important;
-
     color: #53647d;
-    font-size: 13px !important;
     line-height: 1.35;
-
     vertical-align: middle;
 }
 
@@ -1377,14 +1382,12 @@ RESPONSIVE
 .access-footnote {
     margin: 7px 0 0;
     color: #667085;
-    font-size: 11px;
     line-height: 1.45;
 }
 
 .access-scope-note {
     margin: 7px 0 0;
     color: #53647d;
-    font-size: 13px;
     line-height: 1.55;
 }
 
@@ -1599,3 +1602,4 @@ RESPONSIVE
     }
 
 }
+

@@ -39,7 +39,7 @@
 .main-content-wrap {
     width: 95% !important;
     max-width: 1500px !important;
-    margin: 0 auto;
+    margin: 0 !important;
 }
 
 .main-content {
@@ -4680,49 +4680,49 @@ hr{
 
 .sync-process-card {
     padding: 18px 20px 22px;
-
     box-sizing: border-box;
-
     border: 1px solid #d9dde5;
-
     border-radius: 9px;
-
     background: #ffffff;
 }
 
 .sync-process-card > h3 {
     margin: 0 0 30px;
-
     color: #168451;
-
     font-size: 16px;
-
     line-height: 1.3;
 }
 
 .sync-process-flow {
     display: grid;
-
-    grid-template-columns:
-        minmax(105px, 1fr)
-        28px
-        minmax(105px, 1fr)
-        28px
-        minmax(105px, 1fr)
-        28px
-        minmax(105px, 1fr)
-        28px
-        minmax(105px, 1fr);
-
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    column-gap: 14px;
     align-items: start;
-
-    column-gap: 3px;
+    width: 100%;
 }
 
 .sync-process-item {
+    position: relative;
     min-width: 0;
-
     text-align: center;
+}
+
+/* Arrow between process steps */
+.sync-process-item:not(:last-of-type)::after {
+    content: "→";
+    position: absolute;
+    top: 18px;
+    right: -21px;
+
+    color: #159d5d;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Hide the old arrow elements */
+.sync-arrow {
+    display: none;
 }
 
 .sync-process-icon {
@@ -4732,43 +4732,40 @@ hr{
     margin: 0 auto 12px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     box-sizing: border-box;
 
     border: 1px solid #a9ddc1;
-
     border-radius: 9px;
 
     background: #f0fbf5;
-
     color: #168451;
 }
 
 .git-mark {
     font-size: 30px;
-
     transform: rotate(45deg);
 }
 
 .process-symbol {
     font-size: 30px;
-
     line-height: 1;
 }
 
 .sync-process-item h4 {
-    min-height: 21px;
+    min-height: 35px;
 
     margin: 0 0 7px;
 
     color: #111827;
 
     font-size: 13px;
-
     line-height: 1.35;
+
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 .sync-process-item p {
@@ -4779,23 +4776,10 @@ hr{
     color: #4b5563;
 
     font-size: 11px;
-
     line-height: 1.55;
-}
 
-.sync-arrow {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 21px;
-
-    color: #159d5d;
-
-    font-size: 24px;
-
-    font-weight: 400;
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 
@@ -4837,9 +4821,7 @@ hr{
 
 .sync-best-practices ul {
     list-style: none;
-
     margin: 0;
-
     padding: 0;
 }
 
@@ -5233,7 +5215,7 @@ hr{
 
     color: #0873df;
 
-    font-size: 16px;
+    font-size: 16px !important;
 }
 
 .history-info-card p {
@@ -5241,7 +5223,7 @@ hr{
 
     color: #111827;
 
-    font-size: 13px;
+    font-size: 15px;
 
     line-height: 1.8;
 }
@@ -5336,7 +5318,7 @@ hr{
 
     color: #111827;
 
-    font-size: 14px;
+    font-size: 15px !important;
 
     line-height: 1.35;
 }
@@ -5346,7 +5328,7 @@ hr{
 
     color: #111827;
 
-    font-size: 12px;
+    font-size: 14px;
 
     line-height: 1.7;
 }
@@ -5357,49 +5339,66 @@ hr{
    ========================================================= */
 
 .history-glance-card {
-    padding: 20px 22px 26px;
-
+    width: 100%;
     box-sizing: border-box;
 
-    border: 1px solid #d9dde5;
+    padding: 20px 22px 26px;
 
+    border: 1px solid #d9dde5;
     border-radius: 9px;
 
     background: #ffffff;
+
+    overflow: hidden;
 }
 
 .history-glance-card > h3 {
-    margin: 0 0 66px;
+    margin: 0 0 40px;
 
     color: #168451;
 
     font-size: 16px;
+    line-height: 1.3;
 }
+
+
+/* =========================================================
+   HISTORY FLOW
+   ========================================================= */
 
 .history-glance-flow {
     display: grid;
 
-    grid-template-columns:
-        minmax(105px, 1fr)
-        25px
-        minmax(105px, 1fr)
-        25px
-        minmax(105px, 1fr)
-        25px
-        minmax(105px, 1fr)
-        25px
-        minmax(105px, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 40px;
+    row-gap: 36px;
 
     align-items: start;
 
-    column-gap: 4px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+
+/* =========================================================
+   HISTORY ITEM
+   ========================================================= */
+
 .history-glance-item {
+    position: relative;
+
     min-width: 0;
 
     text-align: center;
+
+    box-sizing: border-box;
 }
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
 
 .history-glance-icon {
     width: 58px;
@@ -5410,7 +5409,7 @@ hr{
     align-items: center;
     justify-content: center;
 
-    margin: 0 auto 22px;
+    margin: 0 auto 18px;
 
     box-sizing: border-box;
 
@@ -5427,8 +5426,13 @@ hr{
     font-weight: 500;
 }
 
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
 .history-glance-item h4 {
-    min-height: 20px;
+    min-height: 35px;
 
     margin: 0 0 10px;
 
@@ -5437,7 +5441,17 @@ hr{
     font-size: 13px;
 
     line-height: 1.35;
+
+    font-weight: 500;
+
+    word-break: normal;
+    overflow-wrap: normal;
 }
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
 
 .history-glance-item p {
     min-height: 62px;
@@ -5449,16 +5463,145 @@ hr{
     font-size: 11px;
 
     line-height: 1.7;
+
+    word-break: normal;
+    overflow-wrap: normal;
 }
+
+
+/* =========================================================
+   OLD CONNECTOR ELEMENTS
+   ========================================================= */
 
 .history-glance-line {
-    height: 1px;
-
-    margin-top: 29px;
-
-    background: #b8e3ca;
+    display: none;
 }
 
+
+/* =========================================================
+   ARROWS
+   ---------------------------------------------------------
+   HTML structure contains:
+   item
+   line
+   item
+   line
+   item
+   line
+   item
+   line
+   item
+   line
+   item
+   ========================================================= */
+
+
+/* First row:
+   TRIGGERED → DISCOVERED → PLANNED
+*/
+
+.history-glance-item:nth-child(1)::after,
+.history-glance-item:nth-child(3)::after {
+
+    content: "→";
+
+    position: absolute;
+
+    top: 20px;
+
+    right: -31px;
+
+    color: #159d5d;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* Second row:
+   RECONCILED → RECORDED → REVIEWED
+*/
+
+.history-glance-item:nth-child(7)::after,
+.history-glance-item:nth-child(9)::after {
+
+    content: "→";
+
+    position: absolute;
+
+    top: 20px;
+
+    right: -31px;
+
+    color: #159d5d;
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .history-glance-flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        column-gap: 30px;
+        row-gap: 36px;
+    }
+
+    /* Hide custom arrows on smaller layout */
+    .history-glance-item::after {
+        display: none !important;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .history-glance-card {
+        padding: 18px 16px 22px;
+    }
+
+    .history-glance-card > h3 {
+        margin-bottom: 30px;
+    }
+
+    .history-glance-flow {
+        grid-template-columns: 1fr;
+
+        row-gap: 30px;
+    }
+
+    .history-glance-item::after {
+        display: none !important;
+    }
+
+    .history-glance-item h4 {
+        min-height: auto;
+    }
+
+    .history-glance-item p {
+        min-height: auto;
+    }
+}
 
 /* =========================================================
    TIP
@@ -5506,7 +5649,7 @@ hr{
 
     color: #1f2937;
 
-    font-size: 13px;
+    font-size: 15px;
 
     line-height: 1.75;
 }
@@ -7492,7 +7635,7 @@ hr{
 .axio-manual-best li {
   margin: 5px 0;
   color: #667189;
-  font-size: 12px;
+  font-size: 16px !important;
 }
 
 /* ---------- Responsive ---------- */
@@ -8965,7 +9108,7 @@ hr{
 .drift-two-column li {
   margin: 7px 0;
   color: #465a76;
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.5;
 }
 
@@ -21014,5 +21157,7 @@ table tr:hover td {
     white-space: nowrap;
   }
 }
+
+
 
 

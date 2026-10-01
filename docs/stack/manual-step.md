@@ -157,13 +157,13 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
 
       <div class="axio-manual-form-step active" data-panel="1">
         <label>Organization</label>
-        <input type="text" value="Acme Corp" readonly aria-label="Organization">
+        <input type="text" value="Abcd Corp" readonly aria-label="Organization">
 
         <div class="axio-manual-two" style="margin-top: 1rem;">
           <div>
             <label>Project <em>*</em></label>
             <select>
-              <option>Acme Corp</option>
+              <option>Abcd Corp</option>
               <option>Demo Project</option>
               <option>Platform Project</option>
             </select>
@@ -201,13 +201,13 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
         <label>Source control provider <em>*</em></label>
         <select>
           <option>my-github (GitHub)</option>
-          <option>acme-gitlab (GitLab)</option>
-          <option>acme-bitbucket (Bitbucket)</option>
+          <option>abcd-gitlab (GitLab)</option>
+          <option>abcd-bitbucket (Bitbucket)</option>
         </select>
 
         <label>Repository <em>*</em></label>
         <div class="axio-manual-repo">
-          <input type="text" value="acme/my-infra" aria-label="Repository">
+          <input type="text" value="abcd/my-infra" aria-label="Repository">
           <span>↗</span>
         </div>
 
@@ -253,12 +253,12 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
 
             <label>Cloud credential <em>*</em></label>
             <select>
-              <option>acme-aws-prod</option>
-              <option>acme-aws-dev</option>
+              <option>abcd-aws-prod</option>
+              <option>abcd-aws-dev</option>
             </select>
 
             <label>Region <em>*</em></label>
-            <input type="text" value="ap-south-1" aria-label="Region">
+            <input type="text" value="us-east-1" aria-label="Region">
           </div>
 
           <div class="axio-config-box">

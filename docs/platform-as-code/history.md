@@ -78,13 +78,6 @@ permalink: /axio/platform-as-code/history/
 
             <div class="history-info-card">
 
-                <div class="history-info-icon">
-
-                    <img src="{{ '/assets/icons/rotate-ccw-clock.svg' | relative_url }}"
-                         alt="History">
-
-                </div>
-
                 <div>
 
                     <h3>What is History?</h3>
@@ -105,10 +98,7 @@ permalink: /axio/platform-as-code/history/
 
             <div class="history-info-card" style="margin-top: 1rem;">
 
-                <div class="history-info-icon">
-                    <img src="{{ '/assets/icons/clipboard-list.svg' | relative_url }}" alt="Columns">
-                </div>
-
+                
                 <div>
                     <h3>History columns</h3>
                     <ul>
@@ -141,7 +131,7 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Audit trail</h4>
+                        <h4><strong>Audit trail</strong></h4>
 
                         <p>
                             Maintain a record of Git-driven platform changes for compliance
@@ -159,7 +149,7 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Troubleshooting</h4>
+                        <h4><strong>Troubleshooting</strong></h4>
 
                         <p>
                             Filter failed or rejected runs, then open the same run under
@@ -177,7 +167,7 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Trends</h4>
+                        <h4><strong>Trends</strong></h4>
 
                         <p>
                             Scan validation and approval columns over time to spot recurring
@@ -195,7 +185,7 @@ permalink: /axio/platform-as-code/history/
 
                     <div>
 
-                        <h4>Traceability</h4>
+                        <h4><strong>Traceability</strong></h4>
 
                         <p>
                             Trace each run back to repository, commit SHA, and trigger type.

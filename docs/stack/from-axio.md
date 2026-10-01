@@ -59,7 +59,7 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
         Upload your manifest — Axio validates it and pre-fills the review screen.
       </p>
     </div>
-    <div class="axio-badge">Recommended</div>
+
   </div>
 
   <div class="axio-info">
@@ -129,13 +129,13 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
 
       <div class="axio-form-step" data-panel="2">
         <div class="axio-review">
-          <div><span>Project</span><strong>Acme Corp</strong></div>
+          <div><span>Project</span><strong>Abcd Corp</strong></div>
           <div><span>Team workspace</span><strong>platform-team</strong></div>
           <div><span>Environment</span><strong>Development</strong></div>
           <div><span>Stack name</span><strong>my-app-stack</strong></div>
           <div><span>IaC engine</span><strong>Terraform 1.9.5</strong></div>
           <div><span>Cloud provider</span><strong>AWS · us-east-1</strong></div>
-          <div><span>Cloud credential</span><strong>acme-aws-prod</strong></div>
+          <div><span>Cloud credential</span><strong>abcd-aws-prod</strong></div>
           <div><span>Variables / policies</span><strong>3 variables · 1 policy pack</strong></div>
         </div>
 

@@ -1,0 +1,44 @@
+.resource-card-workspace.project {
+    background: #f9f8fd;
+    border: 1px solid #886ec4;
+}
+
+.resource-card-workspace {
+    border-radius: 18px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    transition: all .25s ease;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, .03);
+}
+
+.resource-card-workspace p {
+    color: #5b6472;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 18px;
+}
+
+.resource-card-workspace ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resource-card-workspace li {
+    display: block;
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 28px;
+    color: #374151;
+    line-height: 1.7;
+}
+
+.resource-card-workspace li::before {
+    content: "✓" !important;
+    position: absolute !important;
+    top: 0 !important;
+    color: #22c55e !important;
+    font-weight: 700 !important;
+}
