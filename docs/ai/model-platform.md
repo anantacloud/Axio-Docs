@@ -13,9 +13,9 @@ permalink: /axio/ai/model-platform/
   <div class="model-hero">
     <h1>AI Model Platform</h1>
     <p>
-      Open <strong>AI → Model Platform</strong> (<code>/ai-platform</code>) to manage the org-scoped LLM gateway:
+      Open <strong>AI → Model Platform</strong> to manage the org-scoped LLM gateway:
       provider catalog, model approval, routing rules, feature bindings, custom prompts, document libraries (RAG),
-      runtime policies, quotas, and usage analytics. Legacy <code>/ai-gateway</code> redirects here.
+      runtime policies, quotas, and usage analytics. Legacy redirects here.
     </p>
   </div>
 
@@ -370,21 +370,6 @@ permalink: /axio/ai/model-platform/
 
     </div>
 
-  </div>
-
-  <h2>Routing playground</h2>
-  <p class="model-section-description">
-    On the <strong>Usage</strong> tab, open <strong>Routing playground</strong> to send test prompts through the gateway.
-    Choose a feature key, task, and privacy mode (e.g. <code>private</code> for air-gapped routing) and inspect the
-    selected model, routing reason, latency, cost, and failover usage. For day-to-day chat, use
-    <a href="{{ '/axio/ai/assistant/' | relative_url }}">AI Assistant</a>.
-  </p>
-
-  <h2>Related pages</h2>
-  <div class="model-related-grid">
-    <div>→ <span><a href="{{ '/axio/ai/assistant/' | relative_url }}">AI Assistant</a> — org chat with explicit model selection</span></div>
-    <div>→ <span><a href="{{ '/axio/ai/prompt-library/' | relative_url }}">Prompt Library</a> — built-in prompts for end users</span></div>
-    <div>→ <span><strong>Administration → Integrations → AI Providers</strong> — credentials and connection verification</span></div>
   </div>
 
 </div>
