@@ -14,8 +14,7 @@ permalink: /axio/security-governance/my-findings/
     <div class="security-admin-note">
       <span class="security-note-icon">i</span>
       <span>
-        Open <strong>Security &amp; Governance → My findings</strong> (<code>/security/findings</code>).
-        Requires <code>security:read</code> (same access as Security Insights).
+        Open <strong>Security &amp; Governance → My findings</strong>.
       </span>
     </div>
 
@@ -63,24 +62,6 @@ permalink: /axio/security-governance/my-findings/
         resources you have access to from Security Insights.
       </p>
     </div>
-  </section>
-
-  <section class="security-section">
-    <h2>Page layout</h2>
-
-    <p>The page has three main areas:</p>
-
-    <ol class="security-numbered-list">
-      <li><strong>Header</strong> — title and short description of the work queue.</li>
-      <li><strong>Need to scan new code?</strong> — shortcut to run a Git repository scan on Security Insights.</li>
-      <li><strong>Open violations</strong> — filterable table of policy violations from the last 30 days.</li>
-    </ol>
-
-    <p>
-      The <strong>Scan Git repository</strong> button opens
-      <code>/security/insights?tab=scans&amp;focus=repos</code>, scrolling to the live IaC scan panel
-      on the IaC scans tab.
-    </p>
   </section>
 
   <section class="security-section">
@@ -154,10 +135,6 @@ permalink: /axio/security-governance/my-findings/
       </tbody>
     </table>
 
-    <p>
-      At the bottom of the table, <strong>Open remediation center</strong> links to
-      <strong>Governance Dashboard → Remediation</strong> (<code>/governance?tab=remediation</code>).
-    </p>
   </section>
 
   <section class="security-section">
