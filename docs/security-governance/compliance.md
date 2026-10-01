@@ -2,7 +2,7 @@
 layout: default
 title: Compliance
 parent: Security & Governance
-nav_order: 4
+nav_order: 5
 permalink: /axio/security-governance/compliance/
 ---
 
