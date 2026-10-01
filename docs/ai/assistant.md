@@ -11,7 +11,7 @@ permalink: /axio/ai/assistant/
   <div class="ai-hero">
     <h1>AI Assistant</h1>
     <p>
-      Open <strong>AI → Assistant</strong> (<code>/ai/assistant</code>) for org-scoped conversations that answer
+      Open <strong>AI → Assistant</strong> for org-scoped conversations that answer
       infrastructure questions, leverage live platform context, and run governed Platform MCP tools.
       HIGH-risk tools pause for human approval before they execute.
     </p>
@@ -140,22 +140,11 @@ permalink: /axio/ai/assistant/
   </div>
 
   <p class="ai-tool-note">
-    Tool runs are recorded and visible under <strong>AI → Activity → Tool runs</strong> (<code>/ai/history?tab=tools</code>).
+    Tool runs are recorded and visible under <strong>AI → Activity → Tool runs</strong>.
     Pending HIGH-risk executions show <strong>Approve</strong> / <strong>Reject</strong> actions for approvers.
     You can also run and approve tools from <strong>AI → MCP Servers</strong>.
   </p>
 
-  <h2>Related pages</h2>
-  <div class="ai-check-grid">
-    <div class="ai-check-column">
-      <div>→ <span><a href="{{ '/axio/ai/prompt-library/' | relative_url }}">Prompt Library</a> — built-in starters with production guardrails</span></div>
-    </div>
-    <div class="ai-check-column">
-      <div>→ <span><a href="{{ '/axio/ai/mcp-servers/' | relative_url }}">MCP Servers</a> — browse, run, and approve tools by domain</span></div>
-    </div>
-    <div class="ai-check-column">
-      <div>→ <span><a href="{{ '/axio/ai/activity/' | relative_url }}">Activity</a> — timeline of scans, conversations, and tool runs</span></div>
-    </div>
   </div>
 
 </div>
