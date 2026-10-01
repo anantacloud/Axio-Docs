@@ -145,6 +145,4 @@ permalink: /axio/ai/assistant/
     You can also run and approve tools from <strong>AI → MCP Servers</strong>.
   </p>
 
-  </div>
-
 </div>
