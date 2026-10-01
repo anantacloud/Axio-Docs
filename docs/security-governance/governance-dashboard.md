@@ -2,7 +2,7 @@
 layout: default
 title: Governance Dashboard
 parent: Security & Governance
-nav_order: 5
+nav_order: 1
 permalink: /axio/security-governance/governance-dashboard/
 ---
 
