@@ -19,35 +19,6 @@ permalink: /axio/security-governance/compliance/
     </p>
   </header>
 
-  <section class="crr-section">
-    <table class="crr-table">
-      <thead>
-        <tr>
-          <th>Page</th>
-          <th>Route</th>
-          <th>Nav permission</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Compliance</strong></td>
-          <td><code>/compliance</code></td>
-          <td><code>compliance:manage</code></td>
-        </tr>
-        <tr>
-          <td><strong>Risk</strong></td>
-          <td><code>/security/risk</code></td>
-          <td><code>governance:read</code></td>
-        </tr>
-        <tr>
-          <td><strong>Reports</strong></td>
-          <td><code>/governance/reports</code></td>
-          <td><code>governance:read</code></td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
   <!-- Compliance -->
   <section class="crr-section compliance-section">
 
