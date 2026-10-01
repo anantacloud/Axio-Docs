@@ -13,7 +13,7 @@ permalink: /axio/ai/prompt-library/
   <div class="prompt-hero">
     <h1>AI Prompt Library</h1>
     <p>
-      Open <strong>AI → Prompt Library</strong> (<code>/ai/prompt-library</code>) for built-in, org-seeded prompt
+      Open <strong>AI → Prompt Library</strong> for built-in, org-seeded prompt
       templates covering getting started, drift, FinOps, GitOps, operations, IaC engines, cloud, security, and governance.
       They are curated system instructions for the Assistant — not one-click code generators.
     </p>
@@ -88,7 +88,7 @@ permalink: /axio/ai/prompt-library/
     </div>
     <div class="prompt-check-column">
       <div>✓ <span><strong>Copy starter</strong> — clipboard message with bracket placeholders for variables</span></div>
-      <div>✓ <span>Deep link <code>?slug=</code> opens the variable dialog for a matching prompt</span></div>
+      <div>✓ <span>Deep link opens the variable dialog for a matching prompt</span></div>
     </div>
     <div class="prompt-check-column">
       <div>✓ <span>Stack wizard links to engine-specific prompts (Terraform, OpenTofu, Pulumi, Crossplane, …)</span></div>
@@ -178,15 +178,6 @@ permalink: /axio/ai/prompt-library/
   <h2>Example prompts</h2>
   <p class="prompt-section-description">Representative built-ins — the full catalog is searchable on the page.</p>
 
-  <div class="prompt-example-grid">
-    <div class="prompt-example-card"><strong>Plan Your First Stack</strong><small>getting-started</small></div>
-    <div class="prompt-example-card"><strong>Understand &amp; Fix Drift</strong><small>drift</small></div>
-    <div class="prompt-example-card"><strong>Review Cloud Spend &amp; Savings</strong><small>finops</small></div>
-    <div class="prompt-example-card"><strong>Troubleshoot a Failed Run</strong><small>operations</small></div>
-    <div class="prompt-example-card"><strong>Explain a Terraform Plan (Plain Language)</strong><small>terraform</small></div>
-    <div class="prompt-example-card"><strong>Pre-Deploy Checklist</strong><small>governance</small></div>
-  </div>
-
   <h2>Tips for better results</h2>
   <div class="prompt-tips">
     <div>• Start with <strong>Plan Your First Stack</strong> or <strong>Axio Platform Orientation</strong> if you are new.</div>
@@ -203,15 +194,5 @@ permalink: /axio/ai/prompt-library/
     <code>DRAFT</code>, new versions bump the template, and <strong>Approve</strong> sets <code>APPROVED</code>.
     Custom prompts use <code>{{variable}}</code> placeholders and are intended for gateway administration — they are not mixed into the end-user Prompt Library grid.
   </p>
-
-  <h2>Related pages</h2>
-  <div class="prompt-check-grid">
-    <div class="prompt-check-column">
-      <div>→ <span><a href="{{ '/axio/ai/assistant/' | relative_url }}">AI Assistant</a> — chat with library hand-off and platform context</span></div>
-    </div>
-    <div class="prompt-check-column">
-      <div>→ <span><a href="{{ '/axio/ai/model-platform/' | relative_url }}">Model Platform</a> — providers, routing, and custom prompt lifecycle</span></div>
-    </div>
-  </div>
 
 </div>
