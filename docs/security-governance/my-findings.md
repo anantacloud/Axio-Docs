@@ -2,7 +2,7 @@
 layout: default
 title: My Findings
 parent: Security & Governance
-nav_order: 2
+nav_order: 3
 permalink: /axio/security-governance/my-findings/  
 ---
 
