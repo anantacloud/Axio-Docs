@@ -35,10 +35,7 @@ permalink: /axio/stack/built-in/
       <div class="pipeline-step light-blue"><span class="pipeline-icon">♧</span><strong>Notify</strong></div>
     </div>
     <div class="parallel-label"><span></span>Parallel (Format / Lint / Security)</div>
-    <p class="axio-manual-help" style="margin-top: 1rem;">
-      Other engines use equivalent stages (for example Pulumi <em>Preview / Up</em>, CloudFormation <em>Changeset / Deploy</em>,
-      ARM/Bicep <em>What-If / Deploy</em>). Exact steps vary by engine — open a template in the catalog to view its pipeline.
-    </p>
+    
   </div>
 </section>
 
@@ -110,11 +107,6 @@ permalink: /axio/stack/built-in/
       </tbody>
     </table>
 
-    <p class="axio-manual-help" style="margin-top: 1rem;">
-      Replace <code>*</code> with the engine prefix (<code>terraform</code>, <code>opentofu</code>, <code>pulumi</code>,
-      <code>cloudformation</code>, <code>crossplane</code>, <code>arm-bicep</code>).
-      Example drift template: <code>terraform-standard-drift</code>.
-    </p>
   </div>
 </section>
 

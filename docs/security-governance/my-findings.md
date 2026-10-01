@@ -1,670 +1,545 @@
 ---
-
 layout: default
-
 title: My Findings
-
-parent: Security & Governance
-
+Parent: Security & Governance
 nav_order: 4
-
 permalink: /axio/security-governance/my-findings/
-
 ---
-
-
 
 <div class="security-insights-page">
 
+   <p class="security-lead">
 
+     <strong>My findings</strong> is the engineer work queue for open misconfigurations and policy failures
 
-&#x20; <div class="security-page-header">
+     on repositories and stacks you can access. Run IaC scans from Security Insights,
 
-&#x20;   <h1>My findings</h1>
+     fix the infrastructure code, and track violations here until they clear.
 
+     For org-wide posture, exceptions, and analytics, admins use the Governance Dashboard instead.
 
+   </p>
 
-&#x20;   <div class="security-admin-note">
+ </div>
 
-&#x20;     <span class="security-note-icon">i</span>
+ <section class="security-section">
 
-&#x20;     <span>
+   <h2>Who should use this page</h2>
 
-&#x20;       Open <strong>Security \&amp; Governance → My findings</strong> (<code>/security/findings</code>).
+   <table class="security-table">
 
-&#x20;       Requires <code>security:read</code> (same access as Security Insights).
+     <thead>
 
-&#x20;     </span>
+       <tr>
 
-&#x20;   </div>
+         <th>Audience</th>
 
+         <th>Use My findings when…</th>
 
+       </tr>
 
-&#x20;   <p class="security-lead">
+     </thead>
 
-&#x20;     My findings is the <strong>engineer work queue</strong> for open misconfigurations and policy failures
+     <tbody>
 
-&#x20;     on repositories and stacks you can access. Run IaC scans from
+       <tr>
 
-&#x20;     <a href="{{ '/axio/security-governance/security-insights/' | relative\_url }}">Security Insights</a>,
+         <td><strong>Engineers / members</strong></td>
 
-&#x20;     fix the infrastructure code, and track violations here until they clear.
+         <td>You need to see and fix violations on stacks and repos in your day-to-day work.</td>
 
-&#x20;     For org-wide posture, exceptions, and analytics, admins use the
+       </tr>
 
-&#x20;     <a href="{{ '/axio/security-governance/' | relative\_url }}">Governance Dashboard</a> instead.
+       <tr>
 
-&#x20;   </p>
+         <td><strong>Admins / governance owners</strong></td>
 
-&#x20; </div>
+         <td>You want a focused violation list without leaving the security area; use Governance Dashboard for org-wide remediation and settings.</td>
 
+       </tr>
 
+       <tr>
 
-&#x20; <section class="security-section">
+         <td><strong>Viewers</strong></td>
 
-&#x20;   <h2>Who should use this page</h2>
+         <td>You need read-only visibility into open violations in scope.</td>
 
+       </tr>
 
+     </tbody>
 
-&#x20;   <table class="security-table">
+   </table>
 
-&#x20;     <thead>
+   <div class="security-info-note">
 
-&#x20;       <tr>
+     <span>i</span>
 
-&#x20;         <th>Audience</th>
+     <p>
 
-&#x20;         <th>Use My findings when…</th>
+       Non-admins see an info banner: organization-wide policy packs, scan defaults, and compliance
 
-&#x20;       </tr>
+       settings are managed by your administrator. You can still scan Git repositories and platform
 
-&#x20;     </thead>
+       resources you have access to from Security Insights.
 
-&#x20;     <tbody>
+     </p>
 
-&#x20;       <tr>
+   </div>
 
-&#x20;         <td><strong>Engineers / members</strong></td>
+ </section>
 
-&#x20;         <td>You need to see and fix violations on stacks and repos in your day-to-day work.</td>
+ <section class="security-section">
 
-&#x20;       </tr>
+   <h2>Page layout</h2>
 
-&#x20;       <tr>
+   <p>The page has three main areas:</p>
 
-&#x20;         <td><strong>Admins / governance owners</strong></td>
+   <ol class="security-numbered-list">
 
-&#x20;         <td>You want a focused violation list without leaving the security area; use Governance Dashboard for org-wide remediation and settings.</td>
+     <li><strong>Header</strong> — title and short description of the work queue.</li>
 
-&#x20;       </tr>
+     <li><strong>Need to scan new code?</strong> — shortcut to run a Git repository scan on Security Insights.</li>
 
-&#x20;       <tr>
+     <li><strong>Open violations</strong> — filterable table of policy violations from the last 30 days.</li>
 
-&#x20;         <td><strong>Viewers</strong></td>
+   </ol>
 
-&#x20;         <td>You need read-only visibility into open violations in scope.</td>
+   <p>
 
-&#x20;       </tr>
+     The <strong>Scan Git repository</strong> button opens
 
-&#x20;     </tbody>
+     <code>/security/insights?tab=scans\&amp;focus=repos</code>, scrolling to the live IaC scan panel
 
-&#x20;   </table>
+     on the IaC scans tab.
 
+   </p>
 
+ </section>
 
-&#x20;   <div class="security-info-note">
+ <section class="security-section">
 
-&#x20;     <span>i</span>
+   <h2>Open violations explorer</h2>
 
-&#x20;     <p>
+   <p>
 
-&#x20;       Non-admins see an info banner: organization-wide policy packs, scan defaults, and compliance
+     The <strong>Open violations</strong> panel uses the same violation explorer as the Governance Dashboard,
 
-&#x20;       settings are managed by your administrator. You can still scan Git repositories and platform
+     tuned for engineers. IaC scan findings appear here after you run a repository or platform scan;
 
-&#x20;       resources you have access to from Security Insights.
+     policy evaluation results appear when assigned policies fail.
 
-&#x20;     </p>
+   </p>
 
-&#x20;   </div>
+   <h3>Filters and summaries</h3>
 
-&#x20; </section>
+   <table class="security-table">
 
+     <thead>
 
+       <tr>
 
-&#x20; <section class="security-section">
+         <th>Control</th>
 
-&#x20;   <h2>Page layout</h2>
+         <th>What it does</th>
 
+       </tr>
 
+     </thead>
 
-&#x20;   <p>The page has three main areas:</p>
+     <tbody>
 
+       <tr>
 
+         <td><strong>Filter by stack</strong></td>
 
-&#x20;   <ol class="security-numbered-list">
+         <td>Chip filters for stacks with open violations (up to eight shown). Click again to clear, or use <strong>Clear filter</strong>.</td>
 
-&#x20;     <li><strong>Header</strong> — title and short description of the work queue.</li>
+       </tr>
 
-&#x20;     <li><strong>Need to scan new code?</strong> — shortcut to run a Git repository scan on Security Insights.</li>
+       <tr>
 
-&#x20;     <li><strong>Open violations</strong> — filterable table of policy violations from the last 30 days.</li>
+         <td><strong>Policy summary chips</strong></td>
 
-&#x20;   </ol>
+         <td>Top policies by violation count — quick context before drilling into rows.</td>
 
+       </tr>
 
+       <tr>
 
-&#x20;   <p>
+         <td><strong>Time window</strong></td>
 
-&#x20;     The <strong>Scan Git repository</strong> button opens
+         <td>Violations from the last <strong>30 days</strong> (default query period).</td>
 
-&#x20;     <code>/security/insights?tab=scans\&amp;focus=repos</code>, scrolling to the live IaC scan panel
+       </tr>
 
-&#x20;     on the IaC scans tab.
+       <tr>
 
-&#x20;   </p>
+         <td><strong>Pagination</strong></td>
 
-&#x20; </section>
+         <td>Page through results; change page size (10, 20, 50, or 100 rows).</td>
 
+       </tr>
 
+     </tbody>
 
-&#x20; <section class="security-section">
+   </table>
 
-&#x20;   <h2>Open violations explorer</h2>
+   <h3>Violation table columns</h3>
 
+   <table class="security-table">
 
+     <thead>
 
-&#x20;   <p>
+       <tr>
 
-&#x20;     The <strong>Open violations</strong> panel uses the same violation explorer as the Governance Dashboard,
+         <th>Column</th>
 
-&#x20;     tuned for engineers. IaC scan findings appear here after you run a repository or platform scan;
+         <th>Meaning</th>
 
-&#x20;     policy evaluation results appear when assigned policies fail.
+       </tr>
 
-&#x20;   </p>
+     </thead>
 
+     <tbody>
 
+       <tr>
 
-&#x20;   <h3>Filters and summaries</h3>
+         <td><strong>Policy</strong></td>
 
+         <td>Policy name and violation message.</td>
 
+       </tr>
 
-&#x20;   <table class="security-table">
+       <tr>
 
-&#x20;     <thead>
+         <td><strong>Resource</strong></td>
 
-&#x20;       <tr>
+         <td>Resource address in IaC (monospace).</td>
 
-&#x20;         <th>Control</th>
+       </tr>
 
-&#x20;         <th>What it does</th>
+       <tr>
 
-&#x20;       </tr>
+         <td><strong>Severity</strong></td>
 
-&#x20;     </thead>
+         <td>Critical, high, medium, or low.</td>
 
-&#x20;     <tbody>
+       </tr>
 
-&#x20;       <tr>
+       <tr>
 
-&#x20;         <td><strong>Filter by stack</strong></td>
+         <td><strong>Trigger</strong></td>
 
-&#x20;         <td>Chip filters for stacks with open violations (up to eight shown). Click again to clear, or use <strong>Clear filter</strong>.</td>
+         <td>What produced the evaluation (e.g. scan, deployment gate, policy evaluation).</td>
 
-&#x20;       </tr>
+       </tr>
 
-&#x20;       <tr>
+       <tr>
 
-&#x20;         <td><strong>Policy summary chips</strong></td>
+         <td><strong>Status</strong></td>
 
-&#x20;         <td>Top policies by violation count — quick context before drilling into rows.</td>
+         <td>Remediation status: <strong>OPEN</strong>, <strong>IN PROGRESS</strong>, or <strong>RESOLVED</strong>.</td>
 
-&#x20;       </tr>
+       </tr>
 
-&#x20;       <tr>
+     </tbody>
 
-&#x20;         <td><strong>Time window</strong></td>
+   </table>
 
-&#x20;         <td>Violations from the last <strong>30 days</strong> (default query period).</td>
+   <p>
 
-&#x20;       </tr>
+     At the bottom of the table, <strong>Open remediation center</strong> links to
 
-&#x20;       <tr>
+     <strong>Governance Dashboard → Remediation</strong> (<code>/governance?tab=remediation</code>).
 
-&#x20;         <td><strong>Pagination</strong></td>
+   </p>
 
-&#x20;         <td>Page through results; change page size (10, 20, 50, or 100 rows).</td>
+ </section>
 
-&#x20;       </tr>
+ <section class="security-section">
 
-&#x20;     </tbody>
+   <h2>Empty state</h2>
 
-&#x20;   </table>
+   <p>
 
+     When there are no open violations for the selected period, the page shows
 
+     <strong>No open violations</strong> with guidance to keep posture current.
 
-&#x20;   <h3>Violation table columns</h3>
+   </p>
 
+   <div class="security-action-grid">
 
+     <div class="security-action-card">
 
-&#x20;   <table class="security-table">
+       <span class="security-action-icon green">⌕</span>
 
-&#x20;     <thead>
+       <h4>Run IaC scan</h4>
 
-&#x20;       <tr>
+       <p>Primary action — opens Security Insights on the IaC scans tab to scan Git repos or platform resources.</p>
 
-&#x20;         <th>Column</th>
+     </div>
 
-&#x20;         <th>Meaning</th>
+   </div>
 
-&#x20;       </tr>
+   <p>
 
-&#x20;     </thead>
+     On the Governance Dashboard, admins see an additional <strong>Evaluate policies</strong> action in the
 
-&#x20;     <tbody>
+     empty state; My findings does not show that secondary action (engineers scan IaC instead).
 
-&#x20;       <tr>
+   </p>
 
-&#x20;         <td><strong>Policy</strong></td>
+ </section>
 
-&#x20;         <td>Policy name and violation message.</td>
+ <section class="security-section security-findings-section">
 
-&#x20;       </tr>
+   <h2>Typical workflow</h2>
 
-&#x20;       <tr>
+   <ol class="security-numbered-list">
 
-&#x20;         <td><strong>Resource</strong></td>
+     <li>Open <strong>My findings</strong> and review open violations, optionally filtering by stack.</li>
 
-&#x20;         <td>Resource address in IaC (monospace).</td>
+     <li>Identify the policy and resource address; open the corresponding repo or stack in your editor.</li>
 
-&#x20;       </tr>
+     <li>Fix the IaC misconfiguration or policy failure in source code.</li>
 
-&#x20;       <tr>
+     <li>Re-scan from <strong>Security Insights → IaC scans</strong> (Git live scan, Scan now, or platform on-demand scan).</li>
 
-&#x20;         <td><strong>Severity</strong></td>
+     <li>Retry deployment if a gate blocked <strong>PLAN</strong> or <strong>APPLY</strong>.</li>
 
-&#x20;         <td>Critical, high, medium, or low.</td>
+     <li>Confirm the violation moves to <strong>RESOLVED</strong> or drops off the list after the next evaluation.</li>
 
-&#x20;       </tr>
+   </ol>
 
-&#x20;       <tr>
+   <div class="security-two-column">
 
-&#x20;         <td><strong>Trigger</strong></td>
+     <div class="security-capability-card allowed">
 
-&#x20;         <td>What produced the evaluation (e.g. scan, deployment gate, policy evaluation).</td>
+       <h3>What you can do</h3>
 
-&#x20;       </tr>
+       <ul>
 
-&#x20;       <tr>
+         <li>Filter and inspect violations on stacks and repos in your work queue.</li>
 
-&#x20;         <td><strong>Status</strong></td>
+         <li>Jump to Security Insights to run new scans.</li>
 
-&#x20;         <td>Remediation status: <strong>OPEN</strong>, <strong>IN PROGRESS</strong>, or <strong>RESOLVED</strong>.</td>
+         <li>Open the remediation center for tracking (shared with Governance Dashboard).</li>
 
-&#x20;       </tr>
+       </ul>
 
-&#x20;     </tbody>
+     </div>
 
-&#x20;   </table>
+     <div class="security-capability-card restricted">
 
+       <h3>What you cannot do here</h3>
 
+       <ul>
 
-&#x20;   <p>
+         <li>Install org-wide policy packs or assign compliance frameworks.</li>
 
-&#x20;     At the bottom of the table, <strong>Open remediation center</strong> links to
+         <li>Change policy gate mode or live-scan defaults.</li>
 
-&#x20;     <strong>Governance Dashboard → Remediation</strong> (<code>/governance?tab=remediation</code>).
+         <li>Create or approve organization-wide policy exceptions.</li>
 
-&#x20;   </p>
+         <li>Run org-wide platform scans (reserved for org owner on Security Insights).</li>
 
-&#x20; </section>
+       </ul>
 
+     </div>
 
+   </div>
 
-&#x20; <section class="security-section">
+ </section>
 
-&#x20;   <h2>Empty state</h2>
+ <section class="security-section">
 
+   <h2>My findings vs Governance Dashboard</h2>
 
+   <table class="security-table">
 
-&#x20;   <p>
+     <thead>
 
-&#x20;     When there are no open violations for the selected period, the page shows
+       <tr>
 
-&#x20;     <strong>No open violations</strong> with guidance to keep posture current.
+         <th>My findings</th>
 
-&#x20;   </p>
+         <th>Governance Dashboard</th>
 
+       </tr>
 
+     </thead>
 
-&#x20;   <div class="security-action-grid">
+     <tbody>
 
+       <tr>
 
+         <td>Engineer-focused work queue at <code>/security/findings</code></td>
 
-&#x20;     <div class="security-action-card">
+         <td>Org control center at <code>/governance</code></td>
 
-&#x20;       <span class="security-action-icon green">⌕</span>
+       </tr>
 
-&#x20;       <h4>Run IaC scan</h4>
+       <tr>
 
-&#x20;       <p>Primary action — opens Security Insights on the IaC scans tab to scan Git repos or platform resources.</p>
+         <td>Open violations table and scan shortcut</td>
 
-&#x20;     </div>
+         <td>Violations, exceptions, remediation, posture, analytics, settings</td>
 
+       </tr>
 
+       <tr>
 
-&#x20;   </div>
+         <td>Linked from Security Insights KPIs (non-admin)</td>
 
+         <td>Linked from Security Insights KPIs (admin) and connectors</td>
 
+       </tr>
 
-&#x20;   <p>
+       <tr>
 
-&#x20;     On the Governance Dashboard, admins see an additional <strong>Evaluate policies</strong> action in the
+         <td>No policy pack or gate configuration</td>
 
-&#x20;     empty state; My findings does not show that secondary action (engineers scan IaC instead).
+         <td>Gate mode, live-scan defaults, evidence export, integrations</td>
 
-&#x20;   </p>
+       </tr>
 
-&#x20; </section>
+     </tbody>
 
+   </table>
 
+   <div class="security-warning">
 
-&#x20; <section class="security-section security-findings-section">
+     <span>⚠</span>
 
-&#x20;   <h2>Typical workflow</h2>
+     <p>
 
+       Admins see a footer link to the Governance Dashboard for org-wide remediation, exceptions,
 
+       and posture analytics. Do not disable deploy gates globally to clear a single stack unless
 
-&#x20;   <ol class="security-numbered-list">
+       leadership explicitly approves it.
 
-&#x20;     <li>Open <strong>My findings</strong> and review open violations, optionally filtering by stack.</li>
+     </p>
 
-&#x20;     <li>Identify the policy and resource address; open the corresponding repo or stack in your editor.</li>
+   </div>
 
-&#x20;     <li>Fix the IaC misconfiguration or policy failure in source code.</li>
+ </section>
 
-&#x20;     <li>Re-scan from <strong>Security Insights → IaC scans</strong> (Git live scan, Scan now, or platform on-demand scan).</li>
+ <section class="security-section">
 
-&#x20;     <li>Retry deployment if a gate blocked <strong>PLAN</strong> or <strong>APPLY</strong>.</li>
+   <h2>How findings get here</h2>
 
-&#x20;     <li>Confirm the violation moves to <strong>RESOLVED</strong> or drops off the list after the next evaluation.</li>
+   <ol class="security-numbered-list">
 
-&#x20;   </ol>
+     <li><strong>IaC scans</strong> (Security Insights) — Terraform, OpenTofu, Pulumi, CloudFormation, and secrets-in-code checks produce misconfiguration findings.</li>
 
+     <li><strong>Live scan</strong> — continuous evaluation on connected Git repositories surfaces new issues automatically.</li>
 
+     <li><strong>Policy evaluation</strong> — assigned policy packs add guardrails; failures become violations.</li>
 
-&#x20;   <div class="security-two-column">
+     <li><strong>Deploy gates</strong> — enforcing policies during <strong>PLAN/APPLY</strong> record violations when deployments are blocked or warned.</li>
 
+   </ol>
 
+   <div class="security-info-note">
 
-&#x20;     <div class="security-capability-card allowed">
+     <span>i</span>
 
-&#x20;       <h3>What you can do</h3>
+     <p>
 
-&#x20;       <ul>
+       Built-in misconfiguration and secrets checks always run during scans; policy packs are optional
 
-&#x20;         <li>Filter and inspect violations on stacks and repos in your work queue.</li>
+       but add organizational rules on top. Violations from scans and policy evaluation appear together
 
-&#x20;         <li>Jump to Security Insights to run new scans.</li>
+       in the Open violations table.
 
-&#x20;         <li>Open the remediation center for tracking (shared with Governance Dashboard).</li>
+     </p>
 
-&#x20;       </ul>
+   </div>
 
-&#x20;     </div>
+ </section>
 
+ <section class="security-section">
 
+   <h2>Permissions</h2>
 
-&#x20;     <div class="security-capability-card restricted">
+   <table class="security-table">
 
-&#x20;       <h3>What you cannot do here</h3>
+     <thead>
 
-&#x20;       <ul>
+       <tr>
 
-&#x20;         <li>Install org-wide policy packs or assign compliance frameworks.</li>
+         <th>Permission / role</th>
 
-&#x20;         <li>Change policy gate mode or live-scan defaults.</li>
+         <th>Typical access on My findings</th>
 
-&#x20;         <li>Create or approve organization-wide policy exceptions.</li>
+       </tr>
 
-&#x20;         <li>Run org-wide platform scans (reserved for org owner on Security Insights).</li>
+     </thead>
 
-&#x20;       </ul>
+     <tbody>
 
-&#x20;     </div>
+       <tr>
 
+         <td><code>security:read</code></td>
 
+         <td>View My findings and the violations table (required for nav access).</td>
 
-&#x20;   </div>
+       </tr>
 
-&#x20; </section>
+       <tr>
 
+         <td><code>security:manage</code>, <code>policy:manage</code>, or <code>governance:manage</code></td>
 
+         <td>Act on findings — resolve, suppress, or update remediations (viewers stay read-only).</td>
 
-&#x20; <section class="security-section">
+       </tr>
 
-&#x20;   <h2>My findings vs Governance Dashboard</h2>
+       <tr>
 
+         <td><code>governance:manage</code> or org Admin/Owner</td>
 
+         <td>Same violation explorer with admin empty-state actions; full org tools on Governance Dashboard.</td>
 
-&#x20;   <table class="security-table">
+       </tr>
 
-&#x20;     <thead>
+       <tr>
 
-&#x20;       <tr>
+         <td>Viewers</td>
 
-&#x20;         <th>My findings</th>
+         <td>Read-only access to violations in scope.</td>
 
-&#x20;         <th>Governance Dashboard</th>
+       </tr>
 
-&#x20;       </tr>
+     </tbody>
 
-&#x20;     </thead>
+   </table>
 
-&#x20;     <tbody>
-
-&#x20;       <tr>
-
-&#x20;         <td>Engineer-focused work queue at <code>/security/findings</code></td>
-
-&#x20;         <td>Org control center at <code>/governance</code></td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td>Open violations table and scan shortcut</td>
-
-&#x20;         <td>Violations, exceptions, remediation, posture, analytics, settings</td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td>Linked from Security Insights KPIs (non-admin)</td>
-
-&#x20;         <td>Linked from Security Insights KPIs (admin) and connectors</td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td>No policy pack or gate configuration</td>
-
-&#x20;         <td>Gate mode, live-scan defaults, evidence export, integrations</td>
-
-&#x20;       </tr>
-
-&#x20;     </tbody>
-
-&#x20;   </table>
-
-
-
-&#x20;   <div class="security-warning">
-
-&#x20;     <span>⚠</span>
-
-&#x20;     <p>
-
-&#x20;       Admins see a footer link to the Governance Dashboard for org-wide remediation, exceptions,
-
-&#x20;       and posture analytics. Do not disable deploy gates globally to clear a single stack unless
-
-&#x20;       leadership explicitly approves it.
-
-&#x20;     </p>
-
-&#x20;   </div>
-
-&#x20; </section>
-
-
-
-&#x20; <section class="security-section">
-
-&#x20;   <h2>How findings get here</h2>
-
-
-
-&#x20;   <ol class="security-numbered-list">
-
-&#x20;     <li><strong>IaC scans</strong> (Security Insights) — Terraform, OpenTofu, Pulumi, CloudFormation, and secrets-in-code checks produce misconfiguration findings.</li>
-
-&#x20;     <li><strong>Live scan</strong> — continuous evaluation on connected Git repositories surfaces new issues automatically.</li>
-
-&#x20;     <li><strong>Policy evaluation</strong> — assigned policy packs add guardrails; failures become violations.</li>
-
-&#x20;     <li><strong>Deploy gates</strong> — enforcing policies during <strong>PLAN/APPLY</strong> record violations when deployments are blocked or warned.</li>
-
-&#x20;   </ol>
-
-
-
-&#x20;   <div class="security-info-note">
-
-&#x20;     <span>i</span>
-
-&#x20;     <p>
-
-&#x20;       Built-in misconfiguration and secrets checks always run during scans; policy packs are optional
-
-&#x20;       but add organizational rules on top. Violations from scans and policy evaluation appear together
-
-&#x20;       in the Open violations table.
-
-&#x20;     </p>
-
-&#x20;   </div>
-
-&#x20; </section>
-
-
-
-&#x20; <section class="security-section">
-
-&#x20;   <h2>Permissions</h2>
-
-
-
-&#x20;   <table class="security-table">
-
-&#x20;     <thead>
-
-&#x20;       <tr>
-
-&#x20;         <th>Permission / role</th>
-
-&#x20;         <th>Typical access on My findings</th>
-
-&#x20;       </tr>
-
-&#x20;     </thead>
-
-&#x20;     <tbody>
-
-&#x20;       <tr>
-
-&#x20;         <td><code>security:read</code></td>
-
-&#x20;         <td>View My findings and the violations table (required for nav access).</td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td><code>security:manage</code>, <code>policy:manage</code>, or <code>governance:manage</code></td>
-
-&#x20;         <td>Act on findings — resolve, suppress, or update remediations (viewers stay read-only).</td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td><code>governance:manage</code> or org Admin/Owner</td>
-
-&#x20;         <td>Same violation explorer with admin empty-state actions; full org tools on Governance Dashboard.</td>
-
-&#x20;       </tr>
-
-&#x20;       <tr>
-
-&#x20;         <td>Viewers</td>
-
-&#x20;         <td>Read-only access to violations in scope.</td>
-
-&#x20;       </tr>
-
-&#x20;     </tbody>
-
-&#x20;   </table>
-
-&#x20; </section>
-
-
+ </section>
 
 </div>
 
-
-
 <div class="page-navigation">
-
-
 
 <a
 
 class="nav-button previous"
 
-href="{{ '/axio/security-governance/security-insights/' | relative\_url }}">
-
-
+href="{{ '/axio/security-governance/security-insights/' | relative_url }}">
 
 ← Security Insights
 
-
-
 </a>
-
-
 
 <a
 
 class="nav-button next"
 
-href="{{ '/axio/security-governance/' | relative\_url }}">
-
-
+href="{{ '/axio/security-governance/' | relative_url }}">
 
 Governance Dashboard →
 
-
-
 </a>
 
-
-
 </div>
-
-
-

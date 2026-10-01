@@ -286,7 +286,7 @@ permalink: /axio/platform-as-code/resources/
 
                             <div>
                                 <strong>Repository:</strong>
-                                <span>acme-platform-config</span>
+                                <span>abcd-platform-config</span>
                             </div>
 
                             <div>

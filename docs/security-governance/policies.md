@@ -12,8 +12,8 @@ permalink: /axio/security-governance/policies/
     <h1>Policies: library, packs, and evaluation</h1>
     <p>
       Policies define what Axio checks in IaC, Kubernetes, cloud resources, identity, CI/CD, and related domains.
-      <strong>Policy Library</strong> (<code>/policies</code>) is where you discover, install, and evaluate policies.
-      <strong>Policy Packs</strong> (<code>/policy-packs</code>) group installed policies into versioned baselines you assign in one step.
+      <strong>Policy Library</strong> is where you discover, install, and evaluate policies.
+      <strong>Policy Packs</strong> group installed policies into versioned baselines you assign in one step.
     </p>
   </div>
 
@@ -291,8 +291,7 @@ permalink: /axio/security-governance/policies/
       </div>
 
       <p>
-        Enterprise governance role presets implement <strong>separation of duties</strong>. Apply them via
-        <code>POST /organizations/:orgId/roles/governance-presets</code> (requires <code>role:manage</code>).
+        Enterprise governance role presets implement <strong>separation of duties</strong>. 
       </p>
 
       <table class="policy-table role-table">

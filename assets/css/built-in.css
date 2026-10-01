@@ -1,0 +1,59 @@
+.builtin-template-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.builtin-template-table th,
+.builtin-template-table td {
+  box-sizing: border-box;
+}
+
+/* Template ID */
+.builtin-template-table th:nth-child(1),
+.builtin-template-table td:nth-child(1) {
+  width: 33%;
+}
+
+/* IaC Engine */
+.builtin-template-table th:nth-child(2),
+.builtin-template-table td:nth-child(2) {
+  width: 14%;
+}
+
+/* Supported Operations */
+.builtin-template-table th:nth-child(3),
+.builtin-template-table td:nth-child(3) {
+  width: 15%;
+}
+
+/* Cloud Providers */
+.builtin-template-table th:nth-child(4),
+.builtin-template-table td:nth-child(4) {
+  width: 19%;
+}
+
+/* Purpose */
+.builtin-template-table th:nth-child(5),
+.builtin-template-table td:nth-child(5) {
+  width: 21%;
+}
+
+.builtin-template-table td {
+  padding: 11px 12px;
+  border-right: 1px solid #e1e7ef;
+  border-bottom: 1px solid #e1e7ef;
+  color: #253451;
+  font-size: 12.5px;
+  line-height: 1.45;
+  vertical-align: middle;
+
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.builtin-template-table th:last-child,
+.builtin-template-table td:last-child {
+  border-right: 0;
+}
