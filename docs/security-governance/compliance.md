@@ -8,19 +8,13 @@ permalink: /axio/security-governance/compliance/
 
 <div class="compliance-risk-reports">
 
-  <div class="crr-breadcrumb">
-    <span>Security &amp; Governance</span>
-    <span class="crumb-separator">›</span>
-    <strong>Compliance, risk, and reports</strong>
-  </div>
-
   <header class="crr-page-header">
     <h1>Compliance, risk, and reports</h1>
     <p>
       Three related surfaces for posture reporting — each is a separate page in the product:
-      <strong>Compliance</strong> (<code>/compliance</code>),
-      <strong>Risk</strong> (<code>/security/risk</code>), and
-      <strong>Reports</strong> (<code>/governance/reports</code>).
+      <strong>Compliance</strong>,
+      <strong>Risk</strong>, and
+      <strong>Reports</strong>.
       Use them for frameworks and assessments, quantified scan-based risk, and auditor-ready exports.
     </p>
   </header>
@@ -326,21 +320,13 @@ permalink: /axio/security-governance/compliance/
 
       <p>
         Governance actions (gate changes, exception decisions, break-glass, policy publish) are written to
-        <strong>Administration → Audit Logs</strong> (<code>/administration/audit-logs</code>).
+        <strong>Administration → Audit Logs</strong>.
         The governance audit trail is also included in the Reports evidence bundle.
       </p>
 
       <div class="audit-role-note">
         Viewing audit logs requires <code>audit:read</code> (typically Admin roles — not granted to the default Member/Viewer presets).
       </div>
-    </div>
-
-    <div class="audit-webhook-card">
-      <span class="webhook-icon">⌁</span>
-      <p>
-        Optional <strong>audit webhook</strong> under Governance Dashboard → Settings streams
-        governance-category events to a SIEM (JSON POST).
-      </p>
     </div>
 
   </section>
