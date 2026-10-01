@@ -154,7 +154,7 @@ permalink: /axio/security-governance/break-glass/
   <li>Open <strong>Administration → Roles &amp; Access → Break Glass</strong>.</li>
   <li>Select scope (project, workspace, or environment), target user/team/group, role, TTL, incident number, and justification.</li>
   <li>Activate the session; the grantee receives temporary permissions until expiry.</li>
-  <li>Monitor active sessions on the Break Glass tab or <code>/governance/break-glass</code>.</li>
+  <li>Monitor active sessions on the Break Glass tab</li>
   <li><strong>Terminate</strong> early when the incident is resolved, or let TTL expire.</li>
   <li>Review audit logs for the full session history.</li>
 </ol>
@@ -213,7 +213,7 @@ permalink: /axio/security-governance/break-glass/
 
   <p>
     Break glass activation, termination, and expiry events appear in
-    <strong>Administration → Audit Logs</strong> (<code>/administration/audit-logs</code>).
+    <strong>Administration → Audit Logs</strong>.
     Viewing audit logs requires <code>audit:read</code>.
   </p>
 
