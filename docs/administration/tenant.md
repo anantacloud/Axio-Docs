@@ -10,224 +10,264 @@ permalink: /axio/administration/tenant/
 
   <div class="tenant-hero">
     <h1>Administration — Tenant</h1>
-    <p>Organization identity and a high-level tenant dashboard.</p>
+    <p>Organization identity, sign-in credentials, editable tenant metadata, and high-level tenant insights.</p>
   </div>
 
   <div class="tenant-info-banner">
     <span class="tenant-info-icon">ⓘ</span>
     <span>
-      Overview:
-      <code>ADMINISTRATION.md</code>
-      <b>•</b>
-      Hierarchy (projects, workspaces, environments, business units) lives under
-      <strong>Organization</strong>, not here.
+      Open <strong>Administration → Tenant</strong> at <code>/administration/tenant</code>.
+      Resource hierarchy (projects, workspaces, environments, business units) lives under
+      <a href="{{ '/axio/organization/overview/' | relative_url }}"><strong>Organization</strong></a>, not on this page.
     </span>
   </div>
 
   <section class="tenant-section">
-    <h2>Organization identity</h2>
-
-    <div class="tenant-identity-card">
-      <div class="tenant-identity-top">
-        <div class="tenant-org-brand">
-          <div class="tenant-avatar">AC</div>
-          <div>
-            <div class="tenant-org-name">
-              Abcd Corporation
-              <span class="tenant-status">Platform Provider</span>
-            </div>
-            <p>The central organization managing cloud infrastructure and governance.</p>
-            <small>Created on Apr 12, 2023 &nbsp;•&nbsp; Owner: abc</small>
-          </div>
-        </div>
-
-        <button class="tenant-outline-button">✎ &nbsp; Edit organization</button>
+    <h2>What it does</h2>
+    <p>Tenant administration covers the current organization’s identity and operational snapshot:</p>
+    <div class="tenant-kpi-grid">
+      <div class="tenant-kpi-card">
+        <div class="tenant-kpi-icon purple">♙</div>
+        <span>Identity</span>
+        <strong>Current tenant</strong>
+        <small>Name, provider vs customer chip, your role, created date</small>
       </div>
-
-      <div class="tenant-fields">
-        <div class="tenant-field">
-          <label>Organization ID (8-character code)</label>
-          <div class="tenant-copy-field">
-            <code>ABCDEFGH</code>
-            <button>▣ &nbsp; Copy</button>
-          </div>
-          <small>Use this ID at sign-in to access this organization.</small>
-        </div>
-
-        <div class="tenant-field">
-          <label>Organization slug</label>
-          <div class="tenant-copy-field">
-            <code>abcd-corp</code>
-            <button>▣ &nbsp; Copy</button>
-          </div>
-          <small>Used in URLs and invitations.</small>
-        </div>
+      <div class="tenant-kpi-card">
+        <div class="tenant-kpi-icon green">◇</div>
+        <span>Sign-in</span>
+        <strong>Organization ID</strong>
+        <small>8-character code members use at login (not the slug)</small>
       </div>
-
-      <div class="tenant-description">
-        <label>Description</label>
-        <p>Global platform team building and operating cloud infrastructure.</p>
+      <div class="tenant-kpi-card">
+        <div class="tenant-kpi-icon blue">⌁</div>
+        <span>Insights</span>
+        <strong>Tenant metrics</strong>
+        <small>Members, projects, groups, deployment activity, runner utilization</small>
       </div>
     </div>
   </section>
 
   <section class="tenant-section">
-    <h2>Overview</h2>
+    <h2>Prerequisites &amp; permissions</h2>
+    <div class="tenant-fields">
+      <div class="tenant-field">
+        <label>Page access</label>
+        <p><code>org:update</code> — in the default role matrix this is <strong>OWNER only</strong> (ADMIN does not receive this permission).</p>
+      </div>
+      <div class="tenant-field">
+        <label>Navigation</label>
+        <p>Listed under <strong>Administration → Tenant</strong> when the signed-in user holds <code>org:update</code>.</p>
+      </div>
+      <div class="tenant-field">
+        <label>Edit tenant details</label>
+        <p>Same <code>org:update</code> permission is required to change organization name and description.</p>
+      </div>
+    </div>
+    <p class="tenant-signin-note">
+      Users without <code>org:update</code> are redirected away from this route (typically to <code>/organization</code>).
+    </p>
+  </section>
+
+  <section class="tenant-section">
+    <h2>Current tenant banner</h2>
+
+    <div class="tenant-identity-card">
+      <div class="tenant-identity-top">
+        <div class="tenant-org-brand">
+          <div class="tenant-avatar">—</div>
+          <div>
+            <div class="tenant-org-name">
+              (organization name)
+              <span class="tenant-status">Platform provider / Customer tenant</span>
+            </div>
+            <p>Summary chips: <strong>Your role</strong> (e.g. OWNER), <strong>Created</strong> date.</p>
+          </div>
+        </div>
+        <button class="tenant-outline-button">⟳ &nbsp; Refresh</button>
+      </div>
+      <p><small>Reloads organization details and the admin dashboard metrics used by KPI cards and charts.</small></p>
+    </div>
+  </section>
+
+  <section class="tenant-section">
+    <h2>Overview KPIs</h2>
+    <p>Three clickable summary cards (counts from <code>GET /organizations/:id</code>; subtitles from the admin dashboard when available):</p>
 
     <div class="tenant-kpi-grid">
       <div class="tenant-kpi-card">
         <div class="tenant-kpi-icon purple">♙</div>
         <span>Members</span>
-        <strong>128</strong>
-        <small class="tenant-positive">↑ 12% <em>vs last 30 days</em></small>
+        <strong>—</strong>
+        <small>Subtitle: <em>N groups</em> · navigates to <code>/administration/users</code></small>
       </div>
 
       <div class="tenant-kpi-card">
         <div class="tenant-kpi-icon green">◇</div>
         <span>Projects</span>
-        <strong>42</strong>
-        <small class="tenant-positive">↑ 8% <em>vs last 30 days</em></small>
+        <strong>—</strong>
+        <small>Subtitle: <em>N workspaces</em> · navigates to <code>/projects</code></small>
       </div>
 
       <div class="tenant-kpi-card">
-        <div class="tenant-kpi-icon blue">♙</div>
-        <span>Teams</span>
-        <strong>16</strong>
-        <small class="tenant-positive">↑ 6% <em>vs last 30 days</em></small>
-      </div>
-
-      <div class="tenant-kpi-card">
-        <div class="tenant-kpi-icon amber">⌁</div>
-        <span>Deployment success</span>
-        <strong>98.6%</strong>
-        <small class="tenant-positive">↑ 2.1% <em>vs last 30 days</em></small>
+        <div class="tenant-kpi-icon blue">♧</div>
+        <span>Groups</span>
+        <strong>—</strong>
+        <small>Subtitle: <em>N% deploy success</em> · navigates to <code>/administration/groups</code></small>
       </div>
     </div>
+    <p><small>Team membership is labeled <strong>Groups</strong> on this page (backed by organization team counts).</small></p>
   </section>
 
   <section class="tenant-section">
-    <h2>Analytics</h2>
-
-    <div class="tenant-analytics-grid">
-      <div class="tenant-chart-card">
-        <div class="tenant-chart-header">
-          <strong>Deployment success (last 30 days)</strong>
-          <button class="tenant-select">Last 30 days⌄</button>
-        </div>
-
-        <div class="tenant-line-chart">
-          <div class="chart-y-labels">
-            <span>100%</span>
-            <span>95%</span>
-            <span>90%</span>
-            <span>85%</span>
-          </div>
-          <div class="chart-area">
-            <div class="chart-gridline g1"></div>
-            <div class="chart-gridline g2"></div>
-            <div class="chart-gridline g3"></div>
-            <div class="chart-gridline g4"></div>
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" aria-hidden="true">
-              <path class="chart-fill"
-                d="M0,75 L20,62 L40,70 L60,58 L80,64 L100,42 L120,50 L140,60 L160,48 L180,40 L200,47 L220,43 L240,52 L260,44 L280,51 L300,37 L320,46 L340,34 L360,43 L380,30 L400,36 L420,25 L440,33 L460,22 L480,17 L500,10 L500,150 L0,150 Z"/>
-              <polyline class="chart-line"
-                points="0,75 20,62 40,70 60,58 80,64 100,42 120,50 140,60 160,48 180,40 200,47 220,43 240,52 260,44 280,51 300,37 320,46 340,34 360,43 380,30 400,36 420,25 440,33 460,22 480,17 500,10"/>
-            </svg>
-            <div class="chart-x-labels">
-              <span>Apr 18</span>
-              <span>Apr 25</span>
-              <span>May 2</span>
-              <span>May 9</span>
-              <span>May 16</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tenant-chart-card tenant-donut-card">
-        <strong>Projects by status</strong>
-        <div class="tenant-donut-content">
-          <div class="tenant-donut">
-            <div>
-              <strong>42</strong>
-              <span>Total</span>
-            </div>
-          </div>
-          <div class="tenant-legend">
-            <div><i class="dot active"></i>Active <b>28 (66.7%)</b></div>
-            <div><i class="dot planning"></i>Planning <b>8 (19.0%)</b></div>
-            <div><i class="dot hold"></i>On Hold <b>4 (9.5%)</b></div>
-            <div><i class="dot archived"></i>Archived <b>2 (4.8%)</b></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tenant-section">
-    <h2>Quick links</h2>
+    <h2>Related administration</h2>
+    <p>Quick links to adjacent admin surfaces (not a full IAM catalog):</p>
 
     <div class="tenant-links-grid">
-      <a class="tenant-link-card">
-        <span class="link-icon">⚙</span>
-        <span><b>Organization Settings</b><small>Manage org details, settings and preferences</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">♙</span>
-        <span><b>Users</b><small>Invite and manage members</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">♧</span>
-        <span><b>Teams</b><small>Manage teams and team memberships</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
+      <a class="tenant-link-card" href="{{ '/axio/administration/roles-access/' | relative_url }}">
         <span class="link-icon">♢</span>
-        <span><b>Roles &amp; Permissions</b><small>Configure roles and access permissions</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">⌑</span>
-        <span><b>SSO Configuration</b><small>Manage SAML / OIDC single sign-on</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">♢</span>
-        <span><b>MFA Policy</b><small>Configure multi-factor authentication policy</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">▤</span>
-        <span><b>Audit Logs</b><small>View organization audit and activity logs</small></span>
-        <strong>→</strong>
-      </a>
-      <a class="tenant-link-card">
-        <span class="link-icon">✣</span>
-        <span><b>Integrations</b><small>Manage connected services and integrations</small></span>
+        <span><b>Roles &amp; Access</b><small>Manage members, groups, and permissions</small></span>
         <strong>→</strong>
       </a>
       <a class="tenant-link-card">
         <span class="link-icon">▣</span>
-        <span><b>Billing &amp; Plans</b><small>View billing, usage and subscription plans</small></span>
+        <span><b>Subscription &amp; Billing</b><small>Plans, usage limits, and invoices</small></span>
         <strong>→</strong>
       </a>
+      <a class="tenant-link-card" href="{{ '/axio/organization/overview/' | relative_url }}">
+        <span class="link-icon">⌁</span>
+        <span><b>Organization overview</b><small>Operational dashboard and health metrics</small></span>
+        <strong>→</strong>
+      </a>
+    </div>
+    <p><small>Routes: <code>/administration/roles-access</code>, <code>/admin/subscription-billing</code>, <code>/organization</code>.</small></p>
+  </section>
+
+  <section class="tenant-section">
+    <h2>Tenant insights</h2>
+    <p>Analytics from <code>GET /admin/organizations/dashboard?organizationId=…</code> (v2 admin API). Charts appear once the tenant has deployment and runner activity.</p>
+
+    <div class="tenant-analytics-grid">
+      <div class="tenant-chart-card">
+        <div class="tenant-chart-header">
+          <strong>Deployment activity</strong>
+        </div>
+        <p>14-day trend: <strong>Successful</strong> vs <strong>Failed</strong> deployment runs.</p>
+      </div>
+
+      <div class="tenant-chart-card tenant-donut-card">
+        <strong>Tenant footprint</strong>
+        <div class="tenant-donut-content">
+          <p>Donut of <strong>Members</strong>, <strong>Projects</strong>, and <strong>Groups</strong> counts — people and structure in this organization.</p>
+        </div>
+      </div>
+
+      <div class="tenant-chart-card">
+        <strong>Deployment status</strong>
+        <p>Distribution of current deployment outcomes.</p>
+      </div>
+
+      <div class="tenant-chart-card">
+        <strong>Runner utilization / Runner fleet</strong>
+        <p>When dashboard analytics exist: utilization % over time. Otherwise: online runner capacity breakdown.</p>
+      </div>
+    </div>
+    <p><small>Header subtitle includes overall deployment success rate (e.g. “success rate (98.6%)”). There is no “Projects by status” chart on this page.</small></p>
+  </section>
+
+  <section class="tenant-section">
+    <h2>Organization details</h2>
+
+    <div class="tenant-identity-card">
+      <div class="tenant-identity-top">
+        <div class="tenant-org-brand">
+          <div>
+            <div class="tenant-org-name">Editable fields</div>
+            <p>Organization name and optional description shown to organization admins.</p>
+          </div>
+        </div>
+        <button class="tenant-outline-button">✎ &nbsp; Edit</button>
+      </div>
+
+      <div class="tenant-fields">
+        <div class="tenant-field">
+          <label>Organization name</label>
+          <div class="tenant-copy-field">
+            <code>lowercaselettersonly</code>
+          </div>
+          <small>Lowercase letters only — no spaces, numbers, or special characters. Validated on save.</small>
+        </div>
+
+        <div class="tenant-field">
+          <label>Description</label>
+          <p>Optional multiline summary. Visible to organization admins; <strong>not</strong> shown at sign-in.</p>
+        </div>
+      </div>
+
+      <div class="tenant-description">
+        <p><strong>Save changes</strong> / <strong>Cancel</strong> appear only while editing. Updates via <code>PATCH /organizations/:id</code> with <code>{ name, description }</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tenant-section">
+    <h2>Sign-in credentials</h2>
+
+    <div class="tenant-fields">
+      <div class="tenant-field">
+        <label>Organization ID (8-character code)</label>
+        <div class="tenant-copy-field">
+          <code>ABCDEFGH</code>
+          <button>▣ &nbsp; Copy</button>
+        </div>
+        <small>Members enter this ID on the sign-in page together with email and password. Use <strong>Copy</strong> to share with your team.</small>
+      </div>
+
+      <div class="tenant-field">
+        <label>Internal slug</label>
+        <div class="tenant-copy-field">
+          <code>abcd-corp</code>
+        </div>
+        <small>Read-only display. Used internally in URLs and invitations — <strong>not</strong> used at sign-in. No copy button on this field.</small>
+      </div>
+
+      <div class="tenant-field">
+        <label>Last updated</label>
+        <p>Organization record last-modified date.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tenant-section">
+    <h2>API reference</h2>
+    <div class="tenant-fields">
+      <div class="tenant-field">
+        <label><code>GET /organizations/:id</code></label>
+        <p>Organization details including <code>organizationCode</code>, <code>slug</code>, <code>isPlatformProvider</code>, and member/project/team counts.</p>
+      </div>
+      <div class="tenant-field">
+        <label><code>PATCH /organizations/:id</code></label>
+        <p>Update <code>name</code> and/or <code>description</code>. Requires <code>org:update</code>.</p>
+      </div>
+      <div class="tenant-field">
+        <label><code>GET /admin/organizations/dashboard?organizationId=…</code></label>
+        <p>Admin dashboard payload powering KPI subtitles and tenant insight charts.</p>
+      </div>
     </div>
   </section>
 
   <div class="tenant-warning">
     <strong>♧ &nbsp; Safeguards</strong>
     <ul>
-      <li>Only <code>org:update</code> may PATCH the organization (OWNER in the default matrix).</li>
-      <li>Organization delete is <code>org:delete</code> (OWNER) and is not the primary action on this page.</li>
-      <li>An organization must always have at least one OWNER.</li>
+      <li>Only holders of <code>org:update</code> may open this page and PATCH organization name/description (OWNER in the default matrix).</li>
+      <li>Organization delete requires <code>org:delete</code> (OWNER only) and is not offered on this page.</li>
+      <li>Slug and organization ID are not editable here; the 8-character organization ID is allocated at org creation.</li>
+      <li>An organization must always retain at least one OWNER.</li>
     </ul>
   </div>
 
   <div class="tenant-signin-note">
     <span>ⓘ</span>
-    <span>Sign-in uses the Organization ID from this page, not the slug. See the root <code>README.md</code>.</span>
+    <span>Sign-in uses the <strong>Organization ID</strong> (8 characters) from this page or <strong>Organization → Overview</strong>, not the slug. See the repository <code>README.md</code> seed login instructions.</span>
   </div>
 
 </div>

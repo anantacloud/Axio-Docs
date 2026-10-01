@@ -330,22 +330,6 @@ The Operations platform entitlement (Professional and Enterprise plans) gates th
 
 ---
 
-<h2>Troubleshooting failed checks</h2>
-
-<p>If a drift check shows <strong>Check failed</strong>, <strong>Plan failed</strong>, or <strong>Runner unavailable</strong>:</p>
-
-<div class="drift-steps">
-
-<ol>
-  <li>Open the affected workspace from the Watched tab.</li>
-  <li>Review <strong>readiness</strong> checks (runner policy, IaC engine, workspace configuration).</li>
-  <li>Confirm a runner is online and has the required Terraform, OpenTofu, or Pulumi CLI.</li>
-  <li>Verify the stack workspace can run a non-destructive plan or preview successfully.</li>
-  <li>Run a new drift check from the monitor detail view or Actions column.</li>
-  <li>Review the updated status and plan output.</li>
-</ol>
-
-</div>
 
 <div class="drift-warning">
 

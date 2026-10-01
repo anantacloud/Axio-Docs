@@ -125,7 +125,7 @@ permalink: /axio/organization/workspace/create-workspace-ui/
                     <li><strong>Project</strong> (required) — The project this workspace belongs to.</li>
                     <li><strong>Name</strong> (required) — Unique within the selected project. Axio auto-generates an internal slug from the name. Names are compared case-insensitively within the project.</li>
                     <li><strong>Description</strong> (optional) — A short summary of the workspace purpose.</li>
-                    <li><strong>Sensitive</strong> (optional) — Enable additional protection for production-critical workspaces. See <a href="#sensitive-workspaces">Sensitive workspaces</a> below. You can also set this when editing the workspace later.</li>
+                 
                 </ul>
 
                 <p><strong>Note:</strong> The UI uses a single <strong>Name</strong> field (there is no separate display name).</p>
@@ -222,19 +222,7 @@ permalink: /axio/organization/workspace/create-workspace-ui/
 
             </label>
 
-            <label class="sensitive-field">
-
-                <input type="checkbox">
-
-                Sensitive
-
-                <p class="field-hint">
-                    Sensitive workspaces cannot be deleted and block destroy deployments for linked stacks.
-                </p>
-
-            </label>
-
-            <div class="form-actions">
+                        <div class="form-actions">
 
                 <button class="cancel-btn">Cancel</button>
 
@@ -348,36 +336,6 @@ permalink: /axio/organization/workspace/create-workspace-ui/
     </p>
 
 </div>
-
-<p><strong>Suggested next steps:</strong></p>
-
-<ul>
-    <li><a href="{{ '/axio/organization/environment/create-environment-ui/' | relative_url }}">Create an Environment from UI</a> *(when published)*</li>
-    <li><a href="{{ '/axio/organization/workspace/create-workspace-platform-as-code/' | relative_url }}">Create Workspace using Platform as Code</a></li>
-</ul>
-
-<hr>
-
-<h2>UI vs Platform as Code</h2>
-
-<p>
-    This guide covers manual creation in the web UI. To define workspaces declaratively in Git, use <a href="{{ '/axio/organization/workspace/create-workspace-platform-as-code/' | relative_url }}">Create Workspace using Platform as Code</a>. Git-managed workspaces show a <strong>Git-managed</strong> badge and have limited manual edit rules in the UI.
-</p>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| **Create Workspace** button disabled | No projects exist | Create a project first under Organization → Projects |
-| **Create Workspace** button disabled | Insufficient role or project access | Ask an Owner or Admin to grant workspace manage access on the target project |
-| Viewer on project | Project-scoped Viewer role | Request Member (or higher) access on that project |
-| **Name and project are required** | Empty name or no project selected | Fill in both required fields |
-| **Workspace name already exists** | Duplicate name in the project | Choose a different name (unique case-insensitively per project) |
-| **Failed to save workspace** | Network or server error | Retry; contact support if the error persists |
-| Cannot unassign workspace | System, Git-managed, or already on Default Project | Manage via Platform as Code for Git-managed resources |
-| Cannot delete workspace | Contains environments or is sensitive | Remove environments first; sensitive workspaces cannot be deleted |
 
 <div class="page-navigation">
 

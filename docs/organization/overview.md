@@ -7,6 +7,8 @@ description: Learn how Organization resources are structured in Axio.
 permalink: /axio/organization/overview/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/organization-overview.css' | relative_url }}">
+
 # Organization
 
 <div class="announcement-box">
@@ -48,40 +50,157 @@ An **organization** is the top-level tenant boundary in Axio. Everything you man
 | **Organization name** | Human-readable display name for the tenant |
 | **Members** | Users invited or provisioned with a role and optional scope |
 
-After sign-in, the organization context determines which resources, permissions, and settings apply to your session.
 
-Every new organization is also provisioned with a system **Default Project**, **Default Workspace**, and **Default Environment** for bootstrap and fallback assignment.
+<div class="organization-context-notes">
+
+  <p>After sign-in, the organization context determines which resources, permissions, and settings apply to your session.</p>
+
+  <p>Every new organization is also provisioned with a system <strong>Default Project</strong>, <strong>Default Workspace</strong>, and <strong>Default Environment</strong> for bootstrap    and fallback assignment.</p>
+
+</div>
 
 ---
 
-## Resource hierarchy
+<section class="resource-hierarchy-section">
 
-Organization resources form a nested hierarchy. Use this order when creating resources and assigning access.
+  <h2>Resource hierarchy</h2>
 
-```
-Organization
-└── Project
-    └── Workspace
-        └── Environment
-            └── Stack (provisioned infrastructure)
-                └── Workflow / Deployment
-```
+  <p class="section-description">
+    Organization resources form a nested hierarchy. Use this order when creating resources and assigning access.
+  </p>
 
-**Recommended creation order:** Project → Workspace → Environment → Stack
+  <div class="hierarchy-layout">
 
-| Layer | Role |
-|-------|------|
-| **Project** | Groups workspaces; project-level configuration, lifecycle policy overrides, and access scope |
-| **Workspace** | Belongs to a project; contains environments; links to IaC state and stack provisioning |
-| **Environment** | Deployment target where workflows run, deployments are approved, and governance rules apply |
-| **Stack** | Infrastructure defined in Git (Terraform, Pulumi, etc.) deployed into an environment |
+    <div class="hierarchy-visual">
+      <div class="hierarchy-tree">
+        <div class="tree-level tree-organization">
+          <span class="tree-icon">▣</span>
+          <strong>Organization</strong>
+        </div>
 
-### Example
+        <div class="tree-level tree-project">
+          <span class="tree-branch">└──</span>
+          <span class="tree-icon">□</span>
+          <strong>Project</strong>
+        </div>
 
-1. **Project:** `payments-platform`
-2. **Workspace:** `payments-infra` (assigned to the project)
-3. **Environment:** `production` (owners assigned, self-approval disabled)
-4. **Stack:** Terraform stack deployed into `production`
+        <div class="tree-level tree-workspace">
+          <span class="tree-branch">└──</span>
+          <span class="tree-icon">◈</span>
+          <strong>Workspace</strong>
+        </div>
+
+        <div class="tree-level tree-environment">
+          <span class="tree-branch">└──</span>
+          <span class="tree-icon">◎</span>
+          <strong>Environment</strong>
+        </div>
+
+        <div class="tree-level tree-stack">
+          <span class="tree-branch">└──</span>
+          <span class="tree-icon">▤</span>
+          <strong>Stack</strong>
+          <span class="tree-muted">(provisioned infrastructure)</span>
+        </div>
+
+        <div class="tree-level tree-workflow">
+          <span class="tree-branch">└──</span>
+          <span class="tree-icon">▷</span>
+          <strong>Workflow / Deployment</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="hierarchy-table-wrapper">
+      <table class="hierarchy-table">
+        <thead>
+          <tr>
+            <th>Layer</th>
+            <th>Role</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><strong>Project</strong></td>
+            <td>
+              Groups workspaces; project-level configuration,
+              lifecycle policy overrides, and access scope
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Workspace</strong></td>
+            <td>
+              Belongs to a project; contains environments;
+              links to IaC state and stack provisioning
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Environment</strong></td>
+            <td>
+              Deployment target where workflows run, deployments
+              are approved, and governance rules apply
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>Stack</strong></td>
+            <td>
+              Infrastructure defined in Git (Terraform, Pulumi, etc.)
+              deployed into an environment
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class="creation-order">
+    <span class="creation-order-icon">💡</span>
+    <span>
+      <strong>Recommended creation order:</strong>
+      Project → Workspace → Environment → Stack
+    </span>
+  </div>
+
+  <div class="hierarchy-example">
+
+    <div class="example-heading">
+      <span class="example-icon">▣</span>
+      <strong>Example</strong>
+    </div>
+
+    <ol>
+      <li>
+        <strong>Project:</strong>
+        <code>payments-platform</code>
+      </li>
+
+      <li>
+        <strong>Workspace:</strong>
+        <code>payments-infra</code>
+        <span>(assigned to the project)</span>
+      </li>
+
+      <li>
+        <strong>Environment:</strong>
+        <code>production</code>
+        <span>(owners assigned, self-approval disabled)</span>
+      </li>
+
+      <li>
+        <strong>Stack:</strong>
+        Terraform stack deployed into
+        <code>production</code>
+      </li>
+    </ol>
+
+  </div>
+
+</section>
 
 ---
 
@@ -323,35 +442,119 @@ An organization consists of the following core resources.
 
 ---
 
-## Access, roles, and permissions
+<section class="access-roles-section">
 
-Who can create and manage organization resources depends on **organization membership role** and optional **scoped assignments** via **Administration → Roles & Access**.
+  <h2>Access, roles, and permissions</h2>
 
-| Role | Create projects / workspaces | Delete projects | Manage org settings & members |
-|------|:----------------------------:|:---------------:|:-----------------------------:|
-| **Owner** | Yes | Yes | Yes |
-| **Admin** | Yes | Yes | Limited |
-| **Member** | Yes* | No | No |
-| **Viewer** | No | No | No |
-| **Unassigned** | No | No | No |
+  <p class="access-intro">
+    Who can create and manage organization resources depends on
+    <strong>organization membership role</strong> and optional
+    <strong>scoped assignments</strong> via
+    <strong>Administration → Roles &amp; Access</strong>.
+  </p>
 
-\*Members with **project-, workspace-, or environment-scoped** access only cannot create new projects.
+  <div class="access-table-wrapper">
+    <table class="access-roles-table">
+      <thead>
+        <tr>
+          <th>Role</th>
+          <th>Create projects / workspaces</th>
+          <th>Delete projects</th>
+          <th>Manage org settings &amp; members</th>
+        </tr>
+      </thead>
 
-Scoped assignments can apply at organization, business unit, project, workspace, or environment level.
+      <tbody>
+        <tr>
+          <td><strong>Owner</strong></td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Yes</td>
+        </tr>
 
----
+        <tr>
+          <td><strong>Admin</strong></td>
+          <td>Yes</td>
+          <td>Yes</td>
+          <td>Limited</td>
+        </tr>
 
-## Organization settings and business units
+        <tr>
+          <td><strong>Member</strong></td>
+          <td>Yes*</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
 
-### Organization settings
+        <tr>
+          <td><strong>Viewer</strong></td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
 
-**Organization → Settings** covers tenant-wide governance, including environment lifecycle policies (default TTL, max TTL, active environment limits), MFA, and other organization-level configuration. Project detail pages can override lifecycle defaults when permitted.
+        <tr>
+          <td><strong>Unassigned</strong></td>
+          <td>No</td>
+          <td>No</td>
+          <td>No</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-### Business units (enterprise)
+  <p class="access-footnote">
+    *Members with <strong>project-, workspace-, or environment-scoped</strong>
+    access only cannot create new projects.
+  </p>
 
-**Organization → Business Units** provides hierarchy and delegated administration for multi-team tenants. Business units complement Project → Workspace → Environment for **access and delegation**—they do not replace that resource hierarchy.
+  <p class="access-scope-note">
+    Scoped assignments can apply at organization, business unit, project,
+    workspace, or environment level.
+  </p>
 
-When a workspace is unassigned from a project, it moves to the system **Default Project** along with its environments.
+</section>
+
+
+<section class="organization-settings-section">
+
+  <h2>Organization settings and business units</h2>
+
+  <div class="organization-subsection">
+
+    <h3>Organization settings</h3>
+
+    <p>
+      <strong>Organization → Settings</strong> covers tenant-wide governance,
+      including environment lifecycle policies (default TTL, max TTL,
+      active environment limits), MFA, and other organization-level
+      configuration. Project detail pages can override lifecycle defaults
+      when permitted.
+    </p>
+
+  </div>
+
+
+  <div class="organization-subsection">
+
+    <h3>Business units (enterprise)</h3>
+
+    <p>
+      <strong>Organization → Business Units</strong> provides hierarchy and
+      delegated administration for multi-team tenants. Business units
+      complement Project → Workspace → Environment for
+      <strong>access and delegation</strong>—they do not replace that
+      resource hierarchy.
+    </p>
+
+    <p>
+      When a workspace is unassigned from a project, it moves to the system
+      <strong>Default Project</strong> along with its environments.
+    </p>
+
+  </div>
+
+</section>
 
 ---
 
@@ -452,15 +655,22 @@ Choose the workflow that best matches your team's development process.
 
     <p><strong>Example manifest:</strong></p>
 
-```yaml
-apiVersion: platform.axio.io/v1
-kind: Project
-metadata:
-  name: payments-platform
-spec:
-  displayName: Payments Platform
-  description: Core payments infrastructure
-```
+      <div class="yaml-example-box">
+
+  <div class="yaml-example-title">
+    <span class="yaml-example-icon">▣</span>
+    <strong>Example</strong>
+  </div>
+
+  <pre class="yaml-code"><code><span class="yaml-key">apiVersion:</span> <span class="yaml-value">platform.axio.io/v1</span>
+<span class="yaml-key">kind:</span> <span class="yaml-value">Project</span>
+<span class="yaml-key">metadata:</span>
+  <span class="yaml-key">name:</span> <span class="yaml-value">payments-platform</span>
+<span class="yaml-key">spec:</span>
+  <span class="yaml-key">displayName:</span> <span class="yaml-value">Payments Platform</span>
+  <span class="yaml-key">description:</span> <span class="yaml-value">Core payments infrastructure</span></code></pre>
+
+</div>
 
     <p><strong>Workflow:</strong> validate → plan → apply / reconcile → monitor drift</p>
 
@@ -478,62 +688,6 @@ spec:
 
 </div>
 
-### UI vs Platform as Code
-
-| Criterion | Prefer UI | Prefer Platform as Code |
-|-----------|-----------|-------------------------|
-| Team maturity | Small team, early exploration | Established GitOps practice |
-| Change review | Ad hoc | Pull-request review required |
-| Audit & reproducibility | Lower priority | High priority |
-| Automation | Manual setup | CI/CD-driven provisioning |
-| Mixed mode | Bootstrap in UI, steady state in Git | — |
-
-Both paths manage the same underlying resources—choose based on process, not capability.
-
----
-
-## What comes next
-
-Organization hierarchy is the foundation of your Axio estate. After projects, workspaces, and environments are in place:
-
-| Step | Area | What you do |
-|------|------|-------------|
-| **1** | **Organization** (this page) | Structure your estate: projects, workspaces, environments |
-| **2** | **Stacks** | Connect cloud and source control; provision infrastructure with your IaC engine |
-| **3** | **Operations** | Monitor runs, approvals, drift, and cost |
-
-Environments connect to **deployment governance**: approval policies, workflow execution, TTL and destroy rules, and linked stacks.
-
----
-
-## Getting started checklist
-
-- [ ] Obtain your **Organization ID** from **Organization → Overview**
-- [ ] Sign in and confirm your role (Owner, Admin, Member, or Viewer)
-- [ ] Create a **project**
-- [ ] Create a **workspace** and assign it to the project
-- [ ] Create an **environment**, assign **owners**, and set **self-approval**
-- [ ] (Optional) Configure **Organization → Settings** lifecycle policies
-- [ ] Proceed to **Stacks** to connect a repository and run your first deployment
-- [ ] (Optional) Adopt **Platform as Code** for Git-managed configuration
-
----
-
-## Glossary
-
-| Term | Definition |
-|------|------------|
-| **Organization ID** | 8-character login identifier for your tenant |
-| **Project** | Top-level grouping of workspaces within an organization |
-| **Workspace** | Container for environments; tied to IaC/state context |
-| **Environment** | Deployment target with owners, approvals, and lifecycle rules |
-| **Sensitive** | Protection flag preventing delete, archive, and destroy |
-| **Archive** | Soft deactivation of a resource no longer in use |
-| **Self-approval** | Whether a workflow initiator may approve their own deployment |
-| **Platform as Code (PaC)** | Git-based declarative management of Axio platform resources |
-| **axio.yaml** | Stack blueprint in an IaC repo—not platform configuration |
-| **Business unit** | Enterprise hierarchy unit for delegated administration |
-| **Default Project** | System-provisioned project used for bootstrap and unassigned workspaces |
 
 <div class="page-navigation">
 

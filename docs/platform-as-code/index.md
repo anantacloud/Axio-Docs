@@ -297,7 +297,7 @@ spec:
                 To create organization resources with PaC, see
                 <a href="{{ '/axio/organization/project/create-project-platform-as-code/' | relative_url }}">Create Project using Platform as Code</a>,
                 <a href="{{ '/axio/organization/workspace/create-workspace-platform-as-code/' | relative_url }}">Create Workspace using Platform as Code</a>, and
-                <a href="{{ '/axio/organization/environment/create-environment-platform-as-code/' | relative_url }}">Create Environment using Platform as Code</a>.
+                <a href="{{ '/axio/organization/create-environment-platform-as-code/' | relative_url }}">Create Environment using Platform as Code</a>.
             </p>
 
         </div>

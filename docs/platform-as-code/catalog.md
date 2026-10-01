@@ -339,7 +339,7 @@ spec:
             </div>
 
             <p class="axio-manual-help" style="margin-top: 1rem;">
-                See <a href="{{ '/axio/organization/environment/create-environment-platform-as-code/' | relative_url }}">Create Environment using Platform as Code</a>
+                See <a href="{{ '/axio/organization/environment/create-environment-ui/' | relative_url }}">Create Environment using Platform as Code</a>
                 for a full walkthrough. For Project and Workspace kinds, see the corresponding Platform as Code guides under Organization.
             </p>
 

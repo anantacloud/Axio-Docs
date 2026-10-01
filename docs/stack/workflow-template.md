@@ -8,6 +8,8 @@ has_toc: false
 permalink: /axio/stack/workflow-template/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/workflow.css' | relative_url }}">
+
 # Workflow Templates
 
 Workflow templates define reusable **deployment pipelines** for Axio stacks — the ordered stages executed when you **Run stack** (Plan, Apply, Destroy, Drift detection, and related operations). A template specifies supported IaC engines and cloud providers, pipeline steps (checkout, validate, plan, approval, apply, notifications, policy checks, and security scans), and optional governance metadata.

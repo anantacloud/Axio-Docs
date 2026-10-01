@@ -1,0 +1,458 @@
+/* =========================================================
+   AXIO — WORKFLOW PAGE SIZE INCREASE
+   Add this at the VERY END of your existing CSS
+   ========================================================= */
+
+
+/* =========================================================
+   FORMAT GRID
+   ========================================================= */
+
+.workflow-format-grid {
+    gap: 40px !important;
+    margin: 34px 0 38px !important;
+}
+
+
+/* =========================================================
+   FORMAT CARDS
+   ========================================================= */
+
+.workflow-format-card {
+    min-height: 250px !important;
+    padding: 28px 30px !important;
+    border-radius: 12px !important;
+}
+
+
+/* =========================================================
+   CARD HEADER
+   ========================================================= */
+
+.workflow-card-header {
+    margin-bottom: 18px !important;
+    gap: 18px !important;
+}
+
+.workflow-card-title {
+    gap: 11px !important;
+}
+
+
+/* =========================================================
+   ICONS
+   ========================================================= */
+
+.workflow-icon-deployment {
+    flex: 0 0 60px !important;
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 9px !important;
+}
+
+.workflow-icon-deployment svg {
+    width: 34px !important;
+    height: 34px !important;
+}
+
+.workflow-icon-sync {
+    width: 64px !important;
+    height: 64px !important;
+    font-size: 24px !important;
+    border-radius: 11px !important;
+}
+
+
+/* =========================================================
+   CARD TITLES
+   ========================================================= */
+
+.workflow-format-card h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   RECOMMENDED BADGE
+   ========================================================= */
+
+.workflow-badge {
+    padding: 6px 12px !important;
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.workflow-format-card > p {
+    margin: 10px 0 18px 78px !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   CARD CHECKLIST
+   ========================================================= */
+
+.workflow-format-card li {
+    margin: 11px 0 !important;
+    padding-left: 28px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
+
+.workflow-format-card li::before {
+    left: 0 !important;
+    top: 0 !important;
+    font-size: 19px !important;
+}
+
+
+/* =========================================================
+   WHAT'S ON THIS PAGE
+   ========================================================= */
+
+.workflow-capability-grid {
+    gap: 24px !important;
+    margin: 26px 0 34px !important;
+}
+
+.workflow-capability-card {
+    min-height: 205px !important;
+    padding: 22px 18px !important;
+    border-radius: 10px !important;
+}
+
+
+/* =========================================================
+   CAPABILITY ICONS
+   ========================================================= */
+
+.workflow-capability-icon {
+    height: 62px !important;
+    margin-bottom: 8px !important;
+}
+
+.workflow-capability-icon svg {
+    width: 44px !important;
+    height: 44px !important;
+}
+
+
+/* =========================================================
+   CAPABILITY TITLES
+   ========================================================= */
+
+.workflow-capability-card h4 {
+    margin: 5px 0 10px !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+}
+
+
+/* =========================================================
+   CAPABILITY DESCRIPTION
+   ========================================================= */
+
+.workflow-capability-card p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   WHERE TO START
+   ========================================================= */
+
+.workflow-start-callout {
+    gap: 18px !important;
+    min-height: 92px !important;
+    margin: 30px 0 38px !important;
+    padding: 20px 22px !important;
+    border-radius: 9px !important;
+}
+
+
+/* =========================================================
+   START ICON
+   ========================================================= */
+
+.workflow-start-icon {
+    flex: 0 0 36px !important;
+}
+
+.workflow-start-icon svg {
+    width: 28px !important;
+    height: 28px !important;
+}
+
+
+/* =========================================================
+   START CONTENT
+   ========================================================= */
+
+.workflow-start-content h4 {
+    margin-bottom: 5px !important;
+    font-size: 16px !important;
+}
+
+.workflow-start-content p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+.workflow-start-button {
+    min-height: 44px !important;
+    padding: 0 20px !important;
+    border-radius: 7px !important;
+    font-size: 13px !important;
+}
+
+.workflow-start-button span {
+    font-size: 20px !important;
+}
+
+
+/* =========================================================
+   START BOX
+   ========================================================= */
+
+.workflow-start-box {
+    padding: 22px 28px !important;
+    margin: 30px 0 !important;
+    border-radius: 10px !important;
+}
+
+.workflow-start-text h4 {
+    margin-bottom: 6px !important;
+    font-size: 16px !important;
+}
+
+.workflow-start-text p {
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+}
+
+.workflow-start-box .workflow-start-button {
+    margin-left: 28px !important;
+    padding: 12px 22px !important;
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   FOOTER PREVIOUS / NEXT
+   ========================================================= */
+
+.workflow-footer-nav {
+    gap: 36px !important;
+    margin-top: 38px !important;
+}
+
+.workflow-footer-nav a {
+    min-height: 76px !important;
+    padding: 14px 20px !important;
+    border-radius: 9px !important;
+}
+
+.workflow-footer-nav span {
+    font-size: 22px !important;
+}
+
+.workflow-footer-nav small {
+    margin-bottom: 4px !important;
+    font-size: 13px !important;
+}
+
+.workflow-footer-nav strong {
+    font-size: 14px !important;
+}
+
+
+/* =========================================================
+   GENERAL PAGE HEADINGS
+   ========================================================= */
+
+.main-content h2 {
+    margin-top: 34px !important;
+    margin-bottom: 8px !important;
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+}
+
+.main-content > p {
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .workflow-format-grid {
+        gap: 28px !important;
+    }
+
+    .workflow-capability-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 20px !important;
+    }
+
+    .workflow-capability-card {
+        min-height: 195px !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .workflow-format-grid {
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+
+    .workflow-format-card {
+        min-height: auto !important;
+        padding: 24px !important;
+    }
+
+    .workflow-capability-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 18px !important;
+    }
+
+    .workflow-capability-card {
+        min-height: 190px !important;
+        padding: 20px 16px !important;
+    }
+
+    .workflow-start-callout {
+        align-items: flex-start !important;
+        flex-wrap: wrap !important;
+    }
+
+    .workflow-start-content {
+        min-width: 240px !important;
+    }
+
+    .workflow-start-button {
+        margin-left: 52px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 550px) {
+
+    .workflow-format-card {
+        padding: 21px !important;
+    }
+
+    .workflow-card-header {
+        gap: 14px !important;
+    }
+
+    .workflow-icon-deployment {
+        flex: 0 0 52px !important;
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .workflow-icon-deployment svg {
+        width: 29px !important;
+        height: 29px !important;
+    }
+
+    .workflow-format-card h3 {
+        font-size: 18px !important;
+    }
+
+    .workflow-format-card > p {
+        margin-left: 0 !important;
+        font-size: 14px !important;
+    }
+
+    .workflow-format-card li {
+        font-size: 14px !important;
+        padding-left: 25px !important;
+    }
+
+    .workflow-capability-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .workflow-capability-card {
+        min-height: auto !important;
+        padding: 22px 18px !important;
+    }
+
+    .workflow-capability-card h4 {
+        font-size: 16px !important;
+    }
+
+    .workflow-capability-card p {
+        font-size: 14px !important;
+    }
+
+    .workflow-start-callout {
+        padding: 18px !important;
+    }
+
+    .workflow-start-button {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .workflow-start-box {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        padding: 20px !important;
+    }
+
+    .workflow-start-box .workflow-start-button {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .workflow-footer-nav {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .workflow-nav-next {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+
+    .workflow-footer-nav a {
+        min-height: 70px !important;
+    }
+
+    .main-content h2 {
+        font-size: 23px !important;
+    }
+
+    .main-content > p {
+        font-size: 15px !important;
+    }
+}

@@ -189,6 +189,7 @@ spec:
 </div>
 
 </div>
+
 </div>
 
 <hr>
@@ -207,6 +208,7 @@ spec:
 <p><strong>Naming rules:</strong> Project slugs must be unique within the organization. Renaming <code>metadata.name</code> changes the slug; conflicting slugs fail validation during synchronization.</p>
 
 <p><strong>System projects:</strong> The auto-provisioned <strong>Default Project</strong> is a protected system resource and cannot be modified or deleted through Platform as Code.</p>
+
 
 <hr>
 
@@ -286,35 +288,6 @@ spec:
 
 <hr>
 
-<h2>Alternative: CLI and API</h2>
-
-<p>You can also validate and apply manifests outside the UI:</p>
-
-```bash
-export AXIO_TOKEN="your-jwt-token"
-export AXIO_ORG_ID="your-org-id"
-
-axio validate ./platform-config/
-axio plan ./platform-config/
-axio apply ./platform-config/
-axio reconcile --repository <repo-id>
-```
-
-<p>REST endpoints are available under <code>/api/v1/organizations/:organizationId/platform/</code> (<code>/validate</code>, <code>/plan</code>, <code>/import</code>, <code>/reconcile</code>).</p>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| No repositories in Synchronizations | Git not connected | Connect Source Control under Administration → Integrations |
-| Sync validation failed | Invalid YAML or schema | Fix the manifest; check <strong>Recent runs</strong> for details |
-| Duplicate Project slug | <code>metadata.name</code> conflicts | Use a unique slug within the organization |
-| Sync plan awaiting approval | Sensitive manifest or policy | Approve or reject in <strong>Recent runs</strong> or <strong>Operations → Approvals</strong> |
-| Cannot edit project in UI | Git-managed resource | Change the manifest in Git and synchronize |
-| Project not discovered | Wrong working directory | Verify the repository working directory in Source Control settings |
-| **Sync now** disabled | Insufficient permission | Ask an Admin for PaC manage or scoped sync access |
 
 <div class="page-navigation">
 

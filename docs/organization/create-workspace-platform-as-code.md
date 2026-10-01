@@ -304,56 +304,6 @@ spec:
 
 </div>
 
-<hr>
-
-<h2>Example: Environment manifest (next step)</h2>
-
-<p>After the Workspace is synchronized, add an Environment that references both project and workspace:</p>
-
-```yaml
-apiVersion: platform.axio.io/v1
-kind: Environment
-metadata:
-  name: production
-spec:
-  displayName: Production
-  project: ecommerce
-  workspace: development
-  description: Production environment
-```
-
-<hr>
-
-<h2>Alternative: CLI and API</h2>
-
-<p>You can also validate and apply manifests outside the UI:</p>
-
-```bash
-export AXIO_TOKEN="your-jwt-token"
-export AXIO_ORG_ID="your-org-id"
-
-axio validate ./platform-config/
-axio plan ./platform-config/
-axio apply ./platform-config/
-axio reconcile --repository <repo-id>
-```
-
-<p>REST endpoints are available under <code>/api/v1/organizations/:organizationId/platform/</code> (<code>/validate</code>, <code>/plan</code>, <code>/import</code>, <code>/reconcile</code>).</p>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| Validation error on <code>spec.project</code> | Project not found | Ensure the Project manifest exists and was synchronized; check the slug matches |
-| Workspace slug conflict | Duplicate <code>metadata.name</code> in the same project | Use a unique workspace slug per project |
-| Sync validation failed | Invalid YAML or schema | Fix the manifest; check <strong>Recent runs</strong> for details |
-| Sync plan awaiting approval | Sensitive manifest or policy | Approve or reject in <strong>Recent runs</strong> or <strong>Operations → Approvals</strong> |
-| Cannot edit workspace in UI | Git-managed resource | Change the manifest in Git and synchronize |
-| Workspace not discovered | Wrong working directory | Verify the repository working directory in Source Control settings |
-| **Sync now** disabled | Insufficient permission | Ask an Admin for PaC manage or scoped sync access |
-| Default Workspace errors | System resource | Do not attempt to manage the Default Workspace via PaC |
 
 <div class="page-navigation">
 

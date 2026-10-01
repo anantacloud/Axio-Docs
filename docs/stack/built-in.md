@@ -6,6 +6,8 @@ nav_order: 2
 permalink: /axio/stack/built-in/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/built-in.css' | relative_url }}">
+
 <div class="builtin-workflow-page">
 
 <section class="builtin-hero">
@@ -51,7 +53,6 @@ permalink: /axio/stack/built-in/
       <h3>Platform (Built-in)</h3>
       <ul>
         <li>Provided by Axio — one deploy, destroy, and drift template per IaC engine</li>
-        <li>Registered in the API code registry; optional YAML overrides under <code>apps/api/workflow-templates/</code></li>
         <li>Read-only in the UI; labeled <strong>Built-in</strong></li>
       </ul>
     </div>
@@ -140,7 +141,7 @@ permalink: /axio/stack/built-in/
   <h2><span class="selection-icon">▤</span> Customize a Built-in Template</h2>
   <div class="selection-grid">
     <div class="selection-item"><span class="check-icon">1</span><p>Open <strong>Stacks → Workflow Templates</strong>, find a built-in template, and choose <strong>Duplicate</strong> to create an editable org copy.</p></div>
-    <div class="selection-item"><span class="check-icon">2</span><p>Or import YAML via <strong>New → Import YAML</strong> using the <a href="{{ '/docs/WORKFLOW_TEMPLATE_YAML.html' | relative_url }}">deployment-template format</a>.</p></div>
+    <div class="selection-item"><span class="check-icon">2</span><p>Or import YAML via <strong>New → Import YAML</strong> using the deployment-template format</a>.</p></div>
     <div class="selection-item"><span class="check-icon">3</span><p>Publish the org version, then select it when creating or running a stack — or reference its ID in <code>workflowTemplate</code> inside <code>axio.yaml</code>.</p></div>
   </div>
 </section>

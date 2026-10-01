@@ -6,6 +6,9 @@ nav_order: 1
 permalink: /axio/stack/from-axio/
 ---
 
+
+<link rel="stylesheet" href="{{ '/assets/css/stack-axio.css' | relative_url }}">
+
 # Create a Stack from `axio.yaml`
 
 Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses the manifest and imports placement, runtime, variables, secrets, policies, and runner settings — then you review and create the stack.
@@ -37,7 +40,7 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
 
 <ul>
 <li>Permission to create stacks (<strong>Member</strong> or higher with <code>iac:manage</code> in the target project, workspace, or environment scope).</li>
-<li>A valid <code>axio.yaml</code> or <code>axio.yml</code> file on your computer (see <a href="{{ '/docs/AXIO_YAML.html' | relative_url }}">axio.yaml reference</a>).</li>
+<li>A valid <code>axio.yaml</code> or <code>axio.yml</code> file on your computer.</li>
 <li>The <strong>Project</strong>, <strong>Team workspace</strong>, and <strong>Environment</strong> named in the manifest <code>placement</code> section must already exist in Axio (or match defaults such as <em>Default Project</em> / <em>Default Workspace</em>).</li>
 <li>If the manifest declares <code>runtime.cloud.provider</code>, a matching cloud credential must exist under <strong>Administration → Integrations → Cloud providers</strong>, or you select one on the review step.</li>
 <li>Optional: if the manifest includes a <code>sourceControl</code> block, the named Git connection must exist under <strong>Administration → Integrations → Source Control</strong>.</li>
@@ -107,7 +110,6 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
         <label>Stack blueprint file <em>*</em></label>
         <div class="axio-input-with-icon">
           <input type="text" value="axio.yaml" aria-label="Manifest file" readonly>
-          <span>↑</span>
         </div>
 
         <div class="axio-step-help">
@@ -123,11 +125,6 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
           </div>
         </div>
 
-        <div class="axio-step-help" style="margin-top: 1rem;">
-          Open the in-app <strong>axio.yaml reference</strong> dialog for field-level documentation, or see the
-          <a href="{{ '/docs/AXIO_YAML.html' | relative_url }}">axio.yaml reference</a> and
-          <a href="{{ '/docs/examples/axio.yaml' | relative_url }}">full example</a>.
-        </div>
       </div>
 
       <div class="axio-form-step" data-panel="2">
@@ -203,18 +200,8 @@ Upload a valid **`axio.yaml`** or **`axio.yml`** stack blueprint. Axio parses th
     </ul>
   </div>
 
-  <div class="axio-best-practices">
-    <h3>Troubleshooting</h3>
-    <ul>
-      <li><strong>Placement must resolve to a project / workspace / environment</strong> — create missing organization resources first, or update <code>placement</code> names to match existing ones.</li>
-      <li><strong>Parse or validation errors</strong> — fix YAML syntax and required fields (<code>metadata.name</code>, <code>runtime.iac.engine</code>, <code>runtime.iac.version</code>, and cloud fields when a provider is set).</li>
-      <li><strong>Select a cloud credential</strong> — required when <code>runtime.cloud.provider</code> is set; add connections under Administration → Integrations → Cloud providers.</li>
-      <li><strong>Preflight checks failed</strong> — read the error list on the review step (policy packs, backend, or scope issues).</li>
-      <li><strong>Need full UI control?</strong> — switch to <strong>Manual setup</strong> from the create flow to configure repository, engine, and backend without a manifest.</li>
-    </ul>
-  </div>
-
 </div>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -271,6 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
   render(1);
 });
 </script>
+
 
 <div class="page-navigation">
 

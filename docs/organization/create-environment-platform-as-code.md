@@ -241,35 +241,6 @@ spec:
 
 <hr>
 
-<h2>Optional: deployment governance in Git</h2>
-
-<p>Instead of using <strong>Assign owner</strong> in the UI, you can declare owners and approval policy in the manifest:</p>
-
-```yaml
-spec:
-  displayName: Production Environment
-  project: ecommerce
-  workspace: development
-  type: PRODUCTION
-  deploymentGovernance:
-    deploymentOperators:
-      users:
-        - demo@axio.dev
-      groups:
-        - platform-admins
-    approvalPolicy:
-      required: true
-      approvers:
-        users:
-          - admin@axio.dev
-      requiredApprovals: 1
-      allowSelfApproval: false
-```
-
-<p>User and group references are resolved against existing organization principals. On create, Axio seeds default governance policies based on environment type when <code>deploymentGovernance</code> is omitted.</p>
-
-<hr>
-
 <h2>What happens next?</h2>
 
 <ul>
@@ -343,38 +314,6 @@ spec:
 
 </div>
 
-<hr>
-
-<h2>Alternative: CLI and API</h2>
-
-<p>You can also validate and apply manifests outside the UI:</p>
-
-```bash
-export AXIO_TOKEN="your-jwt-token"
-export AXIO_ORG_ID="your-org-id"
-
-axio validate ./platform-config/
-axio plan ./platform-config/
-axio apply ./platform-config/
-axio reconcile --repository <repo-id>
-```
-
-<p>REST endpoints are available under <code>/api/v1/organizations/:organizationId/platform/</code> (<code>/validate</code>, <code>/plan</code>, <code>/import</code>, <code>/reconcile</code>).</p>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| Validation error on <code>spec.workspace</code> | Workspace not found | Ensure the Workspace manifest exists and was synchronized; check the slug |
-| Workspace/project mismatch | <code>spec.project</code> does not match workspace's project | Align project and workspace references |
-| Environment slug conflict | Duplicate <code>metadata.name</code> in the same workspace | Use a unique slug per workspace |
-| Sync validation failed | Invalid YAML or schema | Fix the manifest; check <strong>Recent runs</strong> |
-| Sync plan awaiting approval | Sensitive manifest or policy | Approve or reject in <strong>Recent runs</strong> or <strong>Operations → Approvals</strong> |
-| Cannot edit environment in UI | Git-managed resource | Change the manifest in Git and synchronize |
-| Governance users not resolved | Principal email/group not found | Use existing organization users and groups |
-| Default Environment errors | System resource | Do not manage the Default Environment via PaC |
 
 <div class="page-navigation">
 

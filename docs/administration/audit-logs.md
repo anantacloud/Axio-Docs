@@ -10,100 +10,100 @@ permalink: /axio/administration/audit-logs/
 
   <header class="audit-hero">
     <h1>Administration — Audit Logs</h1>
-    <p>Searchable, exportable record of platform activity.</p>
+    <p>Searchable, exportable enterprise audit trail for authentication, deployments, drift, governance, RBAC, and administration.</p>
   </header>
 
   <div class="audit-info">
     <span class="audit-info-icon">i</span>
-    <span>Overview: <code>ADMINISTRATION.md</code></span>
+    <span>Open <strong>Administration → Audit Logs</strong> at <code>/administration/audit-logs</code></span>
     <b>•</b>
-    <span>Role-focused subset: Roles &amp; Access → Audit</span>
+    <span>Legacy <code>?section=audit</code> under Roles &amp; Access redirects here</span>
     <b>•</b>
-    <span>Personal recent events: <code>My Profile</code></span>
+    <span>Personal recent sign-ins: <a href="{{ '/axio/administration/profile/' | relative_url }}">My Profile</a> → Activity &amp; insights</span>
   </div>
 
+  <section>
+    <h2>Permissions</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Action</th><th>Permission</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>View audit logs, dashboard, analytics, export</td><td><code>audit:read</code></td></tr>
+          <tr><td>Edit retention &amp; archive policy</td><td><code>org:update</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Legacy paths <code>/audit</code>, <code>/operations/activity</code>, and <code>/operations/events</code> redirect to this page.</p>
+  </section>
+
+  <section class="audit-toolbar-actions">
+    <h2>Page actions</h2>
+    <ul>
+      <li><strong>Refresh</strong> — reload dashboard, analytics, and the filtered event list</li>
+      <li><strong>Export</strong> — dialog to download <strong>CSV</strong> or <strong>JSON</strong> for a chosen date range</li>
+      <li><strong>Retention &amp; archive</strong> — hot retention days, optional cold archive, manual retention run, browse archived events</li>
+      <li><strong>Saved filters</strong> — shown but disabled (<em>coming soon</em>)</li>
+    </ul>
+  </section>
+
   <section class="audit-kpis">
+    <h2>Dashboard KPIs</h2>
+    <p>Six clickable cards filter the event log and scroll to the table:</p>
+
     <div class="audit-kpi">
       <div class="audit-kpi-icon blue">▣</div>
-      <div><span>Total events</span><strong>128,540</strong><small>All time</small></div>
+      <div><span>Total events</span><strong>—</strong><small>All time (clears KPI filters)</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon green">□</div>
-      <div><span>Today's events</span><strong>1,248</strong><small class="positive">↑ 18% vs yesterday</small></div>
+      <div><span>Events today</span><strong>—</strong><small>Custom date range: today only</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon red">!</div>
-      <div><span>Failed events</span><strong>342</strong><small class="negative">0.27% of total</small></div>
+      <div><span>Failed operations</span><strong>—</strong><small>Status = FAILURE</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon orange">◇</div>
-      <div><span>Security events</span><strong>678</strong><small class="orange-text">0.53% of total</small></div>
+      <div><span>Security events</span><strong>—</strong><small>Security KPI preset</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon purple">♙</div>
-      <div><span>Authentication</span><strong>5,234</strong><small class="purple-text">4.07% of total</small></div>
+      <div><span>Authentication</span><strong>—</strong><small>Authentication KPI preset</small></div>
     </div>
     <div class="audit-kpi">
       <div class="audit-kpi-icon blue">⚙</div>
-      <div><span>Configuration changes</span><strong>2,891</strong><small class="purple-text">2.25% of total</small></div>
+      <div><span>Configuration changes</span><strong>—</strong><small>Configuration KPI preset</small></div>
     </div>
+
+    <p class="note">Counts come from <code>GET /organizations/:orgId/audit-logs/dashboard</code>. Click again to toggle off a KPI filter (except Total events).</p>
   </section>
 
   <section class="audit-analytics">
     <h2>Analytics <small>(Last 30 days)</small></h2>
+    <p>Loaded from <code>GET /organizations/:orgId/audit-logs/analytics?days=30</code>:</p>
 
     <div class="audit-chart-grid">
 
       <div class="audit-chart">
-        <h3>Events over time</h3>
-        <div class="line-chart">
-          <div class="line-grid"></div>
-          <svg viewBox="0 0 360 145" preserveAspectRatio="none" aria-hidden="true">
-            <polyline points="5,112 22,67 39,88 56,76 73,107 90,55 107,72 124,43 141,60 158,95 175,116 192,91 209,50 226,73 243,81 260,108 277,72 294,86 311,43 328,69 345,56 355,72"
-              fill="none" stroke="#6b35ef" stroke-width="3"/>
-          </svg>
-          <div class="chart-axis x"><span>May 20</span><span>May 27</span><span>Jun 3</span><span>Jun 10</span><span>Jun 17</span></div>
-        </div>
+        <h3>Audit event volume</h3>
+        <p>Daily timeline: <strong>Total events</strong> and <strong>Failed events</strong>.</p>
       </div>
 
       <div class="audit-chart">
-        <h3>By category</h3>
-        <div class="donut-row">
-          <div class="donut category-donut"></div>
-          <div class="legend">
-            <span><i class="dot d1"></i>Authentication <b>28.5%</b></span>
-            <span><i class="dot d2"></i>Authorization <b>16.2%</b></span>
-            <span><i class="dot d3"></i>Stacks <b>12.7%</b></span>
-            <span><i class="dot d4"></i>Deployments <b>10.3%</b></span>
-            <span><i class="dot d5"></i>Policies <b>8.6%</b></span>
-            <span><i class="dot d6"></i>Others <b>23.7%</b></span>
-          </div>
-        </div>
+        <h3>Event status</h3>
+        <p>Distribution of <strong>Success</strong> vs <strong>Failure</strong> (not separate Warning/Info status buckets).</p>
       </div>
 
       <div class="audit-chart">
-        <h3>By status</h3>
-        <div class="donut-row">
-          <div class="donut status-donut"></div>
-          <div class="legend">
-            <span><i class="dot success"></i>Success <b>93.1%</b></span>
-            <span><i class="dot failure"></i>Failure <b>5.2%</b></span>
-            <span><i class="dot warning"></i>Warning <b>1.2%</b></span>
-            <span><i class="dot info"></i>Info <b>0.5%</b></span>
-          </div>
-        </div>
+        <h3>Top categories</h3>
+        <p>Most active audit categories (Authentication, Authorization, Stacks, Deployments, Policies, RBAC, etc.).</p>
       </div>
 
       <div class="audit-chart">
-        <h3>By action</h3>
-        <div class="bar-chart">
-          <div><i style="height:92%"></i><span>Create</span></div>
-          <div><i style="height:72%"></i><span>Update</span></div>
-          <div><i style="height:50%"></i><span>Delete</span></div>
-          <div><i style="height:35%"></i><span>Login</span></div>
-          <div><i style="height:24%"></i><span>Approve</span></div>
-          <div><i style="height:15%"></i><span>Others</span></div>
-        </div>
+        <h3>Top actions</h3>
+        <p>Most frequent actions (Create, Update, Delete, Login, …).</p>
       </div>
 
     </div>
@@ -111,88 +111,100 @@ permalink: /axio/administration/audit-logs/
 
   <section class="audit-workspace">
 
+    <h2>Audit event log</h2>
+
     <div class="audit-toolbar">
-      <div class="audit-search">⌕ <span>Search events...</span></div>
-      <button>Category⌄</button>
-      <button>▣ &nbsp; Last 30 days⌄</button>
-      <button>Action⌄</button>
-      <button>Status⌄</button>
-      <button>Severity⌄</button>
-      <button>Resource type⌄</button>
-      <button>⚱ &nbsp; More filters</button>
+      <p><strong>Default filters shown:</strong> Search, Category, Date range (<em>Last 30 days</em>).</p>
+      <p><strong>More filters</strong> toggles optional filters: Action, Status, Severity, Resource type, Resource name, Source module, Repository.</p>
+      <p>Filter visibility is persisted in browser storage. Use <strong>Clear all</strong> when filters are active.</p>
     </div>
 
-    <div class="audit-filter-row">
-      <span class="filter-count">ⓘ Filters applied: 2</span>
-      <span>Status: All ×</span>
-      <span>Severity: All ×</span>
-      <button class="reset">Resort ↻</button>
-    </div>
-
-    <div class="audit-export">
-      <button>⇩ &nbsp; Export CSV</button>
-      <button>⇩ &nbsp; Export JSON</button>
-    </div>
-
-    <div class="audit-table-wrap">
-      <table class="audit-table">
+    <div class="table-wrap">
+      <table>
         <thead>
-          <tr>
-            <th>Time</th><th>Category</th><th>Action</th><th>Status</th>
-            <th>Severity</th><th>User</th><th>Resource</th><th>Source</th>
-          </tr>
+          <tr><th>Filter</th><th>Values</th></tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Jun 18, 2025 10:24:31 AM</td>
-            <td class="link">Authentication</td>
-            <td>Login</td>
-            <td><span class="badge success">✓ Success</span></td>
-            <td><span class="severity info">INFO</span></td>
-            <td>sania.kapoor@abcd.com</td>
-            <td>User</td><td>Web UI</td>
-          </tr>
-          <tr>
-            <td>Jun 18, 2025 10:23:11 AM</td>
-            <td class="link">Stacks</td>
-            <td>Update</td>
-            <td><span class="badge success">✓ Success</span></td>
-            <td><span class="severity info">INFO</span></td>
-            <td>amit.rawat@abcd.com</td>
-            <td>aws-prod-vpc</td><td>Web UI</td>
-          </tr>
-          <tr>
-            <td>Jun 18, 2025 10:21:02 AM</td>
-            <td class="deploy">Deployments</td>
-            <td>Create</td>
-            <td><span class="badge success">✓ Success</span></td>
-            <td><span class="severity info">INFO</span></td>
-            <td>neha.tiwari@abcd.com</td>
-            <td>deploy-9f7ab2</td><td>Runner</td>
-          </tr>
-          <tr>
-            <td>Jun 18, 2025 10:18:45 AM</td>
-            <td class="policy">Policies</td>
-            <td>Delete</td>
-            <td><span class="badge failure">× Failure</span></td>
-            <td><span class="severity high">HIGH</span></td>
-            <td>raj.sharma@abcd.com</td>
-            <td>policy-allow-ssh</td><td>Web UI</td>
-          </tr>
-          <tr>
-            <td>Jun 18, 2025 10:17:33 AM</td>
-            <td class="authz">Authorization</td>
-            <td>Access Denied</td>
-            <td><span class="badge failure">× Failure</span></td>
-            <td><span class="severity critical">CRITICAL</span></td>
-            <td>john.doe@abcd.com</td>
-            <td>project-alpha</td><td>API</td>
-          </tr>
+          <tr><td>Search</td><td>Events, users, resources, correlation IDs</td></tr>
+          <tr><td>Category</td><td>Dynamic list from API + built-in categories (Authentication, Stacks, Deployments, RBAC, …)</td></tr>
+          <tr><td>Date range</td><td>7 / 30 / 60 / 90 / 180 / 365 days, current month, previous month, custom from/to</td></tr>
+          <tr><td>Action</td><td>CREATE, UPDATE, DELETE, LOGIN, LOGOUT, ACCESS, INVITE, REVOKE, SECURITY_VIOLATION</td></tr>
+          <tr><td>Status</td><td>SUCCESS, FAILURE</td></tr>
+          <tr><td>Severity</td><td>CRITICAL, HIGH, MEDIUM, LOW, INFO</td></tr>
+          <tr><td>Resource type / name</td><td>Free text</td></tr>
+          <tr><td>Source module</td><td>Free text (audit source field)</td></tr>
+          <tr><td>Repository</td><td>Free text (Git-related events)</td></tr>
         </tbody>
       </table>
     </div>
 
+    <div class="audit-export">
+      <p><strong>Export</strong> opens a dialog — choose CSV or JSON and the same date presets as search (not separate always-visible export buttons).</p>
+    </div>
+
+    <h3>Table columns</h3>
+    <p>Sortable, configurable via column settings (persisted in browser storage). Defaults:</p>
+    <ul>
+      <li>Timestamp, User, Resource Type, Resource Name, Action, Category, Status, Severity, Source Module, IP Address</li>
+    </ul>
+    <p>Optional columns: Organization, Correlation ID.</p>
+
+    <div class="audit-table-wrap">
+      <p>Click a row to open <strong>Audit Event Details</strong> with:</p>
+      <ul>
+        <li><strong>General</strong> — event ID, timestamp, user, resource, action, status, severity, source; repository/branch/commit when present</li>
+        <li><strong>Technical</strong> — API endpoint, HTTP method, client IP, correlation ID, user agent</li>
+        <li><strong>Changes</strong> — JSON diff when recorded</li>
+      </ul>
+    </div>
+
+    <p class="note">Server-side pagination with adjustable page size. Default sort: <code>createdAt</code> descending.</p>
+
+  </section>
+
+  <section>
+    <h2>Retention &amp; archive</h2>
+    <p>From <strong>Retention &amp; archive</strong>:</p>
+    <ul>
+      <li>Configure hot retention (30–3650 days; presets 30 / 60 / 90 / 180 / 365 or custom)</li>
+      <li>Enable cold archive and optional archive retention limit</li>
+      <li>Run retention manually (archives and/or deletes from hot storage per policy)</li>
+      <li>Browse archived audit records with search and pagination</li>
+    </ul>
+    <p class="note">Editing retention requires <code>org:update</code> (typically organization Owner).</p>
+  </section>
+
+  <section>
+    <h2>API reference</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Endpoint</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>GET /organizations/:orgId/audit-logs</code></td><td>Search / list events (query filters)</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/:id</code></td><td>Event detail</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/dashboard</code></td><td>KPI counts</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/analytics?days=30</code></td><td>Charts data</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/categories</code></td><td>Category list</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/export</code></td><td>CSV export</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/export/json</code></td><td>JSON export</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/retention-policy</code></td><td>Read retention settings</td></tr>
+          <tr><td><code>PUT /organizations/:orgId/audit-logs/retention-policy</code></td><td>Update retention (<code>org:update</code>)</td></tr>
+          <tr><td><code>POST /organizations/:orgId/audit-logs/retention-policy/run</code></td><td>Run retention job</td></tr>
+          <tr><td><code>GET /organizations/:orgId/audit-logs/archives</code></td><td>Search archived events</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>Related surfaces</h2>
+    <ul>
+      <li><strong>My Profile</strong> — personal sign-in activity and charts from a subset of org audit logs (current organization, limited page size)</li>
+      <li><strong>Security &amp; Governance</strong> — compliance and break-glass workflows reference this audit trail</li>
+      <li><strong>Roles &amp; Access</strong> — no embedded audit tab; use this page for full RBAC-related events (filter Category = RBAC or search)</li>
+    </ul>
   </section>
 
 </div>
-

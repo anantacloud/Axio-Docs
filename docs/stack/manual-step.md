@@ -6,6 +6,9 @@ nav_order: 2
 permalink: /axio/stack/manual-step/
 ---
 
+
+<link rel="stylesheet" href="{{ '/assets/css/stack-manual.css' | relative_url }}">
+
 # Create a Stack Manually
 
 Configure a stack step by step in Axio — repository, cloud runtime, state backend, workflow template, variables, secrets, and policy packs — without uploading an `axio.yaml` manifest.
@@ -419,18 +422,6 @@ Configure a stack step by step in Axio — repository, cloud runtime, state back
       <li>Pick a workflow template that matches your IaC engine and cloud provider.</li>
       <li>Set the repository path to the subdirectory that contains your Terraform, OpenTofu, or Pulumi code.</li>
       <li>If you later add <code>axio.yaml</code> to the repo, use <strong>Sync from repository</strong> on the stack detail page — or recreate via <a href="{{ '/axio/stack/from-axio/' | relative_url }}">From axio.yaml</a> for manifest-driven stacks.</li>
-    </ul>
-  </div>
-
-  <div class="axio-manual-best">
-    <h3>Troubleshooting</h3>
-    <ul>
-      <li><strong>No projects in scope</strong> — ask an organization admin to grant Member access on a project, workspace, or environment with <code>iac:manage</code>.</li>
-      <li><strong>No Git connections</strong> — add one under Administration → Integrations → Source Control.</li>
-      <li><strong>Cloud credential is required</strong> — add a connection for the selected provider; some providers also require an account or subscription scope field.</li>
-      <li><strong>No workflow templates shown</strong> — publish a compatible template or change the IaC engine / cloud provider selection.</li>
-      <li><strong>Repository validation failed</strong> — confirm the connection can access the repository and branch, tag, or commit you selected.</li>
-      <li><strong>Stack validation failed on review</strong> — use the inline links to jump to the first invalid step and fix required fields.</li>
     </ul>
   </div>
 

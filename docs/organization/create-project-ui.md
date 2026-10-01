@@ -7,6 +7,8 @@ nav_order: 1
 permalink: /axio/organization/project/create-project-ui/
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/project-ui.css' | relative_url }}">
+
 # <img src="{{ '/assets/icons/folder.svg' | relative_url }}" class="page-icon" alt="Project"> Create a Project from UI
 
 Follow these steps to create a Project using the Axio web interface.
@@ -112,7 +114,6 @@ Click the <strong>Create Project</strong> button on the Projects page toolbar (o
 <ul>
 <li><strong>Name</strong> (required) — A unique display name for the project within your organization. Axio auto-generates an internal slug from the name. Names are compared case-insensitively (<code>ecommerce</code> and <code>Ecommerce</code> cannot both exist).</li>
 <li><strong>Description</strong> (optional) — A short summary of the project's purpose.</li>
-<li><strong>Sensitive</strong> (optional) — Enable additional protection for production-critical or compliance-bound projects. See <a href="#make-a-project-sensitive">Make a Project Sensitive</a> below. You can also set this later when editing the project.</li>
 </ul>
 
 </div>
@@ -191,17 +192,6 @@ rows="4"></textarea>
 
 </label>
 
-<label class="sensitive-field">
-
-<input type="checkbox">
-
-Sensitive
-
-<p class="field-hint">
-Sensitive projects cannot be deleted and block destroy deployments for linked stacks.
-</p>
-
-</label>
 
 <div class="form-actions">
 
@@ -227,15 +217,63 @@ Create
 
 ---
 
-## Field reference
+<!-- ==================================================
+     FIELD REFERENCE
+     ================================================== -->
 
-| Field | Required | Rules |
-|-------|:--------:|-------|
-| **Name** | Yes | Must not be empty. Must be unique within the organization (case-insensitive). A URL-safe slug is generated automatically. |
-| **Description** | No | Free text. Shown on the Projects list and project detail page. |
-| **Sensitive** | No | Defaults to off. When enabled, restricts delete, archive, and destroy operations — see below. Requires permission to update the project to change later. |
+<section class="field-reference-section">
 
----
+  <h2>Field reference</h2>
+
+  <div class="field-reference-table-wrapper">
+    <table class="field-reference-table">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Required</th>
+          <th>Rules</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td>
+            <span class="required-badge yes">Yes</span>
+          </td>
+          <td>
+            Must not be empty. Must be unique within the organization
+            (case-insensitive). A URL-safe slug is generated automatically.
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>Description</strong></td>
+          <td>
+            <span class="required-badge no">No</span>
+          </td>
+          <td>
+            Free text. Shown on the Projects list and project detail page.
+          </td>
+        </tr>
+
+        <tr>
+          <td><strong>Sensitive</strong></td>
+          <td>
+            <span class="required-badge no">No</span>
+          </td>
+          <td>
+            Defaults to off. When enabled, restricts delete, archive, and
+            destroy operations — see below. Requires permission to update
+            the project to change later.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+
 
 ## What Happens Next?
 
@@ -248,11 +286,7 @@ After creating the Project:
 - You can **archive the Project** when it is no longer required (see below).
 - To change the name, description, or sensitive flag later, open the project row actions and choose **Edit**, or edit from the project detail page.
 
-**Suggested next steps:**
 
-- [Create a Workspace]({{ '/axio/organization/workspace/create-workspace-ui/' | relative_url }}) *(link when published)*
-- [Organization overview]({{ '/axio/organization/overview/' | relative_url }})
-- [Create Project using Platform as Code]({{ '/axio/organization/project/create-project-platform-as-code/' | relative_url }}) — for Git-managed projects
 
 <div class="resource-grid-info">
 
@@ -356,26 +390,7 @@ After creating the Project:
 
 </div>
 
----
 
-## UI vs Platform as Code
-
-This guide covers **manual creation in the web UI**. To define projects declaratively in Git and reconcile them through Platform as Code, use [Create Project using Platform as Code]({{ '/axio/organization/project/create-project-platform-as-code/' | relative_url }}). Git-managed projects show a <strong>Git-managed</strong> badge in the UI and have limited manual edit rules.
-
----
-
-## Troubleshooting
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| **Create Project** button disabled | Insufficient role or scoped access | Ask an Owner or Admin to grant organization-wide Member (or higher) access |
-| **Name is required** | Empty name field | Enter a non-empty project name |
-| **Project name already exists** | Duplicate name in the organization | Choose a different name (names are unique case-insensitively) |
-| **Failed to save project** | Network or server error | Retry; contact support if the error persists |
-| Cannot archive project | Project is sensitive, system, or Git-managed | Remove sensitive flag (if appropriate), or manage via Platform as Code for Git-managed resources |
-| Cannot delete project | Project is sensitive or contains workspaces | Remove or reassign workspaces first; sensitive projects cannot be deleted |
-
----
 
 <div class="page-navigation">
 

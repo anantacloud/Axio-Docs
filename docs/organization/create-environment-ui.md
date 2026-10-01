@@ -126,7 +126,7 @@ Create an Environment using the Axio web interface. An Environment belongs to a 
                     <li><strong>Workspace</strong> (required) — The workspace this environment belongs to. The list is filtered by the selected project.</li>
                     <li><strong>Name</strong> (required) — Unique within the selected workspace. Axio auto-generates an internal slug. Names are compared case-insensitively within the workspace.</li>
                     <li><strong>Description</strong> (optional) — A short summary of the environment purpose.</li>
-                    <li><strong>Sensitive</strong> (optional) — Enable additional protection for production-critical environments. See <a href="#sensitive-environments">Sensitive environments</a> below.</li>
+                    
                 </ul>
 
                 <p><strong>Note:</strong> The UI uses a single <strong>Name</strong> field (there is no separate display name). Environment owners and self-approval are configured <strong>after creation</strong> using <strong>Assign owner</strong> on the Environments list — not in the create dialog.</p>
@@ -231,17 +231,7 @@ Create an Environment using the Axio web interface. An Environment belongs to a 
 
             </label>
 
-            <label class="sensitive-field">
-
-                <input type="checkbox">
-
-                Sensitive
-
-                <p class="field-hint">
-                    Sensitive environments cannot be deleted and block destroy deployments for linked stacks.
-                </p>
-
-            </label>
+            
 
             <div class="form-actions">
 
@@ -447,37 +437,6 @@ After the environment is created, configure governance from the Environments lis
 
 </div>
 
-<p><strong>Suggested next steps:</strong></p>
-
-<ul>
-    <li>Assign environment owners and configure self-approval</li>
-    <li>Connect stacks and run your first deployment</li>
-    <li><a href="{{ '/axio/organization/environment/create-environment-platform-as-code/' | relative_url }}">Create Environment using Platform as Code</a></li>
-</ul>
-
-<hr>
-
-<h2>UI vs Platform as Code</h2>
-
-<p>
-    This guide covers manual creation in the web UI. To define environments declaratively in Git, use <a href="{{ '/axio/organization/environment/create-environment-platform-as-code/' | relative_url }}">Create Environment using Platform as Code</a>. Git-managed environments show a <strong>Git-managed</strong> badge and have limited manual edit rules.
-</p>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-| Issue | Cause | What to do |
-|-------|--------|------------|
-| **Create Environment** button disabled | No workspaces exist | Create a workspace first under Organization → Workspaces |
-| **Create Environment** button disabled | Insufficient role or workspace access | Ask an Owner or Admin to grant environment manage access on the target workspace |
-| Viewer on workspace | Workspace-scoped Viewer role | Request Member (or higher) access on that workspace |
-| **Name, project, and workspace are required** | Missing required fields | Fill in project, workspace, and name |
-| **Environment name already exists** | Duplicate name in the workspace | Choose a different name (unique case-insensitively per workspace) |
-| **Failed to save environment** | Network or server error | Retry; contact support if the error persists |
-| **Assign owner** unavailable | Missing <code>environment:manage</code> | Request permission from an Admin |
-| Cannot assign owner — no selection | No users or groups chosen | Select at least one owner user or group |
-| Cannot delete/archive environment | Sensitive, system, or Git-managed | Adjust sensitivity if appropriate; use PaC for Git-managed resources |
 
 <div class="page-navigation">
 

@@ -1,0 +1,1294 @@
+/* =========================================================
+   AXIO — CREATE STACK FROM AXIO.YAML
+   ========================================================= */
+
+.axio-page {
+    width: 100% !important;
+    max-width: 1400px !important;
+
+    margin: 0 auto !important;
+    padding: 0 28px 50px !important;
+
+    color: #263653 !important;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 16px !important;
+
+    line-height: 1.6 !important;
+}
+
+.axio-page *,
+.axio-page *::before,
+.axio-page *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.axio-hero {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+
+    gap: 35px !important;
+
+    width: 100% !important;
+
+    margin: 18px 0 24px !important;
+    padding: 32px 34px !important;
+
+    border: 1px solid #e2e5ec !important;
+    border-radius: 16px !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 7px 25px rgba(15, 23, 42, 0.06) !important;
+}
+
+
+/* Eyebrow */
+
+.axio-eyebrow {
+    margin: 0 0 10px !important;
+
+    color: #6638ce !important;
+
+    font-size: 13px !important;
+    font-weight: 800 !important;
+
+    letter-spacing: .14em !important;
+    line-height: 1.3 !important;
+}
+
+
+/* Hero heading */
+
+.axio-hero h2 {
+    margin: 0 0 10px !important;
+    padding: 0 !important;
+
+    color: #111d35 !important;
+
+    font-size: 32px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.25 !important;
+}
+
+.axio-hero h2 span {
+    color: #6334c6 !important;
+}
+
+
+/* Hero description */
+
+.axio-hero p {
+    max-width: 900px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #596984 !important;
+
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+}
+
+
+/* Recommended badge */
+
+.axio-badge {
+    flex: 0 0 auto !important;
+
+    margin-top: 2px !important;
+
+    padding: 9px 16px !important;
+
+    border-radius: 999px !important;
+
+    background: #eee8ff !important;
+
+    color: #5b30c5 !important;
+
+    font-size: 13px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.3 !important;
+}
+
+
+/* =========================================================
+   INFORMATION / NOTICE
+   ========================================================= */
+
+.axio-info {
+    display: flex !important;
+    align-items: flex-start !important;
+
+    gap: 15px !important;
+
+    width: 100% !important;
+
+    margin: 0 0 24px !important;
+    padding: 19px 21px !important;
+
+    border: 1px solid #d9ceff !important;
+    border-radius: 12px !important;
+
+    background: #f8f5ff !important;
+}
+
+
+.axio-info-icon {
+    display: grid !important;
+    place-items: center !important;
+
+    flex: 0 0 auto !important;
+
+    width: 25px !important;
+    height: 25px !important;
+
+    margin-top: 1px !important;
+
+    border: 1.8px solid #6c3dd0 !important;
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    color: #6939cf !important;
+
+    font-size: 14px !important;
+    font-weight: 800 !important;
+
+    line-height: 1 !important;
+}
+
+
+.axio-info strong {
+    display: block !important;
+
+    margin: 0 0 5px !important;
+
+    color: #402080 !important;
+
+    font-size: 15px !important;
+    font-weight: 750 !important;
+}
+
+
+.axio-info p {
+    margin: 0 !important;
+
+    color: #635d77 !important;
+
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+}
+
+
+/* =========================================================
+   MAIN TWO-COLUMN LAYOUT
+   ========================================================= */
+
+.axio-layout {
+    display: grid !important;
+
+    grid-template-columns: 40% 60% !important;
+
+    gap: 22px !important;
+
+    width: 100% !important;
+
+    align-items: stretch !important;
+}
+
+
+/* =========================================================
+   COMMON PANELS
+   ========================================================= */
+
+.axio-steps,
+.axio-card {
+    width: 100% !important;
+
+    border: 1px solid #e1e5ec !important;
+    border-radius: 16px !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 7px 25px rgba(15, 23, 42, 0.055) !important;
+}
+
+
+/* =========================================================
+   STEPS PANEL
+   ========================================================= */
+
+.axio-steps {
+    min-height: 520px !important;
+
+    padding: 28px 26px !important;
+}
+
+
+.axio-section-title {
+    margin: 0 0 19px !important;
+
+    color: #162039 !important;
+
+    font-size: 17px !important;
+    font-weight: 800 !important;
+
+    line-height: 1.3 !important;
+}
+
+
+/* Step */
+
+.axio-step {
+    position: relative !important;
+
+    display: grid !important;
+
+    grid-template-columns: 34px 1fr !important;
+
+    gap: 14px !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 16px 12px !important;
+
+    border: 0 !important;
+    border-radius: 11px !important;
+
+    background: transparent !important;
+
+    color: #182033 !important;
+
+    text-align: left !important;
+
+    cursor: pointer !important;
+}
+
+
+/* Active step */
+
+.axio-step.active {
+    background: #f7f4ff !important;
+}
+
+
+/* Connecting line */
+
+.axio-step:not(:last-child)::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    left: 28px !important;
+    top: 51px !important;
+
+    width: 2px !important;
+    height: calc(100% - 10px) !important;
+
+    background: #ddd8ed !important;
+}
+
+
+/* Step number */
+
+.axio-step-number {
+    position: relative !important;
+    z-index: 2 !important;
+
+    display: grid !important;
+    place-items: center !important;
+
+    width: 32px !important;
+    height: 32px !important;
+
+    border: 2px solid #7041d1 !important;
+    border-radius: 50% !important;
+
+    background: #ffffff !important;
+
+    color: #7041d1 !important;
+
+    font-size: 15px !important;
+    font-weight: 800 !important;
+
+    line-height: 1 !important;
+}
+
+
+.axio-step.active .axio-step-number,
+.axio-step.done .axio-step-number {
+    border-color: #6939cf !important;
+
+    background: #6939cf !important;
+
+    color: #ffffff !important;
+}
+
+
+/* Step title */
+
+.axio-step strong {
+    display: block !important;
+
+    margin: 1px 0 5px !important;
+
+    color: #172033 !important;
+
+    font-size: 15px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.35 !important;
+}
+
+
+/* Step description */
+
+.axio-step small {
+    display: block !important;
+
+    max-width: 330px !important;
+
+    margin: 0 !important;
+
+    color: #68748a !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   RIGHT FORM CARD
+   ========================================================= */
+
+.axio-card {
+    min-height: 520px !important;
+
+    padding: 30px !important;
+}
+
+
+/* Header */
+
+.axio-card-header {
+    padding: 0 0 19px !important;
+
+    border-bottom: 1px solid #e8eaf0 !important;
+}
+
+
+.axio-card-kicker {
+    margin: 0 !important;
+
+    color: #6d7484 !important;
+
+    font-size: 15px !important;
+    font-weight: 600 !important;
+
+    line-height: 1.4 !important;
+}
+
+
+.axio-card h3 {
+    margin: 5px 0 0 !important;
+    padding: 0 !important;
+
+    color: #111c34 !important;
+
+    font-size: 23px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.3 !important;
+}
+
+
+/* Progress */
+
+.axio-progress {
+    width: 100% !important;
+    height: 4px !important;
+
+    margin: 18px 0 0 !important;
+
+    overflow: hidden !important;
+
+    border-radius: 999px !important;
+
+    background: #eeeaf7 !important;
+}
+
+
+.axio-progress span {
+    display: block !important;
+
+    width: 0 !important;
+    height: 100% !important;
+
+    border-radius: inherit !important;
+
+    background: #6939cf !important;
+
+    transition: width .25s ease !important;
+}
+
+
+/* =========================================================
+   FORM STEPS
+   ========================================================= */
+
+.axio-form-step {
+    display: none !important;
+
+    min-height: 330px !important;
+
+    padding: 28px 0 0 !important;
+}
+
+
+.axio-form-step.active {
+    display: block !important;
+
+    animation: axioFade .2s ease !important;
+}
+
+
+@keyframes axioFade {
+    from {
+        opacity: .25;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Form labels */
+
+.axio-form-step label {
+    display: block !important;
+
+    margin: 0 0 9px !important;
+
+    color: #252d3d !important;
+
+    font-size: 15px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.4 !important;
+}
+
+
+.axio-form-step label em {
+    color: #dc2626 !important;
+
+    font-style: normal !important;
+}
+
+
+/* Inputs */
+
+.axio-form-step input,
+.axio-form-step select {
+    width: 100% !important;
+
+    min-height: 48px !important;
+
+    margin: 0 !important;
+
+    padding: 11px 14px !important;
+
+    border: 1px solid #dce1e9 !important;
+    border-radius: 9px !important;
+
+    outline: none !important;
+
+    background: #ffffff !important;
+
+    color: #202738 !important;
+
+    font-family: inherit !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.4 !important;
+
+    transition:
+        border-color .15s ease,
+        box-shadow .15s ease !important;
+}
+
+
+.axio-form-step input:focus,
+.axio-form-step select:focus {
+    border-color: #7041d1 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(112, 65, 209, .10) !important;
+}
+
+
+/* Help box */
+
+.axio-step-help {
+    margin-top: 15px !important;
+
+    padding: 14px 16px !important;
+
+    border-radius: 9px !important;
+
+    background: #f7f8fa !important;
+
+    color: #667085 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.6 !important;
+}
+
+
+/* =========================================================
+   INPUT WITH ICON
+   ========================================================= */
+
+.axio-input-with-icon {
+    position: relative !important;
+}
+
+
+.axio-input-with-icon input {
+    padding-right: 45px !important;
+}
+
+
+.axio-input-with-icon span {
+    position: absolute !important;
+
+    top: 50% !important;
+    right: 15px !important;
+
+    transform: translateY(-50%) !important;
+
+    color: #4b5563 !important;
+
+    font-size: 16px !important;
+}
+
+
+/* =========================================================
+   TWO COLUMN FORM
+   ========================================================= */
+
+.axio-two-columns {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 18px !important;
+
+    margin-top: 20px !important;
+}
+
+
+.axio-two-columns label {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   SUCCESS / FOUND BOX
+   ========================================================= */
+
+.axio-found,
+.axio-auto {
+    display: flex !important;
+
+    align-items: flex-start !important;
+
+    gap: 13px !important;
+
+    margin-top: 20px !important;
+
+    padding: 15px 16px !important;
+
+    border: 1px solid #b9e7ce !important;
+    border-radius: 10px !important;
+
+    background: #f0fcf5 !important;
+}
+
+
+.axio-found > span,
+.axio-auto > span {
+    display: grid !important;
+    place-items: center !important;
+
+    flex: 0 0 auto !important;
+
+    width: 25px !important;
+    height: 25px !important;
+
+    border-radius: 50% !important;
+
+    background: #2ca66f !important;
+
+    color: #ffffff !important;
+
+    font-size: 15px !important;
+    font-weight: 800 !important;
+}
+
+
+.axio-found strong,
+.axio-auto strong {
+    display: block !important;
+
+    margin: 0 !important;
+
+    color: #176c47 !important;
+
+    font-size: 15px !important;
+    font-weight: 750 !important;
+}
+
+
+.axio-found small,
+.axio-auto small {
+    display: block !important;
+
+    margin-top: 3px !important;
+
+    color: #4c6c5c !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================================
+   REVIEW
+   ========================================================= */
+
+.axio-review {
+    display: grid !important;
+
+    gap: 0 !important;
+
+    width: 100% !important;
+
+    border: 1px solid #e2e6ec !important;
+    border-radius: 10px !important;
+
+    overflow: hidden !important;
+}
+
+
+.axio-review div {
+    display: flex !important;
+
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    gap: 25px !important;
+
+    padding: 13px 16px !important;
+
+    border-bottom: 1px solid #edf0f3 !important;
+
+    font-size: 13px !important;
+
+    line-height: 1.5 !important;
+}
+
+
+.axio-review div:last-child {
+    border-bottom: 0 !important;
+}
+
+
+.axio-review span {
+    color: #707887 !important;
+}
+
+
+.axio-review strong {
+    color: #202738 !important;
+
+    font-weight: 700 !important;
+
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+   ========================================================= */
+
+.axio-actions {
+    display: flex !important;
+
+    justify-content: flex-end !important;
+    align-items: center !important;
+
+    gap: 11px !important;
+
+    padding-top: 19px !important;
+
+    border-top: 1px solid #edf0f4 !important;
+}
+
+
+.axio-btn {
+    min-width: 110px !important;
+
+    padding: 12px 20px !important;
+
+    border: 1px solid #dfe3e9 !important;
+    border-radius: 9px !important;
+
+    font-family: inherit !important;
+
+    font-size: 13px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.3 !important;
+
+    cursor: pointer !important;
+}
+
+
+.axio-btn.secondary {
+    background: #ffffff !important;
+
+    color: #454b59 !important;
+}
+
+
+.axio-btn.primary {
+    border-color: #6939cf !important;
+
+    background: #6939cf !important;
+
+    color: #ffffff !important;
+}
+
+
+.axio-btn.primary:hover {
+    background: #592cb7 !important;
+    border-color: #592cb7 !important;
+}
+
+
+/* =========================================================
+   COMPLETION
+   ========================================================= */
+
+.axio-complete {
+    display: none !important;
+
+    align-items: center !important;
+
+    gap: 13px !important;
+
+    margin-top: 20px !important;
+
+    padding: 16px 19px !important;
+
+    border: 1px solid #bfe8d2 !important;
+    border-radius: 11px !important;
+
+    background: #f2fcf6 !important;
+}
+
+
+.axio-complete.show {
+    display: flex !important;
+
+    animation: axioFade .25s ease !important;
+}
+
+
+.axio-check {
+    display: grid !important;
+    place-items: center !important;
+
+    flex: 0 0 auto !important;
+
+    width: 28px !important;
+    height: 28px !important;
+
+    border-radius: 50% !important;
+
+    background: #2ca66f !important;
+
+    color: #ffffff !important;
+
+    font-weight: 800 !important;
+}
+
+
+.axio-complete strong {
+    display: block !important;
+
+    color: #176c47 !important;
+
+    font-size: 14px !important;
+}
+
+
+.axio-complete span:last-child {
+    display: block !important;
+
+    margin-top: 2px !important;
+
+    color: #5d6e65 !important;
+
+    font-size: 12px !important;
+}
+
+
+/* =========================================================
+   REFERENCE / REPOSITORY SECTION
+   ========================================================= */
+
+.axio-reference {
+    display: grid !important;
+
+    grid-template-columns: auto 1fr auto !important;
+
+    gap: 17px !important;
+
+    align-items: center !important;
+
+    width: 100% !important;
+
+    margin-top: 24px !important;
+
+    padding: 23px 25px !important;
+
+    border: 1px solid #e0e4eb !important;
+    border-radius: 13px !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.035) !important;
+}
+
+
+.axio-reference-icon {
+    display: grid !important;
+    place-items: center !important;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    border-radius: 9px !important;
+
+    background: #f0edff !important;
+
+    color: #6939cf !important;
+
+    font-size: 19px !important;
+    font-weight: 800 !important;
+}
+
+
+.axio-reference strong {
+    display: block !important;
+
+    color: #202738 !important;
+
+    font-size: 15px !important;
+    font-weight: 750 !important;
+}
+
+
+.axio-reference p {
+    margin: 4px 0 0 !important;
+
+    color: #687082 !important;
+
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+}
+
+
+.axio-reference a {
+    color: #5f32c4 !important;
+
+    font-size: 13px !important;
+    font-weight: 700 !important;
+
+    white-space: nowrap !important;
+}
+
+
+/* =========================================================
+   BEST PRACTICES
+   ========================================================= */
+
+.axio-best-practices {
+    width: 100% !important;
+
+    margin-top: 24px !important;
+
+    padding: 25px 27px !important;
+
+    border: 1px solid #e0e4eb !important;
+    border-radius: 13px !important;
+
+    background: #ffffff !important;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.035) !important;
+}
+
+
+.axio-best-practices h3 {
+    margin: 0 0 17px !important;
+
+    color: #202738 !important;
+
+    font-size: 18px !important;
+    font-weight: 750 !important;
+
+    line-height: 1.3 !important;
+}
+
+
+.axio-best-practices ul {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 15px 45px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    list-style: none !important;
+}
+
+
+.axio-best-practices li {
+    position: relative !important;
+
+    margin: 0 !important;
+    padding: 0 0 0 25px !important;
+
+    color: #5f6675 !important;
+
+    font-size: 15px !important;
+
+    line-height: 1.65 !important;
+}
+
+
+.axio-best-practices li::before {
+    content: "✓" !important;
+
+    position: absolute !important;
+
+    left: 0 !important;
+    top: 0 !important;
+
+    color: #2ca66f !important;
+
+    font-size: 15px !important;
+    font-weight: 900 !important;
+}
+
+
+/* =========================================================
+   INLINE CODE
+   ========================================================= */
+
+.axio-page code {
+    display: inline-block !important;
+
+    margin: 0 2px !important;
+    padding: 2px 7px !important;
+
+    border: 0 !important;
+    border-radius: 5px !important;
+
+    background: #f1eff7 !important;
+
+    color: #5830b8 !important;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace !important;
+
+    font-size: .92em !important;
+
+    line-height: 1.35 !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1500px) {
+
+    .axio-page {
+        max-width: 1480px !important;
+
+        padding-left: 35px !important;
+        padding-right: 35px !important;
+    }
+
+    .axio-hero {
+        padding: 35px 38px !important;
+    }
+
+    .axio-hero h2 {
+        font-size: 34px !important;
+    }
+
+    .axio-card,
+    .axio-steps {
+        min-height: 550px !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .axio-page {
+        max-width: 100% !important;
+
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+
+    .axio-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .axio-steps {
+        min-height: auto !important;
+    }
+
+    .axio-card {
+        min-height: auto !important;
+    }
+
+    .axio-form-step {
+        min-height: 300px !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET / SMALL SCREEN
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .axio-page {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .axio-hero {
+        padding: 26px !important;
+    }
+
+    .axio-hero h2 {
+        font-size: 28px !important;
+    }
+
+    .axio-hero p {
+        font-size: 15px !important;
+    }
+
+    .axio-steps {
+        display: grid !important;
+
+        grid-template-columns: 1fr 1fr !important;
+
+        gap: 6px !important;
+    }
+
+    .axio-section-title {
+        grid-column: 1 / -1 !important;
+    }
+
+    .axio-step:not(:last-child)::after {
+        display: none !important;
+    }
+
+    .axio-two-columns {
+        grid-template-columns: 1fr !important;
+    }
+
+    .axio-best-practices ul {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .axio-page {
+        padding: 0 14px 35px !important;
+
+        font-size: 15px !important;
+    }
+
+    .axio-hero {
+        flex-direction: column !important;
+
+        gap: 18px !important;
+
+        padding: 22px !important;
+
+        border-radius: 13px !important;
+    }
+
+    .axio-hero h2 {
+        font-size: 25px !important;
+    }
+
+    .axio-hero p {
+        font-size: 14px !important;
+    }
+
+    .axio-badge {
+        align-self: flex-start !important;
+    }
+
+
+    .axio-info {
+        padding: 16px !important;
+    }
+
+
+    .axio-steps {
+        display: block !important;
+
+        padding: 20px 18px !important;
+    }
+
+
+    .axio-step {
+        padding: 14px 8px !important;
+    }
+
+
+    .axio-card {
+        padding: 20px !important;
+    }
+
+
+    .axio-card h3 {
+        font-size: 20px !important;
+    }
+
+
+    .axio-form-step {
+        min-height: 260px !important;
+    }
+
+
+    .axio-reference {
+        grid-template-columns: auto 1fr !important;
+
+        padding: 20px !important;
+    }
+
+
+    .axio-reference a {
+        grid-column: 2 !important;
+    }
+
+
+    .axio-best-practices {
+        padding: 20px !important;
+    }
+
+
+    .axio-best-practices ul {
+        grid-template-columns: 1fr !important;
+
+        gap: 12px !important;
+    }
+
+
+    .axio-actions {
+        flex-wrap: wrap !important;
+    }
+
+
+    .axio-btn {
+        flex: 1 !important;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .axio-page {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .axio-hero {
+        padding: 18px !important;
+    }
+
+    .axio-hero h2 {
+        font-size: 23px !important;
+    }
+
+    .axio-card {
+        padding: 17px !important;
+    }
+
+    .axio-reference {
+        grid-template-columns: 1fr !important;
+    }
+
+    .axio-reference a {
+        grid-column: auto !important;
+        white-space: normal !important;
+    }
+}
